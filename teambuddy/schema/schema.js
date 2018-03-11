@@ -51,14 +51,18 @@ const RootQuery = new GraphQLObjectType({
       type: UserType,
       args: { id: { type: GraphQLString } },
       resolve(parentValue, args) {
-        return axios.get(`http://localhost:3000/users/${args.id}`).then(resp => resp.data);
+        return axios
+          .get(`http://localhost:3000/users/${args.id}`)
+          .then(resp => resp.data);
       }
     },
     company: {
       type: CompanyType,
       args: { id: { type: GraphQLString } },
       resolve(parentValue, args) {
-        return axios.get(`http://localhost:3000/companies/${args.id}`).then(resp => resp.data);
+        return axios
+          .get(`http://localhost:3000/companies/${args.id}`)
+          .then(resp => resp.data);
       }
     }
   }
@@ -84,7 +88,9 @@ const mutation = new GraphQLObjectType({
       type: UserType,
       args: { id: { type: new GraphQLNonNull(GraphQLString) } },
       resolve(parentValue, { id }) {
-        return axios.delete(`http://localhost:3000/users/${id}`).then(resp => resp.data);
+        return axios
+          .delete(`http://localhost:3000/users/${id}`)
+          .then(resp => resp.data);
       }
     },
     editUser: {
@@ -96,7 +102,9 @@ const mutation = new GraphQLObjectType({
         companyId: { type: GraphQLString }
       },
       resolve(parentValue, args) {
-        return axios.patch(`http://localhost:3000/users/${args.id}`, args).then(resp => resp.data);
+        return axios
+          .patch(`http://localhost:3000/users/${args.id}`, args)
+          .then(resp => resp.data);
       }
     }
   }
