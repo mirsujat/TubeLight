@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 class SongCreate extends Component {
   constructor(props) {
@@ -13,17 +13,21 @@ class SongCreate extends Component {
   onSubmit(event) {
     event.preventDefault();
 
-    this.props.mutate({
-      variables: {
-        title: this.state.title
-      }
-    });
+    // mutate function returns a promise. we can chain .then and .catch
+    this.props
+      .mutate({
+        variables: {
+          title: this.state.title
+        }
+      })
+      //this function only be called after the song has been successfully created
+      .then(() => hashHistory.push('/'));
   }
 
   render() {
     return (
       <div>
-        <Link to="/">...Go Back</Link>
+        <Link to="/">Go Back</Link>
         <h3>Create a New Song</h3>
         <form onSubmit={this.onSubmit.bind(this)}>
           <label>Song Title:</label>
