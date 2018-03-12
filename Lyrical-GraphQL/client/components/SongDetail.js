@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
+import { Link } from 'react-router';
 import fetchOneById from '../queries/fetchSong';
 
 class SongDetail extends Component {
@@ -7,11 +8,12 @@ class SongDetail extends Component {
     const { song } = this.props.data;
 
     if (!song) {
-      return <div />;
+      return <div>Loading...</div>;
     }
 
     return (
       <div>
+        <Link to="/">Go Back</Link>
         <h3>{song.title}</h3>
       </div>
     );
