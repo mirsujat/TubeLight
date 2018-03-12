@@ -17,9 +17,7 @@ class SongCreate extends Component {
     // mutate function returns a promise. we can chain .then and .catch
     this.props
       .mutate({
-        variables: {
-          title: this.state.title
-        },
+        variables: { title: this.state.title },
         refetchQueries: [{ query }]
       })
       //this function only be called after the song has been successfully created
