@@ -3,7 +3,7 @@ Build with React, GraphQl, Apollo, Node JS, Express, MongoDB
 
 clone or download the repo
 
-create a database on ![https://mlab.com/]
+create a database on https://mlab.com/
 
 replace your Databse URI in server.js file
 
