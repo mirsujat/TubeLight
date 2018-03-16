@@ -8,6 +8,7 @@ create a database on ![https://mlab.com/]
 replace your Databse URI in server.js file
 
 // Replace with your mongoLab URI
+
 const MONGO_URI ='mongodb://mirsujat:gq_password@ds213209.mlab.com:13209/gqlr_auth';
 
 then run:  
