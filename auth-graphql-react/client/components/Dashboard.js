@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default () => {
-  return <div>You are logged in</div>;
+  return (
+    <div>
+      <h3>Your are Logged In</h3>
+    </div>
+  );
 };
