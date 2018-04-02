@@ -2,17 +2,16 @@
 
 Build With React, GraphQL, Apollo
 
-clone or download the repo and run
+Clone or download the repo and run
 
-npm install
+Then run the command:
+$ npm install
+$ npm run dev
 
-npm run dev
-
-open your bowser in 
-
-http://localhost:4400
+Open your bowser in http://localhost:4400
 
 and Boom your are ready to go.
 
-Thanks mir 
+Thanks 
+mirsujat 
 
