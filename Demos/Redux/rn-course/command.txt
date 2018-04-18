@@ -1,0 +1,9 @@
+npm run eject
+
+React Native
+
+specify app name: 
+Awesome Places
+
+speficy project name:
+rncourse
