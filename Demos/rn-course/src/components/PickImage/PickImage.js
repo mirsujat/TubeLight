@@ -17,7 +17,7 @@ class PickImage extends Component {
         this.setState({
           pickedImage: { uri: res.uri }
         });
-        this.props.onImagePicked({ uri: res.uri });
+        this.props.onImagePicked({ uri: res.uri, base64: res.data });
       }
     });
   };
