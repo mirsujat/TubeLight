@@ -6,7 +6,8 @@ import {
   Button,
   StyleSheet,
   ScrollView,
-  Image
+  Image,
+  ActivityIndicator
 } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -124,7 +125,7 @@ class SharePlaceScreen extends Component {
       />
     );
     if (this.props.isLoading) {
-      submitButton = <Text>Loading...</Text>;
+      submitButton = <ActivityIndicator size="large" color="#0000ff" />;
     }
 
     return (
