@@ -1,4 +1,4 @@
-import { SET_PLACES } from './actionTypes';
+import { SET_PLACES, DELETE_PLACE } from './actionTypes';
 import { uiStartLoading, uiStopLoading } from './index';
 
 export const addPlace = (placeName, location, image) => {
