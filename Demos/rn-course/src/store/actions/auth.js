@@ -1,4 +1,5 @@
 import { TRY_AUTH } from './actionTypes';
+import { uiStartLoading, uiStopLoading } from './index';
 
 export const tryAuth = authData => {
   return dispatch => {
@@ -8,6 +9,7 @@ export const tryAuth = authData => {
 
 export const authSignup = authData => {
   return dispatch => {
+    dispatch(uiStartLoading());
     fetch(
       'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDBufdkcujuiUF9NGCGaHTpF5VkDqholr0',
       {
@@ -25,10 +27,12 @@ export const authSignup = authData => {
       .catch(err => {
         console.log(err);
         alert('Authentication failed, please try again!!');
+        dispatch(uiStopLoading());
       })
       .then(res => res.json())
       .then(parsedRes => {
         console.log(parsedRes);
+        dispatch(uiStopLoading());
       });
   };
 };
