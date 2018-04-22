@@ -1,5 +1,6 @@
 import { TRY_AUTH } from './actionTypes';
 import { uiStartLoading, uiStopLoading } from './index';
+import startMainTabs from '../../screens/MainTabs/startMainTabs';
 
 export const tryAuth = authData => {
   return dispatch => {
@@ -31,8 +32,12 @@ export const authSignup = authData => {
       })
       .then(res => res.json())
       .then(parsedRes => {
-        console.log(parsedRes);
         dispatch(uiStopLoading());
+        if (parsedRes.error) {
+          alert('Authentication failed, please try again!!');
+        } else {
+          startMainTabs();
+        }
       });
   };
 };
