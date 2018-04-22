@@ -15,16 +15,16 @@ class FindPlaceScreen extends Component {
     navBarButtonColor: 'orange'
   };
 
-  constructor(props) {
-    super(props);
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
-  }
-
   state = {
     placesLoaded: false,
     removeAnim: new Animated.Value(1),
     placesAnim: new Animated.Value(0)
   };
+
+  constructor(props) {
+    super(props);
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+  }
 
   onNavigatorEvent = event => {
     if (event.type === 'NavBarButtonPress') {
