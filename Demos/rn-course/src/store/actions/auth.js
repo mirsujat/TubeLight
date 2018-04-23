@@ -42,7 +42,3 @@ export const tryAuth = (authData, authMode) => {
       });
   };
 };
-
-export const authSignup = authData => {
-  return dispatch => {};
-};
