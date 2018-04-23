@@ -87,11 +87,23 @@ export const setPlaces = places => {
 
 export const deletePlace = key => {
   return dispatch => {
-    dispatch(removePlace(key));
-    let url = 'https://awesome-place-1523875087723.firebaseio.com/places/';
-    fetch(url + key + '.json', {
-      method: 'DELETE'
-    })
+    dispatch(authGetToken())
+      .catch(() => {
+        alert('No valid token found!');
+      })
+      .then(token => {
+        dispatch(removePlace(key));
+
+        return fetch(
+          'https://awesome-place-1523875087723.firebaseio.com/places/' +
+            key +
+            '.json?auth=' +
+            token,
+          {
+            method: 'DELETE'
+          }
+        );
+      })
       .then(res => res.json())
       .then(parsedRes => {
         console.log('Done!');
