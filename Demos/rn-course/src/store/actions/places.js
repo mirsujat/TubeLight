@@ -1,5 +1,5 @@
 import { SET_PLACES, REMOVE_PLACE } from './actionTypes';
-import { uiStartLoading, uiStopLoading } from './index';
+import { uiStartLoading, uiStopLoading, authGetToken } from './index';
 
 export const addPlace = (placeName, location, image) => {
   return dispatch => {
@@ -49,8 +49,16 @@ export const addPlace = (placeName, location, image) => {
 
 export const getPlaces = () => {
   return dispatch => {
-    let url = 'https://awesome-place-1523875087723.firebaseio.com/places.json';
-    fetch(url)
+    dispatch(authGetToken())
+      .then(token => {
+        return fetch(
+          'https://awesome-place-1523875087723.firebaseio.com/places.json?auth=' +
+            token
+        );
+      })
+      .catch(() => {
+        alert('No valid token found!');
+      })
       .then(res => res.json())
       .then(parsedRes => {
         const places = [];
