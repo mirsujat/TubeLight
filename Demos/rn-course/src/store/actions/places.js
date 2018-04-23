@@ -49,7 +49,8 @@ export const addPlace = (placeName, location, image) => {
 
 export const getPlaces = () => {
   return dispatch => {
-    fetch('https://awesome-place-1523875087723.firebaseio.com/places.json')
+    let url = 'https://awesome-place-1523875087723.firebaseio.com/places.json';
+    fetch(url)
       .then(res => res.json())
       .then(parsedRes => {
         const places = [];
