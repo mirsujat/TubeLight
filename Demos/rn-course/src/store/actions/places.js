@@ -4,15 +4,22 @@ import { uiStartLoading, uiStopLoading, authGetToken } from './index';
 export const addPlace = (placeName, location, image) => {
   return dispatch => {
     dispatch(uiStartLoading());
-    fetch(
-      'https://us-central1-awesome-place-1523875087723.cloudfunctions.net/storeImage',
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          image: image.base64
-        })
-      }
-    )
+
+    dispatch(authGetToken())
+      .catch(() => {
+        alert('No valid token found!');
+      })
+      .then(token => {
+        return fetch(
+          'https://us-central1-awesome-place-1523875087723.cloudfunctions.net/storeImage',
+          {
+            method: 'POST',
+            body: JSON.stringify({
+              image: image.base64
+            })
+          }
+        );
+      })
       .catch(err => {
         console.log(err);
         alert('Something went wrong, please try again!');
