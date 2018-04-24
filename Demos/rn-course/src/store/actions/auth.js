@@ -80,7 +80,7 @@ export const authGetToken = () => {
   return (dispatch, getState) => {
     const promise = new Promise((resolve, reject) => {
       const token = getState().auth.token;
-      const expiryDate = getState.auth.expiryDate;
+      const expiryDate = getState().auth.expiryDate;
 
       if (!token || new Date(expiryDate) <= new Date()) {
         let fetchedToken;
