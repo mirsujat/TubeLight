@@ -19,7 +19,7 @@ export const addPlace = (placeName, location, image) => {
               image: image.base64
             }),
             headers: {
-              Authorrization: 'Bearer ' + authToken
+              Authorization: 'Bearer ' + authToken
             }
           }
         );
