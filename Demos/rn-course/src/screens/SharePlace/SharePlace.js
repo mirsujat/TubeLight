@@ -119,6 +119,7 @@ class SharePlaceScreen extends Component {
 
     this.reset();
     this.imagePicker.reset();
+    this.locationPicker.reset();
   };
 
   render() {
@@ -147,7 +148,10 @@ class SharePlaceScreen extends Component {
             onImagePicked={this.imagePickedHandler}
             ref={ref => (this.imagePicker = ref)}
           />
-          <PickLocation onLocationPick={this.locationPickedHandler} />
+          <PickLocation
+            onLocationPick={this.locationPickedHandler}
+            ref={ref => (this.locationPicker = ref)}
+          />
           <PlaceInput
             placeData={this.state.controls.placeName}
             onChangeText={this.placeNameChangedHandler}
