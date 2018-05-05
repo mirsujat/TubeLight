@@ -8,7 +8,9 @@ class App extends Component {
       { name: 'Mir', age: 28 },
       { name: 'Gyle', age: 29 },
       { name: 'Martin', age: 32 }
-    ]
+    ],
+    otherState: 'Some other value',
+    showPersons: false
   };
 
   switchNameHandler = newName => {
@@ -31,6 +33,11 @@ class App extends Component {
     });
   };
 
+  togglePersonHandler = () => {
+   const doesShow = this.state.showPersons;
+   this.setState({ showPersons: !doesShow })
+  }
+
   render() {
     const style = {
       backgroundColor: 'white',
@@ -43,24 +50,28 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi! i am a React App</h1>
-        <button  style={style} onClick={() => this.switchNameHandler('Mir Sujat!!!')}>
-          Switch Name
+        <button  style={style} onClick={this.togglePersonHandler}>
+          Togggle Persons 
         </button>
-        <Person
-          name={this.state.persons[0].name}
-          age={this.state.persons[0].age}
-        />
-        <Person
-          name={this.state.persons[1].name}
-          age={this.state.persons[1].age}
-          click={this.switchNameHandler.bind(this, 'Mir!')}
-          changed={this.nameChangedHandler}>
-          My Hobbies: Travelling
-        </Person>
-        <Person
-          name={this.state.persons[2].name}
-          age={this.state.persons[2].age}
-        />
+        { this.state.showPersons ?
+          <div>
+            <Person
+              name={this.state.persons[0].name}
+              age={this.state.persons[0].age}
+            />
+            <Person
+              name={this.state.persons[1].name}
+              age={this.state.persons[1].age}
+              click={this.switchNameHandler.bind(this, 'Mir!')}
+              changed={this.nameChangedHandler}>
+              My Hobbies: Travelling
+            </Person>
+            <Person
+              name={this.state.persons[2].name}
+              age={this.state.persons[2].age}
+            />
+        </div> : null
+        }
       </div>
     );
   }
