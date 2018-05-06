@@ -13,14 +13,19 @@ class App extends Component {
     showPersons: false
   };
 
-  switchNameHandler = newName => {
-    this.setState({
-      persons: [
-        { name: newName, age: 36 },
-        { name: 'Gyle', age: 29 },
-        { name: 'Martin', age: 24 }
-      ]
-    });
+  // Best practice of update state
+  // You should always update state in immutable fashion
+  // This is a three steps process. mention bellow
+  // -create a copy
+  // -changed that and
+  // -update the state
+
+  deletePersonHandler = personIndex => {
+    //const persons = this.state.persons.slice();
+    const persons = [...this.state.persons];
+    persons.splice(personIndex, 1);
+
+    this.setState({ persons: persons });
   };
 
   nameChangedHandler = event => {
@@ -48,24 +53,19 @@ class App extends Component {
     };
 
     let persons = null;
+
     if (this.state.showPersons) {
       persons = (
         <div>
-          <Person
-            name={this.state.persons[0].name}
-            age={this.state.persons[0].age}
-          />
-          <Person
-            name={this.state.persons[1].name}
-            age={this.state.persons[1].age}
-            click={this.switchNameHandler.bind(this, 'Mir!')}
-            changed={this.nameChangedHandler}>
-            My Hobbies: Travelling
-          </Person>
-          <Person
-            name={this.state.persons[2].name}
-            age={this.state.persons[2].age}
-          />
+          {this.state.persons.map((person, index) => {
+            return (
+              <Person
+                name={person.name}
+                age={person.age}
+                click={() => this.deletePersonHandler(index)}
+              />
+            );
+          })}
         </div>
       );
     }
