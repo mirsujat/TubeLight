@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Style from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
