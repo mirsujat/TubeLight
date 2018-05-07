@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Style from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
@@ -49,7 +48,9 @@ class App extends Component {
 
   togglePersonHandler = () => {
     const doesShow = this.state.showPersons;
-    this.setState({ showPersons: !doesShow });
+    this.setState((prevState, props) => {
+      return { showPersons: !doesShow }; //Better way to setState correctly
+    });
   };
 
   render() {
