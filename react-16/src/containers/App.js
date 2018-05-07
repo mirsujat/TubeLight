@@ -49,7 +49,7 @@ class App extends Component {
   togglePersonHandler = () => {
     const doesShow = this.state.showPersons;
     this.setState((prevState, props) => {
-      return { showPersons: !doesShow }; //Better way to setState correctly
+      return { showPersons: !doesShow }; //Better way to setState correctly if new state depends on old state
     });
   };
 
