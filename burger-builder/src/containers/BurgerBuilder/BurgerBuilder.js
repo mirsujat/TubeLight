@@ -57,12 +57,20 @@ class BurgerBuilder extends Component {
 	};
 
 	render() {
+		const disabledInfo = { ...this.state.ingredients };
+		for (let key in disabledInfo) {
+			disabledInfo[key] = disabledInfo[key] <= 0;
+		}
+
+		// Now the initial state Obj should look like
+		// { salad: false, cheese: false, meat: false, bacon: false }
 		return (
 			<Wrapper>
 				<Burger ingredients={this.state.ingredients} />
 				<BuildControls
 					addIngredient={this.addIngredientHandler}
 					removeIngredient={this.removeIngredientHandler}
+					disabled={disabledInfo}
 				/>
 			</Wrapper>
 		);
