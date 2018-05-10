@@ -85,6 +85,7 @@ class BurgerBuilder extends Component {
 		return (
 			<Wrapper>
 				<Burger ingredients={this.state.ingredients} />
+
 				<BuildControls
 					addIngredient={this.addIngredientHandler}
 					removeIngredient={this.removeIngredientHandler}
