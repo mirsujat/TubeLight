@@ -11,15 +11,18 @@
 
 // simple array
 var arr = ['a', 'b', 'c'];
-console.log(Object.keys(arr)); // console: ['0', '1', '2']
+console.log(Object.keys(arr));
+// console: ['0', '1', '2'] returns an array of a given object's property names,
 
 // array like object
 var obj = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.keys(obj)); // console: ['0', '1', '2']
+console.log(Object.keys(obj));
+// console: ['0', '1', '2'] returns an array of a given object's property names,
 
 // array like object with random key ordering
 var anObj = { 100: 'a', 2: 'b', 7: 'c' };
-console.log(Object.keys(anObj)); // console: ['2', '7', '100']
+console.log(Object.keys(anObj));
+// console: ['2', '7', '100'] returns an array of a given object's property names,
 
 // getFoo is a property which isn't enumerable
 var myObj = Object.create(
@@ -33,4 +36,5 @@ var myObj = Object.create(
 	}
 );
 myObj.foo = 1;
-console.log(Object.keys(myObj)); // console: ['foo']
+console.log(Object.keys(myObj));
+// console: ['foo']
