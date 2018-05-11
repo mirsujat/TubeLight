@@ -1,17 +1,22 @@
 import React from 'react';
 
 import Style from './Modal.css';
+import Wrapper from '../../../hoc/Wrapper';
+import Backdrop from '../Backdrop/Backdrop';
 
 const modal = props => (
-	<div
-		className={Style.Modal}
-		style={{
-			transform: props.show ? 'transformY(0)' : 'transformY(-100vh)',
-			opacity: props.show ? '1' : '0'
-		}}
-	>
-		{props.children}
-	</div>
+	<Wrapper>
+		<Backdrop show={props.show} clicked={props.modalClosed} />
+		<div
+			className={Style.Modal}
+			style={{
+				transform: props.show ? 'transformY(0)' : 'transformY(-100vh)',
+				opacity: props.show ? '1' : '0'
+			}}
+		>
+			{props.children}
+		</div>
+	</Wrapper>
 );
 
 export default modal;
