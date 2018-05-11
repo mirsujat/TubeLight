@@ -13,7 +13,6 @@ const buildControl = props => (
 		>
 			Less
 		</button>
-
 		<button className={Style.More} onClick={props.add}>
 			More
 		</button>
