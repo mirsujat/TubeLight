@@ -1,5 +1,13 @@
 import React from 'react';
 
-const toolbar = props => <div>todo</div>;
+import Style from './Toolbar.css';
+
+const toolbar = props => (
+	<header className={Style.Toolbar}>
+		<div>MENU</div>
+		<div>LOGO</div>
+		<nav>Nav Links ... </nav>
+	</header>
+);
 
 export default toolbar;
