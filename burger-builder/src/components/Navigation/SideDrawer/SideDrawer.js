@@ -7,10 +7,16 @@ import Wrapper from '../../../hoc/Wrapper';
 import Style from './SideDrawer.css';
 
 const sideDrawer = props => {
+	let attachedStyle = [Style.SideDrawer, Style.Close];
+
+	if (props.open) {
+		attachedStyle = [Style.SideDrawer, Style.Open];
+	}
+
 	return (
 		<Wrapper>
-			<Backdrop show />
-			<div className={Style.SideDrawer}>
+			<Backdrop show={props.open} clicked={props.closed} />
+			<div className={attachedStyle.join(' ')}>
 				<div className={Style.Logo}>
 					<Logo />
 				</div>
