@@ -22,17 +22,24 @@ class BurgerBuilder extends Component {
 	//    this.state = { ... }
 	// }
 	state = {
-		ingredients: {
-			salad: 0,
-			bacon: 0,
-			cheese: 0,
-			meat: 0
-		},
+		ingredients: null,
 		totalPrice: 4,
 		purchaseable: false,
 		purchasing: false,
-		loading: false
+		loading: false,
+		error: false
 	};
+
+	componentDidMount() {
+		axios
+			.get('https://build-burger-c3801.firebaseio.com/ingredients.json')
+			.then(response => {
+				this.setState({ ingredients: response.data });
+			})
+			.catch(error => {
+				this.setState({ error: true });
+			});
+	}
 
 	updatePurchaseState(ingredients) {
 		const sum = Object.keys(ingredients)
@@ -122,33 +129,47 @@ class BurgerBuilder extends Component {
 		for (let key in disabledInfo) {
 			disabledInfo[key] = disabledInfo[key] <= 0;
 		}
+		// Now the initial state Obj should look like
+		// { salad: false, cheese: false, meat: false, bacon: false }
 
-		let orderSummary = (
-			<OrderSummary
-				ingredients={this.state.ingredients}
-				price={this.state.totalPrice}
-				purchaseCancel={this.purchaseCancelHandler}
-				purchaseContinue={this.purchaseContinueHandler}
-			/>
+		let orderSummary = null;
+
+		let burger = this.state.error ? (
+			<p>Ingredients can't be loaded!!</p>
+		) : (
+			<Spinner />
 		);
 
+		if (this.state.ingredients) {
+			burger = (
+				<Wrapper>
+					<Burger ingredients={this.state.ingredients} />
+					<BuildControls
+						addIngredient={this.addIngredientHandler}
+						removeIngredient={this.removeIngredientHandler}
+						disabled={disabledInfo}
+						price={this.state.totalPrice}
+						purchaseable={this.state.purchaseable}
+						order={this.purchaseHandler}
+					/>
+				</Wrapper>
+			);
+			orderSummary = (
+				<OrderSummary
+					ingredients={this.state.ingredients}
+					price={this.state.totalPrice}
+					purchaseCancel={this.purchaseCancelHandler}
+					purchaseContinue={this.purchaseContinueHandler}
+				/>
+			);
+		}
 		if (this.state.loading) {
 			orderSummary = <Spinner />;
 		}
 
-		// Now the initial state Obj should look like
-		// { salad: false, cheese: false, meat: false, bacon: false }
 		return (
 			<Wrapper>
-				<Burger ingredients={this.state.ingredients} />
-				<BuildControls
-					addIngredient={this.addIngredientHandler}
-					removeIngredient={this.removeIngredientHandler}
-					disabled={disabledInfo}
-					price={this.state.totalPrice}
-					purchaseable={this.state.purchaseable}
-					order={this.purchaseHandler}
-				/>
+				{burger}
 				<Modal
 					show={this.state.purchasing}
 					modalClosed={this.purchaseCancelHandler}>
