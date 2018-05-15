@@ -51,11 +51,7 @@ class Posts extends Component {
 			});
 		}
 
-		return (
-			<div>
-				<section className="Posts">{posts}</section>
-			</div>
-		);
+		return <section className="Posts">{posts}</section>;
 	}
 }
 
