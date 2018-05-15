@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 
 // Link component helps to prevent page reloading
+// When reload occured React App loses the state
 
 import './Blog.css';
 import Posts from './Posts/Posts';

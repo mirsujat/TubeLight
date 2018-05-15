@@ -10,6 +10,15 @@ class NewPost extends Component {
 		author: 'Max'
 	};
 
+	componentDidMount() {
+		// Uncomment the console.log statement and inspect the props object
+		// i.e: history, location and match
+		// history object gives us some methods to work with i.e; push
+		// loaction object gives us pathname, search, hash
+		// match gives us params {}, path and url
+		// console.log(this.props);
+	}
+
 	postDataHandler = () => {
 		const data = {
 			title: this.state.title,
