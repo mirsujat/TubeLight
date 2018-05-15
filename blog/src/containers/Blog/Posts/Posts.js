@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import axios from '../../../axios';
 
 import Post from '../../../components/Post/Post';
+import FullPost from '../FullPost/FullPost';
+
 import './Posts.css';
 
 class Posts extends Component {
@@ -18,7 +20,6 @@ class Posts extends Component {
 		// match gives us params {}, path and url
 		// console.log(this.props);
 		axios
-
 			.get('/posts')
 			.then(response => {
 				const posts = response.data.slice(0, 4);
@@ -39,9 +40,9 @@ class Posts extends Component {
 	// Programatic navigation using history Object
 	// This is important when we wnat to navigate after a given operation finished
 	postSelectedHandler = id => {
-		this.props.history.push({ pathname: '/' + id });
+		this.props.history.push({ pathname: '/posts/' + id });
 		// Or
-		//this.props.history.push('/' + id );
+		//this.props.history.push('/posts/' + id );
 	};
 
 	// This is usefull When we want to navigate through Link
@@ -58,7 +59,7 @@ class Posts extends Component {
 		if (!this.state.error) {
 			posts = this.state.posts.map(post => {
 				return (
-					//<Link to={'/' + post.id} key={post.id}>
+					//<Link to={'/posts/' + post.id} key={post.id}>
 					<Post
 						key={post.id}
 						title={post.title}
@@ -70,7 +71,16 @@ class Posts extends Component {
 			});
 		}
 
-		return <section className="Posts">{posts}</section>;
+		return (
+			<div>
+				<section className="Posts">{posts}</section>
+				<Route
+					path={this.props.match.url + '/:id'}
+					exact
+					component={FullPost}
+				/>
+			</div>
+		);
 	}
 }
 
