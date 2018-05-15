@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
 // Link component helps to prevent page reloading
 // When reload occured React App loses the state
@@ -16,17 +16,19 @@ class Blog extends Component {
 					<nav>
 						<ul>
 							<li>
-								<Link to="/">Home</Link>
+								<NavLink to="/" exact>
+									Home
+								</NavLink>
 							</li>
 							<li>
-								<Link
+								<NavLink
 									to={{
 										pathname: '/new-post',
 										hash: '#submit',
 										search: '?quick-submit=true'
 									}}>
 									New Post
-								</Link>
+								</NavLink>
 							</li>
 						</ul>
 					</nav>
