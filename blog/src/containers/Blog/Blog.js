@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 
+// Link component helps to prevent page reloading
+
 import './Blog.css';
 import Posts from './Posts/Posts';
 import NewPost from './NewPost/NewPost';
