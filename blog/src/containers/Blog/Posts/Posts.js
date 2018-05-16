@@ -14,7 +14,7 @@ class Posts extends Component {
 	componentDidMount() {
 		// Uncomment the console.log statement and inspect the props object
 		// i.e: history, location and match
-		// history object gives us some methods to work with i.e; push
+		// history object gives us some methods to work with i.e; push, replace(for Ridirect)
 		// loaction object gives us pathname, search, hash
 		// match gives us params {}, path and url
 		// console.log(this.props);

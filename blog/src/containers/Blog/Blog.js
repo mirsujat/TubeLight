@@ -17,6 +17,7 @@ class Blog extends Component {
 	state = {
 		auth: true
 	};
+
 	render() {
 		return (
 			<div className="Blog">
