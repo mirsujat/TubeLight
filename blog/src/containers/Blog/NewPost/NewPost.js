@@ -37,11 +37,10 @@ class NewPost extends Component {
 	};
 
 	render() {
-		{
-			/* Conditional Redirect
+		/* Conditional Redirect
 			* Back button will not work in this type of Redirect
 			*/
-		}
+
 		let redirect = null;
 		if (this.state.submitted) {
 			redirect = <Redirect to="/posts" />;
