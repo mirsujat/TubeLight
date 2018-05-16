@@ -29,13 +29,18 @@ class NewPost extends Component {
 		};
 		axios.post('/posts/', data).then(response => {
 			console.log(response);
-			this.setState({ submitted: true });
+			this.props.history.push('/posts'); // Back button will work in this type of Redirect
+			//or
+			//this.props.history.replace('/posts'); //Back button will not work in this type of Redirect
+			//this.setState({ submitted: true });
 		});
 	};
 
 	render() {
 		{
-			/* Conditional Redirect*/
+			/* Conditional Redirect
+			* Back button will not work in this type of Redirect
+			*/
 		}
 		let redirect = null;
 		if (this.state.submitted) {
