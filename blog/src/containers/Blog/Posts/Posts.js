@@ -4,7 +4,6 @@ import axios from '../../../axios';
 
 import Post from '../../../components/Post/Post';
 import FullPost from '../FullPost/FullPost';
-
 import './Posts.css';
 
 class Posts extends Component {
@@ -38,7 +37,7 @@ class Posts extends Component {
 	}
 
 	// Programatic navigation using history Object
-	// This is important when we wnat to navigate after a given operation finished
+	// This is important when we want to navigate after a given operation finished
 	postSelectedHandler = id => {
 		this.props.history.push({ pathname: '/posts/' + id });
 		// Or
