@@ -13,6 +13,9 @@ class Checkout extends Component {
 	};
 
 	componentDidMount() {
+		// The URLSearchParams interface defines utility methods to work with the query string of a URL.
+		// An object implementing URLSearchParams can directly be used in a for...of structure, instead of entries(): for (var p of mySearchParams) is equivalent to for (var p of mySearchParams.entries())
+
 		const query = new URLSearchParams(this.props.location.search);
 		const ingredients = {};
 		for (let param of query.entries()) {
