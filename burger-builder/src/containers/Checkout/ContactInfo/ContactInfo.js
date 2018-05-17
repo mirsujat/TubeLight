@@ -18,7 +18,7 @@ class ContactInfo extends Component {
 
 	submitOrderHandler = event => {
 		event.preventDefault();
-		console.log(this.props.ingredients);
+		//console.log(this.props.ingredients);
 		this.setState({ loading: true });
 		const order = {
 			ingredients: this.props.ingredients,
@@ -81,6 +81,7 @@ class ContactInfo extends Component {
 		if (this.state.loading) {
 			form = <Spinner />;
 		}
+
 		return (
 			<div className={Style.ContactInfo}>
 				<h4>Enter Your Contact Information.</h4>
