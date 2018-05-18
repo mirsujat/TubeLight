@@ -65,12 +65,10 @@ class ContactInfo extends Component {
 
 	submitOrderHandler = event => {
 		event.preventDefault();
-		//console.log(this.props.ingredients);
 		this.setState({ loading: true });
-
 		const formData = {};
 		for (let key in this.state.orderForm) {
-			// key = name, street, zipCode, email and so on..
+			// key = name, street, zipCode, country, email, deliveryMethod
 			formData[key] = this.state.orderForm[key].value;
 		}
 		const order = {
@@ -91,9 +89,11 @@ class ContactInfo extends Component {
 	};
 
 	inputChangedHandler = (event, inputIdentifier) => {
+		// This will copy; name, street, zipCode, country, email and deliveryMethod
 		const updatedOrderForm = {
 			...this.state.orderForm
 		};
+		// This will copy the nested object of orderForm
 		const updatedFormElement = {
 			...updatedOrderForm[inputIdentifier]
 		};
@@ -106,7 +106,8 @@ class ContactInfo extends Component {
 	render() {
 		const formElementsArray = [];
 		for (let key in this.state.orderForm) {
-			// key is name, street, zipCode, email and deliveryMethod
+			// key is name, street, zipCode, country, email,  and deliveryMethod
+			// formElementsArray = [ {id: name, config: {elementType: .., elementConfig: ...}} and so on..]
 			formElementsArray.push({
 				id: key,
 				config: this.state.orderForm[key]
