@@ -29,12 +29,12 @@ const input = props => {
 
 		case 'select':
 			inputElement = (
-				<select className={Style.InputElement} value={props.value}>
+				<select
+					className={Style.InputElement}
+					value={props.value}
+					onChange={props.changed}>
 					{props.elementConfig.options.map(option => (
-						<option
-							key={option.value}
-							value={option.value}
-							onChange={props.changed}>
+						<option key={option.value} value={option.value}>
 							{option.displayValue}
 						</option>
 					))}
