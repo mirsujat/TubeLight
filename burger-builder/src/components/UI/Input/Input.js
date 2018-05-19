@@ -4,12 +4,17 @@ import Style from './Input.css';
 
 const input = props => {
 	let inputElement = null;
+	const inputStyle = [Style.InputElement];
+
+	if (props.invalid && props.shouldValidate) {
+		inputStyle.push(Style.Invalid);
+	}
 
 	switch (props.elementType) {
 		case 'input':
 			inputElement = (
 				<input
-					className={Style.InputElement}
+					className={inputStyle.join(' ')}
 					{...props.elementConfig}
 					value={props.value}
 					onChange={props.changed}
