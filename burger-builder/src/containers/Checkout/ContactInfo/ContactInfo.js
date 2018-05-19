@@ -19,7 +19,8 @@ class ContactInfo extends Component {
 				validation: {
 					required: true
 				},
-				valid: false
+				valid: false,
+				touched: false
 			},
 			street: {
 				elementType: 'input',
@@ -31,7 +32,8 @@ class ContactInfo extends Component {
 				validation: {
 					required: true
 				},
-				valid: false
+				valid: false,
+				touched: false
 			},
 			zipCode: {
 				elementType: 'input',
@@ -45,7 +47,8 @@ class ContactInfo extends Component {
 					minLength: 5,
 					maxLength: 5
 				},
-				valid: false
+				valid: false,
+				touched: false
 			},
 			country: {
 				elementType: 'input',
@@ -57,7 +60,8 @@ class ContactInfo extends Component {
 				validation: {
 					required: true
 				},
-				valid: false
+				valid: false,
+				touched: false
 			},
 			email: {
 				elementType: 'input',
@@ -69,7 +73,8 @@ class ContactInfo extends Component {
 				validation: {
 					required: true
 				},
-				valid: false
+				valid: false,
+				touched: false
 			},
 			deliveryMethod: {
 				elementType: 'select',
@@ -141,6 +146,7 @@ class ContactInfo extends Component {
 			updatedFormElement.value,
 			updatedFormElement.validation
 		);
+		updatedFormElement.touched = true;
 		updatedOrderForm[inputIdentifier] = updatedFormElement;
 
 		this.setState({ orderForm: updatedOrderForm });
@@ -167,6 +173,7 @@ class ContactInfo extends Component {
 						value={formElement.config.value}
 						invalid={!formElement.config.valid}
 						shouldValidate={formElement.config.validation}
+						touched={formElement.config.touched}
 						changed={event => this.inputChangedHandler(event, formElement.id)}
 					/>
 				))}
