@@ -50,22 +50,28 @@ class BurgerBuilder extends Component {
 		this.setState({ purchasing: false });
 	};
 
+	// With redux. Now we can get the ingredients through redux store
 	purchaseContinueHandler = () => {
-		const queryParams = [];
-		for (let i in this.state.ingredients) {
-			queryParams.push(
-				encodeURIComponent(i) +
-					'=' +
-					encodeURIComponent(this.state.ingredients[i])
-			);
-		}
-		queryParams.push('price=' + this.state.totalPrice);
-		const queryString = queryParams.join('&');
-		this.props.history.push({
-			pathname: '/checkout',
-			search: '?' + queryString
-		});
+		this.props.history.push('/checkout');
 	};
+
+	// Without Redux. we can get the ingredients through local state
+	// purchaseContinueHandler = () => {
+	// 	const queryParams = [];
+	// 	for (let i in this.state.ingredients) {
+	// 		queryParams.push(
+	// 			encodeURIComponent(i) +
+	// 				'=' +
+	// 				encodeURIComponent(this.state.ingredients[i])
+	// 		);
+	// 	}
+	// 	queryParams.push('price=' + this.state.totalPrice);
+	// 	const queryString = queryParams.join('&');
+	// 	this.props.history.push({
+	// 		pathname: '/checkout',
+	// 		search: '?' + queryString
+	// 	});
+	// };
 
 	render() {
 		const disabledInfo = { ...this.props.ings };
