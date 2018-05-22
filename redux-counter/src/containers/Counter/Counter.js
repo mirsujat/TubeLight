@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {
+	increment,
+	decrement,
+	add,
+	subtract,
+	storeResult,
+	deleteResult
+} from '../../store/actions/actions';
 
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
-import * as actionTypes from '../../store/actions';
 
 class Counter extends Component {
 	render() {
@@ -41,14 +48,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		increment: () => dispatch({ type: actionTypes.INCREMENT }),
-		decrement: () => dispatch({ type: actionTypes.DECREMENT }),
-		add: () => dispatch({ type: actionTypes.ADD, val: 10 }),
-		subtract: () => dispatch({ type: actionTypes.SUBTRACT, val: 15 }),
-		storeResult: result =>
-			dispatch({ type: actionTypes.STORE_RESULT, result: result }),
-		deleteResult: id =>
-			dispatch({ type: actionTypes.DELETE_RESULT, resultElementId: id })
+		increment: () => dispatch(increment()),
+		decrement: () => dispatch(decrement()),
+		add: () => dispatch(add(10)),
+		subtract: () => dispatch(subtract(15)),
+		storeResult: result => dispatch(storeResult(result)),
+		deleteResult: id => dispatch(deleteResult(id))
 	};
 };
 
