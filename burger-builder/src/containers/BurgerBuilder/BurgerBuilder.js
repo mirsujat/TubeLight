@@ -44,6 +44,7 @@ class BurgerBuilder extends Component {
 
 	// With redux. Now we can get the ingredients through redux store
 	purchaseContinueHandler = () => {
+		this.props.initPurchase();
 		this.props.history.push('/checkout');
 	};
 
@@ -130,7 +131,8 @@ const mapDispatchToProps = dispatch => {
 	return {
 		onIngredientAdded: ingName => dispatch(action.addIngredient(ingName)),
 		onIngredientRemoved: ingName => dispatch(action.removeIngredient(ingName)),
-		initIngredients: () => dispatch(action.initIngredients())
+		initIngredients: () => dispatch(action.initIngredients()),
+		initPurchase: () => dispatch(action.purchaseInit())
 	};
 };
 
