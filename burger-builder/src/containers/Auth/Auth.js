@@ -77,7 +77,7 @@ class Auth extends Component {
 		this.setState({ controls: updatedControls });
 	};
 
-	// Form submit hadler
+	// Form submit handler
 	submitHandler = event => {
 		event.preventDefault();
 		const email = this.state.controls.email.value;
