@@ -7,6 +7,23 @@ const initialState = {
 	purchased: false
 };
 
+const purchaseSuccess = (state, action) => {
+	const newOrder = updateObject(action.orderData, { id: action.orderId });
+	return updateObject(state, {
+		loading: false,
+		purchased: true,
+		orders: state.orders.concat(newOrder)
+	});
+};
+
+const fetchOrderSuccess = (state, action) => {
+	return updateObject(state, {
+		orders: action.orders,
+		loading: false
+	});
+};
+
+// Order Reducer
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actionTypes.PURCHASE_INIT:
@@ -16,12 +33,7 @@ const reducer = (state = initialState, action) => {
 			return updateObject(state, { loading: true });
 
 		case actionTypes.PURCHASE_SUCCESS:
-			const newOrder = updateObject(action.orderData, { id: action.orderId });
-			return updateObject(state, {
-				loading: false,
-				purchased: true,
-				orders: state.orders.concat(newOrder)
-			});
+			return purchaseSuccess(state, action);
 
 		case actionTypes.PURCHASE_FAILED:
 			return updateObject(state, { loading: false });
@@ -30,10 +42,7 @@ const reducer = (state = initialState, action) => {
 			return updateObject(state, { loading: true });
 
 		case actionTypes.FETCH_ORDERS_SUCCESS:
-			return updateObject(state, {
-				orders: action.orders,
-				loading: false
-			});
+			return fetchOrderSuccess(state, action);
 
 		case actionTypes.FETCH_ORDERS_FAILED:
 			return updateObject(state, { loading: false });

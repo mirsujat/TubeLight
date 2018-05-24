@@ -14,21 +14,31 @@ const INGREDIENT_PRICES = {
 	bacon: 0.7
 };
 
+const addIngredient = (state, action) => {
+	const updatedIngredient = {
+		[action.ingredientName]: state.ingredients[action.ingredientName] + 1
+	};
+	const updatedIngredients = updateObject(state.ingredients, updatedIngredient);
+	const updatedState = {
+		ingredients: updatedIngredients,
+		totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName]
+	};
+	return updateObject(state, updatedState);
+};
+
+const setIngredient = (state, action) => {
+	return updateObject(state, {
+		ingredients: action.ingredients,
+		totalPrice: 4,
+		error: false
+	});
+};
+
+// Burger Builder Reducer
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actionTypes.ADD_INGREDIENT:
-			const updatedIngredient = {
-				[action.ingredientName]: state.ingredients[action.ingredientName] + 1
-			};
-			const updatedIngredients = updateObject(
-				state.ingredients,
-				updatedIngredient
-			);
-			const updatedState = {
-				ingredients: updatedIngredients,
-				totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName]
-			};
-			return updateObject(state, updatedState);
+			return addIngredient(state, action);
 
 		case actionTypes.REMOVE_INGREDIENT:
 			return {
@@ -41,11 +51,7 @@ const reducer = (state = initialState, action) => {
 			};
 
 		case actionTypes.SET_INGREDIENTS:
-			return updateObject(state, {
-				ingredients: action.ingredients,
-				totalPrice: 4,
-				error: false
-			});
+			return setIngredient(state, action);
 
 		case actionTypes.FETCH_INGREDIENTS_FAILED:
 			return updateObject(state, { error: true });
