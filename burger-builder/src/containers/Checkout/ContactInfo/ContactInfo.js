@@ -109,7 +109,7 @@ class ContactInfo extends Component {
 			orderData: formData
 		};
 
-		this.props.onOrderSubmit(order);
+		this.props.onOrderSubmit(this.props.token, order);
 	};
 
 	checkValidity(value, rules) {
@@ -205,13 +205,15 @@ const mapStateToProps = state => {
 	return {
 		ings: state.burgerBuilder.ingredients,
 		price: state.burgerBuilder.totalPrice,
-		loading: state.order.loading
+		loading: state.order.loading,
+		token: state.auth.token
 	};
 };
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onOrderSubmit: orderData => dispatch(action.purchaseBurger(orderData))
+		onOrderSubmit: (token, orderData) =>
+			dispatch(action.purchaseBurger(token, orderData))
 	};
 };
 
