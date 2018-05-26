@@ -12,7 +12,7 @@ import axios from '../../axios-orders';
 import * as action from '../../store/actions/index';
 
 // to test this container add export infront of class
-export class BurgerBuilder extends Component {
+class BurgerBuilder extends Component {
 	state = {
 		purchasing: false
 	};
