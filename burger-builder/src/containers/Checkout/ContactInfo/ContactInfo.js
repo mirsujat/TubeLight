@@ -8,6 +8,7 @@ import axios from '../../../axios-orders';
 import Input from '../../../components/UI/Input/Input';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as action from '../../../store/actions/index';
+import { updateObject, checkValidity } from '../../../utility/utility';
 
 class ContactInfo extends Component {
 	state = {
@@ -134,22 +135,23 @@ class ContactInfo extends Component {
 	}
 
 	inputChangedHandler = (event, inputIdentifier) => {
-		// This will clone; name, street, zipCode, country, email and deliveryMethod
-		const updatedOrderForm = {
-			...this.state.orderForm
-		};
 		// This will deep clone orderForm; elementType, elementConfig and  value
 		// Here we just want the value property to set up the user input
-		const updatedFormElement = {
-			...updatedOrderForm[inputIdentifier]
-		};
-		updatedFormElement.value = event.target.value;
-		updatedFormElement.valid = this.checkValidity(
-			updatedFormElement.value,
-			updatedFormElement.validation
+		const updatedFormElement = updateObject(
+			this.state.orderForm[inputIdentifier],
+			{
+				value: event.target.value,
+				valid: checkValidity(
+					event.target.value,
+					this.state.orderForm[inputIdentifier].validation
+				),
+				touched: true
+			}
 		);
-		updatedFormElement.touched = true;
-		updatedOrderForm[inputIdentifier] = updatedFormElement;
+		// This will clone; name, street, zipCode, country, email and deliveryMethod
+		const updatedOrderForm = updateObject(this.state.orderForm, {
+			[inputIdentifier]: updatedFormElement
+		});
 
 		let formIsValid = true;
 		for (let inputIdentifier in updatedOrderForm) {
