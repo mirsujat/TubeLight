@@ -1,32 +1,18 @@
-import React, { Component } from "react";
-
-import "./App.css";
-import Modal from "./components/Modal/Modal";
-import Backdrop from "./components/Backdrop/Backdrop";
-import List from "./components/List/List";
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
-  state = {
-    modalIsOpen: false
-  }
-
-  showModal = () => {
-    this.setState({modalIsOpen: true});
-  }
-
-  closeModal = () => {
-    this.setState({modalIsOpen: false});
-  }
-
   render() {
     return (
       <div className="App">
-        <h1>React Animations</h1>
-        <Modal show={this.state.modalIsOpen} closed={this.closeModal}/>
-        <Backdrop show={this.state.modalIsOpen} />
-        <button className="Button" onClick={this.showModal}>Open Modal</button>
-        <h3>Animating Lists</h3>
-        <List />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
       </div>
     );
   }
