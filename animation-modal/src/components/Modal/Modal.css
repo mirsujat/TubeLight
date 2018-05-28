@@ -1,21 +1,24 @@
 .Modal {
-    position: fixed;
-    z-index: 200;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 2px #ccc;
-    background-color: white;
-    padding: 10px;
-    text-align: center;
-    box-sizing: border-box;
-    top: 30%;
-    left: 25%;
-    width: 50%;
+	position: fixed;
+	z-index: 200;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 2px #ccc;
+	background-color: white;
+	padding: 10px;
+	text-align: center;
+	box-sizing: border-box;
+	top: 30%;
+	left: 25%;
+	width: 50%;
+	transition: all 0.4s ease-out;
 }
 
 .ModalOpen {
-    display: block;
+	opacity: 1;
+	transition: translateY(0);
 }
 
 .ModalClosed {
-    display: none;
+	opacity: 0;
+	transition: translateY(-100);
 }
