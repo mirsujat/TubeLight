@@ -12,6 +12,9 @@ export {
 	purchaseInit,
 	purchaseSuccess,
 	purchaseFailed,
+	fetchOrdersStart,
+	fetchOrdersSuccess,
+	fetchOrdersFailed,
 	fetchOrders
 } from './order';
 
