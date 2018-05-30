@@ -21,6 +21,24 @@
 	animation: closeModal 1s ease-out forwards;
 }
 
+/* initialize animation  */
+.fade-slide-enter {
+}
+
+/* actual animation */
+.fade-slide-enter-active {
+	animation: openModal 0.4s ease-out forwards;
+}
+
+/* initialize animation  */
+.fade-slide-exit {
+}
+
+/* actual animation */
+.fade-slide-exit-active {
+	animation: closeModal 1s ease-out forwards;
+}
+
 @keyframes openModal {
 	0% {
 		opacity: 0;
