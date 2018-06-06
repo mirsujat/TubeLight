@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col, Card, CardTitle } from 'react-materialize';
 
-class Cards extends Component {
-	render() {
-		return (
-			<Row>
-				<Col m={6} s={12}>
-					<Card
-						header={<CardTitle reveal image="img/office.jpg" waves="light" />}
-						title="Card Title"
-						reveal={
-							<p>
-								Here is some more information about this product that is only
-								revealed once clicked on.
-							</p>
-						}>
+const card = () => {
+	return (
+		<Row>
+			<Col m={6} s={12}>
+				<Card
+					header={<CardTitle reveal image="img/office.jpg" waves="light" />}
+					title="Card Title"
+					reveal={
 						<p>
-							<a href="">This is a link</a>
+							Here is some more information about this product that is only
+							revealed once clicked on.
 						</p>
-					</Card>
-				</Col>
-			</Row>
-		);
-	}
-}
+					}>
+					<p>
+						<a href="">This is a link</a>
+					</p>
+				</Card>
+			</Col>
+		</Row>
+	);
+};
 
-export default Cards;
+export default card;
