@@ -8,6 +8,7 @@ import './App.css';
 import Navigation from './components/NavBar/NavBar';
 import Card from './components/Card/Card';
 import Slider from './components/Slider/Slider';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 	render() {
@@ -59,6 +60,10 @@ class App extends Component {
 						<Slider className="Trend" />
 						<Slider className="Trend" />
 					</Col>
+				</Row>
+
+				<Row>
+					<Footer />
 				</Row>
 			</div>
 		);

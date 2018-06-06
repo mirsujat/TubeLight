@@ -4,12 +4,20 @@
 	margin-top: 20px;
 }
 
+.App {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 .App-title {
 	font-size: 1.5em;
 }
 
 .App-intro {
 	font-size: large;
+}
+
+.Footer {
+	margin-bottom: 0px;
 }
 
 @keyframes App-logo-spin {
