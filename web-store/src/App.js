@@ -13,21 +13,26 @@ class App extends Component {
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
 				<Row>
-					<Col m={3}>
-						{' '}
-						<Card />
+					<Col m={9}>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
 					</Col>
 					<Col m={3}>
-						{' '}
-						<Card />
-					</Col>
-					<Col m={3}>
-						{' '}
-						<Card />
-					</Col>
-					<Col m={3}>
-						{' '}
-						<Card />
+						<h1>Slider</h1>
 					</Col>
 				</Row>
 			</div>
