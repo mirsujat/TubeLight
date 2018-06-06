@@ -3,6 +3,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Row, Col } from 'react-materialize';
 
+import './App.css';
+
 import Navigation from './components/NavBar/NavBar';
 import Card from './components/Card/Card';
 import Slider from './components/Slider/Slider';
@@ -11,35 +13,30 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<Navigation />
-				<header className="App-header">
-					<h1 className="App-title">Welcome to React</h1>
-				</header>
 				<Row>
-					<Col m={9}>
-						<Col m={3}>
-							{' '}
-							<Card />
-						</Col>
-						<Col m={3}>
-							{' '}
-							<Card />
-						</Col>
-						<Col m={3}>
-							{' '}
-							<Card />
-						</Col>
-						<Col m={3}>
-							{' '}
-							<Card />
-						</Col>
-					</Col>
-					<Col m={3}>
-						<Slider />
-					</Col>
+					<Navigation />
 				</Row>
 				<Row>
 					<Col m={9}>
+						<h5>Sports Shoes</h5>
+
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+
 						<Col m={3}>
 							{' '}
 							<Card />
@@ -58,7 +55,9 @@ class App extends Component {
 						</Col>
 					</Col>
 					<Col m={3}>
-						<Slider />
+						<h5>Trending Fashion</h5>
+						<Slider className="Trend" />
+						<Slider className="Trend" />
 					</Col>
 				</Row>
 			</div>

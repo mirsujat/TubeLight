@@ -12,7 +12,7 @@ class SimpleSlider extends React.Component {
 			slidesToScroll: 1
 		};
 		return (
-			<Slider {...settings}>
+			<Slider {...settings} className="Trend">
 				<div>
 					<img
 						src="./assets/images/slides/Cheap-lightweight-running-yellow-high-cut-basketball.png_220x220.png"
