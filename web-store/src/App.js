@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Row, Col } from 'react-materialize';
 
 import Card from './components/Card/Card';
+import Slider from './components/Slider/Slider';
 
 class App extends Component {
 	render() {
@@ -32,7 +33,30 @@ class App extends Component {
 						</Col>
 					</Col>
 					<Col m={3}>
-						<h1>Slider</h1>
+						<Slider />
+					</Col>
+				</Row>
+				<Row>
+					<Col m={9}>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+						<Col m={3}>
+							{' '}
+							<Card />
+						</Col>
+					</Col>
+					<Col m={3}>
+						<Slider />
 					</Col>
 				</Row>
 			</div>
