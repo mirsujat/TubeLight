@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Row, Col } from 'react-materialize';
 
+import Navigation from './components/NavBar/NavBar';
 import Card from './components/Card/Card';
 import Slider from './components/Slider/Slider';
 
@@ -10,6 +11,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
+				<Navigation />
 				<header className="App-header">
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
