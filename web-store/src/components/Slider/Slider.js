@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 class SimpleSlider extends React.Component {
 	render() {
 		var settings = {
-			dots: true,
+			dots: false,
 			arrows: false,
 			infinite: true,
 			speed: 500,

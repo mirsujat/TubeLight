@@ -16,27 +16,45 @@ class App extends Component {
 		return (
 			<div>
 				<Navigation />
-
-				<div className="Wrapper">
-					<div className="Main">
-						<div className="Product">
+				<h4>This is Title</h4>
+				<Row>
+					<Col m={10} className="Wrapper">
+						<Col m={3}>
 							<Card />
-						</div>
-						<div className="Product">
+						</Col>
+						<Col m={3}>
 							<Card />
-						</div>
-						<div className="Product">
+						</Col>
+						<Col m={3}>
 							<Card />
-						</div>
-						<div className="Product">
+						</Col>
+						<Col m={3}>
 							<Card />
-						</div>
-					</div>
-					<div className="SlideRight">
-						<Card />
-					</div>
-				</div>
-
+						</Col>
+						<Col m={3}>
+							<Card />
+						</Col>
+						<Col m={3}>
+							<Card />
+						</Col>
+						<Col m={3}>
+							<Card />
+						</Col>
+						<Col m={3}>
+							<Card />
+						</Col>
+					</Col>
+					<Col m={2} className="ContentRight">
+						<h5>Trending Fashion</h5>
+						<Slider />
+						<h6>Factory hot sales custom korean sports </h6>
+						<Slider />
+						<h6>Factory hot sales custom korean sports </h6>
+						<Slider />
+						<h6>Factory hot sales custom korean sports </h6>
+					</Col>
+				</Row>
+				<h4>This is Title</h4>
 				<Footer />
 			</div>
 		);

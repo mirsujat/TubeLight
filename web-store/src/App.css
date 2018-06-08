@@ -2,51 +2,52 @@ body {
 	background-color: #f4f4f4 !important;
 }
 
-.flex-container {
-	display: flex;
-	height: 300px;
-	justify-content: center;
-	align-items: center;
+.Container {
+	width: 100%;
+	min-height: 50px;
 }
 
-.App {
-	display: flex;
-	flex-direction: column;
-	min-height: 650px;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: space-between;
+.MainContent {
+	display: block;
+	width: 80%;
+	min-height: 50px;
+	position: relative;
+	background-color: #f2d;
 }
 
+.ContentRight {
+	display: block;
+	position: relative;
+	min-height: 1px;
+	margin: 22px 0;
+	padding-left: -25px;
+	border: 1px solid #ccc;
+}
 /* Column container */
 .Wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
 .Main {
-	flex: 80%;
-	flex-direction: row-reverse;
-	background-color: white;
-	padding: 20px;
-}
-.SlideRight {
-	flex: 20%;
-	background-color: #f1f1f1;
-	padding: 20px;
+	width: 250px;
 }
 
-.Product {
-	flex: 25%;
+.row .col {
+	padding: 0.45rem;
 }
-
-.App-title {
-	font-size: 1.5em;
+.MainLeft {
+	width: 200px;
 }
-
-.App-intro {
-	font-size: large;
+.carousel {
+	height: 250px;
+}
+.slider {
+	height: 250px;
+}
+.slider {
+	height: 200px;
 }
 
 .Footer {
