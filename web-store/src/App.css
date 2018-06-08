@@ -1,7 +1,45 @@
-.Trend {
-	display: block;
+body {
+	background-color: #f4f4f4 !important;
+}
 
-	margin-top: 20px;
+.Wrapper {
+	border: 1px solid #dae2ed;
+}
+.Trend {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.Trend h5 {
+	margin-bottom: -40px;
+}
+
+.slick-next {
+	position: absolute;
+	left: 49%;
+	top: 90%;
+	width: 40px;
+	height: 57px;
+	margin-left: 90px;
+	margin-top: 0px;
+}
+
+.slick-prev {
+	position: absolute;
+	right: 50%;
+	top: 90%;
+	width: 40px;
+	height: 57px;
+	margin-left: -253px;
+	margin-top: 0px;
+}
+.slick-prev:before,
+.slick-next:before {
+	font-family: 'slick';
+	font-size: 28px;
+	line-height: 2;
+	opacity: 0.75;
+	color: white;
 }
 
 .App {

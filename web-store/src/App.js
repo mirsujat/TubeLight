@@ -18,7 +18,7 @@ class App extends Component {
 					<Navigation />
 				</Row>
 				<Row>
-					<Col m={9}>
+					<Col m={10}>
 						<h5>Sports Shoes</h5>
 
 						<Col m={3}>
@@ -55,10 +55,10 @@ class App extends Component {
 							<Card />
 						</Col>
 					</Col>
-					<Col m={3}>
+					<Col m={2} className="Wrapper Trend">
 						<h5>Trending Fashion</h5>
-						<Slider className="Trend" />
-						<Slider className="Trend" />
+						<Slider />
+						<Slider />
 					</Col>
 				</Row>
 

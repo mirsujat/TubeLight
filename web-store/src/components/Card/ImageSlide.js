@@ -1,19 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 
-class SimpleSlider extends React.Component {
+function NextArrow(props) {
+	const { className, style, onClick } = props;
+	return (
+		<div className="Arrow">
+			<div
+				className={className}
+				style={{ ...style, display: 'block', background: '#464a493b' }}
+				onClick={onClick}
+			/>
+		</div>
+	);
+}
+
+function PrevArrow(props) {
+	const { className, style, onClick } = props;
+	return (
+		<div className="Arrow">
+			<div
+				className={className}
+				style={{ ...style, display: 'block', background: '#464a493b' }}
+				onClick={onClick}
+			/>
+		</div>
+	);
+}
+
+class ImageSlider extends Component {
 	render() {
 		var settings = {
-			dots: true,
-			arrows: false,
+			dots: false,
+			arrows: true,
 			infinite: true,
 			speed: 500,
-			autoplay: true,
+			autoplay: false,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			nextArrow: <NextArrow />,
+			prevArrow: <PrevArrow />
 		};
 		return (
-			<Slider {...settings} className="Trend">
+			<Slider {...settings}>
 				<div>
 					<img
 						src="./assets/images/slides/Cheap-lightweight-running-yellow-high-cut-basketball.png_220x220.png"
@@ -49,4 +77,4 @@ class SimpleSlider extends React.Component {
 	}
 }
 
-export default SimpleSlider;
+export default ImageSlider;
