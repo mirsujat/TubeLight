@@ -2,50 +2,45 @@ body {
 	background-color: #f4f4f4 !important;
 }
 
-.Wrapper {
-	border: 1px solid #dae2ed;
-}
-.Trend {
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-
-.Trend h5 {
-	margin-bottom: -40px;
-}
-
-.slick-next {
-	position: absolute;
-	left: 49%;
-	top: 90%;
-	width: 40px;
-	height: 57px;
-	margin-left: 90px;
-	margin-top: 0px;
-}
-
-.slick-prev {
-	position: absolute;
-	right: 50%;
-	top: 90%;
-	width: 40px;
-	height: 57px;
-	margin-left: -253px;
-	margin-top: 0px;
-}
-.slick-prev:before,
-.slick-next:before {
-	font-family: 'slick';
-	font-size: 28px;
-	line-height: 2;
-	opacity: 0.75;
-	color: white;
+.flex-container {
+	display: flex;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
 }
 
 .App {
-	margin-top: 0px;
-	margin-bottom: 0px;
+	display: flex;
+	flex-direction: column;
+	min-height: 650px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
 }
+
+/* Column container */
+.Wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.Main {
+	flex: 80%;
+	flex-direction: row-reverse;
+	background-color: white;
+	padding: 20px;
+}
+.SlideRight {
+	flex: 20%;
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+
+.Product {
+	flex: 25%;
+}
+
 .App-title {
 	font-size: 1.5em;
 }
@@ -56,6 +51,7 @@ body {
 
 .Footer {
 	margin-bottom: 0px;
+	width: 100%;
 }
 
 @keyframes App-logo-spin {
@@ -64,5 +60,12 @@ body {
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.Wrapper,
+	.Navbar {
+		flex-direction: column;
 	}
 }

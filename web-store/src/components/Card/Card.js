@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardTitle } from 'react-materialize';
+import { Card } from 'react-materialize';
 import ImageSlider from './ImageSlide';
 
 class ImageCard extends Component {
