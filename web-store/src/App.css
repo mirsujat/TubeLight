@@ -2,6 +2,26 @@ body {
 	background-color: #f4f4f4 !important;
 }
 
+nav {
+	color: #7d7b7b;
+	background-color: #fff;
+}
+nav ul a {
+	color: #7d7b7b;
+}
+nav ul a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #ff6a00;
+}
+
+nav .brand-logo {
+	position: absolute;
+	color: #ff6a00;
+	display: inline-block;
+	font-size: 2.1rem;
+	padding: 0 0 0 15px;
+}
+
 .Container {
 	width: 100%;
 	min-height: 50px;
@@ -19,9 +39,15 @@ body {
 	display: block;
 	position: relative;
 	min-height: 1px;
-	margin: 22px 0;
-	padding-left: -25px;
+	margin-top: -60px;
+
 	border: 1px solid #ccc;
+	color: #7d7b7b;
+}
+
+.ContentRight h6 {
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 /* Column container */
 .Wrapper {
