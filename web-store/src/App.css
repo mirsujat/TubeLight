@@ -39,44 +39,28 @@ nav .brand-logo {
 	height: 64px;
 }
 
-.MainContent {
+.Trend {
 	display: block;
-	width: 80%;
-	min-height: 50px;
-	position: relative;
-	background-color: #f2d;
-}
-
-.ContentRight {
-	display: block;
-	position: relative;
 	min-height: 1px;
+	border: 1px solid #e6e8e8;
 	margin-top: 20px;
-	border: 1px solid #ccc;
 	color: #7d7b7b;
 }
 
-.ContentRight h6 {
-	margin-top: 0;
-	margin-bottom: 20px;
+.Trend h5,
+h6 {
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
-/* Column container */
-.Wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-}
-
-.Main {
-	width: 250px;
+.Trend h6 {
+	margin-top: 5px;
+	margin-bottom: 18px;
 }
 
 .row .col {
 	padding: 0.45rem;
 }
-.MainLeft {
-	width: 200px;
-}
+
 .carousel {
 	height: 250px;
 }

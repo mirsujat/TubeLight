@@ -8,6 +8,7 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import Navigation from './components/NavBar/NavBar';
 import Card from './components/Card/Card';
+import SliderRight from './components/Slider/Slider';
 import Footer from './components/Footer/Footer';
 
 class App extends Component {
@@ -17,20 +18,23 @@ class App extends Component {
 				<Navigation />
 				<div className="row">
 					<div className="col s10">
-						<div className="col s3">
-							<Card />
-						</div>
-
-						<div className="col s3">
-							<Card />
-						</div>
-
-						<div className="col s3">
-							<Card />
-						</div>
-						<div className="col s3">
-							<Card />
-						</div>
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+					</div>
+					<div className="col s2 Trend">
+						<h5>Trending Fashion</h5>
+						<SliderRight />
+						<h6>Factory hot sales custom korean sports</h6>
+						<SliderRight />
+						<h6>Baolite Women's Smart Casual skateboard</h6>
+						<SliderRight />
+						<h6>Breathable Beach Mountain Hiking Sport</h6>
 					</div>
 				</div>
 

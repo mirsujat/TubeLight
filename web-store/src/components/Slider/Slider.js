@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 
-class SimpleSlider extends React.Component {
+class SimpleSlider extends Component {
 	render() {
 		var settings = {
 			dots: false,
@@ -13,7 +13,7 @@ class SimpleSlider extends React.Component {
 			slidesToScroll: 1
 		};
 		return (
-			<Slider {...settings} className="Trend">
+			<Slider {...settings}>
 				<div>
 					<img
 						src="./assets/images/slides/Cheap-lightweight-running-yellow-high-cut-basketball.png_220x220.png"
