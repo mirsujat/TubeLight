@@ -98,6 +98,11 @@ nav .brand-logo {
 	width: 100%;
 }
 
+.page-footer {
+	padding-top: 20px;
+	color: #fff;
+	background-color: #139453;
+}
 .white-text {
 	margin-bottom: -10px;
 }
