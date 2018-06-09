@@ -7,12 +7,15 @@ import './App.css';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import Navigation from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 	render() {
 		return (
 			<div>
 				<Navigation />
+
+				<Footer />
 			</div>
 		);
 	}
