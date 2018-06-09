@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 import ImageSlider from './ImageSlide';
 
-class ImageCard extends Component {
+class Card extends Component {
 	render() {
 		return (
 			<div className="card">
 				<div className="card-image waves-effect waves-block waves-light">
-					<img className="activator" src="images/office.jpg" alt="Brand Logo" />
+					<ImageSlider className="activator" />
 				</div>
 				<div className="card-content">
 					<span className="card-title activator grey-text text-darken-4">
@@ -31,4 +31,4 @@ class ImageCard extends Component {
 	}
 }
 
-export default ImageCard;
+export default Card;
