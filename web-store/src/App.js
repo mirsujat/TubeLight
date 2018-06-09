@@ -16,33 +16,28 @@ class App extends Component {
 		return (
 			<div>
 				<Navigation />
-				<h4>This is Title</h4>
+
 				<Row>
+					<img
+						className="Banner"
+						src="./assets/images/Banner.png"
+						alt="Banner"
+					/>
+					<h5 className="HeaderText">This is Title</h5>
 					<Col m={10} className="Wrapper">
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
-						<Col m={3}>
-							<Card />
-						</Col>
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
 					</Col>
 					<Col m={2} className="ContentRight">
 						<h5>Trending Fashion</h5>
