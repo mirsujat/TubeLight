@@ -9,7 +9,7 @@ const imageSlide = props => {
 	};
 
 	return (
-		<Carousel {...settings}>
+		<Carousel {...settings} height="250px">
 			<div>
 				<img
 					className={props.className}

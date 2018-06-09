@@ -7,6 +7,7 @@ import './App.css';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import Navigation from './components/NavBar/NavBar';
+import MainSlider from './components/MainSlider/MainSlider';
 import Card from './components/Card/Card';
 import SliderRight from './components/Slider/Slider';
 import Footer from './components/Footer/Footer';
@@ -16,6 +17,10 @@ class App extends Component {
 		return (
 			<div>
 				<Navigation />
+				<div className="row col s12">
+					<MainSlider />
+				</div>
+
 				<div className="row">
 					<div className="col s10">
 						<Card />

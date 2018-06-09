@@ -33,6 +33,9 @@ nav .brand-logo {
 	padding: 0 0 0 15px;
 }
 
+.slick-dots {
+	bottom: 20px;
+}
 .Banner {
 	margin-top: 20px;
 	width: 100%;
@@ -61,21 +64,8 @@ h6 {
 	padding: 0.45rem;
 }
 
-.carousel {
-	height: 250px;
-}
-
-.carousel .slider-wrapper {
-	height: 270px;
-}
 .slide {
 	background: #ecebeb00 !important;
-}
-.slider {
-	height: 250px;
-}
-.slider {
-	height: 200px;
 }
 
 .Footer {
