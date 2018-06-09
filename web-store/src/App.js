@@ -49,7 +49,7 @@ class App extends Component {
 						<h6>Factory hot sales custom korean sports </h6>
 					</Col>
 				</Row>
-				<h4>This is Title</h4>
+
 				<Footer />
 			</div>
 		);
