@@ -36,6 +36,10 @@ nav .brand-logo {
 .slick-dots {
 	bottom: 20px;
 }
+
+.carousel {
+	height: 240px !important;
+}
 .Banner {
 	margin-top: 20px;
 	width: 100%;
