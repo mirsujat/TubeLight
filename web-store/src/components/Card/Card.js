@@ -34,7 +34,7 @@ class Card extends Component {
 							SHOP NOW
 						</a>
 						<span className="right">
-							<i className="small material-icons">add_shopping_cart</i>
+							<i className="small material-icons">shopping_cart</i>
 						</span>
 					</div>
 

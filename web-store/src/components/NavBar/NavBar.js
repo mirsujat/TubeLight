@@ -11,7 +11,7 @@ const navigation = () => {
 					<ul id="nav-mobile" className="right hide-on-med-and-down">
 						<li>
 							<a href="sass.html">
-								<i className="small material-icons left">account_circle</i>Sign
+								<i className="small material-icons left">perm_identity</i>Sign
 								In <span>|</span> Join Free
 							</a>
 						</li>

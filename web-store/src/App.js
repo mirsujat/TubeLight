@@ -48,7 +48,7 @@ class App extends Component {
 				</div>
 				<div class="divider margin100 " />
 				<div className="row">
-					<div className="col s12  ">
+					<div className="col s12">
 						<h4 className="HeaderText2">SHOP BY SPORTS</h4>
 						<img
 							className="responsive-img"
