@@ -6,12 +6,19 @@ body {
 	width: 100%;
 }
 .margin100 {
+	margin-top: 100px;
 	margin-bottom: 100px;
 }
+
 .HeaderText {
 	margin-bottom: -10px;
 	margin-left: 15px;
 	color: #7d7b7b;
+	text-align: center;
+}
+.HeaderText2 {
+	color: #7d7b7b;
+	text-align: center;
 }
 nav {
 	color: #7d7b7b;
@@ -36,6 +43,35 @@ nav .brand-logo {
 	padding: 0 0 0 15px;
 }
 
+.secondary-nav {
+	display: block;
+	min-height: 50px;
+}
+.secondary-nav ul {
+	display: block;
+	min-height: 50px;
+}
+
+.secondary-nav ul li {
+	display: inline-block;
+	min-height: 50px;
+	line-height: 50px;
+	padding: 8px;
+	color: #7d7b7b;
+	text-align: center;
+
+	text-align: left;
+}
+.secondary-nav ul li a {
+	display: inline-block;
+	min-height: 50px;
+	color: #7d7b7b;
+	text-align: center;
+}
+
+.secondary-nav ul li a:hover {
+	color: #ff6a00;
+}
 .slick-dots {
 	bottom: 20px;
 }

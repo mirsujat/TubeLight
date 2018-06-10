@@ -7,6 +7,7 @@ import './App.css';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import Navigation from './components/NavBar/NavBar';
+import Nav from './components/NavBar/Nav';
 import MainSlider from './components/MainSlider/MainSlider';
 import Card from './components/Card/Card';
 import SliderRight from './components/Slider/Slider';
@@ -17,12 +18,14 @@ class App extends Component {
 		return (
 			<div>
 				<Navigation />
-				<div className="row col s12 margin100">
+				<div className="row col s12">
 					<MainSlider />
 				</div>
-
+				<div class="divider margin100 " />
 				<div className="row">
 					<h5 className="HeaderText">SPORTS SHOES</h5>
+					<Nav />
+
 					<div className="col s10">
 						<Card />
 						<Card />
@@ -45,7 +48,8 @@ class App extends Component {
 				</div>
 				<div class="divider margin100 " />
 				<div className="row">
-					<div className="col s12 margin100 ">
+					<div className="col s12  ">
+						<h4 className="HeaderText2">SHOP BY SPORTS</h4>
 						<img
 							className="responsive-img"
 							src="/assets/images/Footwear_Boys.jpg"
