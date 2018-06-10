@@ -2,7 +2,7 @@ import React from 'react';
 
 const shopnow = () => {
 	return (
-		<div className="col s2">
+		<div className="col s2 ">
 			<div className="wrapper">
 				<div className="ShopNow center">
 					<div className="ShopNowButton">

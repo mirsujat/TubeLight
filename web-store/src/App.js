@@ -47,7 +47,7 @@ class App extends Component {
 						<h6>Baolite Women's Smart Casual skateboard</h6>
 					</div>
 				</div>
-				<div class="divider margin100 " />
+				<div class="divider margin100 hide-on-small-only " />
 				<div className="row">
 					<h4 className="HeaderText2">SHOP BY SPORTS</h4>
 					<div className="col s12 ">
