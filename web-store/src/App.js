@@ -17,16 +17,10 @@ class App extends Component {
 		return (
 			<div>
 				<Navigation />
-				<div className="row col s12">
+				<div className="row col s12 margin100">
 					<MainSlider />
 				</div>
-				<div className="Banner">
-					<img
-						className="Banner"
-						src="./assets/images/grey-strip.jpg"
-						alt=" News Banner"
-					/>
-				</div>
+
 				<div className="row">
 					<h5 className="HeaderText">SPORTS SHOES</h5>
 					<div className="col s10">

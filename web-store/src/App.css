@@ -5,6 +5,9 @@ body {
 .container {
 	width: 100%;
 }
+.margin100 {
+	margin-bottom: 100px;
+}
 .HeaderText {
 	margin-bottom: -10px;
 	margin-left: 15px;
