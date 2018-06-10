@@ -16,7 +16,13 @@ const navigation = () => {
 						<a href="sass.html">Sass</a>
 					</li>
 					<li>
+						<span>|</span>
+					</li>
+					<li>
 						<a href="badges.html">Components</a>
+					</li>
+					<li>
+						<span>|</span>
 					</li>
 					<li>
 						<a href="collapsible.html">JavaScript</a>

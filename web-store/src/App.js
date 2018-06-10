@@ -20,8 +20,15 @@ class App extends Component {
 				<div className="row col s12">
 					<MainSlider />
 				</div>
-
+				<div className="Banner">
+					<img
+						className="Banner"
+						src="./assets/images/grey-strip.jpg"
+						alt=" News Banner"
+					/>
+				</div>
 				<div className="row">
+					<h5 className="HeaderText">SPORTS SHOES</h5>
 					<div className="col s10">
 						<Card />
 						<Card />
