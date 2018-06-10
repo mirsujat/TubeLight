@@ -40,11 +40,12 @@ class App extends Component {
 						<SliderRight />
 						<h6>Baolite Women's Smart Casual skateboard</h6>
 						<SliderRight />
-						<h6>Breathable Beach Mountain Hiking Sport</h6>
+						<h6>Baolite Women's Smart Casual skateboard</h6>
 					</div>
 				</div>
+				<div class="divider margin100 " />
 				<div className="row">
-					<div className="col s12 ">
+					<div className="col s12 margin100 ">
 						<img
 							className="responsive-img"
 							src="/assets/images/Footwear_Boys.jpg"
