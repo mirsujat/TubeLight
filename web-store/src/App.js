@@ -21,7 +21,7 @@ class App extends Component {
 				<div className="row col s12">
 					<MainSlider />
 				</div>
-				<div class="divider margin100 " />
+				<div className=" margin100 " />
 				<div className="row">
 					<h5 className="HeaderText">SPORTS SHOES</h5>
 					<Nav />

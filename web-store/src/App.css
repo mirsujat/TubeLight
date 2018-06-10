@@ -1,4 +1,5 @@
 body {
+	font-family: 'Open Sans', sans-serif;
 	background-color: #f4f4f4 !important;
 }
 
@@ -13,11 +14,11 @@ body {
 .HeaderText {
 	margin-bottom: -10px;
 	margin-left: 15px;
-	color: #7d7b7b;
+	color: #423f3f;
 	text-align: center;
 }
 .HeaderText2 {
-	color: #7d7b7b;
+	color: #423f3f;
 	text-align: center;
 }
 nav {
@@ -26,6 +27,9 @@ nav {
 }
 nav .brand-logo {
 	height: 75px;
+}
+nav i.material-icons {
+	font-size: 35px;
 }
 nav ul a {
 	color: #7d7b7b;
@@ -45,28 +49,28 @@ nav .brand-logo {
 
 .secondary-nav {
 	display: block;
-	min-height: 50px;
+	min-height: 64px;
 }
 .secondary-nav ul {
 	display: block;
-	min-height: 50px;
+	min-height: 64px;
 }
 
 .secondary-nav ul li {
 	display: inline-block;
-	min-height: 50px;
-	line-height: 50px;
+	min-height: 64px;
+	line-height: 64px;
 	padding: 8px;
 	color: #7d7b7b;
 	text-align: center;
-
-	text-align: left;
 }
 .secondary-nav ul li a {
 	display: inline-block;
 	min-height: 50px;
+	font-size: 14px;
 	color: #7d7b7b;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .secondary-nav ul li a:hover {
