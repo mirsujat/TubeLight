@@ -94,7 +94,33 @@ h6 {
 	margin-top: 100px;
 	padding-top: 20px;
 	color: #fff;
-	background-color: #139453;
+	background-color: #2bbbad;
+}
+.Price {
+	line-height: 16px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}
+
+.Text-Normal {
+	line-height: 12px;
+	font-size: 12px;
+	color: #807b7b;
+	font-weight: 300;
+}
+
+.card .card-content .card-title {
+	display: block;
+	line-height: 19px;
+	margin-bottom: 8px;
+}
+.card .card-title {
+	font-size: 14px;
+	font-weight: 300;
+}
+.grey-text.text-darken-4 {
+	color: #333 !important;
 }
 .white-text {
 	margin-bottom: -10px;
