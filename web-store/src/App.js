@@ -11,6 +11,7 @@ import Nav from './components/NavBar/Nav';
 import MainSlider from './components/MainSlider/MainSlider';
 import Card from './components/Card/Card';
 import SliderRight from './components/Slider/Slider';
+import ShopNow from './components/ShopNow/ShopNow';
 import Footer from './components/Footer/Footer';
 
 class App extends Component {
@@ -48,13 +49,16 @@ class App extends Component {
 				</div>
 				<div class="divider margin100 " />
 				<div className="row">
-					<div className="col s12">
-						<h4 className="HeaderText2">SHOP BY SPORTS</h4>
-						<img
-							className="responsive-img"
-							src="/assets/images/Footwear_Boys.jpg"
-							alt="background images"
-						/>
+					<h4 className="HeaderText2">SHOP BY SPORTS</h4>
+					<div className="col s12 ">
+						<div className="Bgimage">
+							<ShopNow />
+							<ShopNow />
+							<ShopNow />
+							<ShopNow />
+							<ShopNow />
+							<ShopNow />
+						</div>
 					</div>
 				</div>
 

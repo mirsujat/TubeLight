@@ -125,13 +125,53 @@ h6 {
 	text-align: center;
 }
 
+.Bgimage {
+	margin: 0px;
+	height: 350px;
+	background-size: 100%, 100%;
+	background-image: url('/assets/images/Footwear_Boys.jpg');
+	background-repeat: no-repeat;
+}
+.ShopNow {
+	width: 100%;
+	height: 150px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.ShopNowButton {
+	display: block;
+	margin-top: 150px;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0;
+}
+.ShopNowButton:hover {
+	display: block;
+	margin-top: 150px;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.ShopNowFooter {
+	width: 100%;
+	height: 100%;
+	color: #333;
+	box-sizing: border-box;
+}
+.ShopNowFooter a {
+	color: #7d7b7b;
+}
 .Footer {
 	margin-bottom: 0px;
 	width: 100%;
 }
 
 .page-footer {
-	margin-top: 100px;
+	margin-top: 200px;
 	padding-top: 20px;
 	color: #fff;
 	background-color: #2bbbad;
