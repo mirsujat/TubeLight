@@ -76,6 +76,15 @@ h6 {
 	background: #ecebeb00 !important;
 }
 
+.ShopBySports {
+	width: 100%;
+	height: 350px;
+	display: inline-block;
+	background-image: url('/assets/images/Footwear_Boys.jpg');
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
 .Footer {
 	margin-bottom: 0px;
 	width: 100%;

@@ -43,6 +43,15 @@ class App extends Component {
 						<h6>Breathable Beach Mountain Hiking Sport</h6>
 					</div>
 				</div>
+				<div className="row">
+					<div className="col s12 ">
+						<img
+							className="responsive-img"
+							src="/assets/images/Footwear_Boys.jpg"
+							alt="background images"
+						/>
+					</div>
+				</div>
 
 				<Footer />
 			</div>
