@@ -229,6 +229,51 @@
         </div>
       </section>
 
+      <!-- section: Contact -->
+      <section id="contact" class="section section-contact scrollspy">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card-panel teal white-text center">
+                <i class="material-icons">email</i>
+                <h5>Contact Us For Booking</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <ul class="collection with-header">
+                <li class="collection-header"><h4>Location</h4></li>
+                <li class="collection-item">Travelville Agency</li>
+                <li class="collection-item">555 Beach Road, Suite 33</li>
+                <li class="collection-item">Miami Florida, 55555</li>
+              </ul>
+            </div>
+            <div class="col s12 m6">
+              <div class="card-panel grey lighten-3">
+                <h5>Please Fill Out this Form</h5>
+                <div class="input-field">
+                  <input type="text" name="" value="" id="name" placeholder="Name">
+                </div>
+                <div class="input-field">
+                  <input type="text" name="" value="" id="email" placeholder="E-mail">
+                </div>
+                <div class="input-field">
+                  <input type="text" name="" value="" id="phone" placeholder="Phone">
+                </div>
+                <div class="input-field">
+                  <textarea class="material-textarea" id="message" placeholder="Enter Message">
+                  </textarea>
+                </div>
+                <input type="submit" value="submit" class="btn">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Travelville &copy; 2018</p>
+      </footer>
+
       <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
@@ -263,6 +308,10 @@ M.Autocomplete.init(ac, {
 //Material Boxed
 const mb = document.querySelectorAll('.materialboxed');
 M.Materialbox.init(mb, {});
+
+// Scrollspy
+const ss = document.querySelectorAll('.scrollspy');
+M.ScrollSpy.init(ss, {});
 </script>
     </body>
 </html>
