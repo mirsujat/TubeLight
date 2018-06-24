@@ -6,12 +6,13 @@
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <title>Agency Theme</title>
     </head>
 
-    <body>
+    <body id="home" class="scrollspy">
       <!-- Navbar -->
       <div class="navbar-fixed">
         <nav class="teal">
@@ -46,28 +47,42 @@
       <!-- section: Slider -->
       <section class="slider">
         <ul class="slides">
-      <li>
-        <img src="img/resort1.jpg">
-        <div class="caption center-align">
-          <h2>Take Your Dream Vacation</h2>
-          <h5 class="left light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor it in culpa qui officia deserunt mollit anim id est laborum.</h5>
+          <li>
+            <img src="img/resort1.jpg">
+            <div class="caption center-align">
+              <h2>Take Your Dream Vacation</h2>
+              <h5 class="left light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor it in culpa qui officia deserunt mollit anim id est laborum.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="img/resort2.jpg">
+            <div class="caption center-align">
+              <h2>We Work With All Budgets</h2>
+              <h5 class="left light grey-text text-lighten-3 hide-on-small-only">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</h5>
+            </div>
+          </li>
+          <li>
+            <img src="img/resort3.jpg">
+            <div class="caption center-align">
+              <h2>Group & Individuals Getaways</h2>
+              <h5 class="left light grey-text text-lighten-3 hide-on-small-only">Ut enim ad min  veniam, quis nostrud exercitation. Duis aute irure dolor in reprehenderit.</h5>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- section: search -->
+      <section id="search" class="section section-search teal darken1 white-text center scrollspy">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h3>Search Destinations</h3>
+              <div class="input-field">
+                <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Aruba, Cancun etc...">
+              </div>
+            </div>
+          </div>
         </div>
-      </li>
-      <li>
-        <img src="img/resort2.jpg">
-        <div class="caption left-align">
-          <h2>We Work With All Budgets</h2>
-          <h5 class="left light grey-text text-lighten-3 hide-on-small-only">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="img/resort3.jpg">
-        <div class="caption right-align">
-          <h2>Group & Individuals Getaways</h2>
-          <h5 class="left light grey-text text-lighten-3 hide-on-small-only">Ut enim ad minim veniam, quis nostrud exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse.</h5>
-        </div>
-      </li>
-    </ul>
       </section>
 
       <!-- Compiled and minified JavaScript -->
@@ -85,6 +100,20 @@ M.Slider.init(slider, {
 	height: 500,
 	transition: 500,
 	interval: 6000
+});
+
+//Autocomplete
+const ac = document.querySelector('.autocomplete');
+M.Autocomplete.init(ac, {
+	data: {
+		Aruba: null,
+		CancunMaxico: null,
+		Hawaii: null,
+		Florida: null,
+		California: null,
+		Jamacia: null,
+		Europe: null
+	}
 });
 </script>
     </body>
