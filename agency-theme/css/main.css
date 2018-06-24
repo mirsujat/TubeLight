@@ -12,3 +12,9 @@
 nav .brand-logo i {
 	float: none;
 }
+
+@media only screen and (max-width: 600px) {
+	.material-placeholder {
+		margin-bottom: 15px !important;
+	}
+}
