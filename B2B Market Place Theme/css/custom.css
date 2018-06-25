@@ -1,0 +1,10 @@
+nav {
+	padding: 0px 20px;
+}
+
+nav a {
+	color: rgba(0, 0, 0, 0.87) !important;
+}
+nav ul li:hover {
+	background-color: #ff6d00;
+}
