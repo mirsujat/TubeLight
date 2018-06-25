@@ -5,10 +5,8 @@ nav {
 nav a {
 	color: rgba(0, 0, 0, 0.87) !important;
 }
-nav ul li:hover {
-	background-color: transparent !important;
-}
 
-nav ul li a:hover {
-	color: #ff6d00;
+nav ul a:hover {
+	background-color: #fff;
+	color: #ff6d00 !important;
 }
