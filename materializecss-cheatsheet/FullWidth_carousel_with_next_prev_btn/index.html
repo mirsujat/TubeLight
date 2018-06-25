@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Materialize full screen Carousel</title>
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+  	.carousel .carousel-item>img{
+  		height: 100%;
+  		width: 100%;
+  	}
+  	.next, .prev{
+  		position: absolute;
+  		top:45%;
+  		color:white;
+  		cursor: pointer;
+  	}
+  	.prev{
+  		left: 0px;
+  	}
+    .next{
+    	right:0px;
+    }
+  </style>
+ </head>
+ <body>
+
+   <div class="full-silder">
+   	<div class="carousel carousel-slider" data-indicators="true">
+   		<a href="#one!" class="carousel-item"><img src="https://source.unsplash.com/1600x900/?beach"></a>
+   		<a href="#two!" class="carousel-item"><img src="https://source.unsplash.com/1600x900/?travel"></a>
+   		<a href="#three!" class="carousel-item"><img src="https://source.unsplash.com/1600x900/?nature" ></a>
+   		<a href="#four!" class="carousel-item"><img src="https://source.unsplash.com/1600x900/?water"></a>
+   		<a href="#five!" class="carousel-item"><img src="https://source.unsplash.com/1600x900/?building"></a>
+   	</div>
+
+   	<!-- next and prev buttons -->
+
+   	<div class="next green"><i class="material-icons large">navigate_next</i></div>
+   	<div class="prev green"><i class="material-icons large">navigate_before</i></div>
+   </div>
+
+
+   <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+	$('.carousel')
+		.carousel({ fullWidth: true })
+		.css('height', $(window).height());
+
+	// for next slide
+	$('.next').click(function() {
+		$('.carousel').carousel('next');
+	});
+
+	// for prev slide
+	$('.prev').click(function() {
+		$('.carousel').carousel('prev');
+	});
+});
+</script>
+
+ </body>
+ </html>
