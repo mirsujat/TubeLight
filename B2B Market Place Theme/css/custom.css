@@ -53,3 +53,47 @@ i.left {
 	color: #80767685;
 	font-size: 10px;
 }
+.container {
+	width: 90%;
+}
+
+.next,
+.prev {
+	position: absolute;
+	top: 35%;
+	color: white;
+	cursor: pointer;
+	z-index: 100;
+	opacity: 0;
+}
+.next:hover {
+	opacity: 1;
+}
+.prev:hover {
+	opacity: 1;
+}
+.prev {
+	left: 0px;
+}
+.next {
+	right: 0px;
+}
+.md-36 {
+	font-size: 36px;
+}
+.slider .indicators {
+	bottom: 10px;
+}
+
+.slider .indicators .indicator-item {
+	height: 10px;
+	width: 10px;
+	margin: 0 8px;
+}
+.slider .indicators .indicator-item.active {
+	background-color: #ff6d00 !important;
+}
+
+@media only screen and (min-width: 993px) .container {
+	width: 90%;
+}
