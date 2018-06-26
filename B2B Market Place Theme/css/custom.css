@@ -2,6 +2,10 @@ body {
 	background-color: #eee;
 }
 
+a {
+	color: #615c5c;
+}
+
 nav {
 	padding: 0px 20px;
 }
@@ -20,4 +24,32 @@ nav ul a:hover {
 
 i.left {
 	margin-right: 3px;
+}
+
+.panel {
+	background-color: #fff;
+	padding: 3px 20px;
+}
+
+.collection {
+	border: none;
+	margin: 0px;
+}
+.collection.with-header .collection-header {
+	padding-left: 0px !important;
+}
+.collection .collection-item {
+	padding: 10px 10px 10px 0px !important;
+	cursor: pointer;
+}
+
+.collection .collection-item a:hover {
+	color: #ff6d00 !important;
+}
+
+.bullet:before {
+	content: '\25CF';
+	margin-right: 12px;
+	color: #80767685;
+	font-size: 10px;
 }
