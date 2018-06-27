@@ -22,12 +22,18 @@ nav ul a:hover {
 	color: #ff6d00 !important;
 }
 
+.row {
+	margin-bottom: 0px;
+}
 i.left {
 	margin-right: 3px;
 }
 .promotion {
 	background-color: #fff;
-	padding: 20px 0px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
 	border: 1px solid rgb(224, 224, 224);
 }
 .panel {
@@ -49,13 +55,20 @@ i.left {
 .collection .collection-item {
 	padding: 10px 10px 10px 0px !important;
 	cursor: pointer;
-	line-height: 1.5rem;
 }
 
 .collection .collection-item a:hover {
 	color: #ff6d00 !important;
 }
-.collection .collection-item img {
+.popular {
+	display: block;
+}
+.popular-list {
+	display: list-item;
+	height: 115px;
+	border-bottom: 1px solid #eee;
+}
+.popular .popular-list img {
 	height: 50px;
 	width: 50px;
 }
@@ -66,20 +79,22 @@ i.left {
 	font-weight: 400;
 	color: white;
 }
-.sub-title {
+.popular-title {
 	margin: 5px 0 14px 0;
 	color: #717175;
-	font-size: 18px;
-	font-weight: 700;
+	font-size: 16px;
+	font-weight: 500;
 	line-height: 22px;
+	cursor: pointer;
 }
 .view-more {
 	display: inline-block;
 	background: #22447a;
-	padding: 4px 10px;
+	padding: 2px 10px;
 	color: #fff;
 	border-radius: 15px;
-	font-size: 14px;
+	font-size: 12px;
+	cursor: pointer;
 }
 .bullet:before {
 	content: '\25CF';
