@@ -140,7 +140,9 @@ i.left {
 	margin: 0 8px;
 }
 .slider .indicators .indicator-item.active {
-	background-color: #ff6d00 !important;
+	border: 2px solid #ff6d00;
+	padding: 4px;
+	background-color: #fff !important;
 }
 
 @media only screen and (min-width: 993px) .container {
