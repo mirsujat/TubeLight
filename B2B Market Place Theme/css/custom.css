@@ -49,12 +49,38 @@ i.left {
 .collection .collection-item {
 	padding: 10px 10px 10px 0px !important;
 	cursor: pointer;
+	line-height: 1.5rem;
 }
 
 .collection .collection-item a:hover {
 	color: #ff6d00 !important;
 }
+.collection .collection-item img {
+	height: 50px;
+	width: 50px;
+}
 
+.side-header {
+	display: inline-block;
+	padding: 5px 29px;
+	font-weight: 400;
+	color: white;
+}
+.sub-title {
+	margin: 5px 0 14px 0;
+	color: #717175;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+}
+.view-more {
+	display: inline-block;
+	background: #22447a;
+	padding: 4px 10px;
+	color: #fff;
+	border-radius: 15px;
+	font-size: 14px;
+}
 .bullet:before {
 	content: '\25CF';
 	margin-right: 12px;
