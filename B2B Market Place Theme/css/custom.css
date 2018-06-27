@@ -25,17 +25,25 @@ nav ul a:hover {
 .row {
 	margin-bottom: 0px;
 }
+.row .col {
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 0.4rem;
+	min-height: 1px;
+}
 i.left {
 	margin-right: 3px;
 }
 .promotion {
 	background-color: #fff;
 	padding-top: 20px;
-	padding-right: 0px;
-	padding-bottom: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
 	padding-left: 0px;
 	border: 1px solid rgb(224, 224, 224);
 }
+
 .panel {
 	background-color: #fff;
 	margin-top: -20px;
@@ -50,10 +58,10 @@ i.left {
 	padding-top: 0px !important;
 	padding-right: 20px;
 	padding-bottom: 10px;
-	padding-left: 0px !important;
+	padding-left: 15px !important;
 }
 .collection .collection-item {
-	padding: 10px 10px 10px 0px !important;
+	padding: 10px 10px 10px 15px !important;
 	cursor: pointer;
 }
 
@@ -75,7 +83,7 @@ i.left {
 
 .side-header {
 	display: inline-block;
-	padding: 5px 29px;
+	padding: 5px 34px;
 	font-weight: 400;
 	color: white;
 }
@@ -143,6 +151,19 @@ i.left {
 	border: 2px solid #ff6d00;
 	padding: 4px;
 	background-color: #fff !important;
+}
+
+.main-content {
+	display: block;
+	background-color: #fff;
+	min-height: 1px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border: 1px solid rgb(224, 224, 224);
 }
 
 @media only screen and (min-width: 993px) .container {
