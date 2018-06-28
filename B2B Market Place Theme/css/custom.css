@@ -24,14 +24,14 @@ nav ul a:hover {
 .search-bar {
 	display: block;
 	position: relative;
-	max-width: 450px;
+	max-width: 650px;
 	overflow: hidden;
 	margin: 0 auto;
 }
 nav .input-field {
 	margin: 11px auto;
 	height: 35px;
-	width: 450px;
+	width: 600px;
 	/* border: 1px solid red; */
 }
 nav .input-field input[type='text']:valid {
@@ -42,11 +42,10 @@ nav .input-field input[type='text']:valid {
 	box-shadow: none;
 }
 .nav-wrapper .input-field input[type='search'] {
-	max-width: 400px;
+	max-width: 600px;
 	border: 1px solid #ccc;
 	height: inherit;
 	padding-left: 8px;
-
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -63,11 +62,9 @@ nav .input-field input[type='text']:valid {
 	position: absolute;
 	top: -12px;
 	right: 55px;
-	color: transparent;
+	color: #eee;
 	cursor: pointer;
 	font-size: 2rem;
-	-webkit-transition: 0.3s color;
-	transition: 0.3s color;
 }
 
 .clear-fix {
