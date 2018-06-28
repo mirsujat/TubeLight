@@ -19,7 +19,7 @@ nav ul a:hover {
 	color: #ff6d00 !important;
 }
 .brand-logo {
-	color: #ff6d00 !important;
+	color: red !important;
 }
 .search-bar {
 	display: block;
@@ -57,14 +57,47 @@ nav .input-field input[type='text']:valid {
 	box-shadow: none;
 	color: #444;
 }
-.input-field input[type='search'] ~ .mdi-navigation-close,
+/* .input-field input[type='search'] ~ .mdi-navigation-close,
 .input-field input[type='search'] ~ .material-icons {
 	position: absolute;
-	top: -12px;
-	right: 55px;
+	background-color: red;
+	top: -11px;
+	margin-top: 11px;
+	margin-right: -35px;
+	margin-bottom: -15px;
+	margin-left: 10px;
+	right: 2px;
+	left: 520px;
 	color: #eee;
 	cursor: pointer;
-	font-size: 2rem;
+	font-size: 1.5rem;
+} */
+.input-field > label {
+	background-color: red;
+	width: 75px;
+	color: #9e9e9e;
+	height: 46px;
+	position: absolute;
+	top: 0;
+	right: -530px;
+	margin: 14px auto;
+	font-size: 1rem;
+	cursor: text;
+	-webkit-transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+	transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+	transition: transform 0.2s ease-out, color 0.2s ease-out;
+	transition: transform 0.2s ease-out, color 0.2s ease-out,
+		-webkit-transform 0.2s ease-out;
+	-webkit-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	text-align: center;
+	-webkit-transform: translateY(12px);
+	transform: translateY(12px);
+}
+.search-icon {
+	display: block;
+	min-height: 1px;
+	padding-bottom: 10px;
 }
 
 .clear-fix {
