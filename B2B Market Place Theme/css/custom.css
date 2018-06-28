@@ -57,21 +57,7 @@ nav .input-field input[type='text']:valid {
 	box-shadow: none;
 	color: #444;
 }
-/* .input-field input[type='search'] ~ .mdi-navigation-close,
-.input-field input[type='search'] ~ .material-icons {
-	position: absolute;
-	background-color: red;
-	top: -11px;
-	margin-top: 11px;
-	margin-right: -35px;
-	margin-bottom: -15px;
-	margin-left: 10px;
-	right: 2px;
-	left: 520px;
-	color: #eee;
-	cursor: pointer;
-	font-size: 1.5rem;
-} */
+
 .input-field > label {
 	background-color: red;
 	width: 75px;
@@ -79,7 +65,7 @@ nav .input-field input[type='text']:valid {
 	height: 46px;
 	position: absolute;
 	top: 0;
-	right: -530px;
+	right: -570px;
 	margin: 14px auto;
 	font-size: 1rem;
 	cursor: text;
