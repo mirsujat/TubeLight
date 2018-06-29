@@ -32,7 +32,6 @@ nav .input-field {
 	margin: 11px auto;
 	height: 35px;
 	width: 600px;
-	/* border: 1px solid red; */
 }
 nav .input-field input[type='text']:valid {
 	margin: 0 10px;
@@ -290,6 +289,65 @@ span {
 	padding-right: 10px;
 	padding-bottom: 5px;
 	padding-left: 10px;
+}
+.card.horizontal .card-image {
+	max-width: 40%;
+}
+
+.card.horizontal .card-image img {
+	border-radius: 2px 0 0 2px;
+	max-width: 100%;
+	width: auto;
+}
+
+.card .card-image img {
+	display: block;
+	border-radius: 2px 2px 0 0;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	max-width: 100%;
+}
+
+.card .card-stacked img {
+	display: block;
+	border-radius: 2px 2px 0 0;
+	position: relative;
+	left: 80px;
+	right: 40px;
+	top: 60px;
+	bottom: 0px;
+	width: 50%;
+}
+.card.horizontal .card-stacked .card-content {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	border-bottom: 1px solid #eee;
+}
+
+.card.horizontal .card-stacked-image {
+	width: 50%;
+}
+.card.horizontal .card-stacked {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	position: relative;
+	border-right: 1px solid #eee;
 }
 
 @media only screen and (min-width: 993px) .container {
