@@ -26,7 +26,7 @@ nav ul a:hover {
 	position: relative;
 	max-width: 650px;
 	overflow: hidden;
-	margin: 0 auto;
+	margin: 0 75px;
 }
 nav .input-field {
 	margin: 11px auto;
@@ -37,7 +37,6 @@ nav .input-field {
 nav .input-field input[type='text']:valid {
 	margin: 0 10px;
 	line-height: 18px;
-
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -52,7 +51,7 @@ nav .input-field input[type='text']:valid {
 
 .input-field input[type='search']:focus:not(.browser-default) {
 	background-color: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #a7dad0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	color: #444;
