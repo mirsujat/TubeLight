@@ -40,14 +40,7 @@ nav .input-field input[type='text']:valid {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-/* .nav-wrapper .input-field input[type='search'] {
-	max-width: 600px;
-	border: 1px solid #ccc;
-	height: inherit;
-	padding-left: 8px;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-} */
+
 .nav-wrapper .input-field input[type='search'] {
 	height: inherit;
 	padding-left: 10px;
@@ -315,6 +308,7 @@ span {
 	padding-right: 10px;
 	padding-bottom: 5px;
 	padding-left: 10px;
+	cursor: pointer;
 }
 .card.horizontal .card-image {
 	max-width: 40%;
@@ -335,6 +329,24 @@ span {
 	top: 0;
 	bottom: 0;
 	max-width: 100%;
+}
+.image-content {
+	display: block;
+	background-color: transparent;
+	position: absolute;
+	color: #fff;
+	min-height: 1px;
+	top: 10%;
+	left: 2%;
+	width: 50%;
+}
+.image-content h5 {
+	font-weight: 700;
+}
+.image-content span {
+	border: 1px solid #eee;
+	padding: 5px;
+	cursor: pointer;
 }
 
 .card .card-stacked img {
@@ -402,6 +414,46 @@ span {
 	font-size: 18px;
 	color: #333;
 	font-weight: 500;
+}
+.quotes-section {
+	display: block;
+	width: 100%;
+	min-height: 1px;
+	padding: 0 10px;
+	border: 7px solid #ccc;
+	color: #333;
+}
+
+.quotes-section h4 p {
+	color: #444;
+}
+
+.quotes-section p {
+	font-size: 12px;
+	line-height: 12px;
+	margin-bottom: 2px;
+	color: #999;
+}
+.quotes-section span {
+	display: inline-block;
+	font-size: 12px;
+	background-color: #fff;
+	margin: 0 2px 20px 0;
+	padding-left: 6px;
+	padding-right: 6px;
+	border: 1px solid #999;
+	border-radius: 7px;
+}
+
+.quotes-section span:hover {
+	background-color: #eee;
+}
+
+.quotes-section h4 {
+	font-weight: bold;
+}
+.quantity {
+	padding-left: 0;
 }
 
 input[type='search']:not(.browser-default),
@@ -474,46 +526,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-.quotes-section {
-	display: block;
-	width: 100%;
-	min-height: 1px;
-	padding: 0 10px;
-	border: 7px solid #ccc;
-	color: #333;
-}
 
-.quotes-section h4 p {
-	color: #444;
-}
-
-.quotes-section p {
-	font-size: 12px;
-	line-height: 12px;
-	margin-bottom: 2px;
-	color: #999;
-}
-.quotes-section span {
-	display: inline-block;
-	font-size: 12px;
-	background-color: #fff;
-	margin: 0 2px 20px 0;
-	padding-left: 6px;
-	padding-right: 6px;
-	border: 1px solid #999;
-	border-radius: 7px;
-}
-
-.quotes-section span:hover {
-	background-color: #eee;
-}
-
-.quotes-section h4 {
-	font-weight: bold;
-}
-.quantity {
-	padding-left: 0;
-}
 @media only screen and (min-width: 993px) .container {
 	width: 90%;
 }
