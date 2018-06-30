@@ -526,6 +526,12 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+.page-footer {
+	padding-top: 20px;
+	color: #fff;
+	background-color: #607d8b;
+	margin-top: 150px;
+}
 
 @media only screen and (min-width: 993px) .container {
 	width: 90%;
