@@ -51,7 +51,7 @@ nav .input-field input[type='text']:valid {
 .nav-wrapper .input-field input[type='search'] {
 	height: inherit;
 	padding-left: 10px;
-	width: 88%;
+	width: 89%;
 	border: 1px solid #eee;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -75,7 +75,7 @@ nav .input-field label {
 	height: 53px;
 	position: absolute;
 	top: 0;
-	right: -59px;
+	right: -64px;
 	margin: 14px auto;
 	margin-top: 14px;
 	margin-right: 26px;
@@ -202,7 +202,8 @@ i.left {
 	content: '\25CF';
 	margin-right: 12px;
 	color: #80767685;
-	font-size: 10px;
+	/* font-size: 10px; */
+	font-size: inherit;
 }
 .container {
 	width: 90%;
@@ -375,6 +376,33 @@ span {
 	border-right: 1px solid #eee;
 }
 
+/* Quotes */
+.quotes {
+	display: block;
+	min-height: 1px;
+	position: relative;
+	width: 100%;
+}
+.quotes-content {
+	display: block;
+	background-color: transparent;
+	position: absolute;
+	min-height: 1px;
+	top: 10%;
+	left: 15%;
+	width: 75%;
+}
+.quotes-content .quotes-header {
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #fbfeff;
+}
+.quotes-content h6 {
+	font-size: 18px;
+	color: #333;
+	font-weight: 500;
+}
+
 input[type='search']:not(.browser-default),
 textarea.materialize-textarea {
 	background-color: transparent;
@@ -415,10 +443,10 @@ textarea.materialize-textarea {
 	border-radius: 0;
 	outline: none;
 	height: 2rem;
-	width: 100%;
+	width: 99%;
 	font-size: 14px;
-	margin: 0 0 8px 0;
-	padding: 3px 10px;
+	margin: 0;
+	padding: 3px 6px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	-webkit-box-sizing: content-box;
@@ -445,7 +473,43 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+.quotes-section {
+	display: block;
+	width: 100%;
+	min-height: 1px;
+	padding: 0 10px;
+	border: 7px solid #ccc;
+	color: #333;
+}
 
+.quotes-section h4 p {
+	color: #444;
+}
+
+.quotes-section p {
+	font-size: 12px;
+	line-height: 12px;
+	margin-bottom: 2px;
+	color: #999;
+}
+.quotes-section span {
+	display: inline-block;
+	font-size: 12px;
+	background-color: #fff;
+	margin: 0 2px 20px 0;
+	padding-left: 6px;
+	padding-right: 6px;
+	border: 1px solid #999;
+	border-radius: 7px;
+}
+
+.quotes-section span:hover {
+	background-color: #eee;
+}
+
+.quotes-section h4 {
+	font-weight: bold;
+}
 .quantity {
 	padding-left: 0;
 }
