@@ -382,6 +382,7 @@ span {
 	min-height: 1px;
 	position: relative;
 	width: 100%;
+	cursor: pointer;
 }
 .quotes-content {
 	display: block;
@@ -389,7 +390,7 @@ span {
 	position: absolute;
 	min-height: 1px;
 	top: 10%;
-	left: 15%;
+	left: 5%;
 	width: 75%;
 }
 .quotes-content .quotes-header {
