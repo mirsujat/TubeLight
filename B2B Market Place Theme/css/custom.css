@@ -272,7 +272,7 @@ i.left {
 	margin-right: 20px;
 	font-size: 24px;
 	color: #333;
-	line-height: 52px;
+	line-height: 50px;
 	font-weight: 700;
 	padding-left: 10px;
 	text-transform: Uppercase;
@@ -310,6 +310,28 @@ span {
 	min-height: 1px;
 	margin-top: 0;
 	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.main-content-two {
+	display: block;
+	background-color: transparent;
+	min-height: 1px;
+	margin-top: -40px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.main-content-three {
+	display: block;
+	background-color: transparent;
+	min-height: 1px;
+	margin-top: 10px;
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-bottom: 5px;
@@ -418,7 +440,7 @@ span {
 }
 .quotes-content h6 {
 	font-size: 0.8rem;
-	color: #333;
+	color: #fff;
 	font-weight: 500;
 }
 .quotes-section {
