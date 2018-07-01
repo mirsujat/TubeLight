@@ -28,6 +28,12 @@ nav ul a:hover {
 	overflow: hidden;
 	margin: 0 55px;
 }
+.mobi-nav {
+	display: block;
+	min-height: 1px;
+	background-color: #5038394d;
+	width: 100%;
+}
 
 nav .input-field {
 	margin: 11px auto;
@@ -393,7 +399,6 @@ span {
 	display: block;
 	min-height: 1px;
 	position: relative;
-	/* width: 100%; */
 	cursor: pointer;
 }
 
@@ -402,17 +407,17 @@ span {
 	background-color: transparent;
 	position: absolute;
 	min-height: 1px;
-	top: 10%;
+	top: 5%;
 	left: 5%;
-	width: 60%;
+	width: 80%;
 }
 .quotes-content .quotes-header {
-	font-size: 1.2rem;
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	color: #fbfeff;
 }
 .quotes-content h6 {
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: #333;
 	font-weight: 500;
 }
