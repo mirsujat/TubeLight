@@ -393,9 +393,10 @@ span {
 	display: block;
 	min-height: 1px;
 	position: relative;
-	width: 100%;
+	/* width: 100%; */
 	cursor: pointer;
 }
+
 .quotes-content {
 	display: block;
 	background-color: transparent;
@@ -403,25 +404,28 @@ span {
 	min-height: 1px;
 	top: 10%;
 	left: 5%;
-	width: 75%;
+	width: 60%;
 }
 .quotes-content .quotes-header {
-	font-size: 36px;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	color: #fbfeff;
 }
 .quotes-content h6 {
-	font-size: 18px;
+	font-size: 1rem;
 	color: #333;
 	font-weight: 500;
 }
 .quotes-section {
 	display: block;
+	position: relative;
 	width: 100%;
 	min-height: 1px;
 	padding: 0 10px;
 	border: 7px solid #ccc;
 	color: #333;
+	z-index: 200;
+	overflow: hidden;
 }
 
 .quotes-section h4 p {
