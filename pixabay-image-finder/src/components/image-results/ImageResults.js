@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GridList, GridTile } from 'material-ui/GridList';
+import GridList from 'material-ui/GridList';
+import GridListTile from 'material-ui/GridListTile';
 import IconButton from 'material-ui/IconButton';
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
 // import Dialog from 'material-ui/Dialog';
@@ -12,9 +13,9 @@ class ImageResults extends Component {
 		const { images } = this.props;
 		if (images) {
 			imageListContent = (
-				<GridList col={3}>
+				<GridList cols={3}>
 					{images.map(img => (
-						<GridTile
+						<GridListTile
 							key={img.id}
 							title={img.tags}
 							subtitle={
@@ -27,8 +28,8 @@ class ImageResults extends Component {
 									<ZoomIn color="white" />
 								</IconButton>
 							}>
-							<img src={img.largeImageURL} alt="" />
-						</GridTile>
+							<img src={img.largeImageURL} alt="pixabay images" />
+						</GridListTile>
 					))}
 				</GridList>
 			);

@@ -3,7 +3,7 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import axios from 'axios';
-import ImageResults from '../image_results/ImageResults';
+import ImageResults from '../image-results/ImageResults';
 
 class Search extends Component {
 	state = {
@@ -63,7 +63,11 @@ class Search extends Component {
 				<br />
 				{this.state.images.lenght > 0 ? (
 					<ImageResults images={this.state.images} />
-				) : null}
+				) : (
+					<div>
+						<h6>There is No Images to Display</h6>
+					</div>
+				)}
 			</div>
 		);
 	}
