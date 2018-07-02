@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import axios from 'axios';
 import ImageResults from '../image-results/ImageResults';
 
@@ -45,7 +45,7 @@ class Search extends Component {
 					fullWidth={true}
 				/>
 				<br />
-				<SelectField
+				<Select
 					name="amount"
 					floatingLabelText="Amount"
 					value={this.state.amount}
@@ -59,7 +59,7 @@ class Search extends Component {
 					<MenuItem value={30} primaryText="30" />
 					<MenuItem value={40} primaryText="40" />
 					<MenuItem value={50} primaryText="50" />
-				</SelectField>
+				</Select>
 				<br />
 				{this.state.images.lenght > 0 ? (
 					<ImageResults images={this.state.images} />

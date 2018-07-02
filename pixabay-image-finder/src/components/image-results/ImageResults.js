@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import GridList from 'material-ui/GridList';
-import GridListTile from 'material-ui/GridListTile';
-import IconButton from 'material-ui/IconButton';
-import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import Icon from '@material-ui/core/Icon';
+import IconButton from '@material-ui/core/IconButton';
+
 // import Dialog from 'material-ui/Dialog';
 // import FlatButton from 'material-ui/FlatButton';
 
@@ -25,7 +26,7 @@ class ImageResults extends Component {
 							}
 							actionIcon={
 								<IconButton>
-									<ZoomIn color="white" />
+									<Icon color="white" />
 								</IconButton>
 							}>
 							<img src={img.largeImageURL} alt="pixabay images" />
