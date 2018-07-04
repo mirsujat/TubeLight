@@ -1,0 +1,28 @@
+body {
+    background-color: #eee;
+}
+
+.side-nav .logo-sn {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.side-nav .logo-sn img {
+    height: 38px;
+}
+
+.side-nav .search-form input[type=text] {
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.accordion .card {
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .accordion .card .card-body {
+    border-top: 1px solid #eee;
+  }
+        
