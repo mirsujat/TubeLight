@@ -62,8 +62,12 @@ sc-card .front h1 {
 	font-size: 24px;
 }
 
+sc-card img {
+	width: 260px;
+	height: 380px;
+}
 sc-card .back {
-	background: url(images/supercharged.jpg) center center no-repeat;
+	/* background: url(images/supercharged.jpg) center center no-repeat; */
 	color: #fff;
 	transform: rotateY(180deg);
 }
