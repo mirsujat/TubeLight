@@ -1,0 +1,183 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ececec;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #8e9ea1;
+    display: flex;
+    align-items: center;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+}
+header ul{
+    list-style-type: none;
+}
+
+#main-links ul{
+    display: flex;
+}
+
+#logo{
+    font-size: 1.8em;
+    margin: 0 auto;
+    font-family: 'Poiret One', cursive;
+}
+
+#social-links ul{
+    display: flex;
+}
+
+#intro{
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgba(238,242,243,0.5), rgba(142,158,171,1)),
+        url(img/cover.jpg);;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(238,242,243,0.5), rgba(142,158,171,1)),
+        url(img/cover.jpg);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+
+}
+#intro p{
+    width: 50%;
+    margin: 0 auto;
+}
+#intro h1{
+    font-size: 3em;
+    padding: 20px;
+    font-family: 'Poiret One', cursive;
+}
+
+#showcase{
+    display: flex;
+}
+.cards-container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    flex-grow: 1;
+    max-width: 350px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+}
+.card:hover{
+    box-shadow: 0px 0px 25px rgba(0,0,0,.2);
+}
+.card .card-img{
+    height: 200px;
+    overflow: hidden;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+    transition: transform 0.3s;
+}
+.card:hover .card-img{
+    transform: scale(1);
+}
+
+.card .card-img img{
+    height: 100%;
+    min-width: 100%;
+}
+.card .card-title{
+    padding: 10px;
+}
+.card .card-desc{
+    padding: 10px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+}
+.card .call-to-action{
+    margin: 10px;
+    margin-top: auto;
+    align-self: flex-start;
+    
+}
+.card .call-to-action a{
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #8e9ea1;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition-property: border, background-color, color;
+    transition-duration: 0.3s;
+}
+.card .call-to-action a:hover{
+    border: 2px solid #8e9ea1;
+    background-color: transparent;
+    color: #8e9ea1;
+
+}
+
+#showcase aside{
+    flex-basis: 300px;
+    background-color: #fff;
+    flex-shrink: 0;
+}
+#showcase aside h3{
+    padding: 15px;
+}
+#showcase aside a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+#showcase aside a:hover{
+    background-color: rgba(0,0,0,.1);
+}
+#showcase aside ul{
+    list-style-type: none;
+}
+
+#footer{
+    background-color: teal;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 720px){
+    header{
+        flex-direction: column;
+    }
+    #logo{
+        order: -1;
+    }
+    #showcase aside{
+        display: none;
+    }
+    #intro h1{
+        font-size: 1.5em;
+    }
+    #intro p{
+        width: 80%;
+    }
+}
+
+
+
+
