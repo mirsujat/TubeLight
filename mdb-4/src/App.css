@@ -14,20 +14,22 @@
 }
 
 .md-form input[type=text]:focus:not([readonly]){
-  -webkit-box-shadow: 0 0 0 0 #4285f4;
-    box-shadow: 0 0 0 0 #4285f4;
-    border: 1px solid #4285f4;
+  -webkit-box-shadow: 2px 0 2px 0 #cad7ec;
+    box-shadow: 2px 0 2px 0 #cad7ec;
+    border: 1px solid  #9cbdf3;  
 }
 
 .input-group-text{
-  
+  color: #a9a9a9;
   padding: .375rem 1.5rem;
   border: 1px solid #d3d3d3;
   border-radius: 0 2px 2px 0;
   cursor: pointer;
 }
-.input-group-text:hover{
+
+.md-form.input-group .input-group-text:hover{
   background-color: #bdbdbd;
+  color: #060606;
   border-color: #c6c6c6;
   border: 1px solid #d3d3d3;
   border-radius: 0 2px 2px 0;
