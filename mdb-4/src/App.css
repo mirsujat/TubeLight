@@ -3,12 +3,16 @@
   margin: 70px auto;
 }
 /* Navbar */
+
 .navbar{
   padding: 0;
 }
 nav-link {
   display: block;
   padding: 0.6rem 1rem;
+}
+.navbar.navbar-light .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
