@@ -4,12 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
 
+import NavbarFeatures from '../src/components/Navbar/Navbar';
+
 class App extends Component {
   render() {
     return (
       <div>
-
-        <div><h1>Welcome to MDB-4</h1></div>
+        <NavbarFeatures />
+        
+          <div className="test"><h1>Welcome to MDB-4</h1></div>
+ 
       </div>
     );
   }
