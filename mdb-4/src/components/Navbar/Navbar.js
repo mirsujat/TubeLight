@@ -34,9 +34,17 @@ class NavbarFeatures extends Component {
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
+                    
+                            <div className="input-group md-form form-sm form-1 pl-0">
+                              <div className="input-group-append">
+                                <span className="input-group-text purple lighten-3" id="basic-text1"><i className="fa fa-search text-grey" aria-hidden="true"></i></span>
+                              </div>
+                              <input className="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
+                            </div>
+                   
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
-                        <NavbarNav left>
+                        <NavbarNav right>
                           <NavItem active>
                               <NavLink to="#">Home</NavLink>
                           </NavItem>
@@ -58,13 +66,7 @@ class NavbarFeatures extends Component {
                               </Dropdown>
                           </NavItem>
                         </NavbarNav>
-                        <NavbarNav right>
-                          <NavItem>
-                            <form className="form-inline md-form mt-0">
-                              <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search" aria-label="Search"/>
-                            </form>
-                          </NavItem>
-                        </NavbarNav>
+                       
                     </Collapse>
                 </Navbar>
             </Router>

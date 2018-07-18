@@ -8,6 +8,9 @@
   margin-bottom: 0;
 }
 
-nav{
-  margin-bottom: 10px;
+input-group.md-form.form-sm.form-1 input{
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
+
