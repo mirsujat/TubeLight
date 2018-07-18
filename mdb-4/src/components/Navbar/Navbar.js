@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, FormInline, Button, Input } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 class NavbarFeatures extends Component {
@@ -34,13 +34,13 @@ class NavbarFeatures extends Component {
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
-                    
-                            <div className="input-group md-form form-sm form-1 pl-0">
-                              <div className="input-group-append">
-                                <span className="input-group-text purple lighten-3" id="basic-text1"><i className="fa fa-search text-grey" aria-hidden="true"></i></span>
-                              </div>
-                              <input className="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
-                            </div>
+                    <NavbarNav>
+                    <form className="form-inline">
+                        <input className="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search" />
+                        <Button color="mdb-color" size="sm"><i className="fa fa-search" aria-hidden="true"></i></Button>
+                        
+                    </form>
+                    </NavbarNav>
                    
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>

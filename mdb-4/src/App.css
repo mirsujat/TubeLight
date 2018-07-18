@@ -1,16 +1,4 @@
 .test{
- 
   min-height: 1800px;
   margin: 70px auto;
 }
-
-.md-form{
-  margin-bottom: 0;
-}
-
-input-group.md-form.form-sm.form-1 input{
-  border: 1px solid #bdbdbd;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-
