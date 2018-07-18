@@ -15,8 +15,8 @@
 
 .md-form input[type=text]:focus:not([readonly]){
   -webkit-box-shadow: 2px 0 2px 0 #cad7ec;
-    box-shadow: 2px 0 2px 0 #cad7ec;
-    border: 1px solid  #9cbdf3;  
+  box-shadow: 2px 0 2px 0 #cad7ec;
+  border: 1px solid  #9cbdf3;  
 }
 
 .input-group-text{
