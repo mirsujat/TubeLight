@@ -30,7 +30,7 @@ class NavbarFeatures extends Component {
         return (
           <div>
             <Router>
-                <Navbar color="indigo" dark expand="lg" fixed="top" scrolling>
+                <Navbar color="white" light expand="lg" fixed="top" scrolling>
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
