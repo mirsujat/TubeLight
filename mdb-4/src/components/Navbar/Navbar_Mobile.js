@@ -41,7 +41,7 @@ class NavbarMobile extends Component {
              navigation =  (
                 <div>
                     <NavbarNav>
-                        <span><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+                        <span onClick={this.switchNav}><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
                         <SearchForm />
                     </NavbarNav>
                 </div>
@@ -54,8 +54,8 @@ class NavbarMobile extends Component {
                         <strong>Navbar</strong>
                     </NavbarBrand>
                     <NavbarNav>
-                    <NavItem>
-                        <NavLink to="#"><i class="fa fa-search" aria-hidden="true"></i></NavLink>
+                    <NavItem >
+                        <NavLink to="#"><i onClick={this.switchNav} class="fa fa-search" aria-hidden="true"></i></NavLink>
                         </NavItem> 
                         <NavItem>
                             <NavLink to="#"><i class="fa fa-home" aria-hidden="true"></i></NavLink>
