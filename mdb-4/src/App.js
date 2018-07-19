@@ -12,12 +12,12 @@ class App extends Component {
     return (
       <div>
         <NavbarFeatures />
-
+        <div className="container">
           <div className="test">
             <h1>Welcome to MDB-4</h1>
-            <SearchForm />
+              <SearchForm />
+            </div>
           </div>
- 
       </div>
     );
   }

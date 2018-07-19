@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import SearchForm from '../SearchForm';
 
 class NavbarFeatures extends Component {
     constructor(props) {
@@ -34,8 +35,9 @@ class NavbarFeatures extends Component {
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
-                   
-                   
+
+                    <SearchForm />
+
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
