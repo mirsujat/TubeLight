@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLi
 import { BrowserRouter as Router } from 'react-router-dom';
 import SearchForm from '../SearchForm';
 
-class NavbarFeatures extends Component {
+class NavbarDesktop extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -35,9 +35,9 @@ class NavbarFeatures extends Component {
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
-
-                    <SearchForm />
-
+                    <NavbarNav left>    
+                        <SearchForm />
+                    </NavbarNav>
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
@@ -71,4 +71,4 @@ class NavbarFeatures extends Component {
     }
 }
 
-export default NavbarFeatures;
+export default NavbarDesktop;
