@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import SearchForm from '../SearchForm';
+import arrowleft from '../../arrow-left-50.png';
 
 class NavbarMobile extends Component {
     constructor(props) {
@@ -39,11 +40,11 @@ class NavbarMobile extends Component {
         if(this.state.switchNav){
            
              navigation =  (
-                <div>
-                    <NavbarNav>
-                        <span onClick={this.switchNav}><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+                <div className="d-flex" >
+                    <img src={arrowleft} width="30" height="28" onClick={this.switchNav} className="left-arrow" />
+                    
                         <SearchForm />
-                    </NavbarNav>
+                    
                 </div>
              ) 
             

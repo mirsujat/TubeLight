@@ -5,7 +5,8 @@
 
 /* Navbar */
 .navbar {
-  padding: 0.2rem 0.5rem;
+  padding: 0.6rem 0.6rem;
+  justify-content: space-evenly;
 }
 
 .navbar-nav {
@@ -50,8 +51,11 @@
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
-    width: 600px;
-    margin-left: 110px;
+    /* width: 600px;
+    margin-left: 110px; */
+  }
+  .form-control {
+    line-height: 1.5;
   }
   .mobile{
     display: none;
@@ -109,4 +113,22 @@
   border-radius: 0 2px 2px 0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.10);
   cursor: pointer;
+}
+
+.md-form {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.form-control {
+  line-height: 1.1;
+}
+/* custom */
+.left-arrow{
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+  opacity: 0.5;
 }
