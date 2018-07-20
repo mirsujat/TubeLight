@@ -49,11 +49,11 @@ class NavbarMobile extends Component {
             
         }else{
             navigation = (
-                <div>
-                    <NavbarNav>
-                        <NavbarBrand href="/">
+                <div className="d-flex">
+                    <NavbarBrand href="/">
                             <strong>Navbar</strong>
                         </NavbarBrand>
+                    <NavbarNav right>
                         <NavItem >
                             <NavLink to="#"><i onClick={this.switchNav} class="fa fa-search" aria-hidden="true"></i></NavLink>
                         </NavItem> 

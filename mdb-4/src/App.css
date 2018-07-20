@@ -28,6 +28,9 @@
 .navbar .nav-item .nav-link {
   display: block;
   margin-top: 0;
+  padding-right: .64rem;
+  padding-left: .64rem;
+  cursor: pointer;
 }
 
 .nav-link {
@@ -42,7 +45,7 @@
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  width: 500px;
+  width: 100%;
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -82,11 +85,16 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.navbar .nav-item .nav-link {
+  padding-right: .8rem;
+  padding-left: .8rem;
+  cursor: pointer;
+}
 .md-form {
   position: relative;
   margin-top: 0;
   margin-bottom: 0; 
-  width: 335px;
+  width: 280px;
 }
 .form-control {
   line-height: 1.5;
