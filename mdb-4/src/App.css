@@ -38,8 +38,14 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+.md-form {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 500px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
   .navbar-expand-lg .navbar-nav .nav-link {
       padding-right: 1rem;
       padding-left: 1rem;
@@ -51,49 +57,68 @@
   .desktop{
     display: block;
   }
+
+.md-form {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0; 
+}
 }
 
- /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-  .desktop{
-    display: block;
-  }
-  
- }
+/* Small devices (landscape phones, 600px and up) */
+@media (min-width: 767px){
+.navbar {
+  padding: 0.6rem 1.5rem;
+  justify-content: space-evenly;
+}
+.navbar.scrolling-navbar {
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -o-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.navbar.scrolling-navbar.top-nav-collapse{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.md-form {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0; 
+  width: 335px;
+}
+.form-control {
+  line-height: 1.5;
+}
+.mobile{
+  display: none;
+}
 
- /* Small devices (landscape phones, 600px and up) */
-@media (min-width: 600px){
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
   .navbar {
     padding: 0.6rem 1.5rem;
     justify-content: space-evenly;
-  }
-  .navbar.scrolling-navbar {
-      -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-      -o-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-      padding-top: 8px;
-      padding-bottom: 8px;
-  }
-  .navbar.scrolling-navbar.top-nav-collapse{
-    padding-top: 0;
-    padding-bottom: 0;
   }
   .md-form {
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
-    width:80%;
-    
+    width: 500px; 
   }
-  .form-control {
-    line-height: 1.5;
+  .desktop{
+    display: block;
   }
-  .mobile{
-    display: none;
-  }
- 
 }
 
+ 
 
 .dropdown-menu{
   border-radius: 0;
@@ -146,12 +171,7 @@
   cursor: pointer;
 }
 
-.md-form {
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 0;
 
-}
 
 .form-control {
   line-height: 1.1;
@@ -166,5 +186,6 @@
 
 .justify-content-around {
   -ms-flex-pack: distribute!important;
-  justify-content: flex-end!important;
+  justify-content: space-around!important;
+  
 }

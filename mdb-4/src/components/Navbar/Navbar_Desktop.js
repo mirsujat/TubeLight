@@ -29,11 +29,12 @@ class NavbarDesktop extends Component {
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
-                    <NavbarNav >    
+                    
+                    <NavbarNav right>    
                         <SearchForm />
                     </NavbarNav>
-                   
-                        <NavbarNav >
+          
+                        <NavbarNav right>
                           <NavItem active>
                               <NavLink to="#">Home</NavLink>
                           </NavItem>
@@ -55,7 +56,7 @@ class NavbarDesktop extends Component {
                               </Dropdown>
                           </NavItem>
                         </NavbarNav>
-                 
+                    
                 </Navbar>
             </Router>
             </div>
