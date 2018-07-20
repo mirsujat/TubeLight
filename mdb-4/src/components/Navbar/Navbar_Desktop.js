@@ -7,19 +7,13 @@ class NavbarDesktop extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            collapse: false,
-            isWideEnough: false,
             dropdownOpen: false
         };
-    this.onClick = this.onClick.bind(this);
+ 
     this.toggle = this.toggle.bind(this);
     }
 
-    onClick(){
-        this.setState({
-            collapse: !this.state.collapse,
-        });
-    }
+   
 
     toggle() {
         this.setState({
@@ -31,15 +25,14 @@ class NavbarDesktop extends Component {
         return (
           <div>
             <Router>
-                <Navbar color="white" light expand="lg" fixed="top" scrolling>
+                <Navbar color="white" light expand="md" fixed="top" scrolling>
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
                     <NavbarNav left>    
                         <SearchForm />
                     </NavbarNav>
-                    { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
-                    <Collapse isOpen = { this.state.collapse } navbar>
+                   
                         <NavbarNav right>
                           <NavItem active>
                               <NavLink to="#">Home</NavLink>
@@ -62,8 +55,7 @@ class NavbarDesktop extends Component {
                               </Dropdown>
                           </NavItem>
                         </NavbarNav>
-                       
-                    </Collapse>
+                 
                 </Navbar>
             </Router>
             </div>

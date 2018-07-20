@@ -12,15 +12,18 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className="desktop">
+          <NavbarDesktop />
+        </div>
         <div className="mobile">
           <NavbarMobile />
         </div>
         <div className="container">
           <div className="test">
             <h1>Welcome to MDB-4</h1>
-              <SearchForm />
-            </div>
+            <SearchForm />
           </div>
+        </div>
       </div>
     );
   }
