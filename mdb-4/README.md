@@ -8,5 +8,6 @@ Navbar Desktop View
 Mobile View
 ![Navbar Mobile](https://github.com/mirsujat/TubeLight/blob/master/mdb-4/src/img/navbar-mobile-1.png)
 
+
 Search View
 ![Navbar Mobile](https://github.com/mirsujat/TubeLight/blob/master/mdb-4/src/img/navbar-mobile-2.png)
