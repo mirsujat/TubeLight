@@ -20,7 +20,7 @@ class App extends Component {
         </div>
         <div className="container">
           <div className="test">
-            <h1>MDB-4 Custome Navbar</h1>
+          <h1>MDB-4 Custome Navbar</h1>
             <SearchForm />
           </div>
         </div>
