@@ -12,16 +12,20 @@
 .navbar-nav {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
+.navbar.navbar-light .navbar-nav .nav-item .nav-link{
+  color: #717574;
 }
 .navbar .nav-item .nav-link {
   display: block;
   margin-top: 0;
 }
+
 .nav-link {
   display: block;
   padding: 0.6rem 1rem;
@@ -131,4 +135,8 @@
   margin-right: 15px;
   cursor: pointer;
   opacity: 0.5;
+}
+
+.show-search{
+
 }

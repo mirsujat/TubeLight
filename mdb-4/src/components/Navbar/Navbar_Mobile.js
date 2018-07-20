@@ -30,33 +30,32 @@ class NavbarMobile extends Component {
         });
     }
     switchNav() {
-        this.setState({
-            switchNav: !this.state.switchNav
-        });
+        setTimeout(() => {
+            this.setState({
+                switchNav: !this.state.switchNav
+            });
+          }, 300)
     }
 
     render() {
         let navigation = null;
         if(this.state.switchNav){
-           
              navigation =  (
                 <div className="d-flex" >
                     <img src={arrowleft} width="30" height="28" onClick={this.switchNav} className="left-arrow" />
-                    
-                        <SearchForm />
-                    
+                    <SearchForm />
                 </div>
              ) 
             
         }else{
             navigation = (
                 <div>
-                    <NavbarBrand href="/">
-                        <strong>Navbar</strong>
-                    </NavbarBrand>
                     <NavbarNav>
-                    <NavItem >
-                        <NavLink to="#"><i onClick={this.switchNav} class="fa fa-search" aria-hidden="true"></i></NavLink>
+                        <NavbarBrand href="/">
+                            <strong>Navbar</strong>
+                        </NavbarBrand>
+                        <NavItem >
+                            <NavLink to="#"><i onClick={this.switchNav} class="fa fa-search" aria-hidden="true"></i></NavLink>
                         </NavItem> 
                         <NavItem>
                             <NavLink to="#"><i class="fa fa-home" aria-hidden="true"></i></NavLink>
