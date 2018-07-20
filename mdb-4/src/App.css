@@ -3,6 +3,10 @@
   margin: 70px auto;
 }
 
+.desktop{
+  display: none;
+}
+
 /* Navbar */
 .navbar {
   padding: 0.6rem 0.6rem;
@@ -33,6 +37,8 @@
 .navbar.navbar-light .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
       padding-right: 1rem;
@@ -42,10 +48,20 @@
     padding: 0.6rem 1.5rem;
     justify-content: space-evenly;
   }
-  
+  .desktop{
+    display: block;
+  }
 }
 
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .desktop{
+    display: block;
+  }
+  
+ }
 
+ /* Small devices (landscape phones, 600px and up) */
 @media (min-width: 600px){
   .navbar {
     padding: 0.6rem 1.5rem;
@@ -66,8 +82,8 @@
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
-    width: 600px;
-    margin-left: 110px;
+    width:80%;
+    
   }
   .form-control {
     line-height: 1.5;
@@ -148,3 +164,7 @@
   opacity: 0.5;
 }
 
+.justify-content-around {
+  -ms-flex-pack: distribute!important;
+  justify-content: flex-end!important;
+}

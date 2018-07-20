@@ -25,15 +25,15 @@ class NavbarDesktop extends Component {
         return (
           <div>
             <Router>
-                <Navbar color="white" light expand="md" fixed="top" scrolling>
+                <Navbar  color="white" light expand="md" fixed="top" scrolling>
                     <NavbarBrand href="/">
                         <strong>Navbar</strong>
                     </NavbarBrand>
-                    <NavbarNav left>    
+                    <NavbarNav >    
                         <SearchForm />
                     </NavbarNav>
                    
-                        <NavbarNav right>
+                        <NavbarNav >
                           <NavItem active>
                               <NavLink to="#">Home</NavLink>
                           </NavItem>
