@@ -34,7 +34,7 @@ class NavbarMobile extends Component {
             this.setState({
                 switchNav: !this.state.switchNav
             });
-          }, 300)
+          }, 200)
     }
 
     render() {
@@ -42,7 +42,7 @@ class NavbarMobile extends Component {
         if(this.state.switchNav){
              navigation =  (
                 <div className="d-flex" >
-                    <img src={arrowleft} width="30" height="28" onClick={this.switchNav} className="left-arrow" />
+                    <img src={arrowleft} width="30" height="28" onClick={this.switchNav} className="left-arrow" alt="arrow-left"/>
                     <SearchForm />
                 </div>
              ) 
