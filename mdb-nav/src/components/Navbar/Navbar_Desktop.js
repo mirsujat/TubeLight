@@ -32,12 +32,9 @@ class NavbarDesktop extends Component {
                         <span className="logo"><i class="fa fa-th" aria-hidden="true"></i></span>
                         <span>NavBar</span>
                     </NavbarBrand>
-                    
                     <NavbarNav right>
                       <SearchForm />
                     </NavbarNav>
-                    
-
                     <NavbarNav right>
                       <NavItem active>
                           <NavLink to="#">Home</NavLink>

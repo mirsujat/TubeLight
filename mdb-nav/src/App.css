@@ -14,7 +14,7 @@ body {
 .navbar{
   padding: 0 .6rem;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.84rem;
   font-weight: 300;
 }
 .navbar-nav {
@@ -28,7 +28,7 @@ body {
 }
 .navbar .nav-item .nav-link {
   display: block;
-  padding: 0.9rem 0.7rem;
+  padding: 0.7rem 0.49rem;
 }
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
   color: #fff;
@@ -138,10 +138,12 @@ body {
   margin-left: -1px;
   cursor: pointer;
 }
+.search-icon{
+  padding: 0 0.7rem;
+}
 
 
-
-@media (min-width: 600px){
+@media (min-width: 992px){
   .navbar.scrolling-navbar {
       -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
       -o-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -169,7 +171,7 @@ body {
     white-space: nowrap;
   }
   .form-2{
-    width: 600px;
+    width: 450px;
     opacity: 0.96;
   }
 }
