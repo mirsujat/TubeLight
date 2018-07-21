@@ -9,7 +9,10 @@ body {
   margin-top: 100px;
   margin-left: 40%;
 }
-
+ 
+.desktop{
+  display: none;
+}
 
 .navbar{
   padding: 0 .6rem;
@@ -143,7 +146,8 @@ body {
 }
 
 
-@media (min-width: 992px){
+
+@media (min-width: 768px){
   .navbar.scrolling-navbar {
       -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
       -o-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -171,7 +175,16 @@ body {
     white-space: nowrap;
   }
   .form-2{
-    width: 450px;
+    width: 300px;
+    opacity: 0.96;
+  }
+  .desktop{
+    display: block;
+  }
+}
+@media (min-width: 992px){
+  .form-2{
+    width: 550px;
     opacity: 0.96;
   }
 }
