@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 import './App.css';
+
+import NavbarDesktop from './components/Navbar/Navbar_Desktop';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+
+        <NavbarDesktop />
+        <div className="container">
+          <div className="test">
+            <h3>MDB Nav and SideNav</h3>
+          </div>
+        </div>
       </div>
     );
   }

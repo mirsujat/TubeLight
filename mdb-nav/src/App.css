@@ -1,28 +1,58 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Roboto", Roboto Condensed, sans-serif;
+  font-weight: 300;
+}
+.test{
+  display: block;
+  position: relative;
+  height: 1880px;
+  margin-top: 100px;
+  margin-left: 40%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.navbar{
+  padding: 0 1rem;
+}
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.navbar .nav-item .nav-link {
+  display: block;
+  padding: 0.8rem 1rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.navbar-toggler {
+  font-size: 1rem;
+}
+.navbar .navbar-toggler {
+  outline: 0;
+  border-width: 0;
+  margin-right: 0.8rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+.navbar-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.3rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media (min-width: 600px){
+  .navbar.scrolling-navbar {
+      -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+      -o-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+      padding-top: 8px;
+      padding-bottom: 8px;
+  }
 }
