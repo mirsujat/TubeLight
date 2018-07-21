@@ -27,6 +27,7 @@ class NavbarDesktop extends Component {
                 <Navbar color="indigo"  dark fixed="top">
                 <NavbarToggler onClick = { this.onClick } />
                     <NavbarBrand href="#">
+                        <span className="logo"><i class="fa fa-th" aria-hidden="true"></i></span>
                         <span>NavBar</span>
                     </NavbarBrand>
                     

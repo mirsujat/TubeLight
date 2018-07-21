@@ -12,6 +12,8 @@ body {
 
 .navbar{
   padding: 0 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.9rem;
 }
 .navbar-nav {
   display: -ms-flexbox;
@@ -28,7 +30,7 @@ body {
 }
 
 .navbar-toggler {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .navbar .navbar-toggler {
   outline: 0;
@@ -36,15 +38,37 @@ body {
   margin-right: 0.8rem;
 }
 
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.4em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
 .navbar-brand {
   display: inline-block;
   padding-top: .3125rem;
   padding-bottom: .3125rem;
   margin-right: 1rem;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: inherit;
   white-space: nowrap;
+}
+
+.navbar-brand .logo {
+  margin-right: 0.25rem;
+  font-size: 1.04rem;
+}
+
+.dropdown-menu {
+  font-size: 0.9rem;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.11rem;
+  -webkit-box-shadow: 8px -2px 15px 5px rgba(0,0,0,.15);
+  box-shadow: 5px -1px 15px 5px rgba(0,0,0,.15)
 }
 
 @media (min-width: 600px){
