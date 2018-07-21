@@ -5,6 +5,7 @@ import 'mdbreact/dist/css/mdb.css';
 import './App.css';
 
 import NavbarDesktop from './components/Navbar/Navbar_Desktop';
+import SearchForm from './components/SearchForm/SearchForm';
 
 class App extends Component {
   render() {
@@ -12,9 +13,11 @@ class App extends Component {
       <div>
 
         <NavbarDesktop />
+
         <div className="container">
           <div className="test">
             <h3>MDB Nav and SideNav</h3>
+            <SearchForm />
           </div>
         </div>
       </div>
