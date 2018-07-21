@@ -93,11 +93,15 @@ body {
   color: #333;
   font-size: 0.9375rem;
   font-weight: 400;
+  border-radius: 0.111rem;
+  background-color: #fff;
 }
 .md-form input[type=text]:focus:not([readonly]){
   -webkit-box-shadow: 0 1px 0 0 #4285f4;
-    box-shadow: inset -1px -1px 9px 1px #e4eaea;
-    border: 1px solid #dbe0e0;
+  box-shadow: inset 4px -1px 9px 1px #d8dcdc;
+  border: 1px solid #bbbec7;
+  background-color: #fff;
+  transition: 0.35s;
 }
 .input-group-text {
   display: -ms-flexbox;
@@ -120,6 +124,21 @@ body {
   margin: 0;
   padding: 0.125rem 0.75rem;
 }
+.md-form.input-group .input-group-text {
+  transition: 0.35s;
+  background-color: #f1f0f0;
+  
+}
+.md-form.input-group .input-group-text:hover {
+  transition: 0.35s;
+  background-color: #bfbfcc;
+  
+}
+.input-group-append {
+  margin-left: -1px;
+  cursor: pointer;
+}
+
 
 
 @media (min-width: 600px){
@@ -148,5 +167,9 @@ body {
     font-size: 1.1rem;
     line-height: inherit;
     white-space: nowrap;
+  }
+  .form-2{
+    width: 600px;
+    opacity: 0.96;
   }
 }

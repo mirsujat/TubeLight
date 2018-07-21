@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler,  NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import SearchForm from '../SearchForm/SearchForm';
+
 class NavbarDesktop extends Component {
     constructor(props) {
         super(props);
@@ -31,6 +33,9 @@ class NavbarDesktop extends Component {
                         <span>NavBar</span>
                     </NavbarBrand>
                     
+                    <NavbarNav right>
+                      <SearchForm />
+                    </NavbarNav>
                     
 
                     <NavbarNav right>
