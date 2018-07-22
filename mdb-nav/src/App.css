@@ -10,12 +10,15 @@ body {
 
 }
  a{
-   color: #333;
+   color: #000;
    transition: all 0.2s ease-in-out;
+   opacity: 0.8;
  }
  a:hover {
-  color: #fb0909;
+  color: #000;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
+  opacity: 1;
 }
 .desktop{
   display: none;
@@ -69,9 +72,7 @@ body {
   background: no-repeat center center;
   background-size: 100% 100%;
 }
-.navbar.navbar-dark .navbar-toggler {
-  color: red;
-}
+
 .navbar-brand {
   display: inline-block;
   padding-top: .3125rem;
@@ -83,11 +84,12 @@ body {
   white-space: nowrap;
 }
 .navbar .navbar-brand {
-  color: red;
+  color:#33b5e5;
+  opacity: 1;
 }
 .navbar-brand .logo {
   margin-right: 0.110rem;
-  font-size: 0.9374rem;
+  font-size: 1rem;
 }
 
 .dropdown-menu {
@@ -171,6 +173,56 @@ body {
   padding: 0 0.7rem;
 }
 
+.side-nav{
+  display: flex;
+  position: relative;
+  top: 55px;
+  width: 240px;
+  height: auto;
+  color: #313131;
+  background-color: #e6e6e6;
+  padding: 10px 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.870rem;
+
+}
+.list-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .4rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #e6e6e6;
+  border: none;
+  cursor: pointer;
+}
+.list-group-item:hover{
+  background-color: #dedddd;
+}
+.list-group .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #000;
+  font-size: 1rem;
+  background-color: #cacaca;
+  border-color: none;
+}
 /* .search-nav{
   display: block;
   position: fixed;
@@ -210,11 +262,11 @@ body {
       -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
       -o-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
       transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
-      padding-top: 8px;
-      padding-bottom: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
   .navbar{
-    padding: 0 .6rem;
+    padding: 0.2rem;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.8rem;
   }
