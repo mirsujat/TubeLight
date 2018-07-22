@@ -13,9 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="mobile">
-          <SearchFormSm />
-        </div>
+        <div className="mobile" />
         <div className="desktop">
           <NavbarDesktop />
         </div>

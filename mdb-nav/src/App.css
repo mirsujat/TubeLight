@@ -9,7 +9,14 @@ body {
   margin-top: 70px;
 
 }
- 
+ a{
+   color: #333;
+   transition: all 0.2s ease-in-out;
+ }
+ a:hover {
+  color: #fb0909;
+  text-decoration: none;
+}
 .desktop{
   display: none;
 }
@@ -19,6 +26,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.84rem;
   font-weight: 300;
+  color: #333;
 }
 .navbar-nav {
   display: -ms-flexbox;
@@ -33,6 +41,7 @@ body {
   display: block;
   padding: 0.7rem 0.6rem;
 }
+
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
   color: #fff;
   -webkit-transition: 0.35s;
@@ -42,7 +51,8 @@ body {
  
 }
 .navbar-toggler {
-  font-size: 0.85rem;
+  font-size: 1rem;
+  opacity: 0.4;
 }
 .navbar .navbar-toggler {
   outline: 0;
@@ -59,6 +69,9 @@ body {
   background: no-repeat center center;
   background-size: 100% 100%;
 }
+.navbar.navbar-dark .navbar-toggler {
+  color: red;
+}
 .navbar-brand {
   display: inline-block;
   padding-top: .3125rem;
@@ -69,7 +82,9 @@ body {
   line-height: inherit;
   white-space: nowrap;
 }
-
+.navbar .navbar-brand {
+  color: red;
+}
 .navbar-brand .logo {
   margin-right: 0.110rem;
   font-size: 0.9374rem;
@@ -88,6 +103,11 @@ body {
   font-weight: 300;
   color: #6f6f6f !important;
 }
+.light{
+  background-color: #fff;
+  
+
+}
 .input-group.md-form.form-sm.form-2 input.amber-border  {
   border: 1px solid #ffca28;
 }
@@ -98,12 +118,18 @@ body {
   font-weight: 400;
   border-radius: 0.111rem;
   background-color: #fff;
+  -webkit-box-shadow: inset 4px -1px 9px 1px #d8dcdc;
+  box-shadow: inset 4px -1px 9px 1px #d8dcdc;
 }
 .md-form input[type=text]:focus:not([readonly]){
-  -webkit-box-shadow: 0 1px 0 0 #4285f4;
-  box-shadow: inset 4px -1px 9px 1px #d8dcdc;
   border: 1px solid #bbbec7;
   background-color: #fff;
+  border-top: 1px solid #1766f7;
+  border-right: 1px solid #1766f7;
+  border-bottom: 1px solid #1766f7;
+  border-left: 1px solid #1766f7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   transition: 0.35s;
 }
 .input-group-text {
@@ -145,7 +171,7 @@ body {
   padding: 0 0.7rem;
 }
 
-.search-nav{
+/* .search-nav{
   display: block;
   position: fixed;
   top: 0;
@@ -157,7 +183,7 @@ body {
   background-color: #fbfbfb;
   -webkit-box-shadow: 1px 2px 5px 0 #4285f4;
   box-shadow: -3px 1px 3px 2px #dddfe2;
-}
+} */
 .arrow-left{
   display: inline-block;
   cursor: pointer;
