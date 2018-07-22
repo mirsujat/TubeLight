@@ -33,22 +33,21 @@ class NavbarMobile extends Component {
                         <span className="logo"><i class="fa fa-th" aria-hidden="true"></i></span>
                         <span>NavBar</span>
                     </NavbarBrand>
+                   
                     <NavbarNav right>
-                      <SearchFormSm />
-                    </NavbarNav>
-                    <NavbarNav right>
-                      <NavItem active>
-                          <NavLink to="#">Home</NavLink>
+                    <NavItem>
+                        <NavLink to=""><i class="fa fa-search" aria-hidden="true"></i></NavLink>
+                    </NavItem>
+                     
+                      <NavItem>
+                          <NavLink to="#"><i class="fa fa-bell-o" aria-hidden="true"></i></NavLink>
                       </NavItem>
                       <NavItem>
-                          <NavLink to="#">Features</NavLink>
-                      </NavItem>
-                      <NavItem>
-                          <NavLink to="#">Pricing</NavLink>
+                          <NavLink to="#"><i class="fa fa-cogs" aria-hidden="true"></i></NavLink>
                       </NavItem>
                       <NavItem>
                           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                          <DropdownToggle nav caret>Dropdown</DropdownToggle>
+                          <DropdownToggle nav><i class="fa fa-user-o" aria-hidden="true"></i></DropdownToggle>
                           <DropdownMenu>
                               <DropdownItem href="#">Action</DropdownItem>
                               <DropdownItem href="#">Another Action</DropdownItem>

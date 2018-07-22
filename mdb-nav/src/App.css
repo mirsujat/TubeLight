@@ -31,7 +31,7 @@ body {
 }
 .navbar .nav-item .nav-link {
   display: block;
-  padding: 0.7rem 0.49rem;
+  padding: 0.7rem 0.6rem;
 }
 .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
   color: #fff;
@@ -47,7 +47,7 @@ body {
 .navbar .navbar-toggler {
   outline: 0;
   border-width: 0;
-  margin-right: 0.7rem;
+  margin-right: 0.6rem;
 }
 
 .navbar-toggler-icon {
@@ -63,16 +63,16 @@ body {
   display: inline-block;
   padding-top: .3125rem;
   padding-bottom: .3125rem;
-  margin-right: 0.7rem;
+  margin-right: 0.6rem;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9374rem;
   line-height: inherit;
   white-space: nowrap;
 }
 
 .navbar-brand .logo {
   margin-right: 0.110rem;
-  font-size: 1rem;
+  font-size: 0.9374rem;
 }
 
 .dropdown-menu {
@@ -144,6 +144,7 @@ body {
 .search-icon{
   padding: 0 0.7rem;
 }
+
 
 
 
