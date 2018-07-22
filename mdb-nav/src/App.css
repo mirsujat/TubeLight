@@ -174,8 +174,8 @@ body {
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.01rem rgba(0,123,255,.25);
-  box-shadow: 0 0 0 0.01rem rgba(0,123,255,.25);
+  -webkit-box-shadow: 0 0 0 0.01rem rgba(0,123,255,.10);
+  box-shadow: 0 0 0 0.01rem rgba(0,123,255,.10);
 }
 
 
