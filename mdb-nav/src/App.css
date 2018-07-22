@@ -84,7 +84,7 @@ body {
   white-space: nowrap;
 }
 .navbar .navbar-brand {
-  color:#33b5e5;
+  color:#ff3547;
   opacity: 1;
 }
 .navbar-brand .logo {
@@ -178,11 +178,11 @@ body {
   position: relative;
   top: 55px;
   width: 240px;
-  height: auto;
+  min-height: 500px;
   color: #313131;
   background-color: #e6e6e6;
   padding: 10px 0px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
   font-size: 0.870rem;
 
 }
@@ -199,7 +199,7 @@ body {
   position: relative;
   display: block;
   padding: .4rem 1.25rem;
-  margin-bottom: -1px;
+  margin-bottom: 0;
   background-color: #e6e6e6;
   border: none;
   cursor: pointer;
@@ -222,6 +222,15 @@ body {
   font-size: 1rem;
   background-color: #cacaca;
   border-color: none;
+}
+.side-nav-icon{
+  display: inline;
+  margin-right: 26px;
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 53.3%);
+}
+.side-nav-icon.active{
+  color: #ff3547;
 }
 /* .search-nav{
   display: block;
