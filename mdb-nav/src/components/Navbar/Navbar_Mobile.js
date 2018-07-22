@@ -33,12 +33,10 @@ class NavbarMobile extends Component {
                         <span className="logo"><i class="fa fa-th" aria-hidden="true"></i></span>
                         <span>NavBar</span>
                     </NavbarBrand>
-                   
                     <NavbarNav right>
                     <NavItem>
                         <NavLink to=""><i class="fa fa-search" aria-hidden="true"></i></NavLink>
                     </NavItem>
-                     
                       <NavItem>
                           <NavLink to="#"><i class="fa fa-bell-o" aria-hidden="true"></i></NavLink>
                       </NavItem>

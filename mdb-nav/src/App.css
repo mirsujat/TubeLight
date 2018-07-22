@@ -6,8 +6,8 @@ body {
   display: block;
   position: relative;
   height: 1880px;
-  margin-top: 100px;
-  margin-left: 40%;
+  margin-top: 70px;
+
 }
  
 .desktop{
@@ -145,7 +145,38 @@ body {
   padding: 0 0.7rem;
 }
 
+.search-nav{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: auto;
+  width: 100%;
+  padding: 12px 12px;
+  margin: 0;
+  background-color: #fbfbfb;
+  -webkit-box-shadow: 1px 2px 5px 0 #4285f4;
+  box-shadow: -3px 1px 3px 2px #dddfe2;
+}
+.arrow-left{
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.search-sm .form-control{
+  line-height: 1rem;
+  font-size: 0.8rem;
+  border-radius: 0.110rem;
+}
 
+.search-sm .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.01rem rgba(0,123,255,.25);
+  box-shadow: 0 0 0 0.01rem rgba(0,123,255,.25);
+}
 
 
 @media (min-width: 768px){
