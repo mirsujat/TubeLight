@@ -6,9 +6,6 @@ import "./App.css";
 
 import NavbarMobile from "./components/Navbar/Navbar_Mobile";
 import NavbarDesktop from "./components/Navbar/Navbar_Desktop";
-import SearchForm from "./components/SearchForm/SearchForm";
-import SearchFormSm from "./components/SearchForm/SearchFormSm";
-import SideNav from "./components/SideNav/SideNav";
 
 class App extends Component {
   render() {
@@ -18,9 +15,7 @@ class App extends Component {
         <div className="desktop">
           <NavbarDesktop />
         </div>
-        <div className="side-nav">
-          <SideNav />
-        </div>
+        <SideNav />
         <div className="container">
           <div className="test" />
         </div>

@@ -3,7 +3,6 @@ import {
   Navbar,
   NavbarBrand,
   NavbarNav,
-  NavbarToggler,
   NavItem,
   NavLink,
   Dropdown,
@@ -14,6 +13,7 @@ import {
 import { BrowserRouter as Router } from "react-router-dom";
 
 import SearchForm from "../SearchForm/SearchForm";
+import SideNavToggler from "../SideNav/SideNavToggler/SideNavToggler";
 
 class NavbarDesktop extends Component {
   constructor(props) {
@@ -35,9 +35,7 @@ class NavbarDesktop extends Component {
     return (
       <Router>
         <Navbar color="light" fixed="top">
-          <span onClick={this.onClick} className="navbar-toggler">
-            <i class="fa fa-bars" aria-hidden="true" />
-          </span>
+          <SideNavToggler onClick={this.props.clicked} />
           <NavbarBrand href="#">
             <span className="logo">
               <i class="fa fa-th-large" aria-hidden="true" />
