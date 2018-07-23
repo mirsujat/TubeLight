@@ -1,0 +1,32 @@
+.app-drawer{
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 240px;
+  max-width: 70%;
+  z-index: 200;
+}
+
+.app-drawer ul{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-drawer li{
+  margin: 0.5rem 0;
+}
+
+.app-drawer a{
+  color: #333;
+  text-decoration: none;
+}
+.app-drawer a:hover,
+.app-drawer a:active{
+  color: #000000;
+}

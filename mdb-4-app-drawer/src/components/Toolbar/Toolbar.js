@@ -1,11 +1,14 @@
 import React from "react";
 
 import "./Toolbar.css";
+import AppDrawerToggleButton from "../AppDrawer/AppDrawerToggleButton";
 
 const toolbar = props => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
-      <div />
+      <div>
+        <AppDrawerToggleButton />
+      </div>
       <div className="toolbar__logo">
         <a href="/">THE LOGO</a>
       </div>
