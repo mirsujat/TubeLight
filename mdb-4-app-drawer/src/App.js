@@ -3,6 +3,8 @@ import Toolbar from "../src/components/Toolbar/Toolbar";
 import AppDrawer from "./components/AppDrawer/AppDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 
+import "./App.css";
+
 class App extends Component {
   state = {
     appDrawerOpen: false
@@ -18,19 +20,29 @@ class App extends Component {
     this.setState({ appDrawerOpen: false });
   };
   render() {
-    let appDrawer = null;
+    {
+      /*
     let backdrop = null;
+   if (this.state.appDrawerOpen) {
+    backdrop = <Backdrop click={this.backdropClickHandler} />;
+  }
+  */
+    }
+
+    let contentStyleClasses = "content";
     if (this.state.appDrawerOpen) {
-      appDrawer = <AppDrawer />;
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
+      contentStyleClasses = "content content-right";
     }
 
     return (
       <div style={{ height: "100%" }}>
         <Toolbar appDrawerToggle={this.appDrawerToggleHandler} />
-        {appDrawer}
-        {backdrop}
-        <main style={{ marginTop: "65px" }}>
+        <AppDrawer show={this.state.appDrawerOpen} />
+        {/*
+         {backdrop}
+        */}
+
+        <main className={contentStyleClasses}>
           <p>This is the page content</p>
         </main>
       </div>

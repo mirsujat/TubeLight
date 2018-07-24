@@ -8,8 +8,12 @@
   width: 240px;
   max-width: 70%;
   z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease-out;
 }
-
+.app-drawer.open{
+  transform: translateX(0);
+}
 .app-drawer ul{
   height: 100%;
   list-style: none;
@@ -29,4 +33,10 @@
 .app-drawer a:hover,
 .app-drawer a:active{
   color: #000000;
+}
+
+@media(min-width: 769px) {
+  /* .app-drawer{
+    display: none;
+  } */
 }

@@ -6,7 +6,7 @@ import AppDrawerToggleButton from "../AppDrawer/AppDrawerToggleButton";
 const toolbar = props => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
-      <div>
+      <div className="toolbar__toggle-button">
         <AppDrawerToggleButton click={props.appDrawerToggle} />
       </div>
       <div className="toolbar__logo">

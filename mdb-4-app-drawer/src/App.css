@@ -1,0 +1,9 @@
+.content{
+  transition: all 0.35s ease-out;
+  margin-top: 65px;
+  padding-left: 15px;
+}
+
+.content-right{
+  padding-left: 290px;
+}

@@ -3,8 +3,13 @@ import React from "react";
 import "./AppDrawer.css";
 
 const appDrawer = props => {
+  let appDrawerStyleClasses = "app-drawer";
+
+  if (props.show) {
+    appDrawerStyleClasses = "app-drawer open";
+  }
   return (
-    <nav className="app-drawer">
+    <nav className={appDrawerStyleClasses}>
       <ul>
         <li>
           <a href="/">Products</a>
