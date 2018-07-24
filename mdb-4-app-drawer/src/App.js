@@ -20,13 +20,9 @@ class App extends Component {
     this.setState({ appDrawerOpen: false });
   };
   render() {
-    {
-      /*
     let backdrop = null;
-   if (this.state.appDrawerOpen) {
-    backdrop = <Backdrop click={this.backdropClickHandler} />;
-  }
-  */
+    if (this.state.appDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
     let contentStyleClasses = "content";
@@ -38,10 +34,7 @@ class App extends Component {
       <div style={{ height: "100%" }}>
         <Toolbar appDrawerToggle={this.appDrawerToggleHandler} />
         <AppDrawer show={this.state.appDrawerOpen} />
-        {/*
-         {backdrop}
-        */}
-
+        {backdrop}
         <main className={contentStyleClasses}>
           <p>This is the page content</p>
         </main>

@@ -4,6 +4,10 @@
   padding-left: 15px;
 }
 
-.content-right{
-  padding-left: 290px;
+
+@media(min-width: 768px) {
+  .content.content-right{
+    padding-left: 290px;
+  }
 }
+
