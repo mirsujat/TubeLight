@@ -1,25 +1,27 @@
-import React from "react";
-
+import React, { Component } from "react";
 import "./AppDrawer.css";
 
-const appDrawer = props => {
-  let appDrawerStyleClasses = "app-drawer";
+class AppDrawer extends Component {
+  render() {
+    let appDrawerStyleClasses = "app-drawer";
 
-  if (props.show) {
-    appDrawerStyleClasses = "app-drawer open";
+    if (this.props.show) {
+      appDrawerStyleClasses = "app-drawer open";
+    }
+
+    return (
+      <nav className={appDrawerStyleClasses}>
+        <ul>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Users</a>
+          </li>
+        </ul>
+      </nav>
+    );
   }
-  return (
-    <nav className={appDrawerStyleClasses}>
-      <ul>
-        <li>
-          <a href="/">Products</a>
-        </li>
-        <li>
-          <a href="/">Users</a>
-        </li>
-      </ul>
-    </nav>
-  );
-};
+}
 
-export default appDrawer;
+export default AppDrawer;
