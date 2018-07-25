@@ -1,16 +1,17 @@
 import React, { Component } from "react";
+import CustomScroll from "react-custom-scroll";
 import "./AppDrawer.css";
 
 class AppDrawer extends Component {
   render() {
-    let appDrawerStyleClasses = "app-drawer";
+    let appDrawerClasses = "app-drawer";
 
     if (this.props.show) {
-      appDrawerStyleClasses = "app-drawer open";
+      appDrawerClasses = "app-drawer open";
     }
 
     return (
-      <nav className={appDrawerStyleClasses}>
+      <nav className={appDrawerClasses}>
         <ul>
           <li>
             <a href="/">Products</a>

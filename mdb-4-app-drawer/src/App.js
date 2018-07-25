@@ -34,7 +34,7 @@ class App extends Component {
       <div style={{ height: "100%" }}>
         <Toolbar appDrawerToggle={this.appDrawerToggleHandler} />
         <AppDrawer show={this.state.appDrawerOpen} />
-        {backdrop}
+        {/* {backdrop} */}
         <main className={contentStyleClasses}>
           <p>This is the page content</p>
         </main>
