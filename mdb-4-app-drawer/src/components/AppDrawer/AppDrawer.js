@@ -14,40 +14,40 @@ class AppDrawer extends Component {
       <nav className={appDrawerClasses}>
         <ul>
           <li>
-            <a href="/">Products</a>
+            <a href="">Products</a>
           </li>
           <li>
-            <a href="/">Users</a>
+            <a href="">Users</a>
           </li>
           <li>
-            <a href="/">Products</a>
+            <a href="">Products</a>
           </li>
           <li>
-            <a href="/">Users</a>
+            <a href="">Users</a>
           </li>
           <li>
-            <a href="/">Products</a>
+            <a href="">Products</a>
           </li>
           <li>
-            <a href="/">Users</a>
+            <a href="">Users</a>
           </li>
           <li>
-            <a href="/">Products</a>
+            <a href="">Products</a>
           </li>
           <li>
-            <a href="/">Users</a>
+            <a href="">Users</a>
           </li>
           <li>
-            <a href="/">Products</a>
+            <a href="">Products</a>
           </li>
           <li>
-            <a href="/">Users</a>
+            <a href="">Users</a>
           </li>
           <li>
-            <a href="/">Products</a>
+            <a href="">Products</a>
           </li>
           <li>
-            <a href="/">Users</a>
+            <a href="">Users</a>
           </li>
         </ul>
       </nav>
