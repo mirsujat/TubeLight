@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import CustomScroll from "react-custom-scroll";
+import React, { Component, createRef } from "react";
+
 import "./AppDrawer.css";
 
 class AppDrawer extends Component {
@@ -13,6 +13,36 @@ class AppDrawer extends Component {
     return (
       <nav className={appDrawerClasses}>
         <ul>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Users</a>
+          </li>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Users</a>
+          </li>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Users</a>
+          </li>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Users</a>
+          </li>
+          <li>
+            <a href="/">Products</a>
+          </li>
+          <li>
+            <a href="/">Users</a>
+          </li>
           <li>
             <a href="/">Products</a>
           </li>

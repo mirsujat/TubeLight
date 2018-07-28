@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CustomScroll from "react-custom-scroll";
 import Toolbar from "../src/components/Toolbar/Toolbar";
 import AppDrawer from "./components/AppDrawer/AppDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
@@ -34,7 +35,8 @@ class App extends Component {
       <div style={{ height: "100%" }}>
         <Toolbar appDrawerToggle={this.appDrawerToggleHandler} />
         <AppDrawer show={this.state.appDrawerOpen} />
-        {/* {backdrop} */}
+
+        {backdrop}
         <main className={contentStyleClasses}>
           <p>This is the page content</p>
         </main>
