@@ -15,7 +15,7 @@ class App extends Component {
         <div className="desktop">
           <NavbarDesktop />
         </div>
-        <SideNav />
+
         <div className="container">
           <div className="test" />
         </div>
