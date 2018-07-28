@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CustomScroll from "react-custom-scroll";
 import Toolbar from "../src/components/Toolbar/Toolbar";
 import AppDrawer from "./components/AppDrawer/AppDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
