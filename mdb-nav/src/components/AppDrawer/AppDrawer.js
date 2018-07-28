@@ -9,7 +9,7 @@ class AppDrawer extends Component {
 
     <div className="app-drawer">
       App Drawer
-      <AppDrawerHeader />
+      <AppDrawerHeader>App Drawer Header</AppDrawerHeader>
     </div>;
   }
 }
