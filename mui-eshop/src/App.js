@@ -1,10 +1,16 @@
-import React, { Component } from "react";
-
-import "./App.css";
+import React, { Component, Fragment } from "react";
+import { Header, Footer } from "./components/Layouts";
+import Exercises from "./components/Exercises";
 
 class App extends Component {
   render() {
-    return <div className="App">MUI E-shop</div>;
+    return (
+      <Fragment>
+        <Header />
+        <Exercises />
+        <Footer />
+      </Fragment>
+    );
   }
 }
 
