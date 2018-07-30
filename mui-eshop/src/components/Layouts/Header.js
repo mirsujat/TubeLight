@@ -1,10 +1,17 @@
 import React from "react";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
 const header = props => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="title" color="inherit">
+          Exercises Database
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
