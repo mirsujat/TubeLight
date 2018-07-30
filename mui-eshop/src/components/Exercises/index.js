@@ -7,10 +7,10 @@ const exercises = props => {
   return (
     <Grid container>
       <Grid item sm>
-        <LeftPane style={styles} />
+        <LeftPane styles={styles} />
       </Grid>
       <Grid item sm>
-        <RightPane style={styles} />
+        <RightPane styles={styles} />
       </Grid>
     </Grid>
   );
