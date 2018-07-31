@@ -4,9 +4,11 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withStyles } from "@material-ui/core/styles";
+import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
+import IconButton from "@material-ui/core/IconButton";
+import { Delete } from "@material-ui/icons";
 
 const exercises = ({
   exercises,
@@ -16,7 +18,8 @@ const exercises = ({
     id,
     title = "Welcome!",
     description = "Please Select an Exercise From The List on The Left."
-  }
+  },
+  onDelete
 }) => {
   return (
     <Grid container>
@@ -36,6 +39,14 @@ const exercises = ({
                     {exercises.map(({ id, title }) => (
                       <ListItem key={id} button onClick={() => onSelect(id)}>
                         <ListItemText primary={title} />
+                        <ListItemSecondaryAction>
+                          <IconButton
+                            aria-label="Delete"
+                            onClick={() => onDelete(id)}
+                          >
+                            <Delete />
+                          </IconButton>
+                        </ListItemSecondaryAction>
                       </ListItem>
                     ))}
                   </List>
