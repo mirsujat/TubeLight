@@ -8,7 +8,16 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withStyles } from "@material-ui/core/styles";
 
-const exercises = ({ exercises, category }) => {
+const exercises = ({
+  exercises,
+  category,
+  onSelect,
+  exercise: {
+    id,
+    title = "Welcome!",
+    description = "Please Select an Exercise From The List on The Left."
+  }
+}) => {
   return (
     <Grid container>
       <Grid item sm>
@@ -16,7 +25,7 @@ const exercises = ({ exercises, category }) => {
           {exercises.map(
             ([group, exercises]) =>
               !category || category === group ? (
-                <Fragment>
+                <Fragment key={group}>
                   <Typography
                     variant="headline"
                     style={{ textTransform: "capitalize" }}
@@ -24,8 +33,8 @@ const exercises = ({ exercises, category }) => {
                     {group}
                   </Typography>
                   <List component="ul">
-                    {exercises.map(({ title }) => (
-                      <ListItem button>
+                    {exercises.map(({ id, title }) => (
+                      <ListItem key={id} button onClick={() => onSelect(id)}>
                         <ListItemText primary={title} />
                       </ListItem>
                     ))}
@@ -37,10 +46,10 @@ const exercises = ({ exercises, category }) => {
       </Grid>
       <Grid item sm>
         <Paper style={styles.Paper}>
-          <Typography variant="display1">Welcom!</Typography>
+          <Typography variant="display1">{title}</Typography>
 
           <Typography variant="body1" style={{ marginTop: 20 }}>
-            Please Select an Exercise From The List on The Left.
+            {description}
           </Typography>
         </Paper>;
       </Grid>
