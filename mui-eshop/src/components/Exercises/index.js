@@ -8,7 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { withStyles } from "@material-ui/core/styles";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
-import { Delete } from "@material-ui/icons";
+import { Edit, Delete } from "@material-ui/icons";
 
 const exercises = ({
   exercises,
@@ -19,6 +19,7 @@ const exercises = ({
     title = "Welcome!",
     description = "Please Select an Exercise From The List on The Left."
   },
+  onSelectEdit,
   onDelete
 }) => {
   return (
@@ -40,6 +41,12 @@ const exercises = ({
                       <ListItem key={id} button onClick={() => onSelect(id)}>
                         <ListItemText primary={title} />
                         <ListItemSecondaryAction>
+                          <IconButton
+                            aria-label="Edit"
+                            onClick={() => onSelectEdit(id)}
+                          >
+                            <Edit />
+                          </IconButton>
                           <IconButton
                             aria-label="Delete"
                             onClick={() => onDelete(id)}
