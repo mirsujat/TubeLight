@@ -33,13 +33,22 @@ class App extends Component {
     }));
   };
 
+  exerciseCreateHandler = exercise => {
+    this.setState(({ exercises }) => ({
+      exercises: [...exercises, exercise]
+    }));
+  };
+
   render() {
     const exercises = this.getExercisesByMuscle(),
       { category, exercise } = this.state;
 
     return (
       <Fragment>
-        <Header />
+        <Header
+          muscles={muscles}
+          onExerciseCreate={this.exerciseCreateHandler}
+        />
         <Exercises
           exercise={exercise}
           category={category}

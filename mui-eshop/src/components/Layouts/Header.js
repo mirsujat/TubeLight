@@ -3,13 +3,17 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
-const header = props => {
+import CreateDialog from "../Exercises/Dialogs/Create";
+
+const header = ({ muscles, onExerciseCreate }) => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="title" color="inherit">
+        <Typography variant="title" color="inherit" style={{ flex: 1 }}>
           Exercises Database
         </Typography>
+
+        <CreateDialog muscles={muscles} onCreate={onExerciseCreate} />
       </Toolbar>
     </AppBar>
   );
