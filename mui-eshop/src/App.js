@@ -22,9 +22,7 @@ class App extends Component {
     return Object.entries(
       this.state.exercises.reduce((exercises, exercise) => {
         const { muscles } = exercise;
-
         exercises[muscles] = [...exercises[muscles], exercise];
-
         return exercises;
       }, initExercise)
     );
@@ -54,13 +52,20 @@ class App extends Component {
 
   selectEditHandler = id => {
     this.setState(({ exercises }) => ({
-      exercise: exercises.find(ex => ex.id === id)
+      exercise: exercises.find(ex => ex.id === id),
+      editMode: true
+    }));
+  };
+
+  exerciesEditHandler = exercise => {
+    this.setState(({ exercises }) => ({
+      exercises: [...exercises.filter(ex => ex.id !== exercise.id), exercise]
     }));
   };
 
   render() {
     const exercises = this.getExercisesByMuscle(),
-      { category, exercise } = this.state;
+      { category, exercise, editMode } = this.state;
 
     return (
       <Fragment>
@@ -72,9 +77,12 @@ class App extends Component {
           exercise={exercise}
           category={category}
           exercises={exercises}
+          muscles={muscles}
           onSelect={this.exerciesSelectHandler}
           onDelete={this.exerciseDeleteHandler}
           onSelectEdit={this.selectEditHandler}
+          editMode={editMode}
+          onEdit={this.exerciesEditHandler}
         />
         <Footer
           category={category}
