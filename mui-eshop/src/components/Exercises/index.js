@@ -71,7 +71,12 @@ const exercises = ({
       <Grid item xs={12} sm={6}>
         <Paper style={styles.Paper}>
           {editMode ? (
-            <Form muscles={muscles} onSubmit={onEdit} exercise={exercise} />
+            <Form
+              key={id}
+              muscles={muscles}
+              onSubmit={onEdit}
+              exercise={exercise}
+            />
           ) : (
             <Fragment>
               <Typography variant="display1">{title}</Typography>

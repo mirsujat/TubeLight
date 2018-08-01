@@ -22,10 +22,6 @@ class Form extends Component {
         };
   }
 
-  static getDerivedStateFromProps({ exercise }) {
-    return exercise || null;
-  }
-
   handleChange = name => ({ target: { value } }) => {
     this.setState({
       [name]: value
@@ -39,7 +35,6 @@ class Form extends Component {
       id: this.state.title.toLocaleLowerCase().replace(/ /g, "-"),
       ...this.state
     });
-    this.setState(this.getInitialState());
   };
 
   render() {
@@ -77,7 +72,12 @@ class Form extends Component {
           className={classes.formControl}
         />
         <br />
-        <Button color="primary" onClick={this.submitHandle}>
+        <Button
+          color="primary"
+          variant="raised"
+          onClick={this.submitHandle}
+          disabled={!title || !muscles}
+        >
           {exercise ? "Edit" : "Create"}
         </Button>
       </form>
