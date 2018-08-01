@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -22,6 +22,10 @@ class Form extends Component {
         };
   }
 
+  componentWillReceiveProps({ exercise }) {
+    this.setState({ ...exercise });
+  }
+
   handleChange = name => ({ target: { value } }) => {
     this.setState({
       [name]: value
@@ -31,25 +35,16 @@ class Form extends Component {
   submitHandle = () => {
     //TODO: Validations
 
-    const { exercise } = this.state;
-
     this.props.onSubmit({
-      ...exercise,
-      id: exercise.title.toLocaleLowerCase().replace(/ /g, "-")
+      id: this.state.title.toLocaleLowerCase().replace(/ /g, "-"),
+      ...this.state
     });
-    this.setState({
-      open: false,
-      exercise: {
-        title: "",
-        description: "",
-        muscles: ""
-      }
-    });
+    this.setState(this.getInitialState());
   };
 
   render() {
     const { title, description, muscles } = this.state,
-      { classes, muscles: categories } = this.props;
+      { classes, muscles: categories, exercise } = this.props;
 
     return (
       <form className={classes.formControl}>
@@ -83,7 +78,7 @@ class Form extends Component {
         />
         <br />
         <Button color="primary" onClick={this.submitHandle}>
-          Create
+          {exercise ? "Edit" : "Create"}
         </Button>
       </form>
     );
