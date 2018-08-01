@@ -1,19 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import blue from "@material-ui/core/colors/blue";
-import indigo from "@material-ui/core/colors/indigo";
+import deepOrange from "@material-ui/core/colors/deepOrange";
+import amber from "@material-ui/core/colors/amber";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
 const theme = createMuiTheme({
   palette: {
-    primary: blue,
+    primary: {
+      main: "#dd2c00"
+    },
     secondary: {
-      main: indigo[500],
-      light: indigo[300],
-      dark: indigo[700]
+      main: "#ffd740"
     },
     type: "light"
   }
