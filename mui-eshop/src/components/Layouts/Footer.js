@@ -14,7 +14,7 @@ const footer = ({ muscles, category, onSelect, width }) => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="relative" bottom color="default" light>
       <Tabs
         value={index}
         onChange={onIndexSelected}

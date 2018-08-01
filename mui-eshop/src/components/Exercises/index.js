@@ -29,7 +29,7 @@ const exercises = ({
   editMode
 }) => {
   return (
-    <Grid container>
+    <Grid container color="default" light>
       <Grid item xs={12} sm={6}>
         <Paper style={styles.Paper}>
           {exercises.map(
@@ -51,13 +51,13 @@ const exercises = ({
                             aria-label="Edit"
                             onClick={() => onSelectEdit(id)}
                           >
-                            <Edit />
+                            <Edit color="primary" light />
                           </IconButton>
                           <IconButton
                             aria-label="Delete"
                             onClick={() => onDelete(id)}
                           >
-                            <Delete />
+                            <Delete color="error" />
                           </IconButton>
                         </ListItemSecondaryAction>
                       </ListItem>

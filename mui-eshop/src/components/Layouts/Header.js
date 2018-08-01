@@ -7,9 +7,9 @@ import { withStyles } from "@material-ui/core/styles";
 
 const header = ({ classes, muscles, onExerciseCreate }) => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="primary" light>
       <Toolbar>
-        <Typography variant="title" color="inherit" className={classes.flex}>
+        <Typography variant="title" className={classes.flex}>
           Exercises Database
         </Typography>
 

@@ -34,7 +34,8 @@ class CreateDialog extends Component {
           aria-label="Add"
           mini
           onClick={this.toggleHandler}
-          color="secondary"
+          color="default"
+          light
         >
           <AddIcon />
         </Button>
