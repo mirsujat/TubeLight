@@ -30,7 +30,7 @@ const exercises = ({
 }) => {
   return (
     <Grid container>
-      <Grid item sm>
+      <Grid item xs={12} sm={6}>
         <Paper style={styles.Paper}>
           {exercises.map(
             ([group, exercises]) =>
@@ -68,7 +68,7 @@ const exercises = ({
           )}
         </Paper>
       </Grid>
-      <Grid item sm>
+      <Grid item xs={12} sm={6}>
         <Paper style={styles.Paper}>
           {editMode ? (
             <Form muscles={muscles} onSubmit={onEdit} exercise={exercise} />
@@ -89,8 +89,7 @@ const exercises = ({
 const styles = {
   Paper: {
     padding: 20,
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 5,
     height: 400,
     overflowY: "auto"
   }

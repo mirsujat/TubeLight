@@ -22,8 +22,8 @@ class Form extends Component {
         };
   }
 
-  componentWillReceiveProps({ exercise }) {
-    this.setState({ ...exercise });
+  static getDerivedStateFromProps({ exercise }) {
+    return exercise || null;
   }
 
   handleChange = name => ({ target: { value } }) => {
@@ -87,7 +87,7 @@ class Form extends Component {
 
 const styles = theme => ({
   formControl: {
-    width: 300
+    width: 250
   }
 });
 export default withStyles(styles)(Form);
