@@ -21,7 +21,8 @@ const header = ({ classes, muscles, onExerciseCreate }) => {
 
 const styles = {
   flex: {
-    flex: 1
+    flex: 1,
+    color: "#fff"
   }
 };
 

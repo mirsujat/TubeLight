@@ -29,6 +29,12 @@ const theme = createMuiTheme({
       dark: red[600]
     },
     type: "light"
+  },
+  shape: {
+    borderRadius: 2
+  },
+  spacing: {
+    unit: 2
   }
 });
 
