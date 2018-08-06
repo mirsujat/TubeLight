@@ -12,7 +12,6 @@ const header = ({ classes, muscles, onExerciseCreate }) => {
         <Typography variant="title" className={classes.flex}>
           Exercises Database
         </Typography>
-
         <CreateDialog muscles={muscles} onCreate={onExerciseCreate} />
       </Toolbar>
     </AppBar>
