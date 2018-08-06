@@ -1,10 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-.font-select {
-  font-family: "Roboto", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", "Roboto Condensed", "Helvetica", "Open Sans",
+    sans-serif;
 }
