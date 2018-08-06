@@ -1,5 +1,7 @@
 // ##############################
-// // // Variables - Styles that are used on more than one component
+// Author: Mir sujat
+// Email: mir.sujat@gmail.com
+// Variables - Styles that are used on more than one component
 // #############################
 
 const drawerWidth = 260;
