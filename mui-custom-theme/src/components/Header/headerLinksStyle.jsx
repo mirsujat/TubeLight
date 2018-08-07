@@ -1,6 +1,6 @@
-import { defaultFont } from "assets/jss/common-rules.jsx";
+import { defaultFont } from "../../assets/jss/common-rules.jsx";
 
-import tooltip from "assets/jss/styles/tooltipsStyle.jsx";
+import tooltip from "../../assets/jss/styles/tooltipsStyle.jsx";
 
 const navigationLinksStyle = theme => ({
   list: {

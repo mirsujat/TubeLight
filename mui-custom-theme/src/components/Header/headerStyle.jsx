@@ -12,7 +12,7 @@ import {
   transition,
   boxShadow,
   drawerWidth
-} from "../common-rules.jsx";
+} from "../../assets/jss/common-rules.jsx";
 
 const headerStyle = {
   appBar: {

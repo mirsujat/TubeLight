@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
-import { Manager, Target, Popper } from "react-popper";
+import { Manager, Reference, Popper } from "react-popper";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -15,9 +15,8 @@ import Grow from "@material-ui/core/Grow";
 import Divider from "@material-ui/core/Divider";
 
 // core components
-import Button from "components/Buttons/button.jsx";
-
-import dropdownStyle from "assets/jss/styles/dropdownStyle.jsx";
+import Button from "../Button/button.jsx";
+import dropdownStyle from "./dropdownStyle.jsx";
 
 class Dropdown extends Component {
   constructor(props) {
@@ -63,7 +62,7 @@ class Dropdown extends Component {
     });
     return (
       <Manager>
-        <Target>
+        <Reference>
           <Button
             aria-label="Notifications"
             aria-owns={open ? "menu-list" : null}
@@ -77,7 +76,7 @@ class Dropdown extends Component {
             {buttonText !== undefined ? buttonText : null}
             {caret ? <b className={caretClasses} /> : null}
           </Button>
-        </Target>
+        </Reference>
         <Popper
           placement={
             dropup
@@ -144,12 +143,12 @@ class Dropdown extends Component {
   }
 }
 
-CustomDropdown.defaultProps = {
+Dropdown.defaultProps = {
   caret: true,
   hoverColor: "primary"
 };
 
-CustomDropdown.propTypes = {
+Dropdown.propTypes = {
   classes: PropTypes.object.isRequired,
   hoverColor: PropTypes.oneOf([
     "black",
@@ -158,7 +157,7 @@ CustomDropdown.propTypes = {
     "success",
     "warning",
     "danger",
-    "rose"
+    "gold"
   ]),
   buttonText: PropTypes.node,
   buttonIcon: PropTypes.func,

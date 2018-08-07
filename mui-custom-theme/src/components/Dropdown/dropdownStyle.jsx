@@ -12,7 +12,7 @@ import {
   dangerBoxShadow,
   goldColor,
   goldBoxShadow
-} from "assets/jss/common-rules.jsx";
+} from "../../assets/jss/common-rules.jsx";
 
 const dropdownStyle = theme => ({
   popperClose: {
@@ -108,7 +108,7 @@ const dropdownStyle = theme => ({
       ...dangerBoxShadow
     }
   },
-  roseHover: {
+  goldHover: {
     "&:hover": {
       backgroundColor: goldColor,
       color: "#FFFFFF",

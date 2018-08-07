@@ -14,7 +14,7 @@ import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import headerStyle from "../../assets/jss/styles/headerStyle.jsx";
+import headerStyle from "./headerStyle.jsx";
 
 class Header extends Component {
   constructor(props) {
@@ -92,11 +92,11 @@ class Header extends Component {
   }
 }
 
-Navigation.defaultProps = {
+Header.defaultProps = {
   color: "primary"
 };
 
-Navigation.propTypes = {
+Header.propTypes = {
   classes: PropTypes.object.isRequired,
   color: PropTypes.oneOf([
     "primary",

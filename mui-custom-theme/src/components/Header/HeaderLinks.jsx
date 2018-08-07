@@ -18,7 +18,7 @@ import Button from "components/Button/button.jsx";
 
 
 
-import headerLinksStyle from "assets/jss/styles/headerLinksStyle.jsx";
+import headerLinksStyle from "./headerLinksStyle.jsx";
 
 const headerLinks = ({ ...props }) = {
   const { classes } = props;
