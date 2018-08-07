@@ -10,7 +10,7 @@ import {
   transition,
   boxShadow,
   drawerWidth
-} from "assets/jss/material-kit-react.jsx";
+} from "assets/jss/common-rules.jsx";
 
 const headerStyle = {
   appBar: {
@@ -95,7 +95,7 @@ const headerStyle = {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(244, 67, 54, 0.46)"
   },
-  rose: {
+  gold: {
     backgroundColor: roseColor,
     color: "#FFFFFF",
     boxShadow:

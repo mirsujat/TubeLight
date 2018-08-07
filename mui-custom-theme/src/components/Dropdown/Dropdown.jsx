@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -15,11 +15,11 @@ import Grow from "@material-ui/core/Grow";
 import Divider from "@material-ui/core/Divider";
 
 // core components
-import Button from "components/CustomButtons/Button.jsx";
+import Button from "components/Buttons/button.jsx";
 
 import dropdownStyle from "assets/jss/styles/dropdownStyle.jsx";
 
-class Dropdown extends React.Component {
+class Dropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {

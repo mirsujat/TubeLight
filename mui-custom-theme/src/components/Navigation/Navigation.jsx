@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -16,7 +16,7 @@ import Menu from "@material-ui/icons/Menu";
 // core components
 import navigationStyle from "assets/jss/styles/navigationStyle.jsx";
 
-class Header extends React.Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -135,7 +135,7 @@ Header.propTypes = {
     "danger",
     "transparent",
     "white",
-    "rose",
+    "gold",
     "dark"
   ]),
   rightLinks: PropTypes.node,
@@ -159,10 +159,10 @@ Header.propTypes = {
       "danger",
       "transparent",
       "white",
-      "rose",
+      "gold",
       "dark"
     ]).isRequired
   })
 };
 
-export default withStyles(headerStyle)(Header);
+export default withStyles(navigationStyle)(Navigation);

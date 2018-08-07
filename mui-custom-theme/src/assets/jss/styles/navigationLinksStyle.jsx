@@ -1,8 +1,8 @@
-import { defaultFont } from "assets/jss/material-kit-react.jsx";
+import { defaultFont } from "assets/jss/common-rules.jsx";
 
-import tooltip from "assets/jss/material-kit-react/tooltipsStyle.jsx";
+import tooltip from "assets/jss/styles/tooltipsStyle.jsx";
 
-const headerLinksStyle = theme => ({
+const navigationLinksStyle = theme => ({
   list: {
     ...defaultFont,
     fontSize: "14px",
@@ -114,4 +114,4 @@ const headerLinksStyle = theme => ({
   }
 });
 
-export default headerLinksStyle;
+export default navigationLinksStyle;
