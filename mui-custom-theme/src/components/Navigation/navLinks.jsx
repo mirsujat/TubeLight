@@ -13,8 +13,10 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { Apps, CloudDownload } from "@material-ui/icons";
 
 // core components
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
+import Dropdown from "components/Dropdown/Dropdown.jsx";
 import Button from "components/CustomButtons/Button.jsx";
+
+
 
 import navigationLinksStyle from "assets/jss/styles/navigationLinksStyle.jsx";
 
@@ -23,7 +25,7 @@ const navLinks = ({ ...props }) = {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
+        <Dropdown
           noLiPadding
           buttonText="Components"
           buttonProps={{
@@ -36,7 +38,7 @@ const navLinks = ({ ...props }) = {
               All components
             </Link>,
             <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
+              href="#"
               target="_blank"
               className={classes.dropdownLink}
             >
@@ -47,7 +49,7 @@ const navLinks = ({ ...props }) = {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
+          href="#"
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -63,7 +65,7 @@ const navLinks = ({ ...props }) = {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim"
+            href="#"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -81,7 +83,7 @@ const navLinks = ({ ...props }) = {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim"
+            href="#"
             target="_blank"
             className={classes.navLink}
           >
@@ -98,7 +100,7 @@ const navLinks = ({ ...props }) = {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            href="#"
             target="_blank"
             className={classes.navLink}
           >

@@ -19,7 +19,7 @@ import Button from "components/CustomButtons/Button.jsx";
 
 import dropdownStyle from "assets/jss/styles/dropdownStyle.jsx";
 
-class CustomDropdown extends React.Component {
+class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -172,4 +172,4 @@ CustomDropdown.propTypes = {
   noLiPadding: PropTypes.bool
 };
 
-export default withStyles(customDropdownStyle)(CustomDropdown);
+export default withStyles(dropdownStyle)(Dropdown);
