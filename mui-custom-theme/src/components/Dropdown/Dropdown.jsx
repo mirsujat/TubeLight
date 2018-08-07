@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -7,6 +7,7 @@ import { Manager, Reference, Popper } from "react-popper";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
+import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -19,20 +20,22 @@ import Button from "../Button/button.jsx";
 import dropdownStyle from "./dropdownStyle.jsx";
 
 class Dropdown extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false
-    };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-  }
-  handleClick() {
-    this.setState({ open: true });
-  }
-  handleClose() {
+  state = {
+    open: false
+  };
+
+  handleToggle = () => {
+    this.setState(state => ({ open: !state.open }));
+  };
+
+  handleClose = event => {
+    if (this.anchorEl.contains(event.target)) {
+      return;
+    }
+
     this.setState({ open: false });
-  }
+  };
+
   render() {
     const { open } = this.state;
     const {
@@ -61,22 +64,24 @@ class Dropdown extends Component {
       [classes.dropdownItemRTL]: rtlActive
     });
     return (
-      <Manager>
-        <Reference>
-          <Button
-            aria-label="Notifications"
-            aria-owns={open ? "menu-list" : null}
-            aria-haspopup="true"
-            {...buttonProps}
-            onClick={this.handleClick}
-          >
-            {buttonIcon !== undefined ? (
-              <this.props.buttonIcon className={classes.buttonIcon} />
-            ) : null}
-            {buttonText !== undefined ? buttonText : null}
-            {caret ? <b className={caretClasses} /> : null}
-          </Button>
-        </Reference>
+      <Fragment>
+        <Button
+          buttonRef={node => {
+            this.anchorEl = node;
+          }}
+          aria-label="Notifications"
+          aria-owns={open ? "menu-list" : null}
+          aria-haspopup="true"
+          {...buttonProps}
+          onClick={this.handleToggle}
+        >
+          {buttonIcon !== undefined ? (
+            <this.props.buttonIcon className={classes.buttonIcon} />
+          ) : null}
+          {buttonText !== undefined ? buttonText : null}
+          {caret ? <b className={caretClasses} /> : null}
+        </Button>
+
         <Popper
           placement={
             dropup
@@ -138,7 +143,7 @@ class Dropdown extends Component {
             </Grow>
           </ClickAwayListener>
         </Popper>
-      </Manager>
+      </Fragment>
     );
   }
 }
