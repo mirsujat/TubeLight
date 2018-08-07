@@ -27,7 +27,7 @@ class NavbarIcon extends Component {
       <div className={classes.section}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={12}>
               <div className={classes.title}>
                 <h3>Menu with Icons</h3>
               </div>
