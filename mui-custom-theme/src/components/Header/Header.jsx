@@ -14,9 +14,9 @@ import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import navigationStyle from "../../assets/jss/styles/navigationStyle.jsx";
+import headerStyle from "../../assets/jss/styles/headerStyle.jsx";
 
-class Navigation extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -116,4 +116,4 @@ Navigation.propTypes = {
   absolute: PropTypes.bool
 };
 
-export default withStyles(navigationStyle)(Navigation);
+export default withStyles(headerStyle)(Header);

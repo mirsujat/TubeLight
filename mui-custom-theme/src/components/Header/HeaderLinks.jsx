@@ -18,9 +18,9 @@ import Button from "components/Button/button.jsx";
 
 
 
-import navigationLinksStyle from "assets/jss/styles/navigationLinksStyle.jsx";
+import headerLinksStyle from "assets/jss/styles/headerLinksStyle.jsx";
 
-const navLinks = ({ ...props }) = {
+const headerLinks = ({ ...props }) = {
   const { classes } = props;
   return (
     <List className={classes.list}>
@@ -112,4 +112,4 @@ const navLinks = ({ ...props }) = {
   );
 }
 
-export default withStyles(navigationLinksStyle)(navLinks);
+export default withStyles(headerLinksStyle)(headerLinks);
