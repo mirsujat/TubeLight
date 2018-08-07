@@ -14,7 +14,7 @@ import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import navigationStyle from "assets/jss/styles/navigationStyle.jsx";
+import navigationStyle from "../../assets/jss/styles/navigationStyle.jsx";
 
 class Navigation extends Component {
   constructor(props) {
@@ -121,11 +121,11 @@ class Navigation extends Component {
   }
 }
 
-Header.defaultProp = {
+Navigation.defaultProp = {
   color: "white"
 };
 
-Header.propTypes = {
+Navigation.propTypes = {
   classes: PropTypes.object.isRequired,
   color: PropTypes.oneOf([
     "primary",

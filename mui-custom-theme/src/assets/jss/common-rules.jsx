@@ -66,14 +66,14 @@ const colorGreen = "#4caf50";
 const colorRuby = "#e91e63";
 const colorWhiteSmoke = "#f5f5f5";
 const greyColor = "#9e9e9e";
-const textColor = rgba(0, 0, 0, 0.07);
-const primaryTextColor = rgba(0, 0, 0, 0.87);
-const secondaryTextColor = rgba(0, 0, 0, 0.54);
+const textColor = "rgba(0, 0, 0, 0.07)";
+const primaryTextColor = "rgba(0, 0, 0, 0.87)";
+const secondaryTextColor = "rgba(0, 0, 0, 0.54)";
 const alternateTextColor = "#ffffff";
 const whiteColor = "#ffffff";
 const borderColor = "#e0e0e0";
-const disabledColor = rgba(0, 0, 0, 0.3);
-const shadowColor = rgba(0, 0, 0, 1);
+const disabledColor = "rgba(0, 0, 0, 0.3)";
+const shadowColor = "rgba(0, 0, 0, 1)";
 
 const primaryBoxShadow = {
   boxShadow:

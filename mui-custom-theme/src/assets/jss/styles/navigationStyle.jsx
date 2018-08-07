@@ -6,11 +6,11 @@ import {
   successColor,
   warningColor,
   dangerColor,
-  roseColor,
+  goldColor,
   transition,
   boxShadow,
   drawerWidth
-} from "assets/jss/common-rules.jsx";
+} from "../common-rules.jsx";
 
 const headerStyle = {
   appBar: {
@@ -96,7 +96,7 @@ const headerStyle = {
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(244, 67, 54, 0.46)"
   },
   gold: {
-    backgroundColor: roseColor,
+    backgroundColor: goldColor,
     color: "#FFFFFF",
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(233, 30, 99, 0.46)"
