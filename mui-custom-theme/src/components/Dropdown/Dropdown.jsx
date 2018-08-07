@@ -3,13 +3,14 @@ import React, { Component, Fragment } from "react";
 import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
-import { Manager, Reference, Popper } from "react-popper";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Popper from "@material-ui/core/Popper";
+
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
+
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Paper from "@material-ui/core/Paper";
 import Grow from "@material-ui/core/Grow";
@@ -83,6 +84,8 @@ class Dropdown extends Component {
         </Button>
 
         <Popper
+          open={open}
+          anchorEl={this.anchorEl}
           placement={
             dropup
               ? left
@@ -92,13 +95,12 @@ class Dropdown extends Component {
                 ? "bottom-end"
                 : "bottom-start"
           }
-          eventsEnabled={open}
           className={classNames({
             [classes.popperClose]: !open,
             [classes.pooperResponsive]: true
           })}
         >
-          <ClickAwayListener onClickAway={this.handleClose}>
+          {({ TransitionProps, placement }) => (
             <Grow
               in={open}
               id="menu-list"
@@ -108,40 +110,42 @@ class Dropdown extends Component {
                   : { transformOrigin: "0 0 0" }
               }
             >
-              <Paper className={classes.dropdown}>
-                <MenuList role="menu" className={classes.menuList}>
-                  {dropdownHeader !== undefined ? (
-                    <MenuItem
-                      onClick={this.handleClose}
-                      className={classes.dropdownHeader}
-                    >
-                      {dropdownHeader}
-                    </MenuItem>
-                  ) : null}
-                  {dropdownList.map((prop, key) => {
-                    if (prop.divider) {
+              <Paper className={classes.dropdown} transition disablePortal>
+                <ClickAwayListener onClickAway={this.handleClose}>
+                  <MenuList role="menu" className={classes.menuList}>
+                    {dropdownHeader !== undefined ? (
+                      <MenuItem
+                        onClick={this.handleClose}
+                        className={classes.dropdownHeader}
+                      >
+                        {dropdownHeader}
+                      </MenuItem>
+                    ) : null}
+                    {dropdownList.map((prop, key) => {
+                      if (prop.divider) {
+                        return (
+                          <Divider
+                            key={key}
+                            onClick={this.handleClose}
+                            className={classes.dropdownDividerItem}
+                          />
+                        );
+                      }
                       return (
-                        <Divider
+                        <MenuItem
                           key={key}
                           onClick={this.handleClose}
-                          className={classes.dropdownDividerItem}
-                        />
+                          className={dropdownItem}
+                        >
+                          {prop}
+                        </MenuItem>
                       );
-                    }
-                    return (
-                      <MenuItem
-                        key={key}
-                        onClick={this.handleClose}
-                        className={dropdownItem}
-                      >
-                        {prop}
-                      </MenuItem>
-                    );
-                  })}
-                </MenuList>
+                    })}
+                  </MenuList>
+                </ClickAwayListener>
               </Paper>
             </Grow>
-          </ClickAwayListener>
+          )}
         </Popper>
       </Fragment>
     );

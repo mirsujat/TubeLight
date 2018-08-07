@@ -51,7 +51,7 @@ class NavbarIcon extends Component {
                         left
                         hoverColor="info"
                         dropdownHeader="Dropdown Header"
-                        buttonIcon={Settings}
+                        buttonIcon={AccountCircle}
                         buttonProps={{
                           className: classes.navLink,
                           color: "transparent"
