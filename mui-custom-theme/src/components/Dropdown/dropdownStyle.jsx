@@ -19,9 +19,12 @@ const dropdownStyle = theme => ({
     pointerEvents: "none"
   },
   dropdown: {
-    borderRadius: "3px",
+    borderRadius: "2px",
     border: "0",
-    boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.26)",
+    boxShadow: [
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+      "0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+    ],
     top: "100%",
     zIndex: "1000",
     minWidth: "160px",
