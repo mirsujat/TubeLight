@@ -13,9 +13,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import Header from "../Header/Header.jsx";
-import Dropdown from "../Dropdown/Dropdown.jsx";
 import Button from "../Button/button.jsx";
-
+import Dropdown from "../Dropdown/Dropdown.jsx";
 import navbarStyle from "./navbarStyle.jsx";
 
 class NavbarIcon extends Component {

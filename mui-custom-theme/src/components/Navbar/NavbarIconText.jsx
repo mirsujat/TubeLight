@@ -15,6 +15,7 @@ import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import Header from "../Header/Header.jsx";
 import Button from "../Button/button.jsx";
+import Dropdown from "../Dropdown/Dropdown.jsx";
 import navbarStyle from "./navbarStyle.jsx";
 
 class NavbarIconText extends Component {
@@ -48,18 +49,30 @@ class NavbarIconText extends Component {
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    <AccountCircle className={classes.icons} /> Profile
+                    <Shop className={classes.icons} /> Shop
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    <Shop className={classes.icons} /> Shop
-                  </Button>
+                  <Dropdown
+                    left
+                    hoverColor="info"
+                    dropdownHeader="Dropdown Header"
+                    buttonText="Profile"
+                    buttonIcon={AccountCircle}
+                    buttonProps={{
+                      className: classes.navLink,
+                      color: "transparent"
+                    }}
+                    dropdownList={[
+                      "Action",
+                      "Another action",
+                      "Something else here",
+                      { divider: true },
+                      "Separated link",
+                      { divider: true },
+                      "One more separated link"
+                    ]}
+                  />
                 </ListItem>
               </List>
             }
