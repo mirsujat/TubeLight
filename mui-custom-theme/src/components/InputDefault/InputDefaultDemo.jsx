@@ -14,10 +14,9 @@ class CustomInput extends Component {
         <InputDefault
           white
           inputRootCustomClasses={classes.inputRootCustomClasses}
-          formControlProps={{
-            className: classes.formControl
-          }}
+          formControlProps={{ className: classes.formControl }}
           inputProps={{
+            disableUnderline: true,
             placeholder: "Search",
             inputProps: {
               "aria-label": "Search",

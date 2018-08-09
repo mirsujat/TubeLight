@@ -31,20 +31,50 @@ function inputDefault({ ...props }) {
     success
   } = props;
 
+  const labelClasses = classNames({
+    [" " + classes.labelRootError]: error,
+    [" " + classes.labelRootSuccess]: success && !error
+  });
+
+  const marginTop = classNames({
+    [classes.marginTop]: labelText === undefined,
+    [inputRootCustomClasses]: inputRootCustomClasses !== undefined
+  });
+  const inputClasses = classNames({
+    [classes.input]: true,
+    [classes.whiteInput]: white
+  });
+  const formControlClasses = classNames({
+    [classes.formControl]: true,
+    [classes.formControlLabel]: labelText !== undefined,
+    [formControlProps.className]: formControlProps.className !== undefined
+  });
   return (
-    <Fragment>
-      <TextField
-        defaultValue="Search"
-        label="Input Default"
-        id="input-default"
-        InputProps={{
-          disableUnderline: true
+    <FormControl {...formControlProps} className={formControlClasses}>
+      {labelText !== undefined ? (
+        <InputLabel
+          className={classes.labelRoot + " " + labelClasses}
+          htmlFor={id}
+          {...labelProps}
+        >
+          {labelText}
+        </InputLabel>
+      ) : null}
+      <Input
+        classes={{
+          input: inputClasses,
+          root: marginTop,
+          disabled: classes.disabled
         }}
-        InputLabelProps={{
-          shrink: true
-        }}
+        id={id}
+        {...inputProps}
       />
-    </Fragment>
+      {error ? (
+        <Clear className={classes.feedback + " " + classes.labelRootError} />
+      ) : success ? (
+        <Check className={classes.feedback + " " + classes.labelRootSuccess} />
+      ) : null}
+    </FormControl>
   );
 }
 
