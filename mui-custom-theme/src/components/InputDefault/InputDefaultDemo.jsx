@@ -4,7 +4,7 @@ import React, { Component, Fragment } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Search from "@material-ui/icons/Search";
 import InputDefault from "./InputDefault.jsx";
-import demoStyle from "./demoStyle.jsx";
+import demoStyle from "./inputDefaultStyle.jsx";
 
 class CustomInput extends Component {
   render() {
