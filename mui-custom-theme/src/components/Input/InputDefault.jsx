@@ -33,12 +33,7 @@ function inputDefault({ ...props }) {
     [" " + classes.labelRootError]: error,
     [" " + classes.labelRootSuccess]: success && !error
   });
-  const underlineClasses = classNames({
-    [classes.underlineError]: error,
-    [classes.underlineSuccess]: success && !error,
-    [classes.underline]: true,
-    [classes.whiteUnderline]: white
-  });
+
   const marginTop = classNames({
     [classes.marginTop]: labelText === undefined,
     [inputRootCustomClasses]: inputRootCustomClasses !== undefined
@@ -67,8 +62,7 @@ function inputDefault({ ...props }) {
         classes={{
           input: inputClasses,
           root: marginTop,
-          disabled: classes.disabled,
-          underline: underlineClasses
+          disabled: classes.disabled
         }}
         id={id}
         {...inputProps}

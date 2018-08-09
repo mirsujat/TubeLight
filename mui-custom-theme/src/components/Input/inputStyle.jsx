@@ -95,6 +95,21 @@ const inputStyle = {
       color: "#FFFFFF",
       opacity: "1"
     }
+  },
+  inputDefault: {
+    color: "#495057",
+    borderColor: "#D2D2D2 !important",
+    borderWidth: "1px !important",
+    "&,&::placeholder": {
+      fontSize: "14px",
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      fontWeight: "400",
+      lineHeight: "1.42857",
+      opacity: "1"
+    },
+    "&::placeholder": {
+      color: "#AAAAAA"
+    }
   }
 };
 
