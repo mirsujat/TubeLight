@@ -7,9 +7,11 @@ import NavbarSearch from "./components/Navbar/NavbarSearch.jsx";
 
 class App extends Component {
   render() {
+    const { classes } = this.props;
     return (
       <div>
         <h2>React Custom Theme</h2>
+
         <NavbarIcon />
         <NavbarIconText />
         <NavbarNotification />
