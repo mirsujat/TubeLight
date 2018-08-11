@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from "react";
 
 // @material-ui/core components
-import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Search from "@material-ui/icons/Search";
+
+// Custom Component
+import GridContainer from "../Grid/GridContainer.jsx";
+import GridItem from "../Grid/GridItem.jsx";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import InputDefault from "./InputDefault.jsx";
 import demoStyle from "./inputDefaultStyle.jsx";
@@ -13,22 +16,39 @@ class CustomInput extends Component {
     const { classes } = this.props;
 
     return (
-      <Fragment>
-        <InputDefault
-          id="material"
-          inputRootCustomClasses={classes.inputRootCustomClasses}
-          formControlProps={{ className: classes.formControl }}
-          inputProps={{
-            placeholder: "Search",
-            disableUnderline: true,
-            endAdornment: (
-              <InputAdornment>
-                <Search />
-              </InputAdornment>
-            )
-          }}
-        />
-      </Fragment>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
+          <InputDefault
+            id="material"
+            inputRootCustomClasses={classes.inputRootCustomClasses}
+            formControlProps={{ className: classes.formControl }}
+            inputProps={{
+              placeholder: "Search",
+              disableUnderline: true,
+              endAdornment: (
+                <InputAdornment className={classes.adornmentRoot}>
+                  <Search className={classes.adornmentIcon} />
+                </InputAdornment>
+              )
+            }}
+          />
+
+          <InputDefault
+            id="material"
+            inputRootCustomClasses={classes.inputRootCustomClasses}
+            formControlProps={{ className: classes.formControl }}
+            inputProps={{
+              placeholder: "User Name",
+              disableUnderline: true,
+              startAdornment: (
+                <InputAdornment position="start">
+                  <span className={classes.inputLable}>User Name: </span>
+                </InputAdornment>
+              )
+            }}
+          />
+        </GridItem>
+      </GridContainer>
     );
   }
 }

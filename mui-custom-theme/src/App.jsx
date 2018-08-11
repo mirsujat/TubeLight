@@ -12,7 +12,9 @@ class App extends Component {
     return (
       <div>
         <h2>React Custom Theme</h2>
-        <InputDefaultDemo />
+        <div style={{ border: "1px solid red" }}>
+          <InputDefaultDemo />
+        </div>
         <NavbarIcon />
         <NavbarIconText />
         <NavbarNotification />

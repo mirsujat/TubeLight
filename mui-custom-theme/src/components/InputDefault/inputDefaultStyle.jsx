@@ -12,10 +12,10 @@ const inputDefaultStyle = {
     }
   },
   adornmentRoot: {
-    backgroundColor: "red",
+    backgroundColor: "#bcc1c1",
     cursor: "pointer",
-    "&:focus": {
-      backgroundColor: "yellow"
+    "&:hover": {
+      backgroundColor: "#bcc1c1"
     }
   },
   adornmentIcon: {
@@ -41,8 +41,8 @@ const inputDefaultStyle = {
     marginRight: "22px"
   },
   formControl: {
-    margin: "0 0 17px 0",
-    paddingTop: "27px",
+    margin: "3px 3px 3px 3px",
+    paddingTop: "0",
     position: "relative",
     "& svg,& .fab,& .far,& .fal,& .fas": {
       color: "#495057"
@@ -50,20 +50,23 @@ const inputDefaultStyle = {
   },
 
   input: {
+    width: "450px",
+    padding: "6px 10px",
     color: "#495057",
-    border: " 1px solid #D2D2D2 !important",
+    border: "1px solid #D2D2D2 !important",
+    boxShadow: "inset 0 1px 2px #eee",
     "&,&::placeholder": {
-      fontSize: "14px",
+      fontSize: "0.75rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: "400",
-      lineHeight: "14px",
+      fontWeight: "500",
+      lineHeight: "0.85rem",
       opacity: "1"
     },
     "&::placeholder": {
       color: "#AAAAAA"
     },
     "&:focus": {
-      border: " 1px solid red !important"
+      border: " 1px solid #4ba6e4 !important"
     }
   },
   whiteInput: {
@@ -71,6 +74,14 @@ const inputDefaultStyle = {
       color: "#555",
       opacity: "1"
     }
+  },
+  inputLable: {
+    display: "inline-block",
+    fontSize: "0.75rem",
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: "500",
+    lineHeight: "0.85rem",
+    color: "#716f6f"
   }
 };
 
