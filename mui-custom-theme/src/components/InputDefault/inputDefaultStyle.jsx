@@ -41,6 +41,7 @@ const inputDefaultStyle = {
     marginRight: "22px"
   },
   formControl: {
+    display: "flex",
     margin: "3px 3px 3px 3px",
     paddingTop: "0",
     position: "relative",
@@ -50,7 +51,6 @@ const inputDefaultStyle = {
   },
 
   input: {
-    width: "450px",
     padding: "6px 10px",
     color: "#495057",
     border: "1px solid #D2D2D2 !important",
@@ -58,7 +58,7 @@ const inputDefaultStyle = {
     "&,&::placeholder": {
       fontSize: "0.75rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: "500",
+      fontWeight: "400",
       lineHeight: "0.85rem",
       opacity: "1"
     },
@@ -81,7 +81,7 @@ const inputDefaultStyle = {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     fontWeight: "500",
     lineHeight: "0.85rem",
-    color: "#716f6f"
+    color: "#a7a4a4"
   }
 };
 
