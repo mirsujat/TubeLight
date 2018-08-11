@@ -1,27 +1,31 @@
 import React, { Component, Fragment } from "react";
 
 // @material-ui/core components
+import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Search from "@material-ui/icons/Search";
+import InputAdornment from "@material-ui/core/InputAdornment";
 import InputDefault from "./InputDefault.jsx";
 import demoStyle from "./inputDefaultStyle.jsx";
 
 class CustomInput extends Component {
   render() {
     const { classes } = this.props;
+
     return (
       <Fragment>
         <InputDefault
-          white
+          id="material"
           inputRootCustomClasses={classes.inputRootCustomClasses}
           formControlProps={{ className: classes.formControl }}
           inputProps={{
-            disableUnderline: true,
             placeholder: "Search",
-            inputProps: {
-              "aria-label": "Search",
-              className: classes.searchInput
-            }
+            disableUnderline: true,
+            endAdornment: (
+              <InputAdornment>
+                <Search />
+              </InputAdornment>
+            )
           }}
         />
       </Fragment>

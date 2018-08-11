@@ -11,23 +11,20 @@ const inputDefaultStyle = {
       borderColor: "transparent !important"
     }
   },
-
-  labelRoot: {
-    ...defaultFont,
-    color: "#AAAAAA !important",
-    fontWeight: "400",
-    fontSize: "14px",
-    lineHeight: "1.42857",
-    top: "10px",
-    "& + $underline": {
-      marginTop: "0px"
+  adornmentRoot: {
+    backgroundColor: "red",
+    cursor: "pointer",
+    "&:focus": {
+      backgroundColor: "yellow"
     }
   },
-  labelRootError: {
-    color: dangerColor + " !important"
-  },
-  labelRootSuccess: {
-    color: successColor + " !important"
+  adornmentIcon: {
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    opacity: "0.57",
+    "&:hover": {
+      opacity: "0.87"
+    }
   },
   feedback: {
     position: "absolute",
@@ -59,11 +56,14 @@ const inputDefaultStyle = {
       fontSize: "14px",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: "400",
-      lineHeight: "1.42857",
+      lineHeight: "14px",
       opacity: "1"
     },
     "&::placeholder": {
       color: "#AAAAAA"
+    },
+    "&:focus": {
+      border: " 1px solid red !important"
     }
   },
   whiteInput: {

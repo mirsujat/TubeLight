@@ -6,9 +6,7 @@ import classNames from "classnames";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 
 // @material-ui/icons
@@ -23,18 +21,12 @@ function inputDefault({ ...props }) {
     formControlProps,
     labelText,
     id,
-    labelProps,
     inputProps,
     error,
     white,
     inputRootCustomClasses,
     success
   } = props;
-
-  const labelClasses = classNames({
-    [" " + classes.labelRootError]: error,
-    [" " + classes.labelRootSuccess]: success && !error
-  });
 
   const marginTop = classNames({
     [classes.marginTop]: labelText === undefined,
@@ -51,15 +43,6 @@ function inputDefault({ ...props }) {
   });
   return (
     <FormControl {...formControlProps} className={formControlClasses}>
-      {labelText !== undefined ? (
-        <InputLabel
-          className={classes.labelRoot + " " + labelClasses}
-          htmlFor={id}
-          {...labelProps}
-        >
-          {labelText}
-        </InputLabel>
-      ) : null}
       <Input
         classes={{
           input: inputClasses,
@@ -70,9 +53,9 @@ function inputDefault({ ...props }) {
         {...inputProps}
       />
       {error ? (
-        <Clear className={classes.feedback + " " + classes.labelRootError} />
+        <Clear className={classes.feedback} />
       ) : success ? (
-        <Check className={classes.feedback + " " + classes.labelRootSuccess} />
+        <Check className={classes.feedback} />
       ) : null}
     </FormControl>
   );
