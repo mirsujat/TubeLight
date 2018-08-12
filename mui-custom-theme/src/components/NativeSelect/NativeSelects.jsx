@@ -23,20 +23,17 @@ class NativeSelects extends React.Component {
     return (
       <FormControl>
         <InputLabel htmlFor="age-native-simple">Age</InputLabel>
-        <Select
-          native
+        <InputLabel htmlFor="age-native-helper">Age</InputLabel>
+        <NativeSelect
           value={this.state.age}
           onChange={this.handleChange("age")}
-          inputProps={{
-            name: "age",
-            id: "age-native-simple"
-          }}
+          input={<Input name="age" id="age-native-helper" />}
         >
           <option value="" />
           <option value={10}>Ten</option>
           <option value={20}>Twenty</option>
           <option value={30}>Thirty</option>
-        </Select>
+        </NativeSelect>
       </FormControl>
     );
   }
