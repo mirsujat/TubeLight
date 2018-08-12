@@ -84,6 +84,28 @@ const inputDefaultStyle = {
     lineHeight: "0.85rem",
     color: "#a7a4a4",
     textAlign: "right"
+  },
+  textArea: {
+    minHeight: "50px",
+    width: "84%",
+    marginBottom: "15px",
+    padding: "6px 10px",
+    color: "#495057",
+    border: "1px solid #D2D2D2 !important",
+    boxShadow: "inset 0 1px 2px #eee",
+    "&,&::placeholder": {
+      fontSize: "0.75rem",
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      fontWeight: "400",
+      lineHeight: "0.85rem",
+      opacity: "1"
+    },
+    "&::placeholder": {
+      color: "#AAAAAA"
+    },
+    "&:focus": {
+      border: " 1px solid #4ba6e4 !important"
+    }
   }
 };
 

@@ -35,11 +35,11 @@ class CustomInput extends Component {
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <InputDefault
-            id="material"
+            id="email"
             inputRootCustomClasses={classes.inputRootCustomClasses}
             formControlProps={{ className: classes.formControl }}
             inputProps={{
-              placeholder: "User Name",
+              placeholder: "example@gmail.com",
               disableUnderline: true,
               startAdornment: (
                 <InputAdornment position="start">
@@ -50,7 +50,7 @@ class CustomInput extends Component {
           />
 
           <InputDefault
-            id="material"
+            id="username"
             inputRootCustomClasses={classes.inputRootCustomClasses}
             formControlProps={{ className: classes.formControl }}
             inputProps={{
@@ -65,15 +65,30 @@ class CustomInput extends Component {
           />
 
           <InputDefault
-            id="material"
+            id="password"
             inputRootCustomClasses={classes.inputRootCustomClasses}
             formControlProps={{ className: classes.formControl }}
             inputProps={{
-              placeholder: "User Name",
+              placeholder: "Password",
               disableUnderline: true,
               startAdornment: (
                 <InputAdornment position="start">
                   <span className={classes.inputLable}>Password: </span>
+                </InputAdornment>
+              )
+            }}
+          />
+
+          <InputDefault
+            id="comment"
+            inputRootCustomClasses={classes.inputRootCustomClasses}
+            formControlProps={{ className: classes.formControl }}
+            inputProps={{
+              placeholder: "Comment...",
+              disableUnderline: true,
+              startAdornment: (
+                <InputAdornment position="start">
+                  <span className={classes.inputLable}>Comment: </span>
                 </InputAdornment>
               )
             }}
