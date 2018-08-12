@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";

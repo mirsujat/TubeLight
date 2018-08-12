@@ -74,7 +74,8 @@ const inputDefaultStyle = {
       color: "#AAAAAA"
     },
     "&:focus": {
-      border: " 1px solid #4ba6e4 !important"
+      border: " 1px solid #4ba6e4 !important",
+      backgroundColor: "white"
     }
   },
   whiteInput: {
@@ -114,7 +115,8 @@ const inputDefaultStyle = {
       color: "#AAAAAA"
     },
     "&:focus": {
-      border: " 1px solid #4ba6e4 !important"
+      border: " 1px solid #4ba6e4 !important",
+      backgroundColor: "white"
     }
   }
 };
