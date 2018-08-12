@@ -10,6 +10,7 @@ import GridItem from "../Grid/GridItem.jsx";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import InputDefault from "./InputDefault.jsx";
 import TextArea from "./TextArea.jsx";
+import NativeSelects from "../NativeSelect/NativeSelects.jsx";
 import demoStyle from "./inputDefaultStyle.jsx";
 
 class CustomInput extends Component {
@@ -34,6 +35,8 @@ class CustomInput extends Component {
               )
             }}
           />
+
+          <NativeSelects />
         </GridItem>
 
         <GridItem xs={12} sm={12} md={6}>
