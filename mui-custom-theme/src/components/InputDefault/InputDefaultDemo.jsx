@@ -25,6 +25,7 @@ class CustomInput extends Component {
             formControlProps={{ className: classes.formControl }}
             inputProps={{
               placeholder: "Search",
+              type: "search",
               disableUnderline: true,
               endAdornment: (
                 <InputAdornment className={classes.adornmentRoot}>
@@ -42,6 +43,7 @@ class CustomInput extends Component {
             formControlProps={{ className: classes.formControl }}
             inputProps={{
               placeholder: "example@gmail.com",
+              type: "email",
               disableUnderline: true,
               startAdornment: (
                 <InputAdornment position="start">
@@ -57,6 +59,7 @@ class CustomInput extends Component {
             formControlProps={{ className: classes.formControl }}
             inputProps={{
               placeholder: "User Name",
+              type: "text",
               disableUnderline: true,
               startAdornment: (
                 <InputAdornment position="start">
@@ -72,6 +75,7 @@ class CustomInput extends Component {
             formControlProps={{ className: classes.formControl }}
             inputProps={{
               placeholder: "Password",
+              type: "password",
               disableUnderline: true,
               startAdornment: (
                 <InputAdornment position="start">
@@ -84,9 +88,10 @@ class CustomInput extends Component {
           <TextArea
             id="comment"
             inputRootCustomClasses={classes.inputRootCustomClasses}
-            formControlProps={{ className: classes.formControl }}
+            formControlProps={{ className: classes.formControlTextArea }}
             inputProps={{
               placeholder: "Comment...",
+              tyep: "text",
               disableUnderline: true,
               multiline: true,
               startAdornment: (

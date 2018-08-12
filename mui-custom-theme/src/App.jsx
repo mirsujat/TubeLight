@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <h2>React Custom Theme</h2>
-        <div style={{ border: "1px solid red", padding: "15px" }}>
+        <div style={{ border: "1px solid red" }}>
           <InputDefaultDemo />
         </div>
         <NavbarNotification />

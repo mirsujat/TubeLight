@@ -37,7 +37,7 @@ function inputDefault({ ...props }) {
     [classes.whiteInput]: white
   });
   const formControlClasses = classNames({
-    [classes.formControl]: true,
+    [classes.formControlTextArea]: true,
     [classes.formControlLabel]: labelText !== undefined,
     [formControlProps.className]: formControlProps.className !== undefined
   });

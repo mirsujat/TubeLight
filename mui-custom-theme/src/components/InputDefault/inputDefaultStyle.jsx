@@ -49,7 +49,15 @@ const inputDefaultStyle = {
       color: "#495057"
     }
   },
-
+  formControlTextArea: {
+    display: "flex",
+    margin: "15px 6px 55px 15px",
+    paddingTop: "0",
+    position: "relative",
+    "& svg,& .fab,& .far,& .fal,& .fas": {
+      color: "#495057"
+    }
+  },
   input: {
     padding: "6px 10px",
     color: "#495057",
