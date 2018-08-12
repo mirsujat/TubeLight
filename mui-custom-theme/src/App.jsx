@@ -15,9 +15,9 @@ class App extends Component {
         <div style={{ border: "1px solid red" }}>
           <InputDefaultDemo />
         </div>
+        <NavbarNotification />
         <NavbarIcon />
         <NavbarIconText />
-        <NavbarNotification />
         <NavbarSearch />
       </div>
     );

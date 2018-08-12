@@ -17,7 +17,7 @@ class CustomInput extends Component {
 
     return (
       <GridContainer>
-        <GridItem xs={12} sm={12} md={12}>
+        <GridItem xs={12} sm={12} md={6}>
           <InputDefault
             id="material"
             inputRootCustomClasses={classes.inputRootCustomClasses}
@@ -28,6 +28,22 @@ class CustomInput extends Component {
               endAdornment: (
                 <InputAdornment className={classes.adornmentRoot}>
                   <Search className={classes.adornmentIcon} />
+                </InputAdornment>
+              )
+            }}
+          />
+        </GridItem>
+        <GridItem xs={12} sm={12} md={6}>
+          <InputDefault
+            id="material"
+            inputRootCustomClasses={classes.inputRootCustomClasses}
+            formControlProps={{ className: classes.formControl }}
+            inputProps={{
+              placeholder: "User Name",
+              disableUnderline: true,
+              startAdornment: (
+                <InputAdornment position="start">
+                  <span className={classes.inputLable}>Email: </span>
                 </InputAdornment>
               )
             }}
@@ -43,6 +59,21 @@ class CustomInput extends Component {
               startAdornment: (
                 <InputAdornment position="start">
                   <span className={classes.inputLable}>User Name: </span>
+                </InputAdornment>
+              )
+            }}
+          />
+
+          <InputDefault
+            id="material"
+            inputRootCustomClasses={classes.inputRootCustomClasses}
+            formControlProps={{ className: classes.formControl }}
+            inputProps={{
+              placeholder: "User Name",
+              disableUnderline: true,
+              startAdornment: (
+                <InputAdornment position="start">
+                  <span className={classes.inputLable}>Password: </span>
                 </InputAdornment>
               )
             }}
