@@ -32,8 +32,8 @@ function inputDefault({ ...props }) {
     [classes.marginTop]: labelText === undefined,
     [inputRootCustomClasses]: inputRootCustomClasses !== undefined
   });
-  const inputClasses = classNames({
-    [classes.input]: true,
+  const textAreaClasses = classNames({
+    [classes.textArea]: true,
     [classes.whiteInput]: white
   });
   const formControlClasses = classNames({
@@ -45,7 +45,7 @@ function inputDefault({ ...props }) {
     <FormControl {...formControlProps} className={formControlClasses}>
       <Input
         classes={{
-          input: inputClasses,
+          input: textAreaClasses,
           root: marginTop,
           disabled: classes.disabled
         }}

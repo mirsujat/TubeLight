@@ -9,6 +9,7 @@ import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import InputDefault from "./InputDefault.jsx";
+import TextArea from "./TextArea.jsx";
 import demoStyle from "./inputDefaultStyle.jsx";
 
 class CustomInput extends Component {
@@ -33,6 +34,7 @@ class CustomInput extends Component {
             }}
           />
         </GridItem>
+
         <GridItem xs={12} sm={12} md={6}>
           <InputDefault
             id="email"
@@ -79,13 +81,14 @@ class CustomInput extends Component {
             }}
           />
 
-          <InputDefault
+          <TextArea
             id="comment"
             inputRootCustomClasses={classes.inputRootCustomClasses}
             formControlProps={{ className: classes.formControl }}
             inputProps={{
               placeholder: "Comment...",
               disableUnderline: true,
+              multiline: true,
               startAdornment: (
                 <InputAdornment position="start">
                   <span className={classes.inputLable}>Comment: </span>
