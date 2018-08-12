@@ -11,15 +11,14 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <h2>React Custom Theme</h2>
-        <div
-          style={{
-            marginLeft: "15px",
-            marginRight: "15px",
-            backgroundColor: "#f5f5f5",
-            border: "1px solid red"
-          }}
-        >
+        <h2 style={{ color: "#2e8eef" }}>React Custom Theme: Based on </h2>
+        <h6> React @16.4.3 </h6>
+        <h6> Materia-Ui @1.4.3 </h6>
+        <h3 style={{ color: "#ccc" }}>
+          15px padding set on Body. Remove The Body Padding or set it up what
+          ever you like.{" "}
+        </h3>
+        <div style={{ backgroundColor: "#fff", border: "1px solid #e0dede" }}>
           <InputDefaultDemo />
         </div>
         <NavbarNotification />
