@@ -1,5 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+
+// nodejs library to set properties for components
 import PropTypes from "prop-types";
+
+// nodejs library that concatenates classes
+import classNames from "classnames";
+
+// @material-ui/core components
 import { withStyles } from "@material-ui/core/styles";
 import Input from "@material-ui/core/Input";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -9,7 +16,7 @@ import NativeSelect from "@material-ui/core/NativeSelect";
 
 import NativeSelectsStyles from "./NativeSelectsStyle.jsx";
 
-class NativeSelects extends React.Component {
+class NativeSelects extends Component {
   state = {
     age: "",
     name: "hai"
@@ -24,27 +31,32 @@ class NativeSelects extends React.Component {
 
     return (
       <FormControl className={classes.formControl}>
-        <InputLabel className={classes.inputLabel} shrink={false} htmlFor="age">
-          Age
-        </InputLabel>
+        <span className={classes.label}>Age:</span>
 
         <NativeSelect
           value={this.state.age}
           onChange={this.handleChange("age")}
-          className={classes.select}
-          input={
-            <Input
-              className={classes.input}
-              disableUnderline={true}
-              name="age"
-              id="age"
-            />
-          }
+          disableUnderline={true}
+          className={classes.marginTop}
+          inputProps={{
+            name: "age",
+            id: "age",
+            root: classes.marginTop,
+            class: classes.select
+          }}
         >
-          <option value="" />
-          <option value={10}>Ten</option>
-          <option value={20}>Twenty</option>
-          <option value={30}>Thirty</option>
+          <option className={classes.optionList} value="">
+            Select..
+          </option>
+          <option className={classes.optionList} value={10}>
+            Ten
+          </option>
+          <option className={classes.optionList} value={20}>
+            Twenty
+          </option>
+          <option className={classes.optionList} value={30}>
+            Thirty
+          </option>
         </NativeSelect>
       </FormControl>
     );

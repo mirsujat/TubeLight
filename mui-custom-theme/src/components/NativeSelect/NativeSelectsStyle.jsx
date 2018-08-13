@@ -1,13 +1,19 @@
 const nativeSelectsStyle = {
   formControl: {
     display: "block",
-    position: "relative"
+    position: "relative",
+    width: "250px",
+    backgroundColor: "#eee",
+    marginRight: "15px",
+    marginLeft: "15px"
   },
-  inputLabel: {
-    display: "inline-block",
+  marginTop: {
+    marginTop: "0px"
+  },
+  label: {
+    display: "inline",
     position: "relative",
     marginRight: "10px",
-    marginLeft: "10px",
     backgroundColor: "yellow",
     color: "red"
   },
@@ -31,16 +37,28 @@ const nativeSelectsStyle = {
     }
   },
   select: {
-    width: "100px",
+    display: "block",
     cursor: "pointer",
-    minWidth: "50px",
+    minWidth: "150px",
+    padding: "3px",
     userSelect: "none",
     background: "white",
     border: " 1px solid #4ba6e4 !important",
     "&:focus": {
       background: "white",
-      border: " 1px solid #4ba6e4 !important"
+      outline: "0"
     }
+  },
+  optionList: {
+    display: "block",
+    position: "relative",
+    minHeight: "2rem",
+    width: "auto",
+    lineHeight: "2rem",
+    padding: ""
+    fontSize: "14px",
+    fontWeight: "normal",
+    whiteSpace: "pre"
   }
 };
 
