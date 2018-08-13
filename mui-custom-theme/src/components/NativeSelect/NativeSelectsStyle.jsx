@@ -55,7 +55,7 @@ const nativeSelectsStyle = {
     minHeight: "2rem",
     width: "auto",
     lineHeight: "2rem",
-    padding: ""
+    padding: "3px",
     fontSize: "14px",
     fontWeight: "normal",
     whiteSpace: "pre"
