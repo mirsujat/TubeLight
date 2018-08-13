@@ -64,10 +64,10 @@ const inputDefaultStyle = {
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
     "&,&::placeholder": {
-      fontSize: "0.75rem",
+      fontSize: "0.93rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: "400",
-      lineHeight: "0.85rem",
+      lineHeight: "0.95rem",
       opacity: "1"
     },
     "&::placeholder": {
@@ -86,11 +86,11 @@ const inputDefaultStyle = {
   },
   inputLable: {
     display: "inline-block",
-    width: "70px",
-    fontSize: "0.75rem",
+    width: "80px",
+    fontSize: "0.93rem",
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     fontWeight: "500",
-    lineHeight: "0.85rem",
+    lineHeight: "0.95rem",
     color: "#a7a4a4",
     textAlign: "right"
   },
@@ -105,10 +105,10 @@ const inputDefaultStyle = {
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
     "&,&::placeholder": {
-      fontSize: "0.75rem",
+      fontSize: "0.93rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: "400",
-      lineHeight: "0.85rem",
+      lineHeight: "0.955rem",
       opacity: "1"
     },
     "&::placeholder": {
