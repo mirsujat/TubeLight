@@ -13,7 +13,6 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import NativeSelect from "@material-ui/core/NativeSelect";
-
 import NativeSelectsStyles from "./NativeSelectsStyle.jsx";
 
 class NativeSelects extends Component {
@@ -37,24 +36,19 @@ class NativeSelects extends Component {
           value={this.state.age}
           onChange={this.handleChange("age")}
           disableUnderline={true}
-          className={classes.marginTop}
-          inputProps={{
-            name: "age",
-            id: "age",
-            root: classes.marginTop,
-            class: classes.select
-          }}
+          inputProps={{ name: "age", id: "age" }}
+          classes={{ select: classes.select }}
         >
-          <option className={classes.optionList} value="">
-            Select..
+          <option className={classes.option} value="">
+            Select Age..
           </option>
-          <option className={classes.optionList} value={10}>
+          <option className={classes.option} value={10}>
             Ten
           </option>
-          <option className={classes.optionList} value={20}>
+          <option className={classes.option} value={20}>
             Twenty
           </option>
-          <option className={classes.optionList} value={30}>
+          <option className={classes.option} value={30}>
             Thirty
           </option>
         </NativeSelect>
