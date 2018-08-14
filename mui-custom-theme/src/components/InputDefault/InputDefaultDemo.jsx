@@ -35,7 +35,7 @@ class CustomInput extends Component {
               )
             }}
           />
-
+          <h5 style={{ paddingLeft: "15px" }}>Native Select</h5>
           <NativeSelects />
         </GridItem>
 

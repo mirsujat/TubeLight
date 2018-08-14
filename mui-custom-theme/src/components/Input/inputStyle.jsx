@@ -66,7 +66,7 @@ const inputStyle = {
     paddingTop: "27px",
     position: "relative",
     "& svg,& .fab,& .far,& .fal,& .fas": {
-      color: "#495057"
+      color: "#757575"
     }
   },
   whiteUnderline: {
@@ -80,9 +80,9 @@ const inputStyle = {
   input: {
     color: "#757575",
     "&,&::placeholder": {
-      fontSize: "14px",
+      fontSize: "0.9375rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: "400",
+      fontWeight: "300",
       lineHeight: "1.42857",
       opacity: "1"
     },

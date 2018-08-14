@@ -107,7 +107,7 @@ const inputDefaultStyle = {
     "&,&::placeholder": {
       fontSize: "0.93rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: "400",
+      fontWeight: "300",
       lineHeight: "0.955rem",
       opacity: "1"
     },
