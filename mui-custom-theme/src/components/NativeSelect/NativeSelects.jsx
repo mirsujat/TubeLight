@@ -1,16 +1,7 @@
 import React, { Component } from "react";
 
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
-
-// nodejs library that concatenates classes
-import classNames from "classnames";
-
 // @material-ui/core components
 import { withStyles } from "@material-ui/core/styles";
-import Input from "@material-ui/core/Input";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import NativeSelectsStyles from "./NativeSelectsStyle.jsx";
