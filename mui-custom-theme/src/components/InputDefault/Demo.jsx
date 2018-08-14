@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Search from "@material-ui/icons/Search";
-
 // Custom Component
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
@@ -35,7 +33,9 @@ class CustomInput extends Component {
               )
             }}
           />
-          <h5 style={{ paddingLeft: "15px" }}>Native Select</h5>
+          <h3 style={{ paddingLeft: "15px", color: "#757575" }}>
+            Native Select
+          </h3>
           <NativeSelects />
         </GridItem>
 

@@ -4,7 +4,8 @@ import NavbarIcon from "./components/Navbar/NavbarIcon.jsx";
 import NavbarIconText from "./components/Navbar/NavbarIconText.jsx";
 import NavbarNotification from "./components/Navbar/NavbarNotification.jsx";
 import NavbarSearch from "./components/Navbar/NavbarSearch.jsx";
-import InputDefaultDemo from "./components/InputDefault/InputDefaultDemo.jsx";
+import InputDefaultDemo from "./components/InputDefault/Demo.jsx";
+import CustomInputDemo from "./components/Input/Demo.jsx";
 
 class App extends Component {
   render() {
@@ -18,13 +19,22 @@ class App extends Component {
           15px padding set on Body. Remove The Body Padding or set it up what
           ever you like.{" "}
         </h3>
-        <div style={{ backgroundColor: "#fff", border: "1px solid #e0dede" }}>
-          <InputDefaultDemo />
-        </div>
+
         <NavbarNotification />
         <NavbarIcon />
         <NavbarIconText />
         <NavbarSearch />
+
+        <div>
+          <h3 style={{ paddingLeft: "15px", color: "#757575" }}>
+            Input Component
+          </h3>
+          <InputDefaultDemo />
+          <div style={{ padding: "15px", color: "#757575" }}>
+            <h3 style={{ paddingLeft: "15px" }}>Inputs</h3>
+            <CustomInputDemo />
+          </div>
+        </div>
       </div>
     );
   }
