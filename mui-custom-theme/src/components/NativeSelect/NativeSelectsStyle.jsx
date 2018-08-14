@@ -14,7 +14,11 @@ const nativeSelectsStyle = {
     position: "relative",
     marginRight: "10px",
     backgroundColor: "white",
-    color: "#555"
+    fontSize: "0.93rem",
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: "400",
+    lineHeight: "0.95rem",
+    color: "#757575"
   },
 
   select: {
@@ -28,6 +32,11 @@ const nativeSelectsStyle = {
     paddingLeft: "10px",
     border: "1px solid #c8cbce !important",
     background: "white",
+    fontSize: "0.93rem",
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: "400",
+    lineHeight: "0.95rem",
+    color: "#757575",
     "&:focus": {
       background: "white",
       border: "1px solid #6caeef !important",

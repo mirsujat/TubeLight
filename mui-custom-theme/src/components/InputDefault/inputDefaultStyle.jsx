@@ -89,9 +89,9 @@ const inputDefaultStyle = {
     width: "80px",
     fontSize: "0.93rem",
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    fontWeight: "500",
+    fontWeight: "400",
     lineHeight: "0.95rem",
-    color: "#a7a4a4",
+    color: "#757575",
     textAlign: "right"
   },
   textArea: {

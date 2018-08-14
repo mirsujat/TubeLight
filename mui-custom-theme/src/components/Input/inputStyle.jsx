@@ -78,7 +78,7 @@ const inputStyle = {
     }
   },
   input: {
-    color: "#495057",
+    color: "#757575",
     "&,&::placeholder": {
       fontSize: "14px",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
