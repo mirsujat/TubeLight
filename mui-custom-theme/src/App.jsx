@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import ButtonDemo from "./components/Button/button.jsx";
 import NavbarIcon from "./components/Navbar/NavbarIcon.jsx";
 import NavbarIconText from "./components/Navbar/NavbarIconText.jsx";
 import NavbarNotification from "./components/Navbar/NavbarNotification.jsx";
@@ -19,7 +20,7 @@ class App extends Component {
           15px padding set on Body. Remove The Body Padding or set it up what
           ever you like.{" "}
         </h3>
-
+        <ButtonDemo />
         <NavbarNotification />
         <NavbarIcon />
         <NavbarIconText />

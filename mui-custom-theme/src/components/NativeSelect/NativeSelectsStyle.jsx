@@ -31,7 +31,6 @@ const nativeSelectsStyle = {
     paddingBottom: "4px",
     paddingLeft: "10px",
     border: "1px solid #c8cbce !important",
-    background: "transparent",
     fontSize: "0.93rem",
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     fontWeight: "400",
