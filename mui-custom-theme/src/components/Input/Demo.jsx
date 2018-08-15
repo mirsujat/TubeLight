@@ -4,10 +4,10 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
 // @material-ui/icons
-import LockOutlined from "@material-ui/icons/LockOutlined";
-import EmailOutlined from "@material-ui/icons/EmailOutlined";
+import Lock from "@material-ui/icons/Lock";
+import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
-import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOutlined from "@material-ui/icons/VisibilityOutlined";
 import Check from "@material-ui/icons/Check";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 // Custom Component
@@ -83,20 +83,35 @@ class InputDemo extends Component {
           <div className={classes.smartInputGroup}>
             <div className={classes.labelAppend}>
               {" "}
-              <LockOutlined />
+              <Lock />
             </div>
             <div className={classes.smartInput}>
               <Input
-                labelText="With Font Awesome Icons"
+                labelText="With material Icons"
                 id="font-awesome"
                 formControlProps={{ fullWidth: true }}
                 inputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
-                      <Visibility />
+                      <VisibilityOutlined />
                     </InputAdornment>
                   )
                 }}
+              />
+            </div>
+          </div>
+        </GridItem>
+        <GridItem xs={12} sm={4} md={4} lg={3}>
+          <div className={classes.smartInputGroup}>
+            <div className={classes.labelAppend}>
+              {" "}
+              <Email />
+            </div>
+            <div className={classes.smartInput}>
+              <Input
+                labelText="With material Icons"
+                id="font-awesome"
+                formControlProps={{ fullWidth: true }}
               />
             </div>
           </div>
