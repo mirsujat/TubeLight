@@ -1,80 +1,76 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
+import Favorite from "@material-ui/icons/Favorite";
 // core components
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
-import Button from './button.jsx';
-import demoStyle from './demoStyle.jsx';
-
+import Button from "./button.jsx";
+import demoStyle from "./demoStyle.jsx";
 
 class ButtonDemo extends Component {
   render() {
     const { classes } = this.props;
-    return(
+    return (
       <div className={classes.container}>
+        <GridContainer justify="center">
+          <GridItem xs={12} sm={12} md={8}>
+            <Button color="info">Default</Button>
+            <Button color="primary" round>
+              round
+            </Button>
+            <Button color="white">White</Button>
+            <Button color="gold" round>
+              <Favorite className={classes.icons} /> with icon
+            </Button>
+            <Button justIcon round color="danger">
+              <Favorite className={classes.icons} />
+            </Button>
+            <Button color="success">White</Button>
+            <Button disabled>Disabled</Button>
+            <Button color="primary" simple>
+              simple
+            </Button>
+            <Button color="transparent" transparent>
+              Transparent
+            </Button>
+          </GridItem>
+        </GridContainer>
         <div className={classes.title}>
-          <h2>Basic Elements</h2>
+          <h3>
+            <small>Pick your size</small>
+          </h3>
         </div>
-        <div id="buttons">
-          <div className={classes.title}>
-            <h3>
-              Buttons
-                <br />
-              <small>Pick your style</small>
-            </h3>
-          </div>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={8}>
-              <Button color="primaryColor">Default</Button>
-              <Button color="primaryColor" round>
-                round
-                </Button>
-              <Button color="primaryColor" round>
-                <Favorite className={classes.icons} /> with icon
-                </Button>
-              <Button justIcon round color="primaryColor">
-                <Favorite className={classes.icons} />
-              </Button>
-              <Button color="primaryColor" simple>
-                simple
-                </Button>
-            </GridItem>
-          </GridContainer>
-          <div className={classes.title}>
-            <h3>
-              <small>Pick your size</small>
-            </h3>
-          </div>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={8}>
-              <Button color="primaryColor" size="sm">
-                Small
-                </Button>
-              <Button color="primaryColor">Regular</Button>
-              <Button color="primaryColor" size="lg">
-                Large
-                </Button>
-            </GridItem>
-          </GridContainer>
-          <div className={classes.title}>
-            <h3>
-              <small>Pick your color</small>
-            </h3>
-          </div>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={8}>
-              <Button>Default</Button>
-              <Button color="primaryColor">Primary</Button>
-              <Button color="infoColor">Info</Button>
-              <Button color="successColor">Success</Button>
-              <Button color="warningColor">Warning</Button>
-              <Button color="dangerColor">Danger</Button>
-              <Button color="goldColor">Rose</Button>
-            </GridItem>
-          </GridContainer>
+        <GridContainer justify="center">
+          <GridItem xs={12} sm={12} md={8}>
+            <Button color="primary" size="sm">
+              Small
+            </Button>
+            <Button color="primary">Regular</Button>
+            <Button color="primary" size="lg">
+              Large
+            </Button>
+          </GridItem>
+        </GridContainer>
+        <div className={classes.title}>
+          <h3>
+            <small>Pick your color</small>
+          </h3>
         </div>
-    )
+        <GridContainer justify="center">
+          <GridItem xs={12} sm={12} md={8}>
+            <Button>Default</Button>
+            <Button color="primary">Primary</Button>
+            <Button color="info">Info</Button>
+            <Button color="white">White</Button>
+            <Button color="success">Success</Button>
+            <Button color="warning">Warning</Button>
+            <Button color="danger">Danger</Button>
+            <Button color="gold">Gold</Button>
+          </GridItem>
+        </GridContainer>
+      </div>
+    );
   }
 }
 

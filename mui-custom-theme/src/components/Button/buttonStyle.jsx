@@ -19,7 +19,7 @@ const buttonStyle = {
     border: "none",
     borderRadius: "3px",
     position: "relative",
-    padding: "12px 30px",
+    padding: "8px 40px",
     margin: ".3125rem 1px",
     fontSize: "12px",
     fontWeight: "400",
@@ -253,17 +253,18 @@ const buttonStyle = {
     }
   },
   disabled: {
-    opacity: "0.65",
-    pointerEvents: "none"
+    opacity: "0.50",
+    pointerEvents: "none",
+    cursor: "not-allowed"
   },
   lg: {
-    padding: "1.125rem 2.25rem",
+    padding: "0.8235rem 2.9rem",
     fontSize: "0.875rem",
     lineHeight: "1.333333",
     borderRadius: "0.2rem"
   },
   sm: {
-    padding: "0.40625rem 1.25rem",
+    padding: "0.30625rem 1.25rem",
     fontSize: "0.6875rem",
     lineHeight: "1.5",
     borderRadius: "0.2rem"

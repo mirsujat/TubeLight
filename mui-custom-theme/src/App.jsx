@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import ButtonDemo from "./components/Button/button.jsx";
+import ButtonDemo from "./components/Button/Demo.jsx";
 import NavbarIcon from "./components/Navbar/NavbarIcon.jsx";
 import NavbarIconText from "./components/Navbar/NavbarIconText.jsx";
 import NavbarNotification from "./components/Navbar/NavbarNotification.jsx";
