@@ -63,6 +63,7 @@ const inputDefaultStyle = {
     color: "#495057",
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
+    backgroundColor: "white",
     "&,&::placeholder": {
       fontSize: "0.93rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
@@ -104,6 +105,7 @@ const inputDefaultStyle = {
     color: "#495057",
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
+    backgroundColor: "white",
     "&,&::placeholder": {
       fontSize: "0.93rem",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',

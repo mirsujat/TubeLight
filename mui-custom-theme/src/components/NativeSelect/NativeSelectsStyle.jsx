@@ -37,6 +37,7 @@ const nativeSelectsStyle = {
     fontWeight: "400",
     lineHeight: "0.95rem",
     color: "#757575",
+    background: "white",
     "&:focus": {
       background: "white",
       border: "1px solid #6caeef !important",
