@@ -15,7 +15,7 @@ class BadgeDemo extends Component {
       <div className={classes.container}>
         <div className={classes.title}>
           <h3>
-            <small>Pick your color</small>
+            <small>Badges of Your Choice</small>
           </h3>
         </div>
         <GridContainer justify="center">

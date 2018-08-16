@@ -12,6 +12,7 @@ const buttonStyle = {
   button: {
     minHeight: "auto",
     minWidth: "auto",
+    borderColor: "rgba(17, 17, 17, 0.21)",
     backgroundColor: "rgba(17, 17, 17, 0.21)",
     color: "#FFFFFF",
     boxShadow:

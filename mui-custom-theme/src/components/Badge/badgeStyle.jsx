@@ -41,6 +41,7 @@ const badgeStyle = {
     backgroundColor: goldColor
   },
   gray: {
+    borderColor: "rgba(17, 17, 17, 0.41)",
     backgroundColor: "rgba(17, 17, 17, 0.41)"
   },
   round: {

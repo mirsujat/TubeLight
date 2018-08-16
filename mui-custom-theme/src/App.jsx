@@ -8,6 +8,7 @@ import NavbarSearch from "./components/Navbar/NavbarSearch.jsx";
 import InputDefaultDemo from "./components/InputDefault/Demo.jsx";
 import CustomInputDemo from "./components/Input/Demo.jsx";
 import BadgeDemo from "./components/Badge/Demo.jsx";
+import PaginationDemo from "./components/Pagination/Demo.jsx";
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
           </div>
         </div>
         <BadgeDemo />
+        <PaginationDemo />
       </div>
     );
   }
