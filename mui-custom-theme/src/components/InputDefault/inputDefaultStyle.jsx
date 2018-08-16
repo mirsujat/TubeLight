@@ -64,9 +64,10 @@ const inputDefaultStyle = {
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
     backgroundColor: "white",
+    fontFamily: '"Roboto", "Noto", sans-serif',
     "&,&::placeholder": {
       fontSize: "0.93rem",
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      fontFamily: '"Roboto", "Noto", sans-serif',
       fontWeight: "400",
       lineHeight: "0.95rem",
       opacity: "1"
@@ -106,10 +107,11 @@ const inputDefaultStyle = {
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
     backgroundColor: "white",
+    fontFamily: '"Roboto", "Noto", sans-serif',
     "&,&::placeholder": {
       fontSize: "0.93rem",
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: "300",
+      fontFamily: '"Roboto", "Noto", sans-serif',
+      fontWeight: "400",
       lineHeight: "0.955rem",
       opacity: "1"
     },
