@@ -7,6 +7,7 @@ import NavbarNotification from "./components/Navbar/NavbarNotification.jsx";
 import NavbarSearch from "./components/Navbar/NavbarSearch.jsx";
 import InputDefaultDemo from "./components/InputDefault/Demo.jsx";
 import CustomInputDemo from "./components/Input/Demo.jsx";
+import BadgeDemo from "./components/Badge/Demo.jsx";
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
             <CustomInputDemo />
           </div>
         </div>
+        <BadgeDemo />
       </div>
     );
   }
