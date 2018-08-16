@@ -6,10 +6,13 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Radio from "@material-ui/core/Radio";
 import Switch from "@material-ui/core/Switch";
 
+// @material-ui/icons
+import Check from "@material-ui/icons/Check";
+import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+
 // core components
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
-
 import demoStyle from "./demoStyle.jsx";
 
 class CheckboxRadioSwitchDemo extends Component {

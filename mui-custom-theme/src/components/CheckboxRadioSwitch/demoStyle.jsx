@@ -1,5 +1,5 @@
-import { container, title } from "../../assets/jss/common.jsx";
-import checkboxRadioSwitch from "./CheckboxRadioSwitchStyle.jsx";
+import { container, title } from "../../assets/jss/common-rules.jsx";
+import checkboxRadioSwitch from "./checkboxRadioSwitchStyle.jsx";
 
 const demoStyle = {
   sections: {

@@ -2,7 +2,9 @@ import {
   primaryColor,
   dangerColor,
   goldColor,
-  greyColor
+  greyColor,
+  successColor,
+  infoColor
 } from "../../assets/jss/common-rules.jsx";
 
 const checkboxRadioSwitch = {
@@ -25,7 +27,7 @@ const checkboxRadioSwitch = {
     marginBottom: "0"
   },
   checked: {
-    color: primaryColor + "!important"
+    color: infoColor + "!important"
   },
   checkedIcon: {
     width: "20px",
@@ -83,12 +85,12 @@ const checkboxRadioSwitch = {
     color: dangerColor
   },
   radio: {
-    color: primaryColor + "!important"
+    color: infoColor + "!important"
   },
   radioChecked: {
     width: "16px",
     height: "16px",
-    border: "1px solid " + primaryColor,
+    border: "1px solid " + infoColor,
     borderRadius: "50%"
   },
   radioUnchecked: {
@@ -143,19 +145,19 @@ const checkboxRadioSwitch = {
     transform: "translateX(-4px)!important"
   },
   switchIconChecked: {
-    borderColor: "#9c27b0",
+    borderColor: successColor,
     transform: "translateX(0px)!important"
   },
   switchBar: {
     width: "30px",
     height: "15px",
-    backgroundColor: "rgb(80, 80, 80)",
+    backgroundColor: successColor + "!important",
     borderRadius: "15px",
     opacity: "0.7!important"
   },
   switchChecked: {
     "& + $switchBar": {
-      backgroundColor: "rgba(156, 39, 176, 1) !important"
+      backgroundColor: successColor + "!important"
     }
   }
 };

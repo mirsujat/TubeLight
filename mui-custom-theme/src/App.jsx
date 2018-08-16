@@ -7,6 +7,7 @@ import NavbarNotification from "./components/Navbar/NavbarNotification.jsx";
 import NavbarSearch from "./components/Navbar/NavbarSearch.jsx";
 import InputDefaultDemo from "./components/InputDefault/Demo.jsx";
 import CustomInputDemo from "./components/Input/Demo.jsx";
+import CheckboxRadioSwitchDemo from "./components/CheckboxRadioSwitch/Demo.jsx";
 import BadgeDemo from "./components/Badge/Demo.jsx";
 import PaginationDemo from "./components/Pagination/Demo.jsx";
 
@@ -38,6 +39,7 @@ class App extends Component {
             <CustomInputDemo />
           </div>
         </div>
+        <CheckboxRadioSwitchDemo />
         <BadgeDemo />
         <PaginationDemo />
       </div>
