@@ -85,19 +85,19 @@ const checkboxRadioSwitch = {
     color: dangerColor
   },
   radio: {
-    color: successColor + "!important"
+    color: greyColor + "!important"
   },
   radioChecked: {
-    width: "16px",
-    height: "16px",
-    border: "1px solid " + successColor,
+    width: "12px",
+    height: "12px",
+    border: "2px solid " + greyColor,
     borderRadius: "50%"
   },
   radioUnchecked: {
     width: "0px",
     height: "0px",
-    padding: "7px",
-    border: "1px solid rgba(0, 0, 0, .54)",
+    padding: "5px",
+    border: "2px solid rgba(0, 0, 0, .64)",
     borderRadius: "50%"
   },
   inlineChecks: {
