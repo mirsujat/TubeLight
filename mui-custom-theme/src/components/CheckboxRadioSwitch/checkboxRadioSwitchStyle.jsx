@@ -97,7 +97,7 @@ const checkboxRadioSwitch = {
     width: "0px",
     height: "0px",
     padding: "5px",
-    border: "2px solid rgba(0, 0, 0, .64)",
+    border: "2px solid rgba(0, 0, 0, .54)",
     borderRadius: "50%"
   },
   inlineChecks: {
