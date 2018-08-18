@@ -19,8 +19,8 @@ const imageStyles = {
   },
   imgCardTop: {
     width: "100%",
-    borderTopLeftRadius: "calc(.25rem - 1px)",
-    borderTopRightRadius: "calc(.25rem - 1px)",
+    borderTopLeftRadius: "calc(.25rem - 25px)",
+    borderTopRightRadius: "calc(.25rem - 25px)",
     cursor: "pointer"
   },
   imgCardBottom: {
