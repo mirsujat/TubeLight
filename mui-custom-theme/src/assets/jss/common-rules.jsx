@@ -171,13 +171,13 @@ const cardTitle = {
 };
 
 const cardLink = {
-  "& + $cardLink": {
-    marginLeft: "1.25rem",
-    textDecoration: "none",
-    color: primaryColor,
-    fontSize: "0.7345rem",
-    fontWeight: "400"
-  }
+  marginRight: "1.25rem",
+  marginLeft: "0rem",
+  textDecoration: "none",
+  color: infoColor,
+  fontSize: "0.7213rem",
+  fontWeight: "300",
+  textTransform: "uppercase"
 };
 
 const cardSubtitle = {

@@ -43,7 +43,7 @@ class SimpleCard extends Component {
             className={classes.cardLink}
             onClick={e => e.preventDefault()}
           >
-            Another link
+            Card link
           </a>
         </CardBody>
       </Card>
