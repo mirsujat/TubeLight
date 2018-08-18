@@ -103,31 +103,31 @@ const goldBoxShadow = {
 
 const defaultCardHeader = {
   color: "#555",
-  background: "rgb(206,220,231)"
+  background: "rgba(232,232,232, 1)"
 };
 const warningCardHeader = {
   color: "#fff",
-  background: "rgb(255,0,132)"
+  background: warningColor
 };
 const successCardHeader = {
   color: "#fff",
-  background: "rgb(37,141,200)"
+  background: successColor
 };
 const dangerCardHeader = {
   color: "#fff",
-  background: "rgb(255, 48, 25)"
+  background: dangerColor
 };
 const infoCardHeader = {
   color: "#fff",
-  background: " rgb(73, 192, 240)"
+  background: infoColor
 };
 const primaryCardHeader = {
   color: "#fff",
-  background: " rgb(0, 183, 234)"
+  background: primaryColor
 };
 const goldCardHeader = {
   color: "#fff",
-  background: "rgb(255, 214, 94)"
+  background: goldColor
 };
 const cardActions = {
   margin: "0 20px 10px",

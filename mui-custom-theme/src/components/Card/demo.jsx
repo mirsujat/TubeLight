@@ -45,12 +45,10 @@ class CardsDemo extends Component {
             </div>
             <ContentCard />
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
-            <div className={classes.title}>
-              <h3>Card With Header </h3>
-            </div>
-            <HeaderCard />
-          </GridItem>
+          <div className={classes.title}>
+            <h3>Card With Header </h3>
+          </div>
+          <HeaderCard />
         </GridContainer>
       </div>
     );

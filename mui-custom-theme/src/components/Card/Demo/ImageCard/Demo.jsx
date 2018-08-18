@@ -21,7 +21,7 @@ class ImageCard extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Card className={classes.card} style={{ width: "20rem" }}>
+      <Card className={classes.card}>
         <img
           style={{ height: "160px", width: "100%", display: "block" }}
           className={classes.imgCardTop}

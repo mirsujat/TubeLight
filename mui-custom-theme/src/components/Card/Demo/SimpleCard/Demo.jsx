@@ -23,7 +23,7 @@ class SimpleCard extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Card className={classes.card} style={{ width: "20rem" }}>
+      <Card className={classes.card}>
         <CardBody>
           <h4 className={classes.cardTitle}>Card Title</h4>
           <h6 className={classes.cardSubtitle}>Card Subtitle</h6>
