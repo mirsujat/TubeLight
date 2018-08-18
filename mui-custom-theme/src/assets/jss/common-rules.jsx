@@ -176,7 +176,7 @@ const cardLink = {
   textDecoration: "none",
   color: infoColor,
   fontSize: "0.7213rem",
-  fontWeight: "300",
+  fontWeight: "400",
   textTransform: "uppercase"
 };
 
