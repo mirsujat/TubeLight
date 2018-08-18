@@ -46,7 +46,8 @@ const card = {
   boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
   borderRadius: "3px",
   color: "rgba(0, 0, 0, 0.87)",
-  background: "#fff"
+  background: "#fff",
+  fontFamily: `"Roboto Slab", "Noto Sans", serif`
 };
 
 const defaultFont = {
@@ -158,23 +159,33 @@ const title = {
   margin: "1.75rem 0 0.875rem",
   textDecoration: "none",
   fontWeight: "700",
-  fontFamily: `"Roboto Slab", "Times New Roman", serif`
+  fontFamily: `"Roboto Slab", "Noto Sans", serif`
 };
 
 const cardTitle = {
   ...title,
-  marginTop: ".625rem"
+  marginTop: ".625rem",
+  fontSize: "1rem",
+  fontWeight: "700",
+  fontFamily: `"Roboto Slab", "Noto Sans", serif`
 };
 
 const cardLink = {
   "& + $cardLink": {
-    marginLeft: "1.25rem"
+    marginLeft: "1.25rem",
+    textDecoration: "none",
+    color: primaryColor,
+    fontSize: "0.7345rem",
+    fontWeight: "400"
   }
 };
 
 const cardSubtitle = {
   marginBottom: "0",
-  marginTop: "-.375rem"
+  marginTop: "-.375rem",
+  fontSize: "0.7rem",
+  fontWeight: "400",
+  fontFamily: `"Roboto Slab", "Noto Sans", serif`
 };
 
 export {

@@ -6,6 +6,11 @@ body {
   background-color: rgba(238, 238, 238, 0.4);
 }
 
+a {
+  text-decoration: none;
+  color: #00bcd4;
+}
+
 .fontFamily {
   font-family: "Noto Sans", sans-serif;
   font-family: "Roboto", sans-serif;

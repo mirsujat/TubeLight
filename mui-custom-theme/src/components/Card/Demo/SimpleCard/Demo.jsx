@@ -2,27 +2,28 @@ import React, { Component } from "react";
 // material-ui components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
+import Card from "../../Card.jsx";
+import CardBody from "../../CardBody/CardBody.jsx";
 
 import {
+  card,
   cardTitle,
   cardLink,
   cardSubtitle
 } from "../../../../assets/jss/common-rules.jsx";
 
 const style = {
-  ...imagesStyles,
+  card,
   cardTitle,
   cardLink,
   cardSubtitle
 };
 
-class Cards extends Component {
+class SimpleCard extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Card style={{ width: "20rem" }}>
+      <Card className={classes.card} style={{ width: "20rem" }}>
         <CardBody>
           <h4 className={classes.cardTitle}>Card Title</h4>
           <h6 className={classes.cardSubtitle}>Card Subtitle</h6>
@@ -31,14 +32,14 @@ class Cards extends Component {
             bulk of the card's content.
           </p>
           <a
-            href="#pablo"
+            href="#mir"
             className={classes.cardLink}
             onClick={e => e.preventDefault()}
           >
             Card link
           </a>
           <a
-            href="#pablo"
+            href="#mir"
             className={classes.cardLink}
             onClick={e => e.preventDefault()}
           >
@@ -50,4 +51,4 @@ class Cards extends Component {
   }
 }
 
-export default withStyles(style)(Cards);
+export default withStyles(style)(SimpleCard);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import ButtonDemo from "./components/Button/Demo.jsx";
+import Cards from "./components/Card/demo.jsx";
 import NavbarIcon from "./components/Navbar/NavbarIcon.jsx";
 import NavbarIconText from "./components/Navbar/NavbarIconText.jsx";
 import NavbarNotification from "./components/Navbar/NavbarNotification.jsx";
@@ -25,6 +26,7 @@ class App extends Component {
         </h3>
 
         <ButtonDemo />
+        <Cards />
         <NavbarNotification />
         <NavbarIcon />
         <NavbarIconText />
