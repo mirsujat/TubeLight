@@ -8,24 +8,28 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import cardBodyStyle from "./cardBodyStyle.jsx";
+import cardStyle from "./cardStyle.jsx";
 
-function CardBody({ ...props }) {
-  const { classes, className, children, ...rest } = props;
-  const cardBodyClasses = classNames({
-    [classes.cardBody]: true,
+function Card({ ...props }) {
+  const { classes, className, children, plain, carousel, ...rest } = props;
+  const cardClasses = classNames({
+    [classes.card]: true,
+    [classes.cardPlain]: plain,
+    [classes.cardCarousel]: carousel,
     [className]: className !== undefined
   });
   return (
-    <div className={cardBodyClasses} {...rest}>
+    <div className={cardClasses} {...rest}>
       {children}
     </div>
   );
 }
 
-CardBody.propTypes = {
+Card.propTypes = {
   classes: PropTypes.object.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  plain: PropTypes.bool,
+  carousel: PropTypes.bool
 };
 
-export default withStyles(cardBodyStyle)(CardBody);
+export default withStyles(cardStyle)(Card);
