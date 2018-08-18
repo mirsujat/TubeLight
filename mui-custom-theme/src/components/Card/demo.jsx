@@ -8,6 +8,7 @@ import GridItem from "../Grid/GridItem.jsx";
 import SimpleCard from "./Demo/SimpleCard/Demo.jsx";
 import ImageCard from "./Demo/ImageCard/Demo.jsx";
 import ContentCard from "./Demo/ContentCard/Demo.jsx";
+import HeaderCard from "./Demo/HeaderCard/Demo.jsx";
 
 import demoStyle from "./demoStyle.jsx";
 
@@ -43,6 +44,12 @@ class CardsDemo extends Component {
               <h3>Content Card </h3>
             </div>
             <ContentCard />
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <div className={classes.title}>
+              <h3>Card With Header </h3>
+            </div>
+            <HeaderCard />
           </GridItem>
         </GridContainer>
       </div>

@@ -101,35 +101,33 @@ const goldBoxShadow = {
     "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
 };
 
+const defaultCardHeader = {
+  color: "#555",
+  background: "rgb(206,220,231)"
+};
 const warningCardHeader = {
   color: "#fff",
-  background: "linear-gradient(60deg, #ffa726, #fb8c00)",
-  ...warningBoxShadow
+  background: "rgb(255,0,132)"
 };
 const successCardHeader = {
   color: "#fff",
-  background: "linear-gradient(60deg, #66bb6a, #43a047)",
-  ...successBoxShadow
+  background: "rgb(37,141,200)"
 };
 const dangerCardHeader = {
   color: "#fff",
-  background: "linear-gradient(60deg, #ef5350, #e53935)",
-  ...dangerBoxShadow
+  background: "rgb(255, 48, 25)"
 };
 const infoCardHeader = {
   color: "#fff",
-  background: "linear-gradient(60deg, #26c6da, #00acc1)",
-  ...infoBoxShadow
+  background: " rgb(73, 192, 240)"
 };
 const primaryCardHeader = {
   color: "#fff",
-  background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
-  ...primaryBoxShadow
+  background: " rgb(0, 183, 234)"
 };
 const goldCardHeader = {
   color: "#fff",
-  background: "linear-gradient(60deg, #ec407a, #d81b60)",
-  ...goldBoxShadow
+  background: "rgb(255, 214, 94)"
 };
 const cardActions = {
   margin: "0 20px 10px",
@@ -216,6 +214,7 @@ export {
   infoCardHeader,
   primaryCardHeader,
   goldCardHeader,
+  defaultCardHeader,
   cardActions,
   cardHeader,
   defaultBoxShadow,

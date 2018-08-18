@@ -3,11 +3,13 @@ import {
   successCardHeader,
   dangerCardHeader,
   infoCardHeader,
-  primaryCardHeader
-} from "../../assets/jss/common-rules.jsx";
+  primaryCardHeader,
+  goldCardHeader,
+  defaultCardHeader
+} from "../../../assets/jss/common-rules.jsx";
 const cardHeaderStyle = {
   cardHeader: {
-    borderRadius: "3px",
+    borderRadius: "0px",
     padding: "1rem 15px",
     marginLeft: "15px",
     marginRight: "15px",
@@ -23,7 +25,9 @@ const cardHeaderStyle = {
   successCardHeader,
   dangerCardHeader,
   infoCardHeader,
-  primaryCardHeader
+  primaryCardHeader,
+  goldCardHeader,
+  defaultCardHeader
 };
 
 export default cardHeaderStyle;
