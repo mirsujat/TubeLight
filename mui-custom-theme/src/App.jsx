@@ -23,6 +23,7 @@ class App extends Component {
           15px padding set on Body. Remove The Body Padding or set it up what
           ever you like.{" "}
         </h3>
+
         <ButtonDemo />
         <NavbarNotification />
         <NavbarIcon />
