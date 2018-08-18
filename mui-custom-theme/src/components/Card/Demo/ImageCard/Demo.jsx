@@ -9,26 +9,21 @@ import imageStyle from "../../../../assets/jss/styles/imageStyle.jsx";
 
 import SamplePhoto from "../../../../assets/img/photo/sample-1.jpg";
 
-import {
-  card,
-  cardTitle,
-  cardLink
-} from "../../../../assets/jss/common-rules.jsx";
+import { card, cardTitle } from "../../../../assets/jss/common-rules.jsx";
 
 const style = {
   ...imageStyle,
   card,
-  cardTitle,
-  cardLink
+  cardTitle
 };
 
 class ImageCard extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Card style={{ width: "20rem" }}>
+      <Card className={classes.card} style={{ width: "17rem" }}>
         <img
-          style={{ height: "180px", width: "100%", display: "block" }}
+          style={{ height: "160px", width: "100%", display: "block" }}
           className={classes.imgCardTop}
           src={SamplePhoto}
           alt="Card-img-cap"

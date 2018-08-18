@@ -47,11 +47,11 @@ const card = {
   borderRadius: "3px",
   color: "rgba(0, 0, 0, 0.87)",
   background: "#fff",
-  fontFamily: `"Roboto Slab", "Noto Sans", serif`
+  fontFamily: '"Noto Sans", sans-serif'
 };
 
 const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Noto Sans", sans-serif',
   fontWeight: "300",
   lineHeight: "1.5em"
 };
