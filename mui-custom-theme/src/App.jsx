@@ -11,6 +11,7 @@ import CustomInputDemo from "./components/Input/Demo.jsx";
 import CheckboxRadioSwitchDemo from "./components/CheckboxRadioSwitch/Demo.jsx";
 import BadgeDemo from "./components/Badge/Demo.jsx";
 import PaginationDemo from "./components/Pagination/Demo.jsx";
+import TabsDemo from "./components/Tabs/Demo.jsx";
 
 class App extends Component {
   render() {
@@ -42,9 +43,11 @@ class App extends Component {
             <CustomInputDemo />
           </div>
         </div>
+
         <CheckboxRadioSwitchDemo />
         <BadgeDemo />
         <PaginationDemo />
+        <TabsDemo />
       </div>
     );
   }
