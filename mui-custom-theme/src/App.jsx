@@ -47,6 +47,7 @@ class App extends Component {
         <CheckboxRadioSwitchDemo />
         <BadgeDemo />
         <PaginationDemo />
+        <TabsDemo />
       </div>
     );
   }
