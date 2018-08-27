@@ -33,7 +33,7 @@ class DemoTabs extends Component {
                       tabName: "Profile",
                       tabIcon: Face,
                       tabContent: (
-                        <p className={classes.textCenter}>
+                        <p className={classes.textLeft}>
                           I think that’s a responsibility that I have, to push
                           possibilities, to show people, this is the level that
                           things could be at. So when you get something that has
@@ -49,7 +49,7 @@ class DemoTabs extends Component {
                       tabName: "Messages",
                       tabIcon: Chat,
                       tabContent: (
-                        <p className={classes.textCenter}>
+                        <p className={classes.textLeft}>
                           I think that’s a responsibility that I have, to push
                           possibilities, to show people, this is the level that
                           things could be at. I will be the leader of a company
@@ -65,7 +65,7 @@ class DemoTabs extends Component {
                       tabName: "Settings",
                       tabIcon: Build,
                       tabContent: (
-                        <p className={classes.textCenter}>
+                        <p className={classes.textLeft}>
                           think that’s a responsibility that I have, to push
                           possibilities, to show people, this is the level that
                           things could be at. So when you get something that has

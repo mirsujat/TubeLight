@@ -10,11 +10,10 @@ import {
 const cardHeaderStyle = {
   cardHeader: {
     borderRadius: "0px",
-    padding: "0px 0px",
+    padding: "10px 0px",
     marginLeft: "0",
     marginRight: "0",
     marginTop: "-30px",
-    minHeight: "45px",
     textAlign: "center",
     border: "0",
     marginBottom: "0"

@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div style={{ paddingLeft: "15px", paddingRight: "15px" }}>
         <h2 style={{ color: "#2e8eef" }}>React Custom Theme: Based on </h2>
         <h6> React @16.4.3 </h6>
         <h6> Materia-Ui @1.4.3 </h6>
@@ -47,7 +47,6 @@ class App extends Component {
         <CheckboxRadioSwitchDemo />
         <BadgeDemo />
         <PaginationDemo />
-        <TabsDemo />
       </div>
     );
   }

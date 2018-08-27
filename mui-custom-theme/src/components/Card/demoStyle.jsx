@@ -5,6 +5,7 @@ const demoStyle = {
     padding: "70px 0"
   },
   container,
+
   title: {
     ...title,
     marginTop: "30px",

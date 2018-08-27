@@ -8,6 +8,9 @@ const demoStyle = {
   container,
   textCenter: {
     textAlign: "center"
+  },
+  textLeft: {
+    textAlign: "left"
   }
 };
 
