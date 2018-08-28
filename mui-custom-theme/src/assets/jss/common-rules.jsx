@@ -51,7 +51,7 @@ const card = {
 };
 
 const defaultFont = {
-  fontFamily: '"Noto Sans", sans-serif',
+  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
   lineHeight: "1.5em"
 };

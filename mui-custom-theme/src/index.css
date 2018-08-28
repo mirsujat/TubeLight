@@ -1,14 +1,69 @@
 body {
   margin: 0;
   padding: 0px;
-  font-family: "Roboto", "Noto Sans", "Roboto Slab", "Roboto Condensed",
-    "Helvetica", "Open Sans", sans-serif;
-  color: rgba(0, 0, 0, 0.67);
+  font-family: "Roboto", "Helvetica", "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
   background-color: rgba(238, 238, 238, 0.4);
   overflow-y: auto;
   overflow-x: hidden;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", "Helvetica", "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 700;
+}
+h1 {
+  font-size: 3.3125rem;
+  line-height: 1.15em;
+}
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.5em;
+}
+h3 {
+  font-size: 1.5625rem;
+  line-height: 1.4em;
+}
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+}
+h5 {
+  font-size: 1.0625rem;
+  line-height: 1.55em;
+}
+h6 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+}
 a {
   text-decoration: none;
   color: #03a9f4;
