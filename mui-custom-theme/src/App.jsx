@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+      <div style={{ paddingLeft: "15px", paddingRight: "25px" }}>
         <h2 style={{ color: "#2e8eef" }}>React Custom Theme: Based on </h2>
         <h6> React @16.4.3 </h6>
         <h6> Materia-Ui @1.4.3 </h6>
