@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0px;
   font-family: "Roboto", "Helvetica", "Open Sans", sans-serif;
-  color: rgba(0, 0, 0, 0.87);
-  font-weight: 400;
+  color: rgba(0, 0, 0, 0.67);
+  font-weight: 300;
   background-color: rgba(238, 238, 238, 0.4);
   overflow-y: auto;
   overflow-x: hidden;
@@ -15,7 +15,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", "Helvetica", "Open Sans", sans-serif;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.84);
   font-weight: 700;
 }
 h1 {
