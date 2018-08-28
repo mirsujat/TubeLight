@@ -1,4 +1,4 @@
-import { container, title } from "../../assets/jss/common-rules";
+import { container, title } from "../../../assets/jss/common-rules";
 
 const demoStyle = {
   section: {
