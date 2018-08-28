@@ -8,7 +8,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-popper": "^1.0.0-beta.6",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-swipeable-views": "^0.12.16"
   },
   "scripts": {
     "start": "react-scripts start",
