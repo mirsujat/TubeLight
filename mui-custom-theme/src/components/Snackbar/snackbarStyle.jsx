@@ -10,7 +10,7 @@ import {
 
 const snackbarStyle = {
   root: {
-    ...defaultFont,
+    fontFamily: '"Roboto", sans-serif',
     position: "relative",
     padding: "20px 15px",
     lineHeight: "20px",

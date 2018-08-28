@@ -13,6 +13,7 @@ import BadgeDemo from "./components/Badge/Demo.jsx";
 import PaginationDemo from "./components/Pagination/Demo.jsx";
 import TabsDemo from "./components/Tabs/Demo.jsx";
 import NavPillsDemo from "./components/NavPills/Demo.jsx";
+import NotificationDemo from "./components/Notification/Notification.jsx";
 
 class App extends Component {
   render() {
@@ -50,6 +51,7 @@ class App extends Component {
         <PaginationDemo />
         <TabsDemo />
         <NavPillsDemo />
+        <NotificationDemo />
       </div>
     );
   }
