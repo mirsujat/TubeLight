@@ -7,10 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import imageStyle from "./imageStyle.jsx";
-import SummerGreen from "../../assets/img/photo/sample-3.jpg";
-import SummerBeauty from "../../assets/img/photo/p2.jpg";
-import SummerHot from "../../assets/img/photo/p3.jpg";
-import SummerBaby from "../../assets/img/photo/p4.jpg";
+import Image from "../../assets/img/photo/k4.jpg";
 
 class ImageCard extends Component {
   render() {
@@ -27,7 +24,7 @@ class ImageCard extends Component {
               <GridItem xs={12} sm={2}>
                 <h4>Rounded Image</h4>
                 <img
-                  src={SummerGreen}
+                  src={Image}
                   alt="..."
                   className={classes.imgRounded + " " + classes.imgFluid}
                 />
@@ -35,7 +32,7 @@ class ImageCard extends Component {
               <GridItem xs={12} sm={2} className={classes.marginLeft}>
                 <h4>Circle Image</h4>
                 <img
-                  src={SummerBeauty}
+                  src={Image}
                   alt="..."
                   className={classes.imgRoundedCircle + " " + classes.imgFluid}
                 />
@@ -43,7 +40,7 @@ class ImageCard extends Component {
               <GridItem xs={12} sm={2} className={classes.marginLeft}>
                 <h4>Rounded Raised</h4>
                 <img
-                  src={SummerHot}
+                  src={Image}
                   alt="..."
                   className={
                     classes.imgRaised +
@@ -57,7 +54,7 @@ class ImageCard extends Component {
               <GridItem xs={12} sm={2} className={classes.marginLeft}>
                 <h4>Circle Raised</h4>
                 <img
-                  src={SummerBaby}
+                  src={Image}
                   alt="..."
                   className={
                     classes.imgRaised +
