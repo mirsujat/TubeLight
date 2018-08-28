@@ -4,16 +4,17 @@ import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import SummerGreen from '../../assets/img/photo/p1.jpg'
-import  SummerBeauty from '../../assets/img/photo/p2.jpg'
-import SummerHot from '../../assets/img/photo/p3.jpg'
-import SummerBaby from '../../assets/img/photo/p4.jpg'
-
+import GridContainer from "../Grid/GridContainer.jsx";
+import GridItem from "../Grid/GridItem.jsx";
+import imageStyle from "./imageStyle.jsx";
+import SummerGreen from "../../assets/img/photo/p1.jpg";
+import SummerBeauty from "../../assets/img/photo/p2.jpg";
+import SummerHot from "../../assets/img/photo/p3.jpg";
+import SummerBaby from "../../assets/img/photo/p4.jpg";
 
 class ImageCard extends Component {
   render() {
+    const { classes } = this.props;
     return (
       <div className={classes.section}>
         <div className={classes.container}>
@@ -68,8 +69,11 @@ class ImageCard extends Component {
                 />
               </GridItem>
             </GridContainer>
+          </div>
         </div>
       </div>
     );
   }
 }
+
+export default withStyles(imageStyle)(ImageCard);
