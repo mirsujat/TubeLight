@@ -7,7 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import imageStyle from "./imageStyle.jsx";
-import SummerGreen from "../../assets/img/photo/p1.jpg";
+import SummerGreen from "../../assets/img/photo/sample-3.jpg";
 import SummerBeauty from "../../assets/img/photo/p2.jpg";
 import SummerHot from "../../assets/img/photo/p3.jpg";
 import SummerBaby from "../../assets/img/photo/p4.jpg";
