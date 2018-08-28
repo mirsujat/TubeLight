@@ -3,6 +3,7 @@ body {
   padding: 0px;
   font-family: "Roboto", "Noto Sans", "Roboto Slab", "Roboto Condensed",
     "Helvetica", "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.67);
   background-color: rgba(238, 238, 238, 0.4);
   overflow-y: auto;
   overflow-x: hidden;

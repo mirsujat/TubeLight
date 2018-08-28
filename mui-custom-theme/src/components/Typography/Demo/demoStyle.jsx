@@ -13,6 +13,8 @@ const demoStyle = {
     ...title,
     marginTop: "30px",
     minHeight: "32px",
+    color: "rgba(0,0,0, 0.84)",
+    fontFamily: '"Roboto",  sans-serif',
     textDecoration: "none"
   },
   typo: {

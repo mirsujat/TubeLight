@@ -14,6 +14,7 @@ import PaginationDemo from "./components/Pagination/Demo.jsx";
 import TabsDemo from "./components/Tabs/Demo.jsx";
 import NavPillsDemo from "./components/NavPills/Demo.jsx";
 import NotificationDemo from "./components/Notification/Notification.jsx";
+import TypographyDemo from "./components/Typography/Demo/Demo.jsx";
 
 class App extends Component {
   render() {
@@ -52,6 +53,7 @@ class App extends Component {
         <TabsDemo />
         <NavPillsDemo />
         <NotificationDemo />
+        <TypographyDemo />
       </div>
     );
   }
