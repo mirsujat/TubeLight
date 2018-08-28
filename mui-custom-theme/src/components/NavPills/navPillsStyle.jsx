@@ -74,7 +74,10 @@ const navPillsStyle = theme => ({
     color: "inherit"
   },
   contentWrapper: {
-    marginTop: "20px"
+    marginTop: "20px",
+    fontSize: "14px",
+    color: "rgba(0, 0, 0, 0.67)",
+    fontFamily: '"Roboto", sans-serif'
   },
   primary: {
     "&,&:hover": {

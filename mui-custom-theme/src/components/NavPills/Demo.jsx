@@ -44,7 +44,7 @@ class DemoPills extends Component {
                             plug-and-play networks. Dynamically procrastinate
                             B2C users after installed base benefits.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI. Collaboratively
@@ -52,7 +52,7 @@ class DemoPills extends Component {
                             networks. Dynamically procrastinate B2C users after
                             installed base benefits.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI. Collaboratively
@@ -73,7 +73,7 @@ class DemoPills extends Component {
                             cross-media value. Quickly maximize timely
                             deliverables for real-time schemas.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically maintain clicks-and-mortar solutions
                             without functional solutions. Dramatically visualize
@@ -96,7 +96,7 @@ class DemoPills extends Component {
                             plug-and-play networks. Dynamically procrastinate
                             B2C users after installed base benefits.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI. Collaboratively
@@ -104,7 +104,7 @@ class DemoPills extends Component {
                             networks. Dynamically procrastinate B2C users after
                             installed base benefits.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI. Collaboratively
@@ -136,7 +136,7 @@ class DemoPills extends Component {
                             plug-and-play networks. Dynamically procrastinate
                             B2C users after installed base benefits.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI. Collaboratively
@@ -144,7 +144,7 @@ class DemoPills extends Component {
                             networks. Dynamically procrastinate B2C users after
                             installed base benefits.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI. Collaboratively
@@ -165,7 +165,7 @@ class DemoPills extends Component {
                             cross-media value. Quickly maximize timely
                             deliverables for real-time schemas.
                           </p>
-                          <br />
+
                           <p>
                             Dramatically maintain clicks-and-mortar solutions
                             without functional solutions. Dramatically visualize
