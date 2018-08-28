@@ -11,6 +11,7 @@ import {
 const snackbarStyle = {
   root: {
     fontFamily: '"Roboto", sans-serif',
+    fontWeight: "300",
     position: "relative",
     padding: "20px 15px",
     lineHeight: "20px",
