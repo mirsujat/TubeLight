@@ -118,12 +118,12 @@ class DemoPills extends Component {
                   ]}
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={12} lg={6}>
+              <GridItem xs={12} sm={12} md={10} lg={6}>
                 <NavPills
-                  color="rose"
+                  color="gold"
                   horizontal={{
-                    tabsGrid: { xs: 12, sm: 4, md: 4 },
-                    contentGrid: { xs: 12, sm: 8, md: 8 }
+                    tabsGrid: { xs: 12, sm: 4, md: 3 },
+                    contentGrid: { xs: 12, sm: 8, md: 9 }
                   }}
                   tabs={[
                     {

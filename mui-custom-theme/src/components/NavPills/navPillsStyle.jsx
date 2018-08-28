@@ -54,7 +54,7 @@ const navPillsStyle = theme => ({
     margin: "15px 0"
   },
   horizontalPills: {
-    width: "100%",
+    width: "auto",
     float: "none !important",
     "& + button": {
       margin: "10px 0"
