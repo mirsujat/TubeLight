@@ -16,6 +16,7 @@ import NavPillsDemo from "./components/NavPills/Demo.jsx";
 import NotificationDemo from "./components/Notification/Notification.jsx";
 import TypographyDemo from "./components/Typography/Demo/Demo.jsx";
 import ImageCard from "./components/ImageCard/ImageCard.jsx";
+import Modal from "./components/Modal/Modal.jsx";
 
 class App extends Component {
   render() {
@@ -56,6 +57,7 @@ class App extends Component {
         <NotificationDemo />
         <TypographyDemo />
         <ImageCard />
+        <Modal />
       </div>
     );
   }
