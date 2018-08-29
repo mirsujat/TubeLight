@@ -1,6 +1,5 @@
 import React from "react";
-// react plugin for creating date-time-picker
-import Datetime from "react-datetime";
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Tooltip from "@material-ui/core/Tooltip";

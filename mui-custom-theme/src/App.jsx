@@ -19,6 +19,7 @@ import ImageCard from "./components/ImageCard/ImageCard.jsx";
 import Modal from "./components/Modal/Modal.jsx";
 import Datepicker from "./components/Datepicker/Datepicker.jsx";
 import Tooltips from "./components/Tooltips/Tooltips.jsx";
+import Popovers from "./components/Popovers/Popovers.jsx";
 
 class App extends Component {
   render() {
@@ -61,6 +62,7 @@ class App extends Component {
         <ImageCard />
         <Datepicker />
         <Modal />
+        <Popovers />
         <Tooltips />
       </div>
     );
