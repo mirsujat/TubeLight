@@ -23,7 +23,7 @@ class Datepicker extends Component {
                 <h3>Datetime Picker</h3>
               </div>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={2}>
                   <InputLabel className={classes.label}>
                     Datetime Picker
                   </InputLabel>
