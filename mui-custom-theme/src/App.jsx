@@ -18,6 +18,7 @@ import TypographyDemo from "./components/Typography/Demo/Demo.jsx";
 import ImageCard from "./components/ImageCard/ImageCard.jsx";
 import Modal from "./components/Modal/Modal.jsx";
 import Datepicker from "./components/Datepicker/Datepicker.jsx";
+import Tooltips from "./components/Tooltips/Tooltips.jsx";
 
 class App extends Component {
   render() {
@@ -58,8 +59,9 @@ class App extends Component {
         <NotificationDemo />
         <TypographyDemo />
         <ImageCard />
-        <Modal />
         <Datepicker />
+        <Modal />
+        <Tooltips />
       </div>
     );
   }
