@@ -2,7 +2,7 @@ import demoStyle from "./demoStyle.jsx";
 
 const modalStyle = {
   modal: {
-    borderRadius: "6px"
+    borderRadius: "2px"
   },
   modalHeader: {
     borderBottom: "none",
