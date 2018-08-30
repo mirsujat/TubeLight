@@ -20,6 +20,7 @@ import Modal from "./components/Modal/Modal.jsx";
 import Datepicker from "./components/Datepicker/Datepicker.jsx";
 import Tooltips from "./components/Tooltips/Tooltips.jsx";
 import Popovers from "./components/Popovers/Popovers.jsx";
+import CarouselDemo from "./components/Carousel/Demo.jsx";
 
 class App extends Component {
   render() {
@@ -64,6 +65,7 @@ class App extends Component {
         <Modal />
         <Popovers />
         <Tooltips />
+        <CarouselDemo />
       </div>
     );
   }
