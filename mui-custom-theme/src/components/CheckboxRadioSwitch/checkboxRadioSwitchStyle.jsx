@@ -136,7 +136,7 @@ const checkboxRadioSwitch = {
     lineHeight: "111px"
   },
   switchBase: {
-    color: primaryColor + "!important"
+    color: greyColor + "!important"
   },
   switchIcon: {
     boxShadow: "0 1px 3px 1px rgba(0, 0, 0, 0.4)",
@@ -151,7 +151,7 @@ const checkboxRadioSwitch = {
   switchBar: {
     width: "30px",
     height: "15px",
-    backgroundColor: successColor + "!important",
+    backgroundColor: greyColor + "!important",
     borderRadius: "15px",
     opacity: "0.7!important"
   },

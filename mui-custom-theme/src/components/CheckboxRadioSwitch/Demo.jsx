@@ -51,7 +51,7 @@ class CheckboxRadioSwitchDemo extends Component {
       <div className={classes.container}>
         <div className={classes.title}>
           <h3>
-            <small>Pagination for Lazy Loading</small>
+            <small>Checkbox, Radio Button and Switch Button</small>
           </h3>
         </div>
         <div className={classes.space70} />
