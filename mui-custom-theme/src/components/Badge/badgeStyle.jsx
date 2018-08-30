@@ -45,8 +45,8 @@ const badgeStyle = {
     backgroundColor: "rgba(17, 17, 17, 0.41)"
   },
   round: {
-    width: "14px",
-    height: "14px",
+    width: "25px",
+    height: "20px",
     padding: "6px",
     borderRadius: "30px"
   }
