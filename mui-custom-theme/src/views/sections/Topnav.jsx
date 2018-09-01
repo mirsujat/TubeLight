@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -29,42 +30,38 @@ class Topnav extends Component {
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#mirsujat"
                     className={classes.navLink + " " + classes.navLinkActive}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Components
+                    <Link to="/">Components</Link>
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#mirsujat"
                     className={classes.navLink}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Blog
+                    <Link to="/blog">Blog</Link>
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#mirsujat"
                     className={classes.navLink}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Portfolio
+                    <Link to="/portfolio">Portfolio</Link>
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Button
-                    href="#mirsujat"
                     className={classes.navLink}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Contact
+                    <Link to="/contact">Contact</Link>
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
