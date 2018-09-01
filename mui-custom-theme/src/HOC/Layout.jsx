@@ -5,7 +5,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 // core components
 import Wrapper from "./Wrapper";
-import NavbarIconText from "../../components/Navbar/NavbarIconText.jsx";
+import Topnav from "../views/sections/Topnav.jsx";
 import layoutStyle from "./layoutStyle.jsx";
 
 class Layout extends Component {
@@ -13,9 +13,8 @@ class Layout extends Component {
     const { classes } = this.props;
     return (
       <Wrapper>
-        <NavbarIconText />
-
-        <main className={classes.Content}>{this.props.children}</main>
+        <Topnav />
+        <main className={classes.content}>{this.props.children}</main>
       </Wrapper>
     );
   }

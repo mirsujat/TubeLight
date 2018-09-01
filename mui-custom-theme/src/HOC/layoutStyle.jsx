@@ -1,8 +1,7 @@
-
 const layoutStyle = {
   content: {
-    marginTop: "72px";
+    marginTop: "72px"
   }
-}
+};
 
 export default layoutStyle;
