@@ -6,7 +6,6 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 
-import Home from "@material-ui/icons/Home";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 
 // core components
@@ -35,7 +34,7 @@ class Topnav extends Component {
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    <Home className={classes.icons} /> Home
+                    Components
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
@@ -45,14 +44,33 @@ class Topnav extends Component {
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    <i className="fab fa-blogger-b" />
+                    Blog
+                  </Button>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                  <Button
+                    href="#mirsujat"
+                    className={classes.navLink}
+                    onClick={e => e.preventDefault()}
+                    color="transparent"
+                  >
+                    Portfolio
+                  </Button>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                  <Button
+                    href="#mirsujat"
+                    className={classes.navLink}
+                    onClick={e => e.preventDefault()}
+                    color="transparent"
+                  >
+                    Contact
                   </Button>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Dropdown
                     left
-                    hoverColor="info"
-                    dropdownHeader="Dropdown Header"
+                    hoverColor="primary"
                     buttonText="Profile"
                     buttonIcon={AccountCircle}
                     buttonProps={{
