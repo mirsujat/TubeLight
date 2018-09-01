@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -29,40 +29,33 @@ class Topnav extends Component {
             rightLinks={
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
-                  <Button
-                    className={classes.navLink + " " + classes.navLinkActive}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    <Link to="/">Components</Link>
-                  </Button>
+                  <Link to={"/"} className={classes.link}>
+                    <Button className={classes.navLink} color="transparent">
+                      Components
+                    </Button>
+                  </Link>
                 </ListItem>
                 <ListItem className={classes.listItem}>
-                  <Button
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    <Link to="/blog">Blog</Link>
-                  </Button>
+                  <Link to={"/blog"} className={classes.link}>
+                    <Button className={classes.navLink} color="transparent">
+                      Blog
+                    </Button>
+                  </Link>
+                </ListItem>
+
+                <ListItem className={classes.listItem}>
+                  <Link to={"/portfolio"} className={classes.link}>
+                    <Button className={classes.navLink} color="transparent">
+                      Portfolio
+                    </Button>
+                  </Link>
                 </ListItem>
                 <ListItem className={classes.listItem}>
-                  <Button
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    <Link to="/portfolio">Portfolio</Link>
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    <Link to="/contact">Contact</Link>
-                  </Button>
+                  <Link to={"/contact"} className={classes.link}>
+                    <Button className={classes.navLink} color="transparent">
+                      Contact
+                    </Button>
+                  </Link>
                 </ListItem>
                 <ListItem className={classes.listItem}>
                   <Dropdown

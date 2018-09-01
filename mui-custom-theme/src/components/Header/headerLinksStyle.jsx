@@ -36,6 +36,12 @@ const navigationLinksStyle = theme => ({
   listItemText: {
     padding: "0 !important"
   },
+  link: {
+    color: "inherit",
+    "&:hover,&:focus": {
+      color: "inherit"
+    }
+  },
   navLink: {
     color: "inherit",
     position: "relative",
