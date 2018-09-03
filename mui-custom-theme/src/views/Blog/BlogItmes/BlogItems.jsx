@@ -52,13 +52,13 @@ const blog = props => {
         <h3>Mui Custom Theme Story</h3>
       </GridItem>
 
-      <GridItem xs={12} sm={12} md={6}>
+      <GridItem xs={12} sm={12} md={5}>
         <Link to="/blog/item">
           <Card className={classes.card}>
             <img
               style={{ height: "600px", width: "100%", display: "block" }}
               className={classes.imageCardTop}
-              src={image100}
+              src={image105}
               alt="Blog Content Image"
             />
             <CardBody>
@@ -74,23 +74,92 @@ const blog = props => {
         </Link>
       </GridItem>
       <GridItem xs={12} sm={12} md={3}>
-        <Link to="/blog/item">
-          <Card className={classes.card}>
-            <img
-              style={{ height: "200px", width: "100%", display: "block" }}
-              className={classes.imageCardTop}
-              src={image100}
-              alt="Blog Content Image"
-            />
-            <CardBody>
-              <h4 className={classes.cardTitle}>Lorem Ipsum is simply dummy</h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </CardBody>
-          </Card>
-        </Link>
+        <GridItem xs={12} sm={12} md={12}>
+          <Link to="/blog/item">
+            <Card className={classes.card}>
+              <img
+                style={{ height: "279px", width: "100%", display: "block" }}
+                className={classes.imageCardTop}
+                src={image104}
+                alt="Blog Content Image"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>
+                  Lorem Ipsum is simply dummy
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </CardBody>
+            </Card>
+          </Link>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={12}>
+          <Link to="/blog/item">
+            <Card className={classes.card}>
+              <img
+                style={{ height: "222px", width: "100%", display: "block" }}
+                className={classes.imageCardTop}
+                src={image100}
+                alt="Blog Content Image"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>
+                  Lorem Ipsum is simply dummy
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </CardBody>
+            </Card>
+          </Link>
+        </GridItem>
+      </GridItem>
+      <GridItem xs={12} sm={12} md={4}>
+        <GridItem xs={12} sm={12} md={12}>
+          <Link to="/blog/item">
+            <Card className={classes.card}>
+              <img
+                style={{ height: "222px", width: "100%", display: "block" }}
+                className={classes.imageCardTop}
+                src={image102}
+                alt="Blog Content Image"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>
+                  Lorem Ipsum is simply dummy
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </CardBody>
+            </Card>
+          </Link>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={12}>
+          <Link to="/blog/item">
+            <Card className={classes.card}>
+              <img
+                style={{ height: "279px", width: "100%", display: "block" }}
+                className={classes.imageCardTop}
+                src={image104}
+                alt="Blog Content Image"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>
+                  Lorem Ipsum is simply dummy
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+              </CardBody>
+            </Card>
+          </Link>
+        </GridItem>
       </GridItem>
     </GridContainer>
   );
