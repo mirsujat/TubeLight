@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
