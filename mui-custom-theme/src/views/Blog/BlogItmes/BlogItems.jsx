@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 //Material-ui core component
 import withStyles from "@material-ui/core/styles/withStyles";
+import Divider from "@material-ui/core/Divider";
 import GridContainer from "../../../components/Grid/GridContainer.jsx";
 import GridItem from "../../../components/Grid/GridItem.jsx";
 import Card from "../../../components/Card/Card.jsx";
@@ -169,6 +170,9 @@ const blog = props => {
             </GridItem>
           </GridItem>
         </GridContainer>
+        <div className={classes.space50}>
+          <Divider />
+        </div>
       </section>
     </Fragment>
   );
