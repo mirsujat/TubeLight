@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 //Material-ui core component
@@ -8,6 +8,7 @@ import GridItem from "../../../components/Grid/GridItem.jsx";
 import Card from "../../../components/Card/Card.jsx";
 import CardBody from "../../../components/Card/CardBody/CardBody.jsx";
 import imageStyle from "../../../assets/jss/styles/imageStyle.jsx";
+import blogStyle from "./blogStyle.jsx";
 import { card, cardTitle } from "../../../assets/jss/common-rules.jsx";
 
 //Image
@@ -38,8 +39,9 @@ import image18 from "../../../assets/img/blog/18.jpg";
 import image19 from "../../../assets/img/blog/19.jpg";
 import image20 from "../../../assets/img/blog/20.jpg";
 
-const style = {
+const styles = {
   ...imageStyle,
+  ...blogStyle,
   card,
   cardTitle
 };
@@ -47,122 +49,129 @@ const style = {
 const blog = props => {
   const { classes } = props;
   return (
-    <GridContainer>
-      <GridItem xsm={12} sm={12} md={12}>
-        <h3>Mui Custom Theme Story</h3>
-      </GridItem>
+    <Fragment>
+      <section className={classes.blogHeader}>
+        <GridContainer>
+          <GridItem xsm={12} sm={12} md={12}>
+            <h3>Mui Custom Theme Story</h3>
+          </GridItem>
 
-      <GridItem xs={12} sm={12} md={5}>
-        <Link to="/blog/item">
-          <Card className={classes.card}>
-            <img
-              style={{ height: "600px", width: "100%", display: "block" }}
-              className={classes.imageCardTop}
-              src={image105}
-              alt="Blog Content Image"
-            />
-            <CardBody>
-              <h4 className={classes.cardTitle}>Lorem Ipsum is simply dummy</h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </p>
-            </CardBody>
-          </Card>
-        </Link>
-      </GridItem>
-      <GridItem xs={12} sm={12} md={3}>
-        <GridItem xs={12} sm={12} md={12}>
-          <Link to="/blog/item">
-            <Card className={classes.card}>
-              <img
-                style={{ height: "279px", width: "100%", display: "block" }}
-                className={classes.imageCardTop}
-                src={image104}
-                alt="Blog Content Image"
-              />
-              <CardBody>
-                <h4 className={classes.cardTitle}>
-                  Lorem Ipsum is simply dummy
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </CardBody>
-            </Card>
-          </Link>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Link to="/blog/item">
-            <Card className={classes.card}>
-              <img
-                style={{ height: "222px", width: "100%", display: "block" }}
-                className={classes.imageCardTop}
-                src={image100}
-                alt="Blog Content Image"
-              />
-              <CardBody>
-                <h4 className={classes.cardTitle}>
-                  Lorem Ipsum is simply dummy
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </CardBody>
-            </Card>
-          </Link>
-        </GridItem>
-      </GridItem>
-      <GridItem xs={12} sm={12} md={4}>
-        <GridItem xs={12} sm={12} md={12}>
-          <Link to="/blog/item">
-            <Card className={classes.card}>
-              <img
-                style={{ height: "222px", width: "100%", display: "block" }}
-                className={classes.imageCardTop}
-                src={image102}
-                alt="Blog Content Image"
-              />
-              <CardBody>
-                <h4 className={classes.cardTitle}>
-                  Lorem Ipsum is simply dummy
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </CardBody>
-            </Card>
-          </Link>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Link to="/blog/item">
-            <Card className={classes.card}>
-              <img
-                style={{ height: "279px", width: "100%", display: "block" }}
-                className={classes.imageCardTop}
-                src={image104}
-                alt="Blog Content Image"
-              />
-              <CardBody>
-                <h4 className={classes.cardTitle}>
-                  Lorem Ipsum is simply dummy
-                </h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </CardBody>
-            </Card>
-          </Link>
-        </GridItem>
-      </GridItem>
-    </GridContainer>
+          <GridItem xs={12} sm={12} md={5}>
+            <Link to="/blog/item">
+              <Card className={classes.card}>
+                <img
+                  style={{ height: "600px", width: "100%", display: "block" }}
+                  className={classes.imageCardTop}
+                  src={image105}
+                  alt="Blog Content Image"
+                />
+                <CardBody>
+                  <h4 className={classes.cardTitle}>
+                    Lorem Ipsum is simply dummy
+                  </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </p>
+                </CardBody>
+              </Card>
+            </Link>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={12} sm={12} md={12} style={{ paddingRight: "0px" }}>
+              <Link to="/blog/item">
+                <Card className={classes.card}>
+                  <img
+                    style={{ height: "279px", width: "100%", display: "block" }}
+                    className={classes.imageCardTop}
+                    src={image104}
+                    alt="Blog Content Image"
+                  />
+                  <CardBody>
+                    <h4 className={classes.cardTitle}>
+                      Lorem Ipsum is simply dummy
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </CardBody>
+                </Card>
+              </Link>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12} style={{ paddingRight: "0px" }}>
+              <Link to="/blog/item">
+                <Card className={classes.card}>
+                  <img
+                    style={{ height: "222px", width: "100%", display: "block" }}
+                    className={classes.imageCardTop}
+                    src={image100}
+                    alt="Blog Content Image"
+                  />
+                  <CardBody>
+                    <h4 className={classes.cardTitle}>
+                      Lorem Ipsum is simply dummy
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </CardBody>
+                </Card>
+              </Link>
+            </GridItem>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <GridItem xs={12} sm={12} md={12}>
+              <Link to="/blog/item">
+                <Card className={classes.card}>
+                  <img
+                    style={{ height: "222px", width: "100%", display: "block" }}
+                    className={classes.imageCardTop}
+                    src={image102}
+                    alt="Blog Content Image"
+                  />
+                  <CardBody>
+                    <h4 className={classes.cardTitle}>
+                      Lorem Ipsum is simply dummy
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </CardBody>
+                </Card>
+              </Link>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+              <Link to="/blog/item">
+                <Card className={classes.card}>
+                  <img
+                    style={{ height: "279px", width: "100%", display: "block" }}
+                    className={classes.imageCardTop}
+                    src={image104}
+                    alt="Blog Content Image"
+                  />
+                  <CardBody>
+                    <h4 className={classes.cardTitle}>
+                      Lorem Ipsum is simply dummy
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </CardBody>
+                </Card>
+              </Link>
+            </GridItem>
+          </GridItem>
+        </GridContainer>
+      </section>
+    </Fragment>
   );
 };
 
-export default withStyles(style)(blog);
+export default withStyles(styles)(blog);
