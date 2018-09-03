@@ -20,7 +20,7 @@ const inputDefaultStyle = {
   },
   adornmentIcon: {
     paddingLeft: "1rem",
-    paddingRight: "1rem",
+    paddingRight: "2rem",
     opacity: "0.57",
     "&:hover": {
       opacity: "0.87"
