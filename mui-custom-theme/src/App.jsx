@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 //Views
 import Components from "./views/Components/Components.jsx";
-import Blog from "./views/Blog/Blog.jsx";
+import BlogItems from "./views/Blog/BlogItmes/BlogItems.jsx";
 import Contact from "./views/Contact/Contact.jsx";
 import Portfolio from "./views/Portfolio/Portfolio.jsx";
 
@@ -15,7 +15,7 @@ class App extends Component {
     let routes = (
       <Switch>
         <Route exact path="/" component={Components} />
-        <Route path="/blog" component={Blog} />
+        <Route path="/blog" component={BlogItems} />
         <Route path="/contact" component={Contact} />
         <Route path="/portfolio" component={Portfolio} />
       </Switch>

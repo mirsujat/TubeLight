@@ -5,14 +5,15 @@ import { NavLink, Link } from "react-router-dom";
 import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
 
+// @material-ui/icons
 import AccountCircle from "@material-ui/icons/AccountCircle";
 
 // core components
 import GridContainer from "../../components/Grid/GridContainer.jsx";
 import GridItem from "../../components/Grid/GridItem.jsx";
 import Header from "../../components/Header/Header.jsx";
+import Brand from "./Brand/Brand.jsx";
 import Button from "../../components/Button/button.jsx";
 import Dropdown from "../../components/Dropdown/Dropdown.jsx";
 import navbarStyle from "../../components/Navbar/navbarStyle.jsx";
@@ -25,7 +26,7 @@ class Topnav extends Component {
         <GridItem xs={12} sm={12} md={12}>
           <Header
             fixed
-            brand="Primary Color"
+            brand={<Brand />}
             color="primary"
             rightLinks={
               <List className={classes.list}>
