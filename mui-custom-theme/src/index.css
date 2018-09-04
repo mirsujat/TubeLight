@@ -94,6 +94,9 @@ body {
   text-align: left;
 }
 
+p {
+  text-align: justify;
+}
 legend {
   border-bottom: 0;
 }
