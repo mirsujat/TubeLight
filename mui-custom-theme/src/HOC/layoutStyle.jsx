@@ -1,9 +1,7 @@
 const layoutStyle = {
   content: {
-    marginTop: "72px",
-    paddingTop: "50px",
-    paddingRight: "15px",
-    paddingLeft: "15px"
+    marginTop: "19px",
+    paddingTop: "50px"
   }
 };
 

@@ -27,13 +27,15 @@ class Components extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <h2 style={{ color: "#2e8eef" }}>React Custom Theme: Based on </h2>
-        <h6> React @16.4.3 </h6>
-        <h6> Material-UI @1.4.3 </h6>
-        <h3 style={{ color: "#ccc" }}>
-          15px padding set on Body. Remove The Body Padding or set it up what
-          ever you like.{" "}
-        </h3>
+        <section style={{ padding: "15px" }}>
+          <h2 style={{ color: "#2e8eef" }}>React Custom Theme: Based on </h2>
+          <h6> React @16.4.3 </h6>
+          <h6> Material-UI @1.4.3 </h6>
+          <h3 style={{ color: "#ccc" }}>
+            15px padding set on Body. Remove The Body Padding or set it up what
+            ever you like.{" "}
+          </h3>
+        </section>
 
         <ButtonDemo />
         <Cards />
