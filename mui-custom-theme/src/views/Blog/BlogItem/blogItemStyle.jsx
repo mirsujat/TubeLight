@@ -9,7 +9,7 @@ const blogItemStyle = {
     textAlign: "center"
   },
   blogItem: {
-    padding: "25px"
+    padding: "10%"
   }
 };
 
