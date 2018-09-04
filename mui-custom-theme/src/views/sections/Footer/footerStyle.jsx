@@ -11,6 +11,7 @@ const footerStyle = {
     textAlign: "center"
   },
   credit: {
+    fontFamily: '"Roboto", Arial, sans-serif',
     color: "#737373"
   }
 };
