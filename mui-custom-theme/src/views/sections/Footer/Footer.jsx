@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 //Material-ui core component
 import withStyles from "@material-ui/core/styles/withStyles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import Button from "../../../components/Button/button.jsx";
 import GridContainer from "../../../components/Grid/GridContainer.jsx";
 import GridItem from "../../../components/Grid/GridItem.jsx";
