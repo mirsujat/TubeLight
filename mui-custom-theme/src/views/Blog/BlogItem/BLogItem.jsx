@@ -6,11 +6,7 @@ import blogItemStyle from "./blogItemStyle.jsx";
 import imageStyle from "../../../assets/jss/styles/imageStyle.jsx";
 
 //Image
-import image100 from "../../../assets/img/blog/100.jpg";
-import image102 from "../../../assets/img/blog/102.jpg";
-import image101 from "../../../assets/img/blog/101.jpg";
 import image104 from "../../../assets/img/blog/104.jpg";
-import image105 from "../../../assets/img/blog/105.jpg";
 
 const styles = {
   ...imageStyle,

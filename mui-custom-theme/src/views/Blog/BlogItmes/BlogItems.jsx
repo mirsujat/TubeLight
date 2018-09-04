@@ -28,18 +28,6 @@ import image5 from "../../../assets/img/blog/5.jpg";
 import image6 from "../../../assets/img/blog/6.jpg";
 import image7 from "../../../assets/img/blog/7.jpg";
 import image8 from "../../../assets/img/blog/8.jpg";
-import image9 from "../../../assets/img/blog/9.jpg";
-import image10 from "../../../assets/img/blog/10.jpg";
-import image11 from "../../../assets/img/blog/11.jpg";
-import image12 from "../../../assets/img/blog/12.jpg";
-import image13 from "../../../assets/img/blog/13.jpg";
-import image14 from "../../../assets/img/blog/14.jpg";
-import image15 from "../../../assets/img/blog/15.jpg";
-import image16 from "../../../assets/img/blog/16.jpg";
-import image17 from "../../../assets/img/blog/17.jpg";
-import image18 from "../../../assets/img/blog/18.jpg";
-import image19 from "../../../assets/img/blog/19.jpg";
-import image20 from "../../../assets/img/blog/20.jpg";
 
 const styles = {
   ...imageStyle,
