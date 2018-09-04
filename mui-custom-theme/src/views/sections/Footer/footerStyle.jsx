@@ -5,7 +5,11 @@ const footerStyle = {
     marginTop: "120px",
     backgroundColor: "#c5c5c5",
     padding: "25px 15px",
-    color: "#737373"
+    color: "#737373",
+    position: "absolute",
+    right: "0",
+    bottom: "0",
+    left: "0"
   },
   footerTitle: {
     textAlign: "center"
