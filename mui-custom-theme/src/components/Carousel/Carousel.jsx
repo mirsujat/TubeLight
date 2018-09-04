@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 // react component for creating beautiful carousel
 import SlickSlider from "react-slick";
-// material-ui components
+
 // @material-ui/icons
 import LocationOn from "@material-ui/icons/LocationOn";
-// core components
+// material-ui core components
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import Card from "../Card/Card.jsx";
