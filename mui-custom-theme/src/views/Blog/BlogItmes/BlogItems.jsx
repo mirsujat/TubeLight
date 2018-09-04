@@ -55,7 +55,7 @@ const blog = props => {
       <section className={classes.blogHeader}>
         <GridContainer>
           <GridItem xsm={12} sm={12} md={12}>
-            <h3>Mui Custom Theme Story</h3>
+            <h2>Mui Custom Theme Story</h2>
           </GridItem>
 
           <GridItem xs={12} sm={12} md={5}>
@@ -179,7 +179,7 @@ const blog = props => {
       <section>
         <GridContainer>
           <GridItem xsm={12} sm={12} md={12}>
-            <h3>Story of Nature</h3>
+            <h2>Story of Nature</h2>
           </GridItem>
           <GridItem xs={12} sm={12} md={3}>
             <Link to="/blog/item">
@@ -359,7 +359,7 @@ const blog = props => {
       <section>
         <GridContainer>
           <GridItem xsm={12} sm={12} md={12}>
-            <h3>Story of Light</h3>
+            <h2>Story of Light</h2>
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
             <Link to="/blog/item">
