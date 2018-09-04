@@ -3,9 +3,15 @@ const footerStyle = {
     display: "block",
     minHeight: "1px",
     marginTop: "120px",
-    backgroundColor: "#333",
+    backgroundColor: "#c5c5c5",
     padding: "25px 15px",
     color: "#FFFFFF"
+  },
+  footerTitle: {
+    textAlign: "center"
+  },
+  credit: {
+    color: "#737373"
   }
 };
 

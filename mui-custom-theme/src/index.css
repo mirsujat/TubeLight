@@ -69,8 +69,7 @@ h5 {
 
 h6 {
   font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 p {
@@ -109,13 +108,13 @@ legend {
 }
 
 a {
-  color: #9c27b0;
+  color: #737373;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover,
 a:focus {
-  color: #89229b;
+  color: #333232;
   text-decoration: none;
 }
 
