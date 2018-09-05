@@ -11,7 +11,7 @@ const brand = props => {
   return (
     <div className={classes.brand}>
       <DonutLarge className={classes.icons} />
-      <span className={classes.brandText}>Mui Custom Theme</span>
+      <span className={classes.brandText}>Naam Mui Theme</span>
     </div>
   );
 };

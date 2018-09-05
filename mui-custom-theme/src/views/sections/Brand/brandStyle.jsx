@@ -12,7 +12,7 @@ const brandStyle = {
   brandText: {
     fontFamily: '"Roboto Slab", sans-serif',
     fontWeight: "300",
-    fontSize: "30px"
+    fontSize: "20px"
   }
 };
 
