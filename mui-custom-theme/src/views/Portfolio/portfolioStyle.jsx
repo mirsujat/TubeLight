@@ -12,8 +12,11 @@ const portfolioStyle = {
   },
   banner: {
     backgroundColor: "#040c46",
-    marginBottom: "30px",
-    padding: "5px",
+    marginTop: "0",
+    marginRight: "6px",
+    marginBottom: "70px",
+    marginLeft: "6px",
+    padding: "0px",
     textAlign: "center",
     color: "#FFFFFF"
   },
