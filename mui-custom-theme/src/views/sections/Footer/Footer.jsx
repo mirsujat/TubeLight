@@ -25,17 +25,17 @@ const footer = props => {
             </Link>
             <Link to="/blog">
               <Button color="transparent" transparent>
-                Story
-              </Button>
-            </Link>
-            <Link to="/blog">
-              <Button color="transparent" transparent>
-                Contact
+                Blog
               </Button>
             </Link>
             <Link to="/blog">
               <Button color="transparent" transparent>
                 Portfolio
+              </Button>
+            </Link>
+            <Link to="/blog">
+              <Button color="transparent" transparent>
+                Contact
               </Button>
             </Link>
           </GridItem>
