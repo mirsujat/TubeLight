@@ -10,6 +10,12 @@ const portfolioStyle = {
   },
   portfolioHeader: {
     width: "100% !important"
+  },
+  sectionImage: {
+    display: "block",
+    width: "80%",
+    height: "150px",
+    textAling: "center"
   }
 };
 
