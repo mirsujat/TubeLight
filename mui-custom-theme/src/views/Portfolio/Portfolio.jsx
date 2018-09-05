@@ -49,7 +49,7 @@ const portfolio = props => {
           </div>
         </SlickSlider>
       </section>
-      <div>Porfolio</div>;
+      <section className={classes.portfolio}>hi</section>
     </Fragment>
   );
 };
