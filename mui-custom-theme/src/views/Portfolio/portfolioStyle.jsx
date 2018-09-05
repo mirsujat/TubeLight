@@ -1,9 +1,8 @@
 const portfolioStyle = {
   portfolio: {
-    dispaly: "block",
     position: "relative",
-    padding: "15px",
-    margin: "45px 0"
+    margin: "5px 0 0 0",
+    padding: "0 15px"
   },
   portfolioTitle: {
     textAlign: "center"
@@ -11,11 +10,20 @@ const portfolioStyle = {
   portfolioHeader: {
     width: "100% !important"
   },
+  banner: {
+    backgroundColor: "#040c46",
+    marginBottom: "30px",
+    padding: "5px",
+    textAlign: "center",
+    color: "#FFFFFF"
+  },
+  imageBanner: {
+    padding: "40px 0"
+  },
   sectionImage: {
-    display: "block",
-    width: "80%",
-    height: "150px",
-    textAling: "center"
+    display: "flex",
+    justifyContent: "center",
+    alignItem: "center"
   }
 };
 

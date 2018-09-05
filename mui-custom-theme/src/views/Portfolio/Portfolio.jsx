@@ -9,6 +9,8 @@ import GridItem from "../../components/Grid/GridItem.jsx";
 import Card from "../../components/Card/Card.jsx";
 import CardBody from "../../components/Card/CardBody/CardBody.jsx";
 import portfolioStyle from "./portfolioStyle.jsx";
+import imageStyle from "../../assets/jss/styles/imageStyle.jsx";
+import { card, cardTitle } from "../../assets/jss/common-rules.jsx";
 
 //Image
 import image1 from "../../assets/img/bg1.jpg";
@@ -34,6 +36,13 @@ import imageP17 from "../../assets/img/portfolio/p17.png";
 import imageP18 from "../../assets/img/portfolio/p18.png";
 import imageP19 from "../../assets/img/portfolio/p19.png";
 import imageP20 from "../../assets/img/portfolio/p20.png";
+
+const styles = {
+  ...imageStyle,
+  ...portfolioStyle,
+  card,
+  cardTitle
+};
 
 const portfolio = props => {
   const { classes } = props;
@@ -70,19 +79,262 @@ const portfolio = props => {
         </SlickSlider>
       </section>
       <section className={classes.portfolio}>
+        <h1 className={classes.banner}>Make Your Dream Come True!</h1>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={12}>
-            <h1>Make Your Dream Come True!</h1>
-            <img
-              src={imageP20}
-              alt="Bg Image"
-              className={classes.sectionImage}
-            />
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP18}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP2}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP2}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP3}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
           </GridItem>
         </GridContainer>
+        <section className={classes.imageBanner}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={2} />
+            <GridItem xs={12} sm={12} md={10}>
+              <img
+                src={imageP20}
+                alt="Bg Image"
+                className={classes.sectionImage}
+              />
+            </GridItem>
+          </GridContainer>
+        </section>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP5}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP6}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP7}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP8}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP9}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP10}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP11}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={3}>
+            <Card className={classes.card}>
+              <img
+                style={{ height: "200px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src={imageP12}
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <h5> build on the card title</h5>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+        <section className={classes.imageBanner}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={8}>
+              <img
+                style={{ height: "400px", width: "100%", display: "block" }}
+                src={imageP14}
+                alt="Card-img-cap"
+              />
+            </GridItem>
+            <GridItem xs={12} sm={12} md={4}>
+              <img
+                style={{ height: "400px", width: "100%", display: "block" }}
+                src={imageP19}
+                alt="Card-img-cap"
+              />
+            </GridItem>
+          </GridContainer>
+        </section>
       </section>
     </Fragment>
   );
 };
 
-export default withStyles(portfolioStyle)(portfolio);
+export default withStyles(styles)(portfolio);
