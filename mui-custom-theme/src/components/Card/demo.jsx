@@ -46,7 +46,7 @@ class CardsDemo extends Component {
             <ContentCard />
           </GridItem>
           <GridItem xs={12} sm={12} md={12}>
-            <div className={classes.title}>
+            <div className={classes.title} style={{ marginBottom: "45px" }}>
               <h3>Card With Header </h3>
             </div>
           </GridItem>
