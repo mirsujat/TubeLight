@@ -10,7 +10,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import cardFooterStyle from "./cardFooterStyle.jsx";
 
-function CardFooter({ ...props }) {
+const CardFooter = ({ ...props }) => {
   const { classes, className, children, ...rest } = props;
   const cardFooterClasses = classNames({
     [classes.cardFooter]: true,
@@ -21,7 +21,7 @@ function CardFooter({ ...props }) {
       {children}
     </div>
   );
-}
+};
 
 CardFooter.propTypes = {
   classes: PropTypes.object.isRequired,

@@ -10,7 +10,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import cardHeaderStyle from "./cardHeaderStyle.jsx";
 
-function CardHeader({ ...props }) {
+const CardHeader = ({ ...props }) => {
   const { classes, className, children, color, plain, ...rest } = props;
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,
@@ -23,7 +23,7 @@ function CardHeader({ ...props }) {
       {children}
     </div>
   );
-}
+};
 
 CardHeader.propTypes = {
   classes: PropTypes.object.isRequired,

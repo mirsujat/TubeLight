@@ -10,7 +10,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import cardStyle from "./cardStyle.jsx";
 
-function Card({ ...props }) {
+const Card = ({ ...props }) => {
   const { classes, className, children, plain, carousel, ...rest } = props;
   const cardClasses = classNames({
     [classes.card]: true,
@@ -23,7 +23,7 @@ function Card({ ...props }) {
       {children}
     </div>
   );
-}
+};
 
 Card.propTypes = {
   classes: PropTypes.object.isRequired,
