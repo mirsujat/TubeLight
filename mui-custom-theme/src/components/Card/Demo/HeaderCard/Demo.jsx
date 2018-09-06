@@ -31,7 +31,7 @@ class HeaderCard extends Component {
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <Button color="white">Do something</Button>
+              <Button color="primary">Do something</Button>
             </CardBody>
           </Card>
         </GridItem>
@@ -46,7 +46,7 @@ class HeaderCard extends Component {
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <Button color="primary">Do something</Button>
+              <Button color="white">Do something</Button>
             </CardBody>
           </Card>
         </GridItem>
