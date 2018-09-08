@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
+import Header from "../sections/Header/Header.jsx";
 import ButtonDemo from "../../components/Button/Demo.jsx";
 import Cards from "../../components/Card/demo.jsx";
 import NavbarIcon from "../../components/Navbar/NavbarIcon.jsx";
@@ -26,49 +27,10 @@ class Components extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
-        <section style={{ padding: "15px" }}>
-          <h2 style={{ color: "#2e8eef" }}>React Custom Theme: Based on </h2>
-          <h6> React @16.4.3 </h6>
-          <h6> Material-UI @1.4.3 </h6>
-          <h3 style={{ color: "#ccc" }}>
-            15px padding set on Body. Remove The Body Padding or set it up what
-            ever you like.{" "}
-          </h3>
-        </section>
-
+      <Fragment>
+        <Header />
         <ButtonDemo />
-        <Cards />
-        <NavbarNotification />
-        <NavbarIcon />
-        <NavbarIconText />
-        <NavbarSearch />
-
-        <div>
-          <h3 style={{ paddingLeft: "15px", color: "#757575" }}>
-            Input Component
-          </h3>
-          <InputDefaultDemo />
-          <div style={{ padding: "15px", color: "#757575" }}>
-            <h3 style={{ paddingLeft: "15px" }}>Inputs</h3>
-            <CustomInputDemo />
-          </div>
-        </div>
-
-        <CheckboxRadioSwitchDemo />
-        <BadgeDemo />
-        <PaginationDemo />
-        <TabsDemo />
-        <NavPillsDemo />
-        <NotificationDemo />
-        <TypographyDemo />
-        <ImageCard />
-        <Datepicker />
-        <Modal />
-        <Popovers />
-        <Tooltips />
-        <CarouselDemo />
-      </div>
+      </Fragment>
     );
   }
 }

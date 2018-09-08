@@ -24,7 +24,6 @@ const contact = props => {
   return (
     <Fragment>
       <section>
-        <h1>Contact Form</h1>
         <GridContainer>
           <GridItem xs={12} sm={12} md={3} />
           <GridItem xs={12} sm={12} md={6}>

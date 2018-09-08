@@ -15,7 +15,7 @@ const footer = props => {
       <section className={classes.footer}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
-            <h2 className={classes.footerTitle}>Mui Custom Theme</h2>
+            <h3 className={classes.footerTitle}>Mui Custom Theme</h3>
           </GridItem>
           <GridItem xs={12} sm={12} md={8}>
             <Link to="/blog">
