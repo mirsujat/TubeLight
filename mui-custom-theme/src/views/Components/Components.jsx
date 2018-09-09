@@ -41,6 +41,7 @@ class Components extends Component {
         <BadgeDemo />
         <PaginationDemo />
         <TabsDemo />
+        <NavPillsDemo />
       </Fragment>
     );
   }
