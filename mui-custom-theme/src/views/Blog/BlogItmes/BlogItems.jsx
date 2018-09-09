@@ -50,8 +50,7 @@ const blog = props => {
             <Link to="/blog/item">
               <Card className={classes.card}>
                 <img
-                  style={{ height: "600px", width: "100%", display: "block" }}
-                  className={classes.imageCardTop}
+                  className={classes.imageCardTop + " " + classes.blogImg}
                   src={image105}
                   alt="Blog Content Image"
                 />
@@ -71,11 +70,16 @@ const blog = props => {
             </Link>
           </GridItem>
           <GridItem xs={12} sm={12} md={3}>
-            <GridItem xs={12} sm={12} md={12} style={{ paddingRight: "0px" }}>
+            <GridItem
+              xs={12}
+              sm={12}
+              md={12}
+              style={{ paddingRight: "0px", paddingLeft: "0px" }}
+            >
               <Link to="/blog/item">
                 <Card className={classes.card}>
                   <img
-                    style={{ height: "279px", width: "100%", display: "block" }}
+                    style={{ height: "274px", width: "100%", display: "block" }}
                     className={classes.imageCardTop}
                     src={image104}
                     alt="Blog Content Image"
@@ -92,7 +96,12 @@ const blog = props => {
                 </Card>
               </Link>
             </GridItem>
-            <GridItem xs={12} sm={12} md={12} style={{ paddingRight: "0px" }}>
+            <GridItem
+              xs={12}
+              sm={12}
+              md={12}
+              style={{ paddingRight: "0px", paddingLeft: "0px" }}
+            >
               <Link to="/blog/item">
                 <Card className={classes.card}>
                   <img
@@ -115,7 +124,12 @@ const blog = props => {
             </GridItem>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <GridItem xs={12} sm={12} md={12}>
+            <GridItem
+              xs={12}
+              sm={12}
+              md={12}
+              style={{ paddingRight: "0px", paddingLeft: "0px" }}
+            >
               <Link to="/blog/item">
                 <Card className={classes.card}>
                   <img
@@ -136,11 +150,16 @@ const blog = props => {
                 </Card>
               </Link>
             </GridItem>
-            <GridItem xs={12} sm={12} md={12}>
+            <GridItem
+              xs={12}
+              sm={12}
+              md={12}
+              style={{ paddingRight: "0px", paddingLeft: "0px" }}
+            >
               <Link to="/blog/item">
                 <Card className={classes.card}>
                   <img
-                    style={{ height: "279px", width: "100%", display: "block" }}
+                    style={{ height: "274px", width: "100%", display: "block" }}
                     className={classes.imageCardTop}
                     src={image104}
                     alt="Blog Content Image"
