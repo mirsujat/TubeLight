@@ -37,6 +37,10 @@ class Components extends Component {
         <NavbarSearch />
         <InputDefaultDemo />
         <CustomInputDemo />
+        <CheckboxRadioSwitchDemo />
+        <BadgeDemo />
+        <PaginationDemo />
+        <TabsDemo />
       </Fragment>
     );
   }

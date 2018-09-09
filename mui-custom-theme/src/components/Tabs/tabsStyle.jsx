@@ -21,7 +21,7 @@ const tabsStyle = {
     height: "unset !important",
     maxWidth: "unset !important",
     maxHeight: "unset !important",
-    padding: "10px 15px",
+    padding: "10px 10px",
     borderRadius: "3px",
     lineHeight: "24px",
     border: "0 !important",
