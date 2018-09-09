@@ -69,113 +69,123 @@ const blog = props => {
               </Card>
             </Link>
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
-            <GridItem
-              xs={12}
-              sm={12}
-              md={12}
-              style={{ paddingRight: "0px", paddingLeft: "0px" }}
-            >
-              <Link to="/blog/item">
-                <Card className={classes.card}>
-                  <img
-                    style={{ height: "274px", width: "100%", display: "block" }}
-                    className={classes.imageCardTop}
-                    src={image104}
-                    alt="Blog Content Image"
-                  />
-                  <CardBody>
-                    <h4 className={classes.cardTitle}>
-                      Lorem Ipsum is simply dummy
-                    </h4>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Link>
-            </GridItem>
-            <GridItem
-              xs={12}
-              sm={12}
-              md={12}
-              style={{ paddingRight: "0px", paddingLeft: "0px" }}
-            >
-              <Link to="/blog/item">
-                <Card className={classes.card}>
-                  <img
-                    style={{ height: "222px", width: "100%", display: "block" }}
-                    className={classes.imageCardTop}
-                    src={image100}
-                    alt="Blog Content Image"
-                  />
-                  <CardBody>
-                    <h4 className={classes.cardTitle}>
-                      Lorem Ipsum is simply dummy
-                    </h4>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Link>
-            </GridItem>
+          <GridItem
+            xs={12}
+            sm={12}
+            md={3}
+            style={{ paddingLeft: "0", paddingRight: "0" }}
+          >
+            <GridContainer>
+              <GridItem xs={12} sm={6} md={12}>
+                <Link to="/blog/item">
+                  <Card className={classes.card}>
+                    <img
+                      style={{
+                        height: "248px",
+                        width: "100%",
+                        display: "block"
+                      }}
+                      className={classes.imageCardTop}
+                      src={image104}
+                      alt="Blog Content Image"
+                    />
+                    <CardBody>
+                      <h4 className={classes.cardTitle}>
+                        Lorem Ipsum is simply dummy
+                      </h4>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                      </p>
+                    </CardBody>
+                  </Card>
+                </Link>
+              </GridItem>
+              <GridItem xs={12} sm={6} md={12}>
+                <Link to="/blog/item">
+                  <Card className={classes.card}>
+                    <img
+                      style={{
+                        height: "248px",
+                        width: "100%",
+                        display: "block"
+                      }}
+                      className={classes.imageCardTop}
+                      src={image100}
+                      alt="Blog Content Image"
+                    />
+                    <CardBody>
+                      <h4 className={classes.cardTitle}>
+                        Lorem Ipsum is simply dummy
+                      </h4>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                      </p>
+                    </CardBody>
+                  </Card>
+                </Link>
+              </GridItem>
+            </GridContainer>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridItem
-              xs={12}
-              sm={12}
-              md={12}
-              style={{ paddingRight: "0px", paddingLeft: "0px" }}
-            >
-              <Link to="/blog/item">
-                <Card className={classes.card}>
-                  <img
-                    style={{ height: "222px", width: "100%", display: "block" }}
-                    className={classes.imageCardTop}
-                    src={image102}
-                    alt="Blog Content Image"
-                  />
-                  <CardBody>
-                    <h4 className={classes.cardTitle}>
-                      Lorem Ipsum is simply dummy
-                    </h4>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Link>
-            </GridItem>
-            <GridItem
-              xs={12}
-              sm={12}
-              md={12}
-              style={{ paddingRight: "0px", paddingLeft: "0px" }}
-            >
-              <Link to="/blog/item">
-                <Card className={classes.card}>
-                  <img
-                    style={{ height: "274px", width: "100%", display: "block" }}
-                    className={classes.imageCardTop}
-                    src={image104}
-                    alt="Blog Content Image"
-                  />
-                  <CardBody>
-                    <h4 className={classes.cardTitle}>
-                      Lorem Ipsum is simply dummy
-                    </h4>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Link>
-            </GridItem>
+          <GridItem
+            xs={12}
+            sm={12}
+            md={4}
+            style={{ paddingLeft: "0", paddingRight: "0" }}
+          >
+            <GridContainer>
+              <GridItem xs={12} sm={6} md={12}>
+                <Link to="/blog/item">
+                  <Card className={classes.card}>
+                    <img
+                      style={{
+                        height: "248px",
+                        width: "100%",
+                        display: "block"
+                      }}
+                      className={classes.imageCardTop}
+                      src={image102}
+                      alt="Blog Content Image"
+                    />
+                    <CardBody>
+                      <h4 className={classes.cardTitle}>
+                        Lorem Ipsum is simply dummy
+                      </h4>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                      </p>
+                    </CardBody>
+                  </Card>
+                </Link>
+              </GridItem>
+              <GridItem xs={12} sm={6} md={12}>
+                <Link to="/blog/item">
+                  <Card className={classes.card}>
+                    <img
+                      style={{
+                        height: "248px",
+                        width: "100%",
+                        display: "block"
+                      }}
+                      className={classes.imageCardTop}
+                      src={image104}
+                      alt="Blog Content Image"
+                    />
+                    <CardBody>
+                      <h4 className={classes.cardTitle}>
+                        Lorem Ipsum is simply dummy
+                      </h4>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                      </p>
+                    </CardBody>
+                  </Card>
+                </Link>
+              </GridItem>
+            </GridContainer>
           </GridItem>
         </GridContainer>
         <div className={classes.space50}>
@@ -368,7 +378,7 @@ const blog = props => {
           <GridItem xsm={12} sm={12} md={12}>
             <h2>Story of Light</h2>
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={6} md={6}>
             <Link to="/blog/item">
               <Card className={classes.card}>
                 <img
@@ -389,7 +399,7 @@ const blog = props => {
               </Card>
             </Link>
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={6} md={6}>
             <Link to="/blog/item">
               <Card className={classes.card}>
                 <img

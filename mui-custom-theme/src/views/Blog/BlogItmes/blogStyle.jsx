@@ -15,6 +15,7 @@ const blogStyle = {
     height: "210px",
     width: "100%"
   },
+
   "@media (min-width: 576px)": {
     blogImg: {
       height: "279px",
