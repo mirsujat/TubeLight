@@ -51,9 +51,8 @@ const inputDefaultStyle = {
   },
   formControlTextArea: {
     display: "flex",
-    margin: "15px 6px 15px 15px",
+    margin: "15px 6px 45px 15px",
     paddingTop: "0px",
-
     position: "relative",
     "& svg,& .fab,& .far,& .fal,& .fas": {
       color: "#495057"
@@ -102,7 +101,7 @@ const inputDefaultStyle = {
     height: "auto",
     overflow: "hidden",
     width: "100%",
-    paddingTop: "0px",
+    paddingTop: "10px",
     paddingLeft: "10px",
     marginRight: "0px",
     marginBottom: "0px",
