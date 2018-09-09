@@ -35,6 +35,7 @@ const navbarStyle = theme => ({
   inputRootCustomClasses: {
     margin: "0!important"
   },
+
   searchIcon: {
     width: "20px",
     height: "20px",
@@ -48,9 +49,38 @@ const navbarStyle = theme => ({
   },
   imageDropdownButton: {
     padding: "0px",
-    top: "4px",
-    borderRadius: "50%",
-    marginLeft: "5px"
+    borderRadius: "50%"
+  },
+  "@media (min-width: 576px)": {
+    imageDropdownButton: {
+      marginTop: "8px",
+      marginBottom: "8px",
+      marginLeft: "15px"
+    }
+  },
+  "@media (min-width: 768px)": {
+    imageDropdownButton: {
+      top: "4px",
+      marginTop: "0px",
+      marginBottom: "0px",
+      marginLeft: "15px"
+    }
+  },
+  "@media (min-width: 992px)": {
+    imageDropdownButton: {
+      top: "4px",
+      marginTop: "0px",
+      marginBottom: "0px",
+      marginLeft: "15px"
+    }
+  },
+  "@media (min-width: 1200px)": {
+    imageDropdownButton: {
+      top: "4px",
+      marginTop: "0px",
+      marginBottom: "0px",
+      marginLeft: "15px"
+    }
   }
 });
 

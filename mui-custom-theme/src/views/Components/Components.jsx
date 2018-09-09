@@ -32,6 +32,9 @@ class Components extends Component {
         <ButtonDemo />
         <Cards />
         <NavbarIcon />
+        <NavbarIconText />
+        <NavbarNotification />
+        <NavbarSearch />
       </Fragment>
     );
   }

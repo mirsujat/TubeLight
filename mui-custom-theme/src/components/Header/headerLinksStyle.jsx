@@ -77,10 +77,16 @@ const navigationLinksStyle = theme => ({
     textTransform: "uppercase",
     lineHeight: "20px",
     textDecoration: "none",
-    margin: "0px",
+    top: "0px",
     display: "inline-flex",
-    top: "4px"
+    [theme.breakpoints.down("sm")]: {
+      top: "0",
+      marginLeft: "15px",
+      marginBottom: "8px",
+      marginTop: "8px"
+    }
   },
+
   registerNavLink: {
     top: "3px",
     position: "relative",
