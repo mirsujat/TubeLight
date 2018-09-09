@@ -24,9 +24,8 @@ const portfolioStyle = {
     padding: "40px 0"
   },
   sectionImage: {
-    display: "flex",
-    justifyContent: "center",
-    alignItem: "center"
+    width: "100%",
+    height: "220px"
   }
 };
 

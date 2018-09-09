@@ -1,6 +1,6 @@
 const layoutStyle = {
   content: {
-    marginTop: "80px"
+    marginTop: "70px"
   }
 };
 

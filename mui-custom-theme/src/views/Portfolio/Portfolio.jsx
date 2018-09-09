@@ -156,8 +156,7 @@ const portfolio = props => {
         </GridContainer>
         <section className={classes.imageBanner}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={2} />
-            <GridItem xs={12} sm={12} md={10}>
+            <GridItem xs={12} sm={12} md={12}>
               <img
                 src={imageP20}
                 alt="Bg Image"
