@@ -129,7 +129,7 @@ const inputDefaultStyle = {
   },
   "@media (min-width: 576px)": {
     textArea: {
-      width: "96%"
+      width: "97%"
     }
   },
   "@media (min-width: 768px)": {
