@@ -101,6 +101,7 @@ class CustomInput extends Component {
                 placeholder: "Comment...",
                 type: "text",
                 disableUnderline: true,
+                multiline: true,
                 startAdornment: (
                   <InputAdornment position="start">
                     <span className={classes.inputLable}>Comment: </span>

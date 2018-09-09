@@ -100,11 +100,12 @@ const inputDefaultStyle = {
     minHeight: "50px",
     height: "auto",
     overflow: "hidden",
-    width: "100%",
+    width: "96%",
     paddingTop: "10px",
     paddingLeft: "10px",
     marginRight: "0px",
     marginBottom: "0px",
+    boxSizing: "content-box",
     color: "#495057",
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
@@ -118,11 +119,32 @@ const inputDefaultStyle = {
       opacity: "1"
     },
     "&::placeholder": {
-      color: "#AAAAAA"
+      color: "#AAAAAA",
+      paddingTop: "0px"
     },
     "&:focus": {
       border: " 1px solid #4ba6e4 !important",
       backgroundColor: "white"
+    }
+  },
+  "@media (min-width: 576px)": {
+    textArea: {
+      width: "96%"
+    }
+  },
+  "@media (min-width: 768px)": {
+    textArea: {
+      width: "98%"
+    }
+  },
+  "@media (min-width: 992px)": {
+    textArea: {
+      width: "98%"
+    }
+  },
+  "@media (min-width: 1200px)": {
+    textArea: {
+      width: "98%"
     }
   }
 };
