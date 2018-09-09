@@ -36,6 +36,7 @@ class Components extends Component {
         <NavbarNotification />
         <NavbarSearch />
         <InputDefaultDemo />
+        <CustomInputDemo />
       </Fragment>
     );
   }

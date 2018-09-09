@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Search from "@material-ui/icons/Search";
@@ -16,94 +16,101 @@ class CustomInput extends Component {
     const { classes } = this.props;
 
     return (
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={6}>
-          <InputDefault
-            id="material"
-            inputRootCustomClasses={classes.inputRootCustomClasses}
-            formControlProps={{ className: classes.formControl }}
-            inputProps={{
-              placeholder: "Search",
-              type: "search",
-              disableUnderline: true,
-              endAdornment: (
-                <InputAdornment className={classes.adornmentRoot}>
-                  <Search className={classes.adornmentIcon} />
-                </InputAdornment>
-              )
-            }}
-          />
-          <h3 style={{ paddingLeft: "15px", color: "#757575" }}>
-            Native Select
-          </h3>
-          <NativeSelects />
-        </GridItem>
+      <Fragment>
+        <GridContainer>
+          <GridItem>
+            <h3>Default Input</h3>
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={6}>
+            <InputDefault
+              id="material"
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{ className: classes.formControl }}
+              inputProps={{
+                placeholder: "Search",
+                type: "search",
+                disableUnderline: true,
+                endAdornment: (
+                  <InputAdornment className={classes.adornmentRoot}>
+                    <Search className={classes.adornmentIcon} />
+                  </InputAdornment>
+                )
+              }}
+            />
+            <h3 style={{ paddingLeft: "15px", color: "#757575" }}>
+              Native Select
+            </h3>
+            <NativeSelects />
+          </GridItem>
 
-        <GridItem xs={12} sm={12} md={6}>
-          <InputDefault
-            id="email"
-            inputRootCustomClasses={classes.inputRootCustomClasses}
-            formControlProps={{ className: classes.formControl }}
-            inputProps={{
-              placeholder: "example@gmail.com",
-              type: "email",
-              disableUnderline: true,
-              startAdornment: (
-                <InputAdornment position="start">
-                  <span className={classes.inputLable}>Email: </span>
-                </InputAdornment>
-              )
-            }}
-          />
+          <GridItem xs={12} sm={12} md={6}>
+            <InputDefault
+              id="email"
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{ className: classes.formControl }}
+              inputProps={{
+                placeholder: "example@gmail.com",
+                type: "email",
+                disableUnderline: true,
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <span className={classes.inputLable}>Email: </span>
+                  </InputAdornment>
+                )
+              }}
+            />
 
-          <InputDefault
-            id="username"
-            inputRootCustomClasses={classes.inputRootCustomClasses}
-            formControlProps={{ className: classes.formControl }}
-            inputProps={{
-              placeholder: "User Name",
-              type: "text",
-              disableUnderline: true,
-              startAdornment: (
-                <InputAdornment position="start">
-                  <span className={classes.inputLable}>User Name: </span>
-                </InputAdornment>
-              )
-            }}
-          />
+            <InputDefault
+              id="username"
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{ className: classes.formControl }}
+              inputProps={{
+                placeholder: "User Name",
+                type: "text",
+                disableUnderline: true,
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <span className={classes.inputLable}>User Name: </span>
+                  </InputAdornment>
+                )
+              }}
+            />
 
-          <InputDefault
-            id="password"
-            inputRootCustomClasses={classes.inputRootCustomClasses}
-            formControlProps={{ className: classes.formControl }}
-            inputProps={{
-              placeholder: "Password",
-              type: "password",
-              disableUnderline: true,
-              startAdornment: (
-                <InputAdornment position="start">
-                  <span className={classes.inputLable}>Password: </span>
-                </InputAdornment>
-              )
-            }}
-          />
-          <TextArea
-            id="comment"
-            inputRootCustomClasses={classes.inputRootCustomClasses}
-            formControlProps={{ className: classes.formControlTextArea }}
-            inputProps={{
-              placeholder: "Comment...",
-              type: "text",
-              disableUnderline: true,
-              startAdornment: (
-                <InputAdornment position="start">
-                  <span className={classes.inputLable}>Comment: </span>
-                </InputAdornment>
-              )
-            }}
-          />
-        </GridItem>
-      </GridContainer>
+            <InputDefault
+              id="password"
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{ className: classes.formControl }}
+              inputProps={{
+                placeholder: "Password",
+                type: "password",
+                disableUnderline: true,
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <span className={classes.inputLable}>Password: </span>
+                  </InputAdornment>
+                )
+              }}
+            />
+            <TextArea
+              id="comment"
+              inputRootCustomClasses={classes.inputRootCustomClasses}
+              formControlProps={{ className: classes.formControlTextArea }}
+              inputProps={{
+                placeholder: "Comment...",
+                type: "text",
+                disableUnderline: true,
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <span className={classes.inputLable}>Comment: </span>
+                  </InputAdornment>
+                )
+              }}
+            />
+          </GridItem>
+        </GridContainer>
+      </Fragment>
     );
   }
 }

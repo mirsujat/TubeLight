@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -20,103 +20,110 @@ class InputDemo extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <GridContainer>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <Input
-            id="regular"
-            inputProps={{ placeholder: "Regular" }}
-            formControlProps={{ fullWidth: true }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <Input
-            labelText="With floating label"
-            id="float"
-            formControlProps={{ fullWidth: true }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <Input
-            labelText="Success input"
-            id="success"
-            success
-            formControlProps={{ fullWidth: true }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <Input
-            labelText="Error input"
-            id="error"
-            error
-            formControlProps={{ fullWidth: true }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <Input
-            labelText="With material Icons"
-            id="material"
-            formControlProps={{ fullWidth: true }}
-            inputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <People />
-                </InputAdornment>
-              )
-            }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <Input
-            labelText="With Font Awesome Icons"
-            id="font-awesome"
-            formControlProps={{ fullWidth: true }}
-            inputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <i className="fas fa-users" />
-                </InputAdornment>
-              )
-            }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <div className={classes.smartInputGroup}>
-            <div className={classes.labelAppend}>
-              {" "}
-              <Lock />
+      <Fragment>
+        <GridContainer>
+          <GridItem>
+            <h3>Custom Input</h3>
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <Input
+              id="regular"
+              inputProps={{ placeholder: "Regular" }}
+              formControlProps={{ fullWidth: true }}
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <Input
+              labelText="With floating label"
+              id="float"
+              formControlProps={{ fullWidth: true }}
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <Input
+              labelText="Success input"
+              id="success"
+              success
+              formControlProps={{ fullWidth: true }}
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <Input
+              labelText="Error input"
+              id="error"
+              error
+              formControlProps={{ fullWidth: true }}
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <Input
+              labelText="With material Icons"
+              id="material"
+              formControlProps={{ fullWidth: true }}
+              inputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <People />
+                  </InputAdornment>
+                )
+              }}
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <Input
+              labelText="With Font Awesome Icons"
+              id="font-awesome"
+              formControlProps={{ fullWidth: true }}
+              inputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <i className="fas fa-users" />
+                  </InputAdornment>
+                )
+              }}
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <div className={classes.smartInputGroup}>
+              <div className={classes.labelAppend}>
+                {" "}
+                <Lock />
+              </div>
+              <div className={classes.smartInput}>
+                <Input
+                  labelText="With material Icons"
+                  id="font-awesome"
+                  formControlProps={{ fullWidth: true }}
+                  inputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <VisibilityOutlined />
+                      </InputAdornment>
+                    )
+                  }}
+                />
+              </div>
             </div>
-            <div className={classes.smartInput}>
-              <Input
-                labelText="With material Icons"
-                id="font-awesome"
-                formControlProps={{ fullWidth: true }}
-                inputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <VisibilityOutlined />
-                    </InputAdornment>
-                  )
-                }}
-              />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4} lg={3}>
+            <div className={classes.smartInputGroup}>
+              <div className={classes.labelAppend}>
+                {" "}
+                <Email />
+              </div>
+              <div className={classes.smartInput}>
+                <Input
+                  labelText="With material Icons"
+                  id="font-awesome"
+                  formControlProps={{ fullWidth: true }}
+                />
+              </div>
             </div>
-          </div>
-        </GridItem>
-        <GridItem xs={12} sm={4} md={4} lg={3}>
-          <div className={classes.smartInputGroup}>
-            <div className={classes.labelAppend}>
-              {" "}
-              <Email />
-            </div>
-            <div className={classes.smartInput}>
-              <Input
-                labelText="With material Icons"
-                id="font-awesome"
-                formControlProps={{ fullWidth: true }}
-              />
-            </div>
-          </div>
-        </GridItem>
-      </GridContainer>
+          </GridItem>
+        </GridContainer>
+      </Fragment>
     );
   }
 }
