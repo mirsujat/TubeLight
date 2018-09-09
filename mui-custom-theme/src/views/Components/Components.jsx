@@ -42,6 +42,14 @@ class Components extends Component {
         <PaginationDemo />
         <TabsDemo />
         <NavPillsDemo />
+        <NotificationDemo />
+        <TypographyDemo />
+        <ImageCard />
+        <Modal />
+        <Datepicker />
+        <Tooltips />
+        <Popovers />
+        <CarouselDemo />
       </Fragment>
     );
   }
