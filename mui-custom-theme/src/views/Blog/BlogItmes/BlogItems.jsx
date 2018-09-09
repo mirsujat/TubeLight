@@ -40,7 +40,7 @@ const blog = props => {
   const { classes } = props;
   return (
     <Fragment>
-      <section className={classes.blogHeader}>
+      <section className={classes.blog}>
         <GridContainer>
           <GridItem xsm={12} sm={12} md={12}>
             <h2>Mui Custom Theme Story</h2>
@@ -193,7 +193,7 @@ const blog = props => {
         </div>
       </section>
 
-      <section>
+      <section className={classes.blog}>
         <GridContainer>
           <GridItem xsm={12} sm={12} md={12}>
             <h2>Story of Nature</h2>
@@ -373,7 +373,7 @@ const blog = props => {
           <Divider />
         </div>
       </section>
-      <section>
+      <section className={classes.blog}>
         <GridContainer>
           <GridItem xsm={12} sm={12} md={12}>
             <h2>Story of Light</h2>

@@ -1,8 +1,9 @@
 const blogStyle = {
-  blogHeader: {
+  blog: {
     display: "inline-block",
     position: "relative",
-    minHeight: "1px"
+    minHeight: "1px",
+    margin: "4px"
   },
   space50: {
     display: "block",
