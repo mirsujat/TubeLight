@@ -87,16 +87,14 @@ class CustomInput extends Component {
               )
             }}
           />
-
           <TextArea
             id="comment"
             inputRootCustomClasses={classes.inputRootCustomClasses}
             formControlProps={{ className: classes.formControlTextArea }}
             inputProps={{
               placeholder: "Comment...",
-              tyep: "text",
+              type: "text",
               disableUnderline: true,
-              multiline: true,
               startAdornment: (
                 <InputAdornment position="start">
                   <span className={classes.inputLable}>Comment: </span>

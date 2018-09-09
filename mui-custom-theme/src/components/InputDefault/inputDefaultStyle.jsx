@@ -43,7 +43,7 @@ const inputDefaultStyle = {
   formControl: {
     display: "flex",
     margin: "15px 6px 6px 15px",
-    paddingTop: "0",
+    paddingTop: "0px",
     position: "relative",
     "& svg,& .fab,& .far,& .fal,& .fas": {
       color: "#495057"
@@ -51,8 +51,9 @@ const inputDefaultStyle = {
   },
   formControlTextArea: {
     display: "flex",
-    margin: "15px 6px 55px 15px",
-    paddingTop: "0",
+    margin: "15px 6px 15px 15px",
+    paddingTop: "0px",
+
     position: "relative",
     "& svg,& .fab,& .far,& .fal,& .fas": {
       color: "#495057"
@@ -100,9 +101,11 @@ const inputDefaultStyle = {
     minHeight: "50px",
     height: "auto",
     overflow: "hidden",
-    width: "96%",
-    marginBottom: "15px",
-    padding: "6px 10px",
+    width: "100%",
+    paddingTop: "0px",
+    paddingLeft: "10px",
+    marginRight: "0px",
+    marginBottom: "0px",
     color: "#495057",
     border: "1px solid #D2D2D2 !important",
     boxShadow: "inset 0 1px 2px #eee",
