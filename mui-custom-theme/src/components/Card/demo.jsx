@@ -18,6 +18,7 @@ class CardsDemo extends Component {
     return (
       <div className={classes.container}>
         <div className={classes.title}>
+          <h2>Card</h2>
           <h3>
             <small>
               Cards support a wide variety of content, including images, text,

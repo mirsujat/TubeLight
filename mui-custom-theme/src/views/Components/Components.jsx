@@ -30,6 +30,8 @@ class Components extends Component {
       <Fragment>
         <Header />
         <ButtonDemo />
+        <Cards />
+        <NavbarIcon />
       </Fragment>
     );
   }

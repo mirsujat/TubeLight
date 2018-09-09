@@ -15,6 +15,7 @@ class ButtonDemo extends Component {
       <div className={classes.container}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
+            <h2>Button</h2>
             <Button color="info">Default</Button>
             <Button color="primary" round>
               round
