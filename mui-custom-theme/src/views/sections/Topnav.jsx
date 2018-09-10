@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -30,6 +30,21 @@ class Topnav extends Component {
             color="primary"
             rightLinks={
               <List className={classes.list}>
+                <ListItem className={classes.listItem}>
+                  <Link
+                    to={{
+                      pathname:
+                        "https://github.com/mirsujat/TubeLight/tree/MuiCustomTheme",
+                      state: {}
+                    }}
+                    target="_blank"
+                    className={classes.link}
+                  >
+                    <Button className={classes.navLink} color="transparent">
+                      Download
+                    </Button>
+                  </Link>
+                </ListItem>
                 <ListItem className={classes.listItem}>
                   <Link to={"/"} className={classes.link}>
                     <Button className={classes.navLink} color="transparent">
