@@ -98,7 +98,7 @@ const inputDefaultStyle = {
   },
   textArea: {
     minHeight: "50px",
-    height: "auto",
+    maxHeight: "10000px",
     overflow: "hidden",
     width: "96%",
     paddingTop: "10px",
