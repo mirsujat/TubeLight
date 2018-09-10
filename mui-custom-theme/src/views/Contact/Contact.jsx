@@ -8,7 +8,7 @@ import GridItem from "../../components/Grid/GridItem.jsx";
 import Card from "../../components/Card/Card.jsx";
 import CardBody from "../../components/Card/CardBody/CardBody.jsx";
 import CardFooter from "../../components/Card/CardFooter/CardFooter.jsx";
-import Button from "../../components/Button/button.jsx";
+import Button from "../../components/Button/Button.jsx";
 import InputDefault from "../../components/InputDefault/InputDefault.jsx";
 import TextArea from "../../components/InputDefault/TextArea.jsx";
 import inputDefaultStyle from "../../components/InputDefault/inputDefaultStyle.jsx";

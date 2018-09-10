@@ -14,7 +14,7 @@ import GridContainer from "../../components/Grid/GridContainer.jsx";
 import GridItem from "../../components/Grid/GridItem.jsx";
 import Header from "../../components/Header/Header.jsx";
 import Brand from "./Brand/Brand.jsx";
-import Button from "../../components/Button/button.jsx";
+import Button from "../../components/Button/Button.jsx";
 import Dropdown from "../../components/Dropdown/Dropdown.jsx";
 import navbarStyle from "../../components/Navbar/navbarStyle.jsx";
 

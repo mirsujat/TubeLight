@@ -7,7 +7,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 // core components
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
-import Button from "../Button/button.jsx";
+import Button from "../Button/Button.jsx";
 import tooltipsStyle from "./tooltipsStyle.jsx";
 
 class Tooltips extends React.Component {

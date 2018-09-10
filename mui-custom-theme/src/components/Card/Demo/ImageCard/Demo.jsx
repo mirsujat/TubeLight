@@ -4,7 +4,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import Card from "../../Card.jsx";
 import CardBody from "../../CardBody/CardBody.jsx";
-import Button from "../../../Button/button.jsx";
+import Button from "../../../Button/Button.jsx";
 import imageStyle from "../../../../assets/jss/styles/imageStyle.jsx";
 
 import SamplePhoto from "../../../../assets/img/photo/sample-1.jpg";

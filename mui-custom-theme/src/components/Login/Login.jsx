@@ -15,7 +15,7 @@ import GridItem from "../Grid/GridItem.jsx";
 import Card from "../Card/Card.jsx";
 import CardBody from "../Card/CardBody/CardBody.jsx";
 import Input from "../Input/Input.jsx";
-import Button from "../Button/button.jsx";
+import Button from "../Button/Button.jsx";
 import loginStyle from "./loginStyle.jsx";
 import { card } from "../../assets/jss/common-rules.jsx";
 

@@ -6,7 +6,7 @@ import GridItem from "../../../Grid/GridItem.jsx";
 import Card from "../../Card.jsx";
 import CardBody from "../../CardBody/CardBody.jsx";
 import CardHeader from "../../CardHeader/CardHeader.jsx";
-import Button from "../../../Button/button.jsx";
+import Button from "../../../Button/Button.jsx";
 
 import { card, cardTitle } from "../../../../assets/jss/common-rules.jsx";
 

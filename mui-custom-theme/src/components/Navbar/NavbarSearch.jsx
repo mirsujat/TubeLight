@@ -12,7 +12,7 @@ import Search from "@material-ui/icons/Search";
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
 import Header from "../Header/Header.jsx";
-import Button from "../Button/button.jsx";
+import Button from "../Button/Button.jsx";
 import Input from "../Input/Input.jsx";
 import navbarStyle from "./navbarStyle.jsx";
 

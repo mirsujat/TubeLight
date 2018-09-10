@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 //Material-ui core component
 import withStyles from "@material-ui/core/styles/withStyles";
-import Button from "../../../components/Button/button.jsx";
+import Button from "../../../components/Button/Button.jsx";
 import GridContainer from "../../../components/Grid/GridContainer.jsx";
 import GridItem from "../../../components/Grid/GridItem.jsx";
 import footerStyle from "./footerStyle.jsx";

@@ -17,7 +17,7 @@ import Grow from "@material-ui/core/Grow";
 import Divider from "@material-ui/core/Divider";
 
 // core components
-import Button from "../Button/button.jsx";
+import Button from "../Button/Button.jsx";
 import dropdownStyle from "./dropdownStyle.jsx";
 
 class Dropdown extends Component {

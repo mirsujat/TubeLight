@@ -5,7 +5,7 @@ import Favorite from "@material-ui/icons/Favorite";
 // core components
 import GridContainer from "../Grid/GridContainer.jsx";
 import GridItem from "../Grid/GridItem.jsx";
-import Button from "./button.jsx";
+import Button from "./Button.jsx";
 import demoStyle from "./demoStyle.jsx";
 
 class ButtonDemo extends Component {
