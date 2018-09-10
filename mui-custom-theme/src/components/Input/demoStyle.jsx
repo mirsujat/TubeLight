@@ -14,7 +14,7 @@ const demo = {
     display: "flex",
     paddingTop: "33px",
     paddingRight: "15px",
-    paddingLeft: "15px",
+    paddingLeft: "0px",
     marginRight: "10px"
   }
 };
