@@ -16,24 +16,19 @@ import { card, cardTitle } from "../../assets/jss/common-rules.jsx";
 import image1 from "../../assets/img/bg1.jpg";
 import image2 from "../../assets/img/bg2.jpg";
 import image3 from "../../assets/img/bg3.jpg";
-import imageP1 from "../../assets/img/portfolio/p1.png";
-import imageP2 from "../../assets/img/portfolio/p2.png";
-import imageP3 from "../../assets/img/portfolio/p3.png";
-import imageP4 from "../../assets/img/portfolio/p4.png";
-import imageP5 from "../../assets/img/portfolio/p5.png";
-import imageP6 from "../../assets/img/portfolio/p6.png";
+import imageP1 from "../../assets/img/portfolio/p1.jpg";
+import imageP2 from "../../assets/img/portfolio/p2.jpg";
+import imageP3 from "../../assets/img/portfolio/p3.jpg";
+import imageP4 from "../../assets/img/portfolio/p4.jpg";
+import imageP5 from "../../assets/img/portfolio/p5.jpg";
+import imageP6 from "../../assets/img/portfolio/p6.jpg";
 import imageP7 from "../../assets/img/portfolio/p7.png";
 import imageP8 from "../../assets/img/portfolio/p8.png";
 import imageP9 from "../../assets/img/portfolio/p9.png";
 import imageP10 from "../../assets/img/portfolio/p10.png";
 import imageP11 from "../../assets/img/portfolio/p11.png";
 import imageP12 from "../../assets/img/portfolio/p12.png";
-import imageP13 from "../../assets/img/portfolio/p13.png";
 import imageP14 from "../../assets/img/portfolio/p14.png";
-import imageP15 from "../../assets/img/portfolio/p15.jpg";
-import imageP16 from "../../assets/img/portfolio/p16.png";
-import imageP17 from "../../assets/img/portfolio/p17.png";
-import imageP18 from "../../assets/img/portfolio/p18.png";
 import imageP19 from "../../assets/img/portfolio/p19.png";
 import imageP20 from "../../assets/img/portfolio/p20.png";
 
@@ -86,7 +81,7 @@ const portfolio = props => {
               <img
                 style={{ height: "200px", width: "100%", display: "block" }}
                 className={classes.imgCardTop}
-                src={imageP18}
+                src={imageP1}
                 alt="Card-img-cap"
               />
               <CardBody>
