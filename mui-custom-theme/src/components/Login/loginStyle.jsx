@@ -6,10 +6,17 @@ const loginStyle = {
   header: {
     ...title,
     textAlign: "center",
+    textTransform: "uppercase",
     borderBottom: "1px solid #dad8d8"
   },
-  email: {
+  input: {
     flexBasis: "343px"
+  },
+  submitButton: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingBottom: "30px"
   }
 };
 

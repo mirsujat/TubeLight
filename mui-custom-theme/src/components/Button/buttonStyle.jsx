@@ -18,7 +18,7 @@ const buttonStyle = {
     boxShadow:
       "0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12)",
     border: "none",
-    borderRadius: "3px",
+    borderRadius: "0px",
     position: "relative",
     padding: "8px 40px",
     margin: ".3125rem 1px",

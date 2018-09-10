@@ -5,6 +5,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
 // @material-ui/icons
+import People from "@material-ui/icons/People";
 import Lock from "@material-ui/icons/Lock";
 import Email from "@material-ui/icons/Email";
 import VisibilityOutlined from "@material-ui/icons/VisibilityOutlined";
@@ -33,13 +34,25 @@ const Login = props => {
           <Card className={classes.card}>
             <CardBody>
               <h4 className={classes.header}>Login</h4>
-
+              <div className={classes.smartInputGroup}>
+                <div className={classes.labelAppend}>
+                  {" "}
+                  <People />
+                </div>
+                <div className={classes.input}>
+                  <Input
+                    labelText="Email Address"
+                    id="email"
+                    formControlProps={{ fullWidth: true }}
+                  />
+                </div>
+              </div>
               <div className={classes.smartInputGroup}>
                 <div className={classes.labelAppend}>
                   {" "}
                   <Email />
                 </div>
-                <div className={classes.email}>
+                <div className={classes.input}>
                   <Input
                     labelText="Email Address"
                     id="email"
@@ -52,7 +65,7 @@ const Login = props => {
                   {" "}
                   <Lock />
                 </div>
-                <div className={classes.email}>
+                <div className={classes.input}>
                   <Input
                     labelText="Password"
                     id="password"
@@ -68,6 +81,9 @@ const Login = props => {
                 </div>
               </div>
             </CardBody>
+            <div className={classes.submitButton}>
+              <Button color="primary">Login</Button>
+            </div>
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={4} />
