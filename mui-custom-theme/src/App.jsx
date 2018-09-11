@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 //Views
 import Components from "./views/Components/Components.jsx";
@@ -20,6 +20,7 @@ class App extends Component {
         <Route path="/blog/item" component={BlogItem} />
         <Route path="/contact" component={Contact} />
         <Route path="/portfolio" component={Portfolio} />
+        <Redirect to="/" />
       </Switch>
     );
     return (
