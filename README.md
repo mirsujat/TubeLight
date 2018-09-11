@@ -6,8 +6,9 @@
 Make user you have nodejs install
 Then clone or download the project
 Two simple command to start the project
-> npm install (to install the dependancny)
-> npm start (to start the project)
+ > npm install (to install the dependancny)
+
+ > npm start (to start the project)
 
 Now visit localhost:3000 
 
