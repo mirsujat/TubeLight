@@ -129,6 +129,13 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
+  h1.heading,
+  h2.heading,
+  h3.heading {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 6rem; }
 
 a {
   color: #fff;
