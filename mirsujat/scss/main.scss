@@ -115,6 +115,49 @@ main {
   }
 }
 
+.tool-set {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-areas: "tool1 tool2 tool3 tool4 tool5 tool6 tool7 tool8 tool9 tool10 tool11 tool12";
+  grid-template-columns: repeat(12, 1fr);
+
+  .tool-1 {
+    grid-area: tool1;
+  }
+  .tool-2 {
+    grid-area: tool2;
+  }
+  .tool-3 {
+    grid-area: tool3;
+  }
+  .tool-4 {
+    grid-area: tool4;
+  }
+  .tool-5 {
+    grid-area: tool5;
+  }
+  .tool-6 {
+    grid-area: tool6;
+  }
+  .tool-7 {
+    grid-area: tool7;
+  }
+  .tool-8 {
+    grid-area: tool8;
+  }
+  .tool-9 {
+    grid-area: tool9;
+  }
+  .tool-10 {
+    grid-area: tool10;
+  }
+  .tool-11 {
+    grid-area: tool11;
+  }
+  .tool-12 {
+    grid-area: tool12;
+  }
+}
 // Work/Projects Page
 .projects {
   display: grid;
