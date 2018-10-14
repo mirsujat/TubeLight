@@ -130,6 +130,7 @@ main {
     }
   }
 }
+
 // Work/Projects Page
 .projects {
   display: grid;
@@ -138,6 +139,8 @@ main {
 
   img {
     width: 100%;
+    min-height: 250px;
+    max-height: 250px;
     border: 3px #fff solid;
   }
 }

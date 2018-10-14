@@ -205,6 +205,8 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
+    min-height: 250px;
+    max-height: 250px;
     border: 3px #fff solid; }
 
 .boxes {
