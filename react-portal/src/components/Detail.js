@@ -4,9 +4,9 @@ const Detail = ({
   asn,
   hostname,
   city,
-  post_code,
+  postCode,
   country,
-  country_code,
+  countryCode,
   latitude,
   longitude
 }) => {
@@ -31,7 +31,7 @@ const Detail = ({
         </li>
         <li>
           <span className="label">Post Code: </span>
-          {post_code}{" "}
+          {postCode}{" "}
         </li>
         <li>
           <span className="label">Country: </span>
@@ -39,7 +39,7 @@ const Detail = ({
         </li>
         <li>
           <span className="label">Country Code: </span>
-          {country_code}{" "}
+          {countryCode}{" "}
         </li>
         <li>
           <span className="label">Latitude: </span>
