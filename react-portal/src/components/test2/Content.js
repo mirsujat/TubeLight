@@ -1,39 +1,30 @@
 import React from "react";
 
-const Content = ({ ip, hostname, city, country, click }) => {
-  let Detail = <div className="content">Loading...!</div>;
-
-  if (ip) {
-    Detail = (
-      <div className="content">
-        <ul>
-          <li>
-            <span className="label">IP Address: </span>
-            {ip}
-          </li>
-
-          <li>
-            <span className="label">Host Name: </span>
-            {hostname}{" "}
-          </li>
-          <li>
-            <span className="label">City: </span>
-            {city}{" "}
-          </li>
-          <li>
-            <span className="label">Country: </span>
-            {country}{" "}
-          </li>
-          <div className="view-more" onClick={click}>
-            View Detail...
-          </div>
-        </ul>
-      </div>
-    );
-  }
+const Content = props => {
   return (
-    <div>
-      <div>{Detail}</div>
+    <div className="content">
+      <ul>
+        <li>
+          <span className="label">IP Address: </span>
+          {props.ip}
+        </li>
+
+        <li>
+          <span className="label">Host Name: </span>
+          {props.hostname}{" "}
+        </li>
+        <li>
+          <span className="label">City: </span>
+          {props.city}{" "}
+        </li>
+        <li>
+          <span className="label">Country: </span>
+          {props.country}{" "}
+        </li>
+        <div className="view-more" onClick={props.click}>
+          View Detail...
+        </div>
+      </ul>
     </div>
   );
 };

@@ -9,33 +9,36 @@ import Detail from "./components/Detail";
 
 class App extends Component {
   state = {
-    ip: "",
-    asn: null,
-    netmask: null,
-    hostname: null,
-    city: null,
-    post_code: null,
-    country: null,
-    country_code: null,
-    latitude: null,
-    longitude: null,
+    user: null,
+    searchTerm: "me",
     error: false,
-    errorMsg: null,
-    term: "me",
+    errorMsg: "",
     open: false
   };
   componentDidMount() {
-    this.ipSearch();
-  }
-  componentDidUpdate(prevProps, prevState) {
-    const term = this.state.term;
-    if (term !== prevState.ip && term.length === 14) {
+    if (this.state.user === null) {
       this.ipSearch();
     }
-    if (term.length > 14) {
-      alert("Max Length 14 Characters.");
-    }
   }
+  componentDidUpdate = async (prevProps, prevState) => {
+    const searchTerm = this.state.searchTerm;
+    if (
+      prevState.searchTerm !== "me" &&
+      prevState.searchTerm !== searchTerm &&
+      searchTerm.length === 14
+    ) {
+      try {
+        const { data } = await axios.get(`https://ip.nf/${searchTerm}.json`);
+        if (searchTerm !== prevState.searchTerm && searchTerm.length === 14) {
+          this.setState({ user: data, searchTerm: data.ip.ip, error: "" });
+        }
+      } catch (error) {
+        if (!this.state.error) {
+          this.setState({ user: null, error: "Invalid IP Address!!!" });
+        }
+      }
+    }
+  };
   handleChange = e => {
     this.setState({ term: e.target.value });
   };
@@ -47,43 +50,22 @@ class App extends Component {
       this.ipSearch();
     }
   };
-  ipSearch = async (e, term) => {
-    const searchterm = this.state.term;
-    console.log("Search Term:", searchterm);
+  ipSearch = async () => {
+    const searchTerm = this.state.searchTerm;
     try {
-      if (!this.state.ip || (this.state.ip && this.state.ip !== searchterm)) {
-        const { data } = await axios.get(`https://ip.nf/${searchterm}.json`);
+      const { data } = await axios.get(`https://ip.nf/${searchTerm}.json`);
+      this.setState({ user: data, error: false, errorMsg: "" });
+    } catch (error) {
+      if (!this.state.error) {
         this.setState({
-          ip: data.ip.ip,
-          asn: data.ip.asn,
-          hostname: data.ip.hostname,
-          city: data.ip.city,
-          post_code: data.ip.post_code,
-          country: data.ip.country,
-          country_code: data.ip.country_code,
-          latitude: data.ip.latitude,
-          longitude: data.ip.longitude,
-          error: false,
-          errorMsg: null,
-          term: data.ip.ip
+          user: null,
+          error: true,
+          errMsg: "Something Went Wrong!"
         });
       }
-    } catch (error) {
-      this.setState({
-        ip: "",
-        asn: null,
-        hostname: null,
-        city: null,
-        post_code: null,
-        country: null,
-        country_code: null,
-        latitude: null,
-        longitude: null,
-        error: true,
-        errorMsg: "Invalid IP Address"
-      });
     }
   };
+
   ipSearchonChange = _.debounce(term => {
     this.ipSearch(term);
   }, 300);
@@ -95,30 +77,40 @@ class App extends Component {
     this.setState({ open: false });
   };
   render() {
-    const {
-      ip,
-      asn,
-      hostname,
-      city,
-      post_code,
-      country,
-      country_code,
-      latitude,
-      longitude
-    } = this.state;
+    const { user } = this.state;
+    console.log("user: ", user);
 
     let content = null;
+    let detail = null;
     if (this.state.error && this.state.errorMsg) {
       content = <div style={{ color: "red" }}>{this.state.errorMsg}</div>;
-    } else {
+    }
+    if (user) {
       content = (
         <div>
           <Content
-            ip={ip}
-            hostname={hostname}
-            city={city}
-            country={country}
+            ip={user.ip.ip}
+            hostname={user.ip.hostname}
+            city={user.ip.city}
+            country={user.ip.country}
             click={this.handleClickOpen}
+          />
+        </div>
+      );
+    }
+    if (user && this.state.open) {
+      detail = (
+        <div>
+          <Detail
+            ip={user.ip.ip}
+            asn={user.ip.asn}
+            hostname={user.ip.hostname}
+            city={user.ip.city}
+            postCode={user.ip.post_code}
+            country={user.ip.country}
+            countryCode={user.ip.country_code}
+            latitude={user.ip.latitude}
+            longitude={user.ip.longitude}
           />
         </div>
       );
@@ -141,28 +133,18 @@ class App extends Component {
           />
         </section>
         <section>{content}</section>
-        {/* <Modal open={this.state.open} onClose={this.handleClickClose}>
-          <Detail
-            ip={ip}
-            asn={asn}
-            hostname={hostname}
-            city={city}
-            postCode={post_code}
-            country={country}
-            countryCode={country_code}
-            latitude={latitude}
-            longitude={longitude}
-          />
+        <Modal open={this.state.open} onClose={this.handleClickClose}>
+          {detail}
           <button onClick={this.handleClickClose} className="close-btn">
             Close
           </button>
-        </Modal> */}
-        <Modal open={this.state.open} onClose={this.handleClickClose}>
+        </Modal>
+        {/* <Modal open={this.state.open} onClose={this.handleClickClose}>
           <button onClick={this.handleClickClose} className="close-btn">
             Close
           </button>
           <Login />
-        </Modal>
+        </Modal> */}
       </div>
     );
   }
