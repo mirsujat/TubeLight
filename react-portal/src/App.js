@@ -1,9 +1,8 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import axios from "axios";
-import Search from "./Search";
-import Login from "./components/user/Login";
-import Content from "./components/test2/Content";
+import Search from "./components/Search";
+import Content from "./components/Content";
 import Modal from "./components/portal/Portal";
 import Detail from "./components/Detail";
 
