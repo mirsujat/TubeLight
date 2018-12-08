@@ -12,9 +12,6 @@ const Navigation = props => {
           <NavLink to="/posts">Posts</NavLink>
         </li>
         <li>
-          <NavLink to="/posts/:id">Post Detail</NavLink>
-        </li>
-        <li>
           <NavLink to="/registration">Registration</NavLink>
         </li>
       </ul>
