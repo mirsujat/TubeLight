@@ -1,0 +1,13 @@
+// Challenge -1
+- Make a home page that shows a user's IP information when the page firt loaded
+- and the user's ip address show's in the search field.
+- When the user typed a IP address in the search field the component will display this particular IP information.
+
+// Challenge -2
+- Make a modal component that display the user registration form.
+- The user registration form must have username, email, password,                  confirmPassword fields.
+- You must sanatize the user input before send it to the server.
+
+// Challenge -3
+- Load and display a list of post form a remote server.
+- When a user click one of the post show the detail post.
