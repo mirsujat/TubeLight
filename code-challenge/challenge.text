@@ -1,6 +1,6 @@
 // Challenge -1: 30 Minutes
 - URL  https://ip.nf/me.json;
-- Make a input component so that user can search their IP information.
+- Make an input component so that user can search their IP information.
 - when the component first loaded it display the user's own Ip Information.
 - and user's ip number must be shown into the input field.
 - and when a user type a new ip address into the input field the component should reload and  fetch the submitted ip information and display it to the screen.
