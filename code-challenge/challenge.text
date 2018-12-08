@@ -1,4 +1,5 @@
 // Challenge -1
+- URL  https://ip.nf/me.json;
 - Make a input component so that user can search their IP information.
 - when the component first loaded it display the user's own Ip Information.
 - and user's ip number must be shown into the input field.
@@ -11,5 +12,6 @@
 - You must sanatize the user input before send it to the server.
 
 // Challenge -3
-- Load and display a list of post form a remote server.
-- When a user click one of the post show the detail post.
+- URL https://jsonplaceholder.typicode.com/users;
+- Load and display a list of user form a remote server.
+- When a user click one of the users show the user's detail.
