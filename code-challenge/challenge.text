@@ -13,5 +13,6 @@
 
 // Challenge -3
 - URL https://jsonplaceholder.typicode.com/users;
-- Load and display a list of user form a remote server.
+- or URL https://randomuser.me/api/?&results=12&nat=us,dk,fr,gb
+- Load and display a list of users form a remote server.
 - When a user click one of the users show the user's detail.
