@@ -7,7 +7,7 @@
 *** make sure you should avoid create infinit loop. ***
 
 // Challenge -2: 40 Minutes
-- Make a modal component that display the user registration form.
+- Make a modal component that will display  user registration form.
 - The user registration form must have username, email, password,                  confirmPassword fields.
 - You must sanatize the user input before send it to the server.
 
