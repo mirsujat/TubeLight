@@ -20,8 +20,8 @@
 }
 form {
   display: flex;
-  width: 600px;
-  flex-direction: row;
+  width: 800px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -34,7 +34,7 @@ input[type="text"] {
   letter-spacing: 0.5em;
   color: rgba(0, 0, 0, 0.74);
 }
-form button {
+button {
   width: 20%;
   padding: 7px 10px;
   cursor: pointer;
