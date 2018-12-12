@@ -101,6 +101,7 @@ class App extends Component {
             <form onSubmit={this.handleSubmit} className="search-form">
               <input
                 type="text"
+                maxLength={14}
                 value={this.state.searchTerm}
                 onChange={e => this.setState({ searchTerm: e.target.value })}
               />
