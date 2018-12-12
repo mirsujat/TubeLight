@@ -96,20 +96,25 @@ class App extends Component {
     return (
       <div className="app">
         <div className="header">
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              value={this.state.searchTerm}
-              onChange={e => this.setState({ searchTerm: e.target.value })}
-            />
-            <button type="type">Submit</button>
-          </form>
-          <button onClick={this.handleModalOpen}>Registration</button>
+          <div />
+          <section className="search">
+            <form onSubmit={this.handleSubmit} className="search-form">
+              <input
+                type="text"
+                value={this.state.searchTerm}
+                onChange={e => this.setState({ searchTerm: e.target.value })}
+              />
+              <button type="type">Submit</button>
+            </form>
+          </section>
+          <div onClick={this.handleModalOpen} className="reg-btn">
+            Register
+          </div>
         </div>
         {content}
-        <section className="registration">
-          <form onSubmit={this.handleRegistration}>
-            <div>
+        <Modal open={this.state.open} closed={this.handleModalOpen}>
+          <form onSubmit={this.handleRegistration} className="reg-form">
+            <div className="form-field">
               <label htmlFor="username">Username</label>
               <input
                 type="text"
@@ -118,7 +123,7 @@ class App extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
+            <div className="form-field">
               <label htmlFor="email">E-mail</label>
               <input
                 type="text"
@@ -127,7 +132,7 @@ class App extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
+            <div className="form-field">
               <label htmlFor="password">Password</label>
               <input
                 type="text"
@@ -136,8 +141,8 @@ class App extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div>
-              <label htmlFor="confirmPassword">confirmPassword</label>
+            <div className="form-field">
+              <label htmlFor="confirmPassword">Confirm Password</label>
               <input
                 type="text"
                 name="confirmPassword"
@@ -147,7 +152,7 @@ class App extends Component {
             </div>
             <button type="submit">Register</button>
           </form>
-        </section>
+        </Modal>
       </div>
     );
   }
