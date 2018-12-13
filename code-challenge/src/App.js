@@ -114,60 +114,56 @@ class App extends Component {
         </div>
         {content}
         <Modal open={this.state.open} closed={this.handleModalOpen}>
-          <div>
-            <h2
-              style={{
-                textAlign: "center",
-                color: "grey",
-                textDecoration: "underline"
-              }}
-            >
-              REGISTER NOW!
-            </h2>
-            <form onSubmit={this.handleRegistration} className="reg-form">
-              <div className="form-field">
-                <label htmlFor="username">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  value={this.state.registration.username}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className="form-field">
-                <label htmlFor="email">E-mail</label>
-                <input
-                  type="text"
-                  name="email"
-                  value={this.state.registration.email}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className="form-field">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="text"
-                  name="password"
-                  value={this.state.registration.password}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className="form-field">
-                <label htmlFor="confirmPassword">Confirm Password</label>
-                <input
-                  type="text"
-                  name="confirmPassword"
-                  value={this.state.registration.confirmPassword}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <button type="submit" className="btn">
-                Register
-              </button>
-            </form>
-            <h6 style={{ textAlign: "center", color: "grey" }}>
-              Already Have an Account?
-            </h6>
+          <div className="card">
+            <div className="card-header">
+              <h2>REGISTER NOW!</h2>
+            </div>
+            <div className="card-body">
+              <form onSubmit={this.handleRegistration} className="reg-form">
+                <div className="form-field">
+                  <label htmlFor="username">Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    value={this.state.registration.username}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="email">E-mail</label>
+                  <input
+                    type="text"
+                    name="email"
+                    value={this.state.registration.email}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="text"
+                    name="password"
+                    value={this.state.registration.password}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="confirmPassword">Confirm Password</label>
+                  <input
+                    type="text"
+                    name="confirmPassword"
+                    value={this.state.registration.confirmPassword}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <button type="submit" className="btn">
+                  Register
+                </button>
+              </form>
+            </div>
+            <div className="card-footer">
+              <h6>Already Have an Account?</h6>
+            </div>
           </div>
         </Modal>
       </div>
