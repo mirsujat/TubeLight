@@ -108,9 +108,9 @@ class App extends Component {
               <button type="type">Submit</button>
             </form>
           </section>
-          <div onClick={this.handleModalOpen} className="reg-btn">
+          <button onClick={this.handleModalOpen} className="reg-btn">
             Register
-          </div>
+          </button>
         </div>
         {content}
         <Modal open={this.state.open} closed={this.handleModalOpen}>
