@@ -89,7 +89,6 @@ button {
 }
 .card {
   display: flex;
-  /* padding: 25px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
