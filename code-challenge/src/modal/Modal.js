@@ -28,9 +28,7 @@ class Modal extends Component {
       modalRoot = "modal-root modal-open";
       content = (
         <div className="modal-wrapper" open={this.props.open}>
-          <div className="modal">
-            <div>{this.props.children}</div>
-          </div>
+          <div className="modal">{this.props.children}</div>
           <Backdrop onClick={this.props.closed} />
         </div>
       );
