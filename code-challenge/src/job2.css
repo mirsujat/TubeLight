@@ -55,7 +55,7 @@ button {
 }
 .modal {
   position: fixed;
-  top: 80px;
+  top: 13%;
   z-index: 10000;
 }
 .backdrop {
