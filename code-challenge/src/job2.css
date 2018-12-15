@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 .app,
+.content,
+.card,
+.card-body,
 .modal-wrapper,
 .modal {
   display: flex;
@@ -16,10 +19,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 15px;
   width: 100%;
   background-color: teal;
+  padding: 25px 15px;
 }
+
 form {
   width: 100%;
 }
@@ -37,12 +41,13 @@ form input[type="text"] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  width: 560px;
 }
+
 button {
   display: inline-block;
   min-height: 1px;
-  padding: 4px 10px;
+  padding: 4px 20px;
   line-height: 20px;
   font-size: 16px;
   cursor: pointer;
@@ -53,11 +58,30 @@ button {
   border: 1px solid #f1f1f1;
   color: #f1f1f1;
 }
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+li {
+  display: block;
+  min-height: 1px;
+  padding: 6px;
+}
+li > span {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.52);
+}
 .modal {
   position: fixed;
-  top: 13%;
+  top: 12.5%;
   z-index: 10000;
 }
+
 .backdrop {
   display: block;
   position: absolute;
@@ -69,39 +93,43 @@ button {
   z-index: 10;
   cursor: pointer;
 }
+
 .card {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 400px;
+  min-width: 500px;
   background-color: white;
+  box-shadow: 6px 7px 17px 6px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
-  box-shadow: 0px 12px 20px 6px rgba(0, 0, 0, 0.4);
+}
+.card-header,
+.card-footer {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 .card-header {
-  display: block;
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.52);
-  width: 100%;
   padding: 15px;
-  text-align: center;
   text-decoration: underline;
+  color: rgba(0, 0, 0, 0.54);
 }
-
-.reg-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  min-width: 400px;
-  padding: 25px;
+.card-footer {
+  background-color: teal;
+  color: #f1f1f1;
 }
+.reg-form,
 .form-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.reg-form {
+  align-items: flex-end;
+  min-width: 500px;
+  padding: 35px;
+}
+
+.form-field {
   align-items: flex-start;
   width: 100%;
   padding-bottom: 15px;
@@ -109,18 +137,11 @@ button {
 
 label {
   font-weight: 500;
-  color: grey;
-}
-.btn {
-  background-color: white;
-  border: 1px solid teal;
   color: rgba(0, 0, 0, 0.72);
 }
 
-.card-footer {
-  display: block;
-  background-color: teal;
-  color: #f1f1f1;
-  width: 100%;
-  text-align: center;
+.btn {
+  border: 1px solid teal;
+  color: rgba(0, 0, 0, 0.72);
+  background-color: white;
 }
