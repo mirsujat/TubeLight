@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+.app,
+.card,
+.card-body,
+.modal-wrapper,
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: teal;
+  padding: 25px 15px;
+}
+
+form {
+  width: 100%;
+}
+form input[type="text"] {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 4px 10px;
+  line-height: 20px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.72);
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+button {
+  display: inline-block;
+  min-height: 1px;
+  padding: 4px 15px;
+  line-height: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.reg-btn {
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  color: #f1f1f1;
+}
+.modal {
+  position: fixed;
+  top: 12.5%;
+  z-index: 10000;
+}
+
+.backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -3000px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.card {
+  min-width: 500px;
+  background-color: white;
+  box-shadow: 6px 7px 17px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+.card-header,
+.card-footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.card-header {
+  background-color: transparent;
+  padding: 15px;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.54);
+}
+.card-footer {
+  background-color: teal;
+  color: #f1f1f1;
+}
+.reg-form,
+.form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reg-form {
+  align-items: flex-end;
+  min-width: 500px;
+  padding: 35px;
+}
+
+.form-field {
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+label {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.btn {
+  border: 1px solid teal;
+  color: rgba(0, 0, 0, 0.72);
+  background-color: white;
+}
