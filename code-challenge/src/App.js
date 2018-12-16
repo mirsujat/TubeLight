@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import Modal from "./components/Modal";
 
 import "./App.css";
 
@@ -11,7 +12,18 @@ class App extends Component {
     loading: false,
     formError: {
       searchTermError: ""
-    }
+    },
+    fields: {
+      username: "",
+      email: "",
+      password: ""
+    },
+    registrationFormError: {
+      username: "",
+      email: "",
+      password: ""
+    },
+    open: false
   };
 
   componentDidMount() {
@@ -39,6 +51,27 @@ class App extends Component {
       this.searchIP();
     }
   };
+
+  handleModalOpen = () => {
+    this.setState(prevState => {
+      return { open: !prevState.open };
+    });
+  };
+
+  handleChange = e => {
+    const { fields } = this.state;
+    fields[e.target.name] = e.target.value;
+    this.setState({ fields });
+  };
+
+  handleRegistration = e => {
+    e.preventDefault();
+    const isValid = this.validateRegistration();
+    if (isValid) {
+      console.log(this.state.fields);
+    }
+  };
+
   searchIP = async () => {
     const { searchTerm } = this.state;
     try {
@@ -63,6 +96,35 @@ class App extends Component {
       });
     }
   };
+  validateRegistration = () => {
+    const fields = this.state.fields;
+    const registrationFormError = {};
+    let isValid = true;
+    const pattern = {
+      username: /^[a-z\d]{2,20}$/,
+      email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      password: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$/
+    };
+    if (!fields.username.match(pattern.username)) {
+      isValid = false;
+      registrationFormError.username =
+        "Username must alphanumeric and contain (2-20) Characters.";
+    }
+    if (!fields.email.match(pattern.email)) {
+      isValid = false;
+      registrationFormError.email =
+        "Invalid E-mail Address. ie; test@gmail.com";
+    }
+    if (!fields.password.match(pattern.password)) {
+      isValid = false;
+      registrationFormError.password =
+        " Password must be between [8 to 15 characters] which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character.";
+    }
+
+    this.setState({ registrationFormError });
+    return isValid;
+  };
+
   validate = () => {
     const { searchTerm } = this.state;
     let formError = {};
@@ -136,9 +198,61 @@ class App extends Component {
             />
             <button type="submit">Submit</button>
           </form>
-          <button className="reg-btn">Register</button>
+          <button className="reg-btn" onClick={this.handleModalOpen}>
+            Register
+          </button>
         </div>
         {content}
+        <Modal open={this.state.open} closed={this.handleModalOpen}>
+          <div className="card">
+            <div className="card-header">REGISTER NOW!</div>
+            <div className="card-body">
+              <form onSubmit={this.handleRegistration} className="reg-form">
+                <div className="form-field">
+                  <label htmlFor="usernaem">Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    value={this.state.fields.username}
+                    onChange={this.handleChange}
+                  />
+                  <p className="error">
+                    {this.state.registrationFormError.username}
+                  </p>
+                </div>
+
+                <div className="form-field">
+                  <label htmlFor="email">E-mail</label>
+                  <input
+                    type="text"
+                    name="email"
+                    value={this.state.fields.email}
+                    onChange={this.handleChange}
+                  />
+                  <p className="error">
+                    {this.state.registrationFormError.email}
+                  </p>
+                </div>
+                <div className="form-field">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="text"
+                    name="password"
+                    value={this.state.fields.password}
+                    onChange={this.handleChange}
+                  />
+                  <p className="error">
+                    {this.state.registrationFormError.password}
+                  </p>
+                </div>
+
+                <div className="card-footer">
+                  <button> Register</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </Modal>
       </div>
     );
   }
