@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import Modal from "./components/Modal/Modal";
 
 import "./App.css";
 
@@ -11,7 +12,8 @@ class App extends Component {
     loading: false,
     formError: {
       searchTermError: ""
-    }
+    },
+    open: false
   };
 
   componentDidMount() {
@@ -76,6 +78,13 @@ class App extends Component {
     this.setState({ formError: formError });
     return valid;
   };
+
+  handleModalOpen = () => {
+    this.setState(prevState => {
+      return { open: !prevState.open };
+    });
+  };
+
   render() {
     const { user, error, loading } = this.state;
     let content = <div>There is no content to show!</div>;
@@ -129,9 +138,39 @@ class App extends Component {
             />
             <button type="submit">Submit</button>
           </form>
-          <button className="reg-btn">Register</button>
+          <button className="reg-btn" onClick={this.handleModalOpen}>
+            Register
+          </button>
         </div>
         {content}
+        <Modal open={this.state.open} closed={this.handleModalOpen}>
+          <div className="card">
+            <div className="card-header">
+              <h1>REGISTER NOW!</h1>{" "}
+            </div>
+            <div className="card-body">
+              <form className="reg-form">
+                <div className="form-field">
+                  <label htmlFor="username">Username</label>
+                  <input type="text" name="username" />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="email">E-mail</label>
+                  <input type="text" name="email" />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="password">Password</label>
+                  <input type="text" name="password" />
+                </div>
+              </form>
+            </div>
+            <div className="card-footer">
+              <button type="submit" className="reg-btn">
+                Register
+              </button>
+            </div>
+          </div>
+        </Modal>
       </div>
     );
   }
