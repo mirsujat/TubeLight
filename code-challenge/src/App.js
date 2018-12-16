@@ -70,7 +70,7 @@ class App extends Component {
     if (!searchTerm.match(ipformat)) {
       valid = false;
       formError.searchTermError =
-        "Invalid IP Address. Valid Ip should be 14 Carachters long and format would be; xx.xxx.xxx.xxx";
+        "Invalid IP Address. Learn more about valid IP Address.";
     }
     this.setState({ formError: formError });
     return valid;
