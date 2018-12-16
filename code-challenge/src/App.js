@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import Axios from "axios";
 
 import "./App.css";
-import Axios from "axios";
 
 class App extends Component {
   state = {
@@ -34,7 +34,8 @@ class App extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    if (this.validate(this.state)) {
+    const isValid = this.validate();
+    if (isValid) {
       this.searchIP();
     }
   };
@@ -130,7 +131,6 @@ class App extends Component {
           </form>
           <button className="reg-btn">Register</button>
         </div>
-
         {content}
       </div>
     );
