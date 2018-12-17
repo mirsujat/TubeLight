@@ -15,7 +15,9 @@ form input[type="text"] {
 }
 
 .app,
-.content {
+.content,
+.modal-wrapper,
+.modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,4 +76,8 @@ li > span {
   background-color: transparent;
   color: #f1f1f1;
   border: 1px solid #f1f1f1;
+}
+
+.error {
+  color: red;
 }
