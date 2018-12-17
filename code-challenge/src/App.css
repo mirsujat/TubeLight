@@ -15,7 +15,9 @@ form input[type="text"] {
 }
 
 .app,
-.content {
+.content,
+.modal-wrapper,
+.modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,4 +76,18 @@ li > span {
   background-color: transparent;
   color: #f1f1f1;
   border: 1px solid #f1f1f1;
+}
+
+.modal {
+  width: 500px;
+  height: auto;
+  padding: 15px;
+}
+.error {
+  color: red;
+}
+
+.form-field {
+  display: block;
+  padding-bottom: 15px;
 }
