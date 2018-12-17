@@ -97,10 +97,16 @@ class App extends Component {
   };
   submitRegistrationForm = e => {
     e.preventDefault();
+    const fields = {
+      username: "",
+      email: "",
+      password: ""
+    };
 
     const isValid = this.validateRegistration();
     if (isValid) {
       console.log(this.state.fields);
+      this.setState({ fields });
     }
   };
 
@@ -116,12 +122,13 @@ class App extends Component {
     const regFormError = {};
     let isValid = true;
     const pattern = {
-      username: /^\w{2,20}$/,
+      username: /^\w+([\.-]?\w+){2,20}$/,
       email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/
     };
     const errorMsg = {
-      username: "Username must be Alphanumeric and contain 2-20 Characters.",
+      username:
+        "Username must be Alphanumeric [A-Za-z0-9 and _ - .] and contain 2-20 Characters.",
       email: "Invalid E-mail address. email i.e; test@gmail.com",
       password:
         "Password must be 6-20 characters and contain at least one numeric digit, one uppercase and one lowercase letter."
