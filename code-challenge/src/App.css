@@ -15,11 +15,7 @@ form input[type="text"] {
 }
 
 .app,
-.content,
-.modal-wrapper,
-.modal,
-.card,
-.card-body {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,42 +74,4 @@ li > span {
   background-color: transparent;
   color: #f1f1f1;
   border: 1px solid #f1f1f1;
-}
-.backdrop {
-  display: block;
-  position: absolute;
-  min-height: 1px;
-  top: 0;
-  right: 0;
-  bottom: -3000px;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-  cursor: pointer;
-}
-
-.modal {
-  position: fixed;
-  top: 13%;
-  width: 400px;
-  padding: 25px;
-  z-index: 10000;
-  box-shadow: 6px 17px 12px 6px rgba(0, 0, 0, 0.3);
-  background-color: white;
-}
-
-label {
-  display: block;
-  width: 100%;
-  font-weight: 700;
-  color: rgb(0, 0, 0, 0.64);
-}
-.form-field {
-  display: block;
-  width: 100%;
-  padding-bottom: 15px;
-}
-
-.error {
-  color: red;
 }
