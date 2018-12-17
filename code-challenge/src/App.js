@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Axios from "axios";
 
 import "./App.css";
-import Modal from "./components/Modal";
 
 class App extends Component {
   state = {
@@ -12,16 +11,6 @@ class App extends Component {
     loading: false,
     formError: {
       searchTermError: ""
-    },
-    fields: {
-      username: "",
-      email: "",
-      password: ""
-    },
-    regFormError: {
-      username: "",
-      email: "",
-      password: ""
     }
   };
   componentDidMount() {
@@ -89,66 +78,6 @@ class App extends Component {
     return valid;
   };
 
-  //REGISTRATION
-  handleChange = e => {
-    const { fields } = this.state;
-    fields[e.target.name] = e.target.value;
-    this.setState({ fields });
-  };
-  submitRegistrationForm = e => {
-    e.preventDefault();
-    const fields = {
-      username: "",
-      email: "",
-      password: ""
-    };
-
-    const isValid = this.validateRegistration();
-    if (isValid) {
-      console.log(this.state.fields);
-      this.setState({ fields });
-    }
-  };
-
-  handleModalOpen = () => {
-    this.setState(prevState => {
-      return { open: !prevState.open };
-    });
-  };
-
-  // Validate Registration form
-  validateRegistration = () => {
-    const { fields } = this.state;
-    const regFormError = {};
-    let isValid = true;
-    const pattern = {
-      username: /^\w+([\.-]?\w+){2,20}$/,
-      email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/
-    };
-    const errorMsg = {
-      username:
-        "Username must be Alphanumeric [A-Za-z0-9_-.] and contain 2-20 Characters.",
-      email: "Invalid E-mail address. email i.e; test@gmail.com",
-      password:
-        "Password must be 6-20 characters and contain at least one numeric digit, one uppercase and one lowercase letter."
-    };
-    if (!fields.username.match(pattern.username)) {
-      isValid = false;
-      regFormError.username = errorMsg.username;
-    }
-    if (!fields.email.match(pattern.email)) {
-      isValid = false;
-      regFormError.email = errorMsg.email;
-    }
-    if (!fields.password.match(pattern.password)) {
-      isValid = false;
-      regFormError.password = errorMsg.password;
-    }
-    this.setState({ regFormError });
-    return isValid;
-  };
-
   render() {
     const { user, error, loading } = this.state;
     let content = <div>There is no content to show!</div>;
@@ -202,55 +131,9 @@ class App extends Component {
             />
             <button type="submit">Submit</button>
           </form>
-          <button className="reg-btn" onClick={this.handleModalOpen}>
-            Register
-          </button>
+          <button className="reg-btn">Register</button>
         </div>
         {content}
-
-        <Modal open={this.state.open} closed={this.handleModalOpen}>
-          <div className="card">
-            <div className="card-header">
-              <h3>REGISTER NOW!</h3>
-            </div>
-            <form className="reg-form" onSubmit={this.submitRegistrationForm}>
-              <div className="form-field">
-                <label htmlFor="username">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  value={this.state.fields.username}
-                  onChange={this.handleChange}
-                />
-                <p className="error">{this.state.regFormError.username}</p>
-              </div>
-
-              <div className="form-field">
-                <label htmlFor="email">email</label>
-                <input
-                  type="text"
-                  name="email"
-                  value={this.state.fields.email}
-                  onChange={this.handleChange}
-                />
-                <p className="error">{this.state.regFormError.email}</p>
-              </div>
-
-              <div className="form-field">
-                <label htmlFor="password">password</label>
-                <input
-                  type="text"
-                  name="password"
-                  value={this.state.fields.password}
-                  onChange={this.handleChange}
-                />
-                <p className="error">{this.state.regFormError.password}</p>
-              </div>
-
-              <button type="submit">Register</button>
-            </form>
-          </div>
-        </Modal>
       </div>
     );
   }
