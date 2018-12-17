@@ -128,7 +128,7 @@ class App extends Component {
     };
     const errorMsg = {
       username:
-        "Username must be Alphanumeric [a-zA-Z0-9 and _ - .] and contain 2-20 Characters.",
+        "Username must be Alphanumeric [A-Za-z0-9_-.] and contain 2-20 Characters.",
       email: "Invalid E-mail address. email i.e; test@gmail.com",
       password:
         "Password must be 6-20 characters and contain at least one numeric digit, one uppercase and one lowercase letter."
