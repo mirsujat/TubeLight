@@ -13,7 +13,6 @@ class App extends Component {
       searchTermError: ""
     }
   };
-
   componentDidMount() {
     if (!this.state.user) {
       this.searchIP();
