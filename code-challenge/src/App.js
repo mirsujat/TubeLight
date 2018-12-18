@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import Modal from "./Modal";
 
 import "./App.css";
-import Modal from "./Modal";
 
 const initRegForm = {
   username: "",
