@@ -12,21 +12,21 @@ const initRegForm = {
 };
 class App extends Component {
   state = {
-    searchTerm: "me",
-    user: "",
-    error: "",
     loading: false,
-    formError: {
-      searchTermError: ""
-    },
     fields: { ...initRegForm },
     regFormError: { ...initRegForm },
     open: false,
-    data: { ...Products }
+    data: { ...Products },
+    cart: []
   };
   componentDidMount() {
     console.log(this.state.data);
   }
+  addToCart = id => {
+    const data = { ...this.state.data };
+    const cart = data.products.filter(product => product.id === id);
+    this.setState({ cart });
+  };
 
   //REGISTRATION FORM
   handleChange = e => {
@@ -90,7 +90,19 @@ class App extends Component {
       content = data.products.map(product => {
         return (
           <div className="product" key={product.id}>
-            <div className="title">{product.title}</div>
+            <div className="card">
+              <div>Name: {product.title}</div>
+              <div>Style: {product.style}</div>
+              <div>AvailableSizes: {product.availableSizes}</div>
+              <div>
+                Price:
+                <span>{product.currencyFormat}</span> {product.price}
+              </div>
+              <div> Description: {product.description}</div>
+              <button onClick={id => this.addToCart(product.id)}>
+                BUY NOW
+              </button>
+            </div>
           </div>
         );
       });
@@ -100,15 +112,23 @@ class App extends Component {
       <div className="app">
         <div className="header">
           <div />
-          <button className="reg-btn" onClick={this.handleModalOpen}>
-            Register
-          </button>
+          <div>
+            <button className="reg-btn" onClick={this.handleModalOpen}>
+              Register
+            </button>
+            <button className="reg-btn" onClick={this.handleModalOpen}>
+              <i className="fas fa-cart-plus">
+                <span className="shop-cart-text">0</span>
+              </i>
+            </button>
+          </div>
         </div>
-        {content}
+        <div className="products">{content}</div>
+
         <Modal open={this.state.open} closed={this.handleModalOpen}>
           <div className="card">
             <div className="card-header">
-              <h3>REGISTER NOW!</h3>
+              <h1>REGISTER NOW!</h1>
             </div>
             <div className="card-body">
               <form onSubmit={this.submitRegForm} className="reg-form">

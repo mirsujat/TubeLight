@@ -109,15 +109,25 @@ li > span {
   cursor: pointer;
 }
 .card {
-  padding: 25px;
+  min-width: 250px;
+  max-width: auto;
+  min-height: 250px;
+  max-height: auto;
+  padding: 15px;
+  margin: 5px;
   background-color: white;
-  box-shadow: 6px 17px 12px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px -1px 20px 0px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
 }
 .card-header {
   display: block;
+  text-align: center;
   text-decoration: underline;
   color: rgba(0, 0, 0, 0.64);
+}
+.card-footer {
+  display: block;
+  text-align: center;
 }
 .reg-form {
   display: flex;
@@ -125,6 +135,7 @@ li > span {
   justify-content: center;
   align-items: flex-start;
   width: 450px;
+  padding: 15px;
 }
 .error {
   color: red;
@@ -136,8 +147,32 @@ li > span {
   justify-content: center;
   width: 100%;
 }
+label {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.64);
+}
 p {
   display: block;
   padding: 4px;
   margin: 4px;
+}
+
+.shop-cart-text {
+  display: inline-block;
+  padding-left: 5px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 260px;
+  height: 260px;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
