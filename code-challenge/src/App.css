@@ -109,7 +109,6 @@ li > span {
   cursor: pointer;
 }
 .card {
-  width: 500px;
   padding: 25px;
   background-color: white;
   box-shadow: 6px 17px 12px 12px rgba(0, 0, 0, 0.3);
