@@ -95,10 +95,11 @@ class App extends Component {
   };
   submitRegForm = e => {
     e.preventDefault();
+    let fields = initRegForm;
     const isValid = this.validateRegForm();
     if (isValid) {
       console.log(this.state.fields);
-      this.setState({ fields: initRegForm });
+      this.setState({ fields });
     }
   };
 

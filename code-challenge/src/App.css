@@ -17,7 +17,9 @@ form input[type="text"] {
 .app,
 .content,
 .modal-wrapper,
-.modal {
+.modal,
+.card,
+.card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,15 +81,64 @@ li > span {
 }
 
 .modal {
+  position: fixed;
+  top: 20%;
+  min-width: 1;
+  min-height: 1;
+  max-width: auto;
+  max-height: auto;
+  -webkit-z-index: 10000;
+  -moz-z-index: 10000;
+  -ms-z-index: 10000;
+  -o-z-index: 10000;
+  z-index: 10000;
+}
+.backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -2000px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-z-index: 10;
+  -moz-z-index: 10;
+  -ms-z-index: 10;
+  -o-z-index: 10;
+  z-index: 10;
+  cursor: pointer;
+}
+.card {
   width: 500px;
-  height: auto;
-  padding: 15px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 6px 17px 12px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+.card-header {
+  display: block;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.64);
+}
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 450px;
 }
 .error {
   color: red;
 }
 
 .form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+p {
   display: block;
-  padding-bottom: 15px;
+  padding: 4px;
+  margin: 4px;
 }
