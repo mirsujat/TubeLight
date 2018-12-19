@@ -17,18 +17,20 @@ class App extends Component {
     regFormError: { ...initRegForm },
     open: false,
     data: { ...Products },
-    cart: []
+    cart: [],
+    cartOpen: false
   };
   componentDidMount() {
     console.log(this.state.data);
   }
   addToCart = id => {
     const data = { ...this.state.data };
-    let cart = this.state.cart;
+    let oldCart = this.state.cart;
     const updatedCart = data.products.filter(product => product.id === id);
-    cart.push(updatedCart);
-    console.log(cart);
-    this.setState({ cart });
+    const newCart = { ...updatedCart, id: id };
+    oldCart.push(newCart);
+
+    this.setState({ cart: oldCart });
     console.log("Mir cart: ", this.state.cart);
   };
 
@@ -47,7 +49,11 @@ class App extends Component {
       this.setState({ fields });
     }
   };
-
+  handleCartOpen = () => {
+    this.setState(prevState => {
+      return { cartOpen: !prevState.cartOpen };
+    });
+  };
   handleModalOpen = () => {
     this.setState(prevState => {
       return { open: !prevState.open };
@@ -88,7 +94,9 @@ class App extends Component {
   };
 
   render() {
-    const { data } = this.state;
+    const { data, cart, cartOpen } = this.state;
+
+    console.log("cartData: ", cart);
     let content = <div>There is no data to show.</div>;
     if (data) {
       content = data.products.map(product => {
@@ -111,6 +119,21 @@ class App extends Component {
         );
       });
     }
+    let shoppingCart = <div>You haven't buy anythings from us.</div>;
+    if (cartOpen && cart) {
+      shoppingCart = cart.map((item, i) => {
+        return (
+          <div className="cart" key={i}>
+            <div className="cart-item">Product Name:{item.id}</div>
+            <div className="cart-item">Product Name:{item.title}</div>
+            <div className="cart-item">Description: {item.style}</div>
+            <div className="cart-item">
+              Price: <span>{item.currencyFormat}</span> {item.price}
+            </div>
+          </div>
+        );
+      });
+    }
 
     return (
       <div className="app">
@@ -120,14 +143,15 @@ class App extends Component {
             <button className="reg-btn" onClick={this.handleModalOpen}>
               Register
             </button>
-            <button className="reg-btn" onClick={this.handleModalOpen}>
+            <button className="reg-btn" onClick={this.handleCartOpen}>
               <i className="fas fa-cart-plus">
-                <span className="shop-cart-text">0</span>
+                <span className="shop-cart-text">{this.state.cart.length}</span>
               </i>
             </button>
           </div>
         </div>
         <div className="products">{content}</div>
+        <div className="shopping-cart">{shoppingCart}</div>
 
         <Modal open={this.state.open} closed={this.handleModalOpen}>
           <div className="card">
