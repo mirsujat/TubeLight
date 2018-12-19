@@ -25,13 +25,15 @@ class App extends Component {
   }
   addToCart = id => {
     const data = { ...this.state.data };
-    let oldCart = this.state.cart;
-    const updatedCart = data.products.filter(product => product.id === id);
-    const newCart = { ...updatedCart, id: id };
-    oldCart.push(newCart);
-
-    this.setState({ cart: oldCart });
-    console.log("Mir cart: ", this.state.cart);
+    const cart = this.state.cart;
+    const product = data.products
+      .filter(product => product.id === id)
+      .reduce((obj, item) => {
+        obj = item;
+        return obj;
+      }, {});
+    cart.push(product);
+    this.setState({ cart: cart });
   };
 
   //REGISTRATION FORM
@@ -94,9 +96,9 @@ class App extends Component {
   };
 
   render() {
-    const { data, cart, cartOpen } = this.state;
+    const { data, cartOpen, cart } = this.state;
 
-    console.log("cartData: ", cart);
+    console.log("cartData: ", this.state.cart);
     let content = <div>There is no data to show.</div>;
     if (data) {
       content = data.products.map(product => {
@@ -123,18 +125,13 @@ class App extends Component {
     if (cartOpen && cart) {
       shoppingCart = cart.map((item, i) => {
         return (
-          <div className="cart" key={i}>
-            <div className="cart-item">Product Name:{item.id}</div>
-            <div className="cart-item">Product Name:{item.title}</div>
-            <div className="cart-item">Description: {item.style}</div>
-            <div className="cart-item">
-              Price: <span>{item.currencyFormat}</span> {item.price}
-            </div>
+          <div key={i}>
+            <div>{item.title}</div>
+            <div>{item.price}</div>
           </div>
         );
       });
     }
-
     return (
       <div className="app">
         <div className="header">
