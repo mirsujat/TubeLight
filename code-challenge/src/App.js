@@ -24,8 +24,12 @@ class App extends Component {
   }
   addToCart = id => {
     const data = { ...this.state.data };
-    const cart = data.products.filter(product => product.id === id);
+    let cart = this.state.cart;
+    const updatedCart = data.products.filter(product => product.id === id);
+    cart.push(updatedCart);
+    console.log(cart);
     this.setState({ cart });
+    console.log("Mir cart: ", this.state.cart);
   };
 
   //REGISTRATION FORM
@@ -99,7 +103,7 @@ class App extends Component {
                 <span>{product.currencyFormat}</span> {product.price}
               </div>
               <div> Description: {product.description}</div>
-              <button onClick={id => this.addToCart(product.id)}>
+              <button onClick={() => this.addToCart(product.id)}>
                 BUY NOW
               </button>
             </div>
