@@ -117,7 +117,7 @@ li > span {
   padding: 15px;
   margin: 5px;
   background-color: white;
-  box-shadow: 2px -1px 20px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
 }
 .card-header {
