@@ -194,6 +194,18 @@ td {
   padding: 5px;
   text-align: left;
 }
+tfoot {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.64);
+}
 tr {
   border: 1px solid grey;
+}
+
+.shopping-cart {
+  display: block;
+  position: absolute;
+  top: 78px;
+  right: 0px;
+  z-index: 100;
 }

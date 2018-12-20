@@ -18,9 +18,10 @@ class App extends Component {
     open: false,
     data: { ...Products },
     cart: [],
-    cartOpen: false,
+    cartopen: false,
     totalPrice: 0,
-    currencyFormat: "$"
+    currencyFormat: "$",
+    rowNumber: 0
   };
   componentDidMount() {
     console.log(this.state.data);
@@ -50,6 +51,13 @@ class App extends Component {
     this.setState({ totalPrice });
   };
 
+  // ?TODO  Buggy Code
+  rowNumber = () => {
+    let counter = 0;
+    for (let i = 0; i <= 20; ++i) counter = +i;
+    return counter;
+  };
+
   //REGISTRATION FORM
   handleChange = e => {
     const { fields } = this.state;
@@ -66,8 +74,9 @@ class App extends Component {
     }
   };
   handleCartOpen = () => {
+    this.rowNumber();
     this.setState(prevState => {
-      return { cartOpen: !prevState.cartOpen };
+      return { cartopen: !prevState.cartopen };
     });
   };
   handleModalOpen = () => {
@@ -110,9 +119,9 @@ class App extends Component {
   };
 
   render() {
-    const { data, cartOpen, cart, totalPrice, currencyFormat } = this.state;
-
-    console.log("cartData: ", this.state.cart);
+    const { data, cartopen, cart, totalPrice, currencyFormat } = this.state;
+    console.log("cartData: ", this.state.counter);
+    console.log("cart length: ", cart.length);
     let content = <div>There is no data to show.</div>;
     if (data) {
       content = data.products.map(product => {
@@ -135,38 +144,43 @@ class App extends Component {
         );
       });
     }
-    let shoppingCart = <div>You haven't buy anythings from us.</div>;
-    if (cartOpen && cart) {
+    let shoppingCart = null;
+    if (cartopen && cart) {
       shoppingCart = (
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price $</th>
-          </tr>
-          {cart.map(item => {
-            return (
-              <tr key={item.id}>
-                <td>{item.title}</td>
-                <td>{item.description}</td>
+        <div className="card">
+          <table>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price $</th>
+            </tr>
+            {cart.map(item => {
+              return (
+                <tr key={item.id}>
+                  <td>{this.rowNumber()}</td>
+                  <td>{item.title}</td>
+                  <td>{item.description}</td>
+                  <td>
+                    <span>{item.currencyFormat}</span>
+                    {item.price}
+                  </td>
+                </tr>
+              );
+            })}
+            <tfoot>
+              <tr>
+                <td>Total Price=</td>
+                <td />
+                <td />
                 <td>
-                  <span>{item.currencyFormat}</span>
-                  {item.price}
+                  <span>{currencyFormat} </span>
+                  {totalPrice}
                 </td>
               </tr>
-            );
-          })}
-          <tfoot>
-            <tr>
-              <td>Total Price=</td>
-              <td />
-              <td>
-                <span>{currencyFormat} </span>
-                {totalPrice}
-              </td>
-            </tr>
-          </tfoot>
-        </table>
+            </tfoot>
+          </table>
+        </div>
       );
 
       cart.map((item, i) => {
@@ -194,7 +208,9 @@ class App extends Component {
           </div>
         </div>
         <div className="products">{content}</div>
-        <div className="shopping-cart">{shoppingCart}</div>
+        <div className="shopping-cart" open={this.state.cartOpen}>
+          {shoppingCart}
+        </div>
 
         <Modal open={this.state.open} closed={this.handleModalOpen}>
           <div className="card">
