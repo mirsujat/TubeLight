@@ -123,7 +123,29 @@ class App extends Component {
     }
     let shoppingCart = <div>You haven't buy anythings from us.</div>;
     if (cartOpen && cart) {
-      shoppingCart = cart.map((item, i) => {
+      shoppingCart = (
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price $</th>
+          </tr>
+          {cart.map(item => {
+            return (
+              <tr key={item.id}>
+                <td>{item.title}</td>
+                <td>{item.description}</td>
+                <td>
+                  <span>{item.currencyFormat}</span>
+                  {item.price}
+                </td>
+              </tr>
+            );
+          })}
+        </table>
+      );
+
+      cart.map((item, i) => {
         return (
           <div key={i}>
             <div>{item.title}</div>

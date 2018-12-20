@@ -177,3 +177,17 @@ p {
   align-items: center;
   padding: 15px;
 }
+table,
+th,
+td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+th {
+  color: rgba(0, 0, 0, 0.74);
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
