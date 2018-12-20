@@ -18,14 +18,16 @@ class App extends Component {
     open: false,
     data: { ...Products },
     cart: [],
-    cartOpen: false
+    cartOpen: false,
+    totalPrice: 0,
+    currencyFormat: "$"
   };
   componentDidMount() {
     console.log(this.state.data);
   }
   addToCart = id => {
     const data = { ...this.state.data };
-    const cart = this.state.cart;
+    const { cart } = this.state;
     const product = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
@@ -34,6 +36,18 @@ class App extends Component {
       }, {});
     cart.push(product);
     this.setState({ cart: cart });
+    this.totalPrice();
+  };
+
+  totalPrice = () => {
+    const { cart } = this.state;
+    let price = 0;
+    const totalPrice = cart
+      .reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.price;
+      }, price)
+      .toFixed(2);
+    this.setState({ totalPrice });
   };
 
   //REGISTRATION FORM
@@ -96,7 +110,7 @@ class App extends Component {
   };
 
   render() {
-    const { data, cartOpen, cart } = this.state;
+    const { data, cartOpen, cart, totalPrice, currencyFormat } = this.state;
 
     console.log("cartData: ", this.state.cart);
     let content = <div>There is no data to show.</div>;
@@ -142,6 +156,16 @@ class App extends Component {
               </tr>
             );
           })}
+          <tfoot>
+            <tr>
+              <td>Total Price=</td>
+              <td />
+              <td>
+                <span>{currencyFormat} </span>
+                {totalPrice}
+              </td>
+            </tr>
+          </tfoot>
         </table>
       );
 

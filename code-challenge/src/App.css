@@ -177,6 +177,9 @@ p {
   align-items: center;
   padding: 15px;
 }
+table {
+  margin-bottom: 20px;
+}
 table,
 th,
 td {
@@ -190,4 +193,7 @@ th,
 td {
   padding: 5px;
   text-align: left;
+}
+tr {
+  border: 1px solid grey;
 }
