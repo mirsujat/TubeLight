@@ -51,13 +51,6 @@ class App extends Component {
     this.setState({ totalPrice });
   };
 
-  // ?TODO  Buggy Code
-  rowNumber = () => {
-    let counter = 0;
-    for (let i = 0; i <= 20; ++i) counter = +i;
-    return counter;
-  };
-
   //REGISTRATION FORM
   handleChange = e => {
     const { fields } = this.state;
@@ -155,10 +148,10 @@ class App extends Component {
               <th>Description</th>
               <th>Price $</th>
             </tr>
-            {cart.map(item => {
+            {cart.map((item, index) => {
               return (
                 <tr key={item.id}>
-                  <td>{this.rowNumber()}</td>
+                  <td>{index + 1}</td>
                   <td>{item.title}</td>
                   <td>{item.description}</td>
                   <td>
