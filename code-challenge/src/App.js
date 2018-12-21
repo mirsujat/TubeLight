@@ -67,7 +67,6 @@ class App extends Component {
     }
   };
   handleCartOpen = () => {
-    this.rowNumber();
     this.setState(prevState => {
       return { cartopen: !prevState.cartopen };
     });
@@ -142,11 +141,12 @@ class App extends Component {
       shoppingCart = (
         <div className="card">
           <table>
+            <caption>Your Shopping List</caption>
             <tr>
               <th>#</th>
               <th>Name</th>
               <th>Description</th>
-              <th>Price $</th>
+              <th>Price ($)</th>
             </tr>
             {cart.map((item, index) => {
               return (
@@ -161,18 +161,13 @@ class App extends Component {
                 </tr>
               );
             })}
-            <tfoot>
-              <tr>
-                <td>Total Price=</td>
-                <td />
-                <td />
-                <td>
-                  <span>{currencyFormat} </span>
-                  {totalPrice}
-                </td>
-              </tr>
-            </tfoot>
           </table>
+          <div className="cart-footer">
+            <div className="display-total">
+              Total Price = <span>{currencyFormat} </span>
+              {totalPrice}
+            </div>
+          </div>
         </div>
       );
 

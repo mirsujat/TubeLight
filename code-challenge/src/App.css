@@ -183,29 +183,55 @@ table {
 table,
 th,
 td {
-  border: 1px solid grey;
+  border: 1px solid #ddd;
   border-collapse: collapse;
 }
 th {
-  color: rgba(0, 0, 0, 0.74);
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.64);
 }
 th,
 td {
-  padding: 5px;
   text-align: left;
 }
+tr > td {
+  padding: 5px 10px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
 tfoot {
+  width: 100%;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.64);
 }
-tr {
-  border: 1px solid grey;
+table > tfoot > tr {
+  background-color: white;
 }
 
 .shopping-cart {
   display: block;
   position: absolute;
-  top: 78px;
+  top: 76px;
   right: 0px;
   z-index: 100;
+}
+table > caption {
+  padding: 10px 15px;
+  font-size: 22px;
+  color: green;
+  font-weight: 700;
+}
+
+.display-total {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  color: green;
+  font-weight: 700;
 }
