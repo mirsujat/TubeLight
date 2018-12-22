@@ -158,8 +158,8 @@ class App extends Component {
                 return (
                   <tr key={Math.random() * 100}>
                     <td>{index + 1}</td>
-                    <td>{item.title || item.style}</td>
-                    <td>{item.description}</td>
+                    <td>{item.title}</td>
+                    <td>{item.description || item.style}</td>
                     <td>
                       <span>{item.currencyFormat}</span>
                       {item.price}
