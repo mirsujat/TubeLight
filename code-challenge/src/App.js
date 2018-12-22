@@ -25,7 +25,10 @@ class App extends Component {
   };
   componentDidMount() {
     console.log(this.state.data);
+    this.rowNumber();
   }
+  rowNumber = () => {};
+
   addToCart = id => {
     const data = { ...this.state.data };
     const { cart } = this.state;
@@ -142,43 +145,43 @@ class App extends Component {
         <div className="card">
           <table>
             <caption>Your Shopping List</caption>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Price ($)</th>
-            </tr>
-            {cart.map((item, index) => {
-              return (
-                <tr key={item.id}>
-                  <td>{index + 1}</td>
-                  <td>{item.title}</td>
-                  <td>{item.description}</td>
-                  <td>
-                    <span>{item.currencyFormat}</span>
-                    {item.price}
-                  </td>
-                </tr>
-              );
-            })}
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price ($)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((item, index) => {
+                return (
+                  <tr key={Math.random() * 100}>
+                    <td>{index + 1}</td>
+                    <td>{item.title || item.style}</td>
+                    <td>{item.description}</td>
+                    <td>
+                      <span>{item.currencyFormat}</span>
+                      {item.price}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+            <tfoot>
+              <tr>
+                <td />
+                <td />
+                <td>Total Price = </td>
+                <td>
+                  <span>{currencyFormat}</span>
+                  {totalPrice}
+                </td>
+              </tr>
+            </tfoot>
           </table>
-          <div className="cart-footer">
-            <div className="display-total">
-              Total Price = <span>{currencyFormat} </span>
-              {totalPrice}
-            </div>
-          </div>
         </div>
       );
-
-      cart.map((item, i) => {
-        return (
-          <div key={i}>
-            <div>{item.title}</div>
-            <div>{item.price}</div>
-          </div>
-        );
-      });
     }
     return (
       <div className="app">
