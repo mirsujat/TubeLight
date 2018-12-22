@@ -216,7 +216,7 @@ tr:hover {
 tfoot {
   width: 100%;
   font-weight: 700;
-  color: #2a862a;
+  color: #ff8b13;
 }
 
 .shopping-cart {
@@ -229,14 +229,12 @@ tfoot {
 table > caption {
   padding: 10px 15px;
   font-size: 22px;
-  color: green;
+  color: #f1f1f1;
   font-weight: 700;
+  margin-bottom: 15px;
+  background-color: #ff8b13;
 }
 
-.display-total {
-  display: block;
-  width: 100%;
-  font-size: 24px;
-  color: green;
-  font-weight: 700;
+.fas.fa-times {
+  color: rgba(0, 0, 0, 0.4);
 }

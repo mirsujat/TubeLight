@@ -21,17 +21,14 @@ class App extends Component {
     cartopen: false,
     totalPrice: 0,
     currencyFormat: "$",
-    rowNumber: 0
+    quantity: 1
   };
   componentDidMount() {
     console.log(this.state.data);
-    this.rowNumber();
   }
-  rowNumber = () => {};
 
   addToCart = id => {
-    const data = { ...this.state.data };
-    const { cart } = this.state;
+    const { data, cart } = this.state;
     const product = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
@@ -43,15 +40,24 @@ class App extends Component {
     this.totalPrice();
   };
 
-  totalPrice = () => {
+  removeFromCart = id => {
     const { cart } = this.state;
     let price = 0;
-    const totalPrice = cart
-      .reduce((accumulator, currentValue) => {
-        return accumulator + currentValue.price;
-      }, price)
-      .toFixed(2);
-    this.setState({ totalPrice });
+    const updatedCart = cart.filter(product => product.id !== id);
+    const totalPrice = updatedCart.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.price;
+    }, price);
+    this.setState({ cart: updatedCart, totalPrice });
+  };
+
+  totalPrice = () => {
+    const { cart } = this.state;
+    let updatedTotalPrice = { ...this.state.totalPrice };
+    let price = 0;
+    updatedTotalPrice = cart.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.price;
+    }, price);
+    this.setState({ totalPrice: updatedTotalPrice });
   };
 
   //REGISTRATION FORM
@@ -151,6 +157,7 @@ class App extends Component {
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price ($)</th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
@@ -162,7 +169,10 @@ class App extends Component {
                     <td>{item.description || item.style}</td>
                     <td>
                       <span>{item.currencyFormat}</span>
-                      {item.price}
+                      {item.price.toFixed(2)}
+                    </td>
+                    <td onClick={id => this.removeFromCart(item.id)}>
+                      <i className="fas fa-times" />
                     </td>
                   </tr>
                 );
@@ -175,8 +185,9 @@ class App extends Component {
                 <td>Total Price = </td>
                 <td>
                   <span>{currencyFormat}</span>
-                  {totalPrice}
+                  {totalPrice.toFixed(2)}
                 </td>
+                <td />
               </tr>
             </tfoot>
           </table>
