@@ -197,6 +197,11 @@ td {
 thead {
   background-color: #ddd;
 }
+thead,
+th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
 tr > td {
   padding: 5px 10px;
   text-align: left;
@@ -211,10 +216,7 @@ tr:hover {
 tfoot {
   width: 100%;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.64);
-}
-table > tfoot > tr {
-  background-color: white;
+  color: #2a862a;
 }
 
 .shopping-cart {
