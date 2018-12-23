@@ -12,7 +12,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 13,
@@ -26,7 +40,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 14,
@@ -40,7 +68,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 15,
@@ -54,7 +96,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 11,
@@ -68,7 +124,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 16,
@@ -82,7 +152,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 0,
@@ -96,7 +180,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 1,
@@ -110,7 +208,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 2,
@@ -124,7 +236,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 3,
@@ -138,7 +264,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 4,
@@ -152,7 +292,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: false,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 5,
@@ -166,7 +320,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: false,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 6,
@@ -180,7 +348,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 7,
@@ -194,7 +376,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 8,
@@ -208,7 +404,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: false,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 9,
@@ -222,7 +432,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     },
     {
       id: 10,
@@ -236,7 +460,21 @@ const Products = {
       currencyId: "USD",
       currencyFormat: "$",
       isFreeShipping: true,
-      minOrderQuantity: 1
+      minOrderQuantity: 1,
+      orderQuantity: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelve: 12
+      }
     }
   ]
 };

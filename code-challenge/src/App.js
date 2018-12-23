@@ -20,20 +20,23 @@ class App extends Component {
     cart: [],
     cartopen: false,
     totalPrice: 0,
-    currencyFormat: "$",
-    orderQuantity: 1
+    currencyFormat: "$"
   };
   componentDidMount() {
     // console.log(this.state.data);
   }
 
   addToCart = id => {
-    const { data, cart, orderQuantity } = this.state;
+    const { data, cart } = this.state;
     const product = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
-        obj.amount = orderQuantity * obj.price;
+
+        obj.amount =
+          obj.orderQuantity && obj.orderQuantity >= 2
+            ? obj.orderQuantity * obj.price
+            : obj.minOrderQuantity * obj.price;
         return obj;
       }, {});
 
@@ -48,7 +51,7 @@ class App extends Component {
     let price = 0;
     const updatedCart = cart.filter(product => product.id !== id);
     const totalPrice = updatedCart.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price * currentValue.minOrderQuantity;
+      return accumulator + currentValue.amount;
     }, price);
     this.setState({ cart: updatedCart, totalPrice });
   };
@@ -58,9 +61,13 @@ class App extends Component {
     let updatedTotalPrice = { ...this.state.totalPrice };
     let price = 0;
     updatedTotalPrice = cart.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price * currentValue.minOrderQuantity;
+      return accumulator + currentValue.amount;
     }, price);
     this.setState({ totalPrice: updatedTotalPrice });
+  };
+
+  handleOrderQuantity = e => {
+    const { cart } = this.state;
   };
 
   //REGISTRATION FORM
@@ -139,6 +146,15 @@ class App extends Component {
                 <span>{product.currencyFormat}</span> {product.price}
               </div>
               <div> Description: {product.description}</div>
+              <div>
+                {" "}
+                Select Quantity:
+                <select>
+                  <option value={product.orderQuantity.one}>1</option>
+                  <option value={product.orderQuantity.two}>2</option>
+                  <option value={product.orderQuantity.three}>3</option>
+                </select>
+              </div>
               <button onClick={() => this.addToCart(product.id)}>
                 BUY NOW
               </button>
