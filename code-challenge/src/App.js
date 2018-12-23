@@ -24,7 +24,7 @@ class App extends Component {
     quantity: 1
   };
   componentDidMount() {
-    console.log(this.state.data);
+    // console.log(this.state.data);
   }
 
   addToCart = id => {
@@ -33,10 +33,14 @@ class App extends Component {
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
+        obj.price = obj.minOrderQuantity * obj.price;
         return obj;
       }, {});
-    cart.push(product);
+
+    cart.unshift(product);
     this.setState({ cart: cart });
+    console.log("cart: ", cart);
+    // this.setState({ cart: cart });
     this.totalPrice();
   };
 
@@ -45,7 +49,7 @@ class App extends Component {
     let price = 0;
     const updatedCart = cart.filter(product => product.id !== id);
     const totalPrice = updatedCart.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price;
+      return accumulator + currentValue.price * currentValue.minOrderQuantity;
     }, price);
     this.setState({ cart: updatedCart, totalPrice });
   };
@@ -55,7 +59,7 @@ class App extends Component {
     let updatedTotalPrice = { ...this.state.totalPrice };
     let price = 0;
     updatedTotalPrice = cart.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price;
+      return accumulator + currentValue.price * currentValue.minOrderQuantity;
     }, price);
     this.setState({ totalPrice: updatedTotalPrice });
   };
@@ -121,8 +125,7 @@ class App extends Component {
 
   render() {
     const { data, cartopen, cart, totalPrice, currencyFormat } = this.state;
-    console.log("cartData: ", this.state.counter);
-    console.log("cart length: ", cart.length);
+
     let content = <div>There is no data to show.</div>;
     if (data) {
       content = data.products.map(product => {
@@ -156,6 +159,7 @@ class App extends Component {
                 <th>#</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Quantity</th>
                 <th>Price ($)</th>
                 <th>Remove</th>
               </tr>
@@ -167,6 +171,7 @@ class App extends Component {
                     <td>{index + 1}</td>
                     <td>{item.title}</td>
                     <td>{item.description || item.style}</td>
+                    <td>{item.minOrderQuantity}</td>
                     <td>
                       <span>{item.currencyFormat}</span>
                       {item.price.toFixed(2)}
@@ -180,6 +185,7 @@ class App extends Component {
             </tbody>
             <tfoot>
               <tr>
+                <td />
                 <td />
                 <td />
                 <td>Total Price = </td>

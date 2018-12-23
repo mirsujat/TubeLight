@@ -11,7 +11,8 @@ const Products = {
       installments: 9,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 13,
@@ -24,7 +25,8 @@ const Products = {
       installments: 5,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 14,
@@ -37,7 +39,8 @@ const Products = {
       installments: 3,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 15,
@@ -50,7 +53,8 @@ const Products = {
       installments: 5,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 11,
@@ -63,7 +67,8 @@ const Products = {
       installments: 3,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 16,
@@ -76,7 +81,8 @@ const Products = {
       installments: 5,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 0,
@@ -89,7 +95,8 @@ const Products = {
       installments: 9,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 1,
@@ -102,7 +109,8 @@ const Products = {
       installments: 9,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 2,
@@ -115,7 +123,8 @@ const Products = {
       installments: 7,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 3,
@@ -128,7 +137,8 @@ const Products = {
       installments: 7,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 4,
@@ -141,7 +151,8 @@ const Products = {
       installments: 12,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: false
+      isFreeShipping: false,
+      minOrderQuantity: 1
     },
     {
       id: 5,
@@ -154,7 +165,8 @@ const Products = {
       installments: 9,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: false
+      isFreeShipping: false,
+      minOrderQuantity: 1
     },
     {
       id: 6,
@@ -167,7 +179,8 @@ const Products = {
       installments: 0,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 7,
@@ -180,7 +193,8 @@ const Products = {
       installments: 4,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 8,
@@ -193,7 +207,8 @@ const Products = {
       installments: 4,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: false
+      isFreeShipping: false,
+      minOrderQuantity: 1
     },
     {
       id: 9,
@@ -206,7 +221,8 @@ const Products = {
       installments: 5,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     },
     {
       id: 10,
@@ -219,7 +235,8 @@ const Products = {
       installments: 9,
       currencyId: "USD",
       currencyFormat: "$",
-      isFreeShipping: true
+      isFreeShipping: true,
+      minOrderQuantity: 1
     }
   ]
 };
