@@ -39,8 +39,8 @@ class App extends Component {
 
     cart.unshift(product);
     this.setState({ cart: cart });
+
     console.log("cart: ", cart);
-    // this.setState({ cart: cart });
     this.totalPrice();
   };
 
