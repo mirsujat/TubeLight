@@ -21,19 +21,19 @@ class App extends Component {
     cartopen: false,
     totalPrice: 0,
     currencyFormat: "$",
-    quantity: 1
+    orderQuantity: 1
   };
   componentDidMount() {
     // console.log(this.state.data);
   }
 
   addToCart = id => {
-    const { data, cart } = this.state;
+    const { data, cart, orderQuantity } = this.state;
     const product = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
-        obj.price = obj.minOrderQuantity * obj.price;
+        obj.amount = orderQuantity * obj.price;
         return obj;
       }, {});
 
@@ -159,7 +159,8 @@ class App extends Component {
                 <th>Name</th>
                 <th>Description</th>
                 <th>Quantity</th>
-                <th>Price ($)</th>
+                <th>Unit Price ($)</th>
+                <th>Amount ($)</th>
                 <th>Remove</th>
               </tr>
             </thead>
@@ -175,6 +176,10 @@ class App extends Component {
                       <span>{item.currencyFormat}</span>
                       {item.price.toFixed(2)}
                     </td>
+                    <td>
+                      <span>{item.currencyFormat}</span>
+                      {item.amount.toFixed(2)}
+                    </td>
                     <td onClick={id => this.removeFromCart(item.id)}>
                       <i className="fas fa-times" />
                     </td>
@@ -184,6 +189,7 @@ class App extends Component {
             </tbody>
             <tfoot>
               <tr>
+                <td />
                 <td />
                 <td />
                 <td />
