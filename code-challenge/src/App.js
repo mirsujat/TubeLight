@@ -15,7 +15,7 @@ class App extends Component {
     cartopen: false,
     totalPrice: 0,
     currencyFormat: "$",
-    selectedProduct: ""
+    selectedProduct: {}
   };
 
   componentDidMount() {
@@ -28,6 +28,7 @@ class App extends Component {
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
+        obj.orderNUmber = Date.now().toFixed();
         obj.amount =
           obj.orderQuantity && obj.orderQuantity >= 2
             ? obj.orderQuantity * obj.price
@@ -35,6 +36,7 @@ class App extends Component {
         return obj;
       }, {});
     this.setState({ selectedProduct });
+    this.handleModalOpen();
   };
 
   addToCart = id => {
@@ -89,7 +91,17 @@ class App extends Component {
   };
 
   render() {
-    const { data, cartopen, cart, totalPrice, currencyFormat } = this.state;
+    const {
+      data,
+      cartopen,
+      cart,
+      totalPrice,
+      currencyFormat,
+      selectedProduct
+    } = this.state;
+
+    console.log("selected Product:", selectedProduct);
+    console.log("Size: ", this.state.selectedProduct.availableSizes);
 
     let content = <div>There is no data to show.</div>;
     if (data) {
@@ -189,24 +201,42 @@ class App extends Component {
           {shoppingCart}
         </div>
         <Modal open={this.state.open} closed={this.handleModalOpen}>
-          <form className="reg-form">
-            <div className="form-field">
-              <label>Title</label>
-              <input type="text" name="title" value="title" />
-            </div>
-            <div className="form-field">
-              <label>Description</label>
-              <input type="text" name="description" value="description" />
-            </div>
-            <div className="form-field">
-              <label>Size</label>
-              <input type="text" name="size" value="size" />
-            </div>
-            <div className="form-field">
-              <label>Quantity</label>
-              <input type="text" name="quantity" value="quantity" />
-            </div>
-          </form>
+          <div className="card">
+            <form className="reg-form">
+              <div className="form-field">
+                <p>Title: {selectedProduct.title}</p>
+              </div>
+              <div className="form-field">
+                <p>Description: {selectedProduct.description}</p>
+              </div>
+              <div className="form-field">
+                <label>Please Select Size</label>
+                <select
+                  value={selectedProduct.size}
+                  onChange={e => console.log(e.target.value)}
+                >
+                  <option>X</option>
+                  <option>L</option>
+                  <option>XL</option>
+                </select>
+              </div>
+              <p>Price: {selectedProduct.price}</p>
+              <div className="form-field">
+                <label>Please Select Quantity</label>
+                <select
+                  value={selectedProduct.orderQuantity.one}
+                  onChange={e => console.log(e.target.value)}
+                >
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                </select>
+              </div>
+            </form>
+          </div>
         </Modal>
       </div>
     );
