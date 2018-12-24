@@ -13,7 +13,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 13,
@@ -28,7 +28,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 14,
@@ -43,7 +43,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 15,
@@ -58,7 +58,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 11,
@@ -73,7 +73,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 16,
@@ -88,7 +88,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 0,
@@ -103,7 +103,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 1,
@@ -118,7 +118,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 2,
@@ -133,7 +133,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 3,
@@ -148,7 +148,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 4,
@@ -163,7 +163,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: false,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 5,
@@ -178,7 +178,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: false,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 6,
@@ -193,7 +193,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 7,
@@ -208,7 +208,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 8,
@@ -223,7 +223,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: false,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 9,
@@ -238,7 +238,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     },
     {
       id: 10,
@@ -253,7 +253,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: 0
+      orderQuantity: 1
     }
   ]
 };

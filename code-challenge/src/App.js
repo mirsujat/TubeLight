@@ -15,7 +15,8 @@ class App extends Component {
     cartopen: false,
     totalPrice: 0,
     currencyFormat: "$",
-    selectedProduct: {}
+    selectedProduct: {},
+    order: {}
   };
 
   componentDidMount() {
@@ -28,16 +29,23 @@ class App extends Component {
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
-        obj.orderNUmber = Date.now().toFixed();
-        obj.size = "";
-        obj.amount =
-          obj.orderQuantity && obj.orderQuantity >= 2
-            ? obj.orderQuantity * obj.price
-            : obj.minOrderQuantity * obj.price;
+        obj.amount = obj.price * obj.orderQuantity;
         return obj;
       }, {});
     this.setState({ selectedProduct });
     this.handleModalOpen();
+  };
+  // ! TODO
+  handleChange = e => {
+    const { selectedProduct } = this.state;
+    selectedProduct[e.target.name] = e.target.value;
+    this.setState({ selectedProduct });
+  };
+  orderSubmit = e => {
+    e.preventDefault();
+    const { cart, order } = this.state;
+    cart.unshift(order);
+    this.setState({ cart: cart });
   };
 
   addToCart = id => {
@@ -46,11 +54,8 @@ class App extends Component {
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
-
-        obj.amount =
-          obj.orderQuantity && obj.orderQuantity >= 2
-            ? obj.orderQuantity * obj.price
-            : obj.minOrderQuantity * obj.price;
+        obj.size = "";
+        obj.amount = obj.orderQuantity * obj.price;
         return obj;
       }, {});
 
@@ -99,11 +104,12 @@ class App extends Component {
       cart,
       totalPrice,
       currencyFormat,
-      selectedProduct
+      selectedProduct,
+      order
     } = this.state;
 
     console.log("selected Product:", selectedProduct);
-    console.log("Size: ", this.state.selectedProduct.availableSizes);
+    console.log("Order: ", order);
 
     let content = <div>There is no data to show.</div>;
     if (data) {
@@ -204,7 +210,7 @@ class App extends Component {
         </div>
         <Modal open={this.state.open} closed={this.handleModalOpen}>
           <div className="card">
-            <form className="reg-form">
+            <form className="reg-form" onSubmit={this.orderSubmit}>
               <div className="form-field">
                 <p>Title: {selectedProduct.title}</p>
               </div>
@@ -214,8 +220,9 @@ class App extends Component {
               <div className="form-field">
                 <label>Please Select Size</label>
                 <select
+                  name="size"
                   value={selectedProduct.size}
-                  onChange={e => console.log(e.target.value)}
+                  onChange={this.handleChange}
                 >
                   <option>X</option>
                   <option>L</option>
@@ -226,17 +233,22 @@ class App extends Component {
               <div className="form-field">
                 <label>Please Select Quantity</label>
                 <select
+                  name="orderQuantity"
                   value={selectedProduct.orderQuantity}
-                  onChange={e => console.log(e.target.value)}
+                  onChange={this.handleChange}
                 >
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
+                  <option>{1}</option>
+                  <option>{2}</option>
+                  <option>{3}</option>
+                  <option>{4}</option>
+                  <option>{5}</option>
+                  <option>{6}</option>
+                  <option>{7}</option>
                 </select>
+              </div>
+              <p>Amount: {selectedProduct.amount}</p>
+              <div className="form-field">
+                <button type="submit">ADD TO CART</button>
               </div>
             </form>
           </div>
