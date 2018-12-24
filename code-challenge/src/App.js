@@ -2,19 +2,13 @@ import React, { Component } from "react";
 import Axios from "axios";
 import Modal from "./Modal";
 import Products from "./products";
+import RegForm from "./RegForm";
 
 import "./App.css";
 
-const initRegForm = {
-  username: "",
-  email: "",
-  password: ""
-};
 class App extends Component {
   state = {
     loading: false,
-    fields: { ...initRegForm },
-    regFormError: { ...initRegForm },
     open: false,
     data: { ...Products },
     cart: [],
@@ -70,21 +64,6 @@ class App extends Component {
     const { cart } = this.state;
   };
 
-  //REGISTRATION FORM
-  handleChange = e => {
-    const { fields } = this.state;
-    fields[e.target.name] = e.target.value;
-    this.setState({ fields });
-  };
-  submitRegForm = e => {
-    e.preventDefault();
-    let fields = initRegForm;
-    const isValid = this.validateRegForm();
-    if (isValid) {
-      console.log(this.state.fields);
-      this.setState({ fields });
-    }
-  };
   handleCartOpen = () => {
     this.setState(prevState => {
       return { cartopen: !prevState.cartopen };
@@ -94,39 +73,6 @@ class App extends Component {
     this.setState(prevState => {
       return { open: !prevState.open };
     });
-  };
-
-  // Validate Reg Form
-  validateRegForm = () => {
-    const { fields } = this.state;
-    const regFormError = {};
-    let isValid = true;
-    const pattern = {
-      username: /^[\w\.-]{2,20}$/,
-      email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/
-    };
-    const errorMsg = {
-      username:
-        "Username must be alphanumeric[A-Za-z0-9_.-] and contain (2-20) Characters.",
-      email: "Invalid e-mail address. i.e; test@gmail.com",
-      password:
-        "Password must be 6-20 characters which contain at least one numeric digit, one uppercase and one lowercase letter."
-    };
-    if (!fields.username.match(pattern.username)) {
-      isValid = false;
-      regFormError.username = errorMsg.username;
-    }
-    if (!fields.email.match(pattern.email)) {
-      isValid = false;
-      regFormError.email = errorMsg.email;
-    }
-    if (!fields.password.match(pattern.password)) {
-      isValid = false;
-      regFormError.password = errorMsg.password;
-    }
-    this.setState({ regFormError });
-    return isValid;
   };
 
   render() {
@@ -146,15 +92,7 @@ class App extends Component {
                 <span>{product.currencyFormat}</span> {product.price}
               </div>
               <div> Description: {product.description}</div>
-              <div>
-                {" "}
-                Select Quantity:
-                <select>
-                  <option value={product.orderQuantity.one}>1</option>
-                  <option value={product.orderQuantity.two}>2</option>
-                  <option value={product.orderQuantity.three}>3</option>
-                </select>
-              </div>
+
               <button onClick={() => this.addToCart(product.id)}>
                 BUY NOW
               </button>
@@ -240,51 +178,7 @@ class App extends Component {
         <div className="shopping-cart" open={this.state.cartOpen}>
           {shoppingCart}
         </div>
-
-        <Modal open={this.state.open} closed={this.handleModalOpen}>
-          <div className="card">
-            <div className="card-header">
-              <h1>REGISTER NOW!</h1>
-            </div>
-            <div className="card-body">
-              <form onSubmit={this.submitRegForm} className="reg-form">
-                <div className="form-field">
-                  <label htmlFor="">Username</label>
-                  <input
-                    type="text"
-                    name="username"
-                    value={this.state.fields.username}
-                    onChange={this.handleChange}
-                  />
-                  <p className="error">{this.state.regFormError.username}</p>
-                </div>
-                <div className="form-field">
-                  <label htmlFor="">Email</label>
-                  <input
-                    type="text"
-                    name="email"
-                    value={this.state.fields.email}
-                    onChange={this.handleChange}
-                  />
-                  <p className="error">{this.state.regFormError.email}</p>
-                </div>
-                <div className="form-field">
-                  <label htmlFor="">Password</label>
-                  <input
-                    type="text"
-                    name="password"
-                    value={this.state.fields.password}
-                    onChange={this.handleChange}
-                  />
-                  <p className="error">{this.state.regFormError.password}</p>
-                </div>
-                <div className="form-field">
-                  <button type="submit">Register</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </Modal>
+        <RegForm open={this.state.open} closed={this.handleModalOpen} />
       </div>
     );
   }
