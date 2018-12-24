@@ -14,8 +14,10 @@ class App extends Component {
     cart: [],
     cartopen: false,
     totalPrice: 0,
-    currencyFormat: "$"
+    currencyFormat: "$",
+    selectedProduct: ""
   };
+
   componentDidMount() {
     // console.log(this.state.data);
   }
@@ -60,15 +62,12 @@ class App extends Component {
     this.setState({ totalPrice: updatedTotalPrice });
   };
 
-  handleOrderQuantity = e => {
-    const { cart } = this.state;
-  };
-
   handleCartOpen = () => {
     this.setState(prevState => {
       return { cartopen: !prevState.cartopen };
     });
   };
+
   handleModalOpen = () => {
     this.setState(prevState => {
       return { open: !prevState.open };
@@ -92,7 +91,6 @@ class App extends Component {
                 <span>{product.currencyFormat}</span> {product.price}
               </div>
               <div> Description: {product.description}</div>
-
               <button onClick={() => this.addToCart(product.id)}>
                 BUY NOW
               </button>
@@ -178,7 +176,26 @@ class App extends Component {
         <div className="shopping-cart" open={this.state.cartOpen}>
           {shoppingCart}
         </div>
-        <RegForm open={this.state.open} closed={this.handleModalOpen} />
+        <Modal open={this.state.open} closed={this.handleModalOpen}>
+          <form className="reg-form">
+            <div className="form-field">
+              <label>Title</label>
+              <input type="text" name="title" value="title" />
+            </div>
+            <div className="form-field">
+              <label>Description</label>
+              <input type="text" name="description" value="description" />
+            </div>
+            <div className="form-field">
+              <label>Size</label>
+              <input type="text" name="size" value="size" />
+            </div>
+            <div className="form-field">
+              <label>Quantity</label>
+              <input type="text" name="quantity" value="quantity" />
+            </div>
+          </form>
+        </Modal>
       </div>
     );
   }
