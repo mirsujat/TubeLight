@@ -62,7 +62,7 @@ class RegForm extends Component {
 
   render() {
     return (
-      <Modal open={this.props.open} closed={this.props.handleModalOpen}>
+      <Modal open={this.props.open} closed={this.props.closed}>
         <div className="card">
           <div className="card-header">
             <h1>REGISTER NOW!</h1>
