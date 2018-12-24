@@ -29,6 +29,7 @@ class App extends Component {
       .reduce((obj, item) => {
         obj = item;
         obj.orderNUmber = Date.now().toFixed();
+        obj.size = "";
         obj.amount =
           obj.orderQuantity && obj.orderQuantity >= 2
             ? obj.orderQuantity * obj.price
@@ -45,6 +46,7 @@ class App extends Component {
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
+
         obj.amount =
           obj.orderQuantity && obj.orderQuantity >= 2
             ? obj.orderQuantity * obj.price
@@ -224,9 +226,10 @@ class App extends Component {
               <div className="form-field">
                 <label>Please Select Quantity</label>
                 <select
-                  value={selectedProduct.orderQuantity.one}
+                  value={selectedProduct.orderQuantity}
                   onChange={e => console.log(e.target.value)}
                 >
+                  <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>

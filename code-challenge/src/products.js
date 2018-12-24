@@ -13,20 +13,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 13,
@@ -41,20 +28,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 14,
@@ -69,20 +43,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 15,
@@ -97,20 +58,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 11,
@@ -125,20 +73,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 16,
@@ -153,20 +88,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 0,
@@ -181,20 +103,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 1,
@@ -209,20 +118,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 2,
@@ -237,20 +133,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 3,
@@ -265,20 +148,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 4,
@@ -293,20 +163,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: false,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 5,
@@ -321,20 +178,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: false,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 6,
@@ -349,20 +193,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 7,
@@ -377,20 +208,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 8,
@@ -405,20 +223,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: false,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 9,
@@ -433,20 +238,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     },
     {
       id: 10,
@@ -461,20 +253,7 @@ const Products = {
       currencyFormat: "$",
       isFreeShipping: true,
       minOrderQuantity: 1,
-      orderQuantity: {
-        one: 1,
-        two: 2,
-        three: 3,
-        four: 4,
-        five: 5,
-        six: 6,
-        seven: 7,
-        eight: 8,
-        nine: 9,
-        ten: 10,
-        eleven: 11,
-        twelve: 12
-      }
+      orderQuantity: 0
     }
   ]
 };
