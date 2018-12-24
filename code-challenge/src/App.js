@@ -22,13 +22,27 @@ class App extends Component {
     // console.log(this.state.data);
   }
 
+  buyNow = id => {
+    const { data } = this.state;
+    const selectedProduct = data.products
+      .filter(product => product.id === id)
+      .reduce((obj, item) => {
+        obj = item;
+        obj.amount =
+          obj.orderQuantity && obj.orderQuantity >= 2
+            ? obj.orderQuantity * obj.price
+            : obj.minOrderQuantity * obj.price;
+        return obj;
+      }, {});
+    this.setState({ selectedProduct });
+  };
+
   addToCart = id => {
     const { data, cart } = this.state;
     const product = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
-
         obj.amount =
           obj.orderQuantity && obj.orderQuantity >= 2
             ? obj.orderQuantity * obj.price
@@ -91,9 +105,7 @@ class App extends Component {
                 <span>{product.currencyFormat}</span> {product.price}
               </div>
               <div> Description: {product.description}</div>
-              <button onClick={() => this.addToCart(product.id)}>
-                BUY NOW
-              </button>
+              <button onClick={() => this.buyNow(product.id)}>BUY NOW</button>
             </div>
           </div>
         );
