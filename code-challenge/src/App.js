@@ -35,11 +35,21 @@ class App extends Component {
     this.setState({ selectedProduct });
     this.handleModalOpen();
   };
+  handleOrder = () => {
+    const { selectedProduct } = this.state;
+    const order = selectedProduct;
+    order.amount = order.price * order.quantity;
+    order.orderNumber = Date.now().toFixed();
+    this.setState({ order });
+  };
   // ! TODO
   handleChange = e => {
     const { selectedProduct } = this.state;
-    selectedProduct[e.target.name] = e.target.value;
-    this.setState({ selectedProduct });
+    const order = selectedProduct;
+    order.amount = order.price * +order.quantity;
+    order.orderNumber = Date.now().toFixed();
+    order[e.target.name] = e.target.value;
+    this.setState({ order });
   };
   orderSubmit = e => {
     e.preventDefault();
