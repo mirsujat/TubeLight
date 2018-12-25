@@ -88,9 +88,9 @@ class App extends Component {
 
   totalPrice = () => {
     const { cart } = this.state;
-    let updatedTotalPrice = { ...this.state.totalPrice };
+    // let updatedTotalPrice = { ...this.state.totalPrice };
     let price = 0;
-    updatedTotalPrice = cart.reduce((accumulator, currentValue) => {
+    const updatedTotalPrice = cart.reduce((accumulator, currentValue) => {
       return accumulator + currentValue.amount;
     }, price);
     this.setState({ totalPrice: updatedTotalPrice });
@@ -169,11 +169,11 @@ class App extends Component {
                     <td>{item.orderQuantity}</td>
                     <td>
                       <span>{item.currencyFormat}</span>
-                      {item.price.toFixed(2)}
+                      {item.price}
                     </td>
                     <td>
                       <span>{item.currencyFormat}</span>
-                      {item.amount.toFixed(2)}
+                      {item.amount}
                     </td>
                     <td onClick={id => this.removeFromCart(item.id)}>
                       <i className="fas fa-times" />
