@@ -29,6 +29,7 @@ class App extends Component {
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
+        obj.amount = 0;
         obj.amount = obj.price * obj.orderQuantity;
         return obj;
       }, {});
@@ -38,7 +39,6 @@ class App extends Component {
   handleOrder = () => {
     const { selectedProduct } = this.state;
     const order = selectedProduct;
-    order.amount = order.price * order.quantity;
     order.orderNumber = Date.now().toFixed();
     this.setState({ order });
   };
@@ -46,9 +46,9 @@ class App extends Component {
   handleChange = e => {
     const { selectedProduct } = this.state;
     const order = selectedProduct;
-    order.amount = order.price * +order.quantity;
-    order.orderNumber = Date.now().toFixed();
     order[e.target.name] = e.target.value;
+    order.amount = order.price * order.orderQuantity;
+    order.orderNumber = Date.now().toFixed();
     this.setState({ order });
   };
   orderSubmit = e => {
@@ -256,7 +256,7 @@ class App extends Component {
                   <option>{7}</option>
                 </select>
               </div>
-              <p>Amount: {selectedProduct.amount}</p>
+              <p>Amount: {order.amount}</p>
               <div className="form-field">
                 <button type="submit">ADD TO CART</button>
               </div>
