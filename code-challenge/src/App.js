@@ -165,7 +165,9 @@ class App extends Component {
                   <tr key={Math.random() * 100}>
                     <td>{index + 1}</td>
                     <td>{item.title}</td>
-                    <td>{item.description || item.style}</td>
+                    <td>
+                      {item.description || item.style}, Size: {item.size}
+                    </td>
                     <td>{item.orderQuantity}</td>
                     <td>
                       <span>{item.currencyFormat}</span>
@@ -173,7 +175,7 @@ class App extends Component {
                     </td>
                     <td>
                       <span>{item.currencyFormat}</span>
-                      {item.amount}
+                      {item.amount.toFixed(2)}
                     </td>
                     <td onClick={id => this.removeFromCart(item.id)}>
                       <i className="fas fa-times" />
