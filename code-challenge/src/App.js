@@ -103,7 +103,7 @@ class App extends Component {
 
   handleModalOpen = () => {
     this.setState(prevState => {
-      return { open: !prevState.open };
+      return { open: !prevState.open, order: {} };
     });
   };
 
@@ -256,7 +256,7 @@ class App extends Component {
                   <option>{7}</option>
                 </select>
               </div>
-              <p>Amount: {order.amount}</p>
+              <p>Amount: {order.amount || selectedProduct.amount}</p>
               <div className="form-field">
                 <button type="submit">ADD TO CART</button>
               </div>
