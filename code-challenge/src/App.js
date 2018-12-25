@@ -55,7 +55,8 @@ class App extends Component {
     e.preventDefault();
     const { cart, order } = this.state;
     cart.unshift(order);
-    this.setState({ cart: cart });
+    this.totalPrice();
+    this.setState({ cart: cart, order: {}, open: false });
   };
 
   addToCart = id => {
@@ -165,7 +166,7 @@ class App extends Component {
                     <td>{index + 1}</td>
                     <td>{item.title}</td>
                     <td>{item.description || item.style}</td>
-                    <td>{item.minOrderQuantity}</td>
+                    <td>{item.orderQuantity}</td>
                     <td>
                       <span>{item.currencyFormat}</span>
                       {item.price.toFixed(2)}
