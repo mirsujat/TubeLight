@@ -16,7 +16,11 @@ class App extends Component {
     totalPrice: Number,
     currencyFormat: "$",
     selectedProduct: {},
-    order: {}
+    order: {},
+    orderFormError: {
+      size: "",
+      orderQauntity: ""
+    }
   };
 
   // This will select a product to buy
@@ -27,6 +31,7 @@ class App extends Component {
       .reduce((obj, item) => {
         obj = item;
         obj.orderNumber = Date.now().toFixed();
+        obj.size = "";
         obj.amount = obj.price;
         return obj;
       }, {});
@@ -51,9 +56,17 @@ class App extends Component {
   orderSubmit = e => {
     e.preventDefault();
     const { cart, order } = this.state;
-    cart.unshift(order);
-    this.totalPrice();
-    this.setState({ cart: cart, order: {}, selectedProduct: {}, open: false });
+    const isValid = this.validateOrder();
+    if (isValid) {
+      cart.unshift(order);
+      this.totalPrice();
+      this.setState({
+        cart: cart,
+        order: {},
+        selectedProduct: {},
+        open: false
+      });
+    }
   };
 
   // Handle remove order from cart and recalculate the totalPrice
@@ -92,6 +105,23 @@ class App extends Component {
     });
   };
 
+  // Validate Order
+  validateOrder = () => {
+    const { order } = this.state;
+    const orderFormError = {};
+    let isValid = true;
+    if (!order.size) {
+      isValid = false;
+      orderFormError.size = "Please select size.";
+    }
+    if (!order.orderQuantity < 0) {
+      isValid = false;
+      orderFormError.orderQuantity = "Please select quantity.";
+    }
+    this.setState({ orderFormError });
+    return isValid;
+  };
+
   render() {
     const {
       data,
@@ -100,7 +130,8 @@ class App extends Component {
       totalPrice,
       currencyFormat,
       selectedProduct,
-      order
+      order,
+      orderFormError
     } = this.state;
 
     let content = <div>There is no data to show.</div>;
@@ -215,13 +246,14 @@ class App extends Component {
                 <label>Please Select Size</label>
                 <select
                   name="size"
-                  value={selectedProduct.size}
+                  value={order.size}
                   onChange={this.handleChange}
                 >
                   <option>X</option>
                   <option>L</option>
                   <option>XL</option>
                 </select>
+                <p className="error">{orderFormError.size}</p>
               </div>
               <p>Price: {selectedProduct.price}</p>
               <div className="form-field">
@@ -239,6 +271,7 @@ class App extends Component {
                   <option>{6}</option>
                   <option>{7}</option>
                 </select>
+                <p className="error">{orderFormError.orderQauntity}</p>
               </div>
               <p>Amount: {order.amount}</p>
               <div className="form-field">
