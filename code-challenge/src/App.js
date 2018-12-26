@@ -27,7 +27,7 @@ class App extends Component {
       .reduce((obj, item) => {
         obj = item;
         obj.orderNumber = Date.now().toFixed();
-        obj.amount = obj.price * obj.orderQuantity;
+        obj.amount = obj.price;
         return obj;
       }, {});
     this.setState({ selectedProduct, order: selectedProduct });
@@ -39,11 +39,12 @@ class App extends Component {
   };
   // Handle order as user specified
   handleChange = e => {
-    const { order } = this.state;
+    // const { order } = this.state;
     // const order = selectedProduct;
-    order[e.target.name] = e.target.value;
-    order.amount = order.orderQuantity * order.price;
-    this.setState({ order });
+    const updateOrder = { ...this.state.order };
+    updateOrder[e.target.name] = e.target.value;
+    updateOrder.amount = updateOrder.orderQuantity * updateOrder.price;
+    this.setState({ order: updateOrder });
   };
 
   // Handle order submission and update the cart by adding new order
