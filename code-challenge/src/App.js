@@ -19,63 +19,44 @@ class App extends Component {
     order: {}
   };
 
-  componentDidMount() {
-    // console.log(this.state.data);
-  }
-
+  // This will select a product to buy
   buyNow = id => {
     const { data } = this.state;
     const selectedProduct = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
+        obj.orderNumber = Date.now().toFixed();
         obj.amount = 0;
         obj.amount = obj.price * obj.orderQuantity;
         return obj;
       }, {});
-    this.setState({ selectedProduct });
+    this.setState({ selectedProduct, order: selectedProduct });
     this.handleModalOpen();
   };
-  handleOrder = () => {
-    const { selectedProduct } = this.state;
-    const order = selectedProduct;
-    order.orderNumber = Date.now().toFixed();
-    this.setState({ order });
+  // Handle order amount product price multiplied by orderQauntity
+  calculateAmount = (x, y) => {
+    return Number.parseInt(x * y).toFixed(2);
   };
-  // ! TODO
+  // Handle order as user specified
   handleChange = e => {
-    const { selectedProduct } = this.state;
-    const order = selectedProduct;
-    order[e.target.name] = e.target.value;
+    const { order } = this.state;
+    // const order = selectedProduct;
     order.amount = order.price * order.orderQuantity;
-    order.orderNumber = Date.now().toFixed();
+    order[e.target.name] = e.target.value;
     this.setState({ order });
   };
+
+  // Handle order submission and update the cart by adding new order
   orderSubmit = e => {
     e.preventDefault();
     const { cart, order } = this.state;
     cart.unshift(order);
     this.totalPrice();
-    this.setState({ cart: cart, order: {}, open: false });
+    this.setState({ cart: cart, order: {}, selectedProduct: {}, open: false });
   };
 
-  addToCart = id => {
-    const { data, cart } = this.state;
-    const product = data.products
-      .filter(product => product.id === id)
-      .reduce((obj, item) => {
-        obj = item;
-        obj.size = "";
-        obj.amount = obj.orderQuantity * obj.price;
-        return obj;
-      }, {});
-
-    cart.unshift(product);
-    this.setState({ cart: cart });
-    console.log("cart: ", cart);
-    this.totalPrice();
-  };
-
+  // Handle remove order from cart and recalculate the totalPrice
   removeFromCart = id => {
     const { cart } = this.state;
     let price = 0;
@@ -86,25 +67,28 @@ class App extends Component {
     this.setState({ cart: updatedCart, totalPrice });
   };
 
+  // Handle totalPrice calculation of all orders.
   totalPrice = () => {
     const { cart } = this.state;
-    // let updatedTotalPrice = { ...this.state.totalPrice };
-    let price = 0;
-    const updatedTotalPrice = cart.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.amount;
-    }, price);
-    this.setState({ totalPrice: updatedTotalPrice });
+    let initialValue = 0;
+    let totalPrice = cart.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.amount,
+      initialValue
+    );
+    this.setState({ totalPrice });
   };
 
+  // Handle shopping cart open and close
   handleCartOpen = () => {
     this.setState(prevState => {
       return { cartopen: !prevState.cartopen };
     });
   };
 
+  // Handle modal open and close
   handleModalOpen = () => {
     this.setState(prevState => {
-      return { open: !prevState.open, order: {} };
+      return { open: !prevState.open };
     });
   };
 
@@ -118,9 +102,6 @@ class App extends Component {
       selectedProduct,
       order
     } = this.state;
-
-    console.log("selected Product:", selectedProduct);
-    console.log("Order: ", order);
 
     let content = <div>There is no data to show.</div>;
     if (data) {
@@ -175,7 +156,7 @@ class App extends Component {
                     </td>
                     <td>
                       <span>{item.currencyFormat}</span>
-                      {item.amount.toFixed(2)}
+                      {item.amount}
                     </td>
                     <td onClick={id => this.removeFromCart(item.id)}>
                       <i className="fas fa-times" />
@@ -192,8 +173,8 @@ class App extends Component {
                 <td />
                 <td>Total Price = </td>
                 <td>
-                  <span>{currencyFormat}</span>
-                  {totalPrice.toFixed(2)}
+                  <span>{currencyFormat} </span>
+                  {totalPrice}
                 </td>
                 <td />
               </tr>
@@ -247,7 +228,7 @@ class App extends Component {
                 <label>Please Select Quantity</label>
                 <select
                   name="orderQuantity"
-                  value={selectedProduct.orderQuantity}
+                  value={order.orderQuantity}
                   onChange={this.handleChange}
                 >
                   <option>{1}</option>
@@ -259,7 +240,7 @@ class App extends Component {
                   <option>{7}</option>
                 </select>
               </div>
-              <p>Amount: {order.amount || selectedProduct.amount}</p>
+              <p>Amount: {order.amount}</p>
               <div className="form-field">
                 <button type="submit">ADD TO CART</button>
               </div>
