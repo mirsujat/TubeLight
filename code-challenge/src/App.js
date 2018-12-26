@@ -163,6 +163,7 @@ class App extends Component {
             <thead>
               <tr>
                 <th>#</th>
+                <th>Order Number</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Quantity</th>
@@ -176,6 +177,7 @@ class App extends Component {
                 return (
                   <tr key={Math.random() * 100}>
                     <td>{index + 1}</td>
+                    <td>{item.orderNumber}</td>
                     <td>{item.title}</td>
                     <td>
                       {item.description || item.style}, Size: {item.size}
@@ -198,6 +200,7 @@ class App extends Component {
             </tbody>
             <tfoot>
               <tr>
+                <td />
                 <td />
                 <td />
                 <td />
