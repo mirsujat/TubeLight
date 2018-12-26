@@ -13,7 +13,7 @@ class App extends Component {
     data: { ...Products },
     cart: [],
     cartopen: false,
-    totalPrice: 0,
+    totalPrice: Number,
     currencyFormat: "$",
     selectedProduct: {},
     order: {}
@@ -27,7 +27,6 @@ class App extends Component {
       .reduce((obj, item) => {
         obj = item;
         obj.orderNumber = Date.now().toFixed();
-        obj.amount = 0;
         obj.amount = obj.price * obj.orderQuantity;
         return obj;
       }, {});
@@ -42,8 +41,8 @@ class App extends Component {
   handleChange = e => {
     const { order } = this.state;
     // const order = selectedProduct;
-    order.amount = order.price * order.orderQuantity;
     order[e.target.name] = e.target.value;
+    order.amount = order.orderQuantity * order.price;
     this.setState({ order });
   };
 
@@ -151,12 +150,12 @@ class App extends Component {
                     </td>
                     <td>{item.orderQuantity}</td>
                     <td>
-                      <span>{item.currencyFormat}</span>
+                      <span>{item.currencyFormat} </span>
                       {item.price}
                     </td>
                     <td>
-                      <span>{item.currencyFormat}</span>
-                      {item.amount}
+                      <span>{item.currencyFormat} </span>
+                      {item.amount.toFixed(2)}
                     </td>
                     <td onClick={id => this.removeFromCart(item.id)}>
                       <i className="fas fa-times" />
@@ -174,7 +173,7 @@ class App extends Component {
                 <td>Total Price = </td>
                 <td>
                   <span>{currencyFormat} </span>
-                  {totalPrice}
+                  {totalPrice.toFixed(2)}
                 </td>
                 <td />
               </tr>
