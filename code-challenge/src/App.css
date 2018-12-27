@@ -156,6 +156,7 @@ li > span {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-bottom: 15px;
 }
 label {
   font-weight: 700;
