@@ -31,10 +31,11 @@ form input[type="text"] {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   background-color: teal;
   padding: 25px;
+  color: #f1f1f1;
 }
 .search-nav {
   display: flex;
@@ -75,6 +76,14 @@ li > span {
   color: rgba(0, 0, 0, 0.64);
   padding-right: 10px;
 }
+.btn {
+  display: inline-block;
+  line-height: 20px;
+  padding: 6px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .reg-btn {
   background-color: transparent;
   color: #f1f1f1;
