@@ -22,8 +22,18 @@ class App extends Component {
       orderQauntity: ""
     }
   };
+  /*  THE TODO LIST
+ 1. select a product to buy
+ 2. process order as user specified
+ 3. add order to cart
+ 4. remove order from cart 
+ 5. calculate total Price from all order placed onto cart
+ 6. handle shopping cart open and close
+ 7. handle modal open cand close
+ 8. validate order
+ */
 
-  // This will select a product to buy
+  // This will select a product to buy Method-1
   buyNow = id => {
     const { data } = this.state;
     const selectedProduct = data.products
@@ -38,21 +48,16 @@ class App extends Component {
     this.setState({ selectedProduct, order: selectedProduct });
     this.handleModalOpen();
   };
-  // Handle order amount product price multiplied by orderQauntity
-  calculateAmount = (x, y) => {
-    return Number.parseInt(x * y).toFixed(2);
-  };
-  // Handle order as user specified
+
+  // Handle order as user specified Method-2
   handleChange = e => {
-    // const { order } = this.state;
-    // const order = selectedProduct;
     const updateOrder = { ...this.state.order };
     updateOrder[e.target.name] = e.target.value;
     updateOrder.amount = updateOrder.orderQuantity * updateOrder.price;
     this.setState({ order: updateOrder });
   };
 
-  // Handle order submission and update the cart by adding new order
+  // Handle order submission and update the cart by adding new order Method-3
   orderSubmit = e => {
     e.preventDefault();
     const { cart, order } = this.state;
@@ -69,7 +74,7 @@ class App extends Component {
     }
   };
 
-  // Handle remove order from cart and recalculate the totalPrice
+  // Handle remove order from cart and recalculate the totalPrice Method-4
   removeFromCart = id => {
     const { cart } = this.state;
     let price = 0;
@@ -80,7 +85,7 @@ class App extends Component {
     this.setState({ cart: updatedCart, totalPrice });
   };
 
-  // Handle totalPrice calculation of all orders.
+  // Handle totalPrice calculation of all orders. Method-5
   totalPrice = () => {
     const { cart } = this.state;
     let initialValue = 0;
@@ -91,21 +96,21 @@ class App extends Component {
     this.setState({ totalPrice });
   };
 
-  // Handle shopping cart open and close
+  // Handle shopping cart open and close Method-6
   handleCartOpen = () => {
     this.setState(prevState => {
       return { cartopen: !prevState.cartopen };
     });
   };
 
-  // Handle modal open and close
+  // Handle modal open and close Method-7
   handleModalOpen = () => {
     this.setState(prevState => {
       return { open: !prevState.open };
     });
   };
 
-  // Validate Order
+  // Validate Order Method-8
   validateOrder = () => {
     const { order } = this.state;
     const orderFormError = {};
