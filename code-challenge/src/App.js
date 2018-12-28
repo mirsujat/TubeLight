@@ -18,7 +18,7 @@ class App extends Component {
   // method-1: select a product to buy -DONE
   // method-2: process the order as user specified -DONE
   // method-3: submit order and added to cart -DONE
-  // method-4: calculate total price from ordered products
+  // method-4: calculate total price from ordered products -DONE
   // method-5: handle modal open and close -DONE
   // method-6: handle cart open and close -DONE
   // method-7: validate user input
@@ -54,7 +54,15 @@ class App extends Component {
     this.setState({ cart: cart, order: {}, selectId: null, open: false });
     this.totalPrice();
   };
-
+  removeOrder = orderNumber => {
+    const { cart } = this.state;
+    const updateOrder = cart.filter(order => order.orderNumber !== orderNumber);
+    const updateTotalPrice = updateOrder.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.amount,
+      0
+    );
+    this.setState({ cart: updateOrder, totalPrice: updateTotalPrice });
+  };
   totalPrice = () => {
     const { cart } = this.state;
     const totalPrice = cart.reduce(
@@ -118,6 +126,7 @@ class App extends Component {
                 <td>Price($)</td>
                 <td>Quantity</td>
                 <td>Amount($)</td>
+                <td>Remove</td>
               </tr>
             </thead>
             <tbody>
@@ -136,6 +145,12 @@ class App extends Component {
                     <td>
                       {item.currencyFormat}{" "}
                       {parseFloat(item.amount, 10).toFixed(2)}
+                    </td>
+                    <td
+                      onClick={() => this.removeOrder(item.orderNumber)}
+                      className="remove-btn"
+                    >
+                      Remove
                     </td>
                   </tr>
                 );

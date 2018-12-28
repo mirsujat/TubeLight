@@ -250,3 +250,7 @@ table > caption {
 .fas.fa-times {
   color: rgba(0, 0, 0, 0.4);
 }
+
+.remove-btn {
+  cursor: pointer;
+}
