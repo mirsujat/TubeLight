@@ -133,7 +133,8 @@ class App extends Component {
               </div>
               <div className="form-field">
                 <p>
-                  Amount: {order.currencyFormat} {order.amount}
+                  Amount: {order.currencyFormat}{" "}
+                  {parseFloat(order.amount, 10).toFixed(2)}
                 </p>
               </div>
               <div className="form-field">
