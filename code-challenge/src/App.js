@@ -52,6 +52,16 @@ class App extends Component {
     const { cart, order } = this.state;
     cart.unshift(order);
     this.setState({ cart: cart, order: {}, selectId: null, open: false });
+    this.totalPrice();
+  };
+
+  totalPrice = () => {
+    const { cart } = this.state;
+    const totalPrice = cart.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.amount,
+      0
+    );
+    this.setState({ totalPrice });
   };
 
   //! handle Modal open

@@ -62,13 +62,14 @@ class Ecom extends Component {
     const isValid = this.validateOrder();
     if (isValid) {
       cart.unshift(order);
-      this.totalPrice();
+
       this.setState({
         cart: cart,
         order: {},
         selectedProduct: {},
         open: false
       });
+      this.totalPrice();
     }
   };
 
