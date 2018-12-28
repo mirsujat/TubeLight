@@ -9,7 +9,10 @@ class App extends Component {
     selectId: null,
     order: {},
     cart: [],
-    open: false
+    open: false,
+    cartopen: false,
+    currencyFormat: "$",
+    totalPrice: 0
   };
   //! TODO
   // method-1: select a product to buy -DONE
@@ -17,7 +20,7 @@ class App extends Component {
   // method-3: submit order and added to cart -DONE
   // method-4: calculate total price from ordered products
   // method-5: handle modal open and close -DONE
-  // method-6: handle cart open and close
+  // method-6: handle cart open and close -DONE
   // method-7: validate user input
   // method-8: remove order from cart
 
@@ -58,10 +61,24 @@ class App extends Component {
   handleModalClosed = () => {
     this.setState({ open: false, order: {}, selectId: null });
   };
+  //! handle cart open and close
+  handleCartOpen = () => {
+    this.setState(prevState => {
+      return { cartopen: !prevState.cartopen };
+    });
+  };
 
   render() {
-    const { data, order, cart } = this.state;
+    const {
+      data,
+      order,
+      cart,
+      cartopen,
+      totalPrice,
+      currencyFormat
+    } = this.state;
     let content = <div>There is no data to show.</div>;
+    let shoppingCart = null;
     if (data) {
       content = data.products.map(product => {
         return (
@@ -77,16 +94,74 @@ class App extends Component {
         );
       });
     }
-
+    if (cartopen && cart) {
+      shoppingCart = (
+        <div className="card">
+          <table>
+            <caption>YOUR SHOPPING LIST</caption>
+            <thead>
+              <tr>
+                <td>#</td>
+                <td>Order Number</td>
+                <td>Product Name</td>
+                <td>Description</td>
+                <td>Price($)</td>
+                <td>Quantity</td>
+                <td>Amount($)</td>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((item, index) => {
+                return (
+                  <tr key={item.orderNumber}>
+                    <td>{index + 1}</td>
+                    <td>{item.orderNumber}</td>
+                    <td>{item.title}</td>
+                    <td>{item.description}</td>
+                    <td>
+                      {item.currencyFormat}{" "}
+                      {parseFloat(item.price, 10).toFixed(2)}
+                    </td>
+                    <td>{item.orderQuantity}</td>
+                    <td>
+                      {item.currencyFormat}{" "}
+                      {parseFloat(item.amount, 10).toFixed(2)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+            <tfoot>
+              <tr>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td>Total Price = </td>
+                <td>
+                  <span>{currencyFormat}</span>
+                  {parseFloat(totalPrice, 10).toFixed(2)}
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      );
+    }
     return (
       <div className="app">
         <div className="header">
-          <div className="btn">
+          <div className="btn" onClick={this.handleCartOpen}>
             <i class="fas fa-cart-plus" />
             <span>{cart.length}</span>
           </div>
         </div>
         <div className="products">{content}</div>
+        <div className="shopping-cart" open={this.state.cartopen}>
+          {shoppingCart}
+        </div>
+
         <Modal
           open={this.state.open}
           closed={this.handleModalClosed}

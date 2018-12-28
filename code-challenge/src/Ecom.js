@@ -236,7 +236,7 @@ class Ecom extends Component {
           </div>
         </div>
         <div className="products">{content}</div>
-        <div className="shopping-cart" open={this.state.cartOpen}>
+        <div className="shopping-cart" open={this.state.cartopen}>
           {shoppingCart}
         </div>
         <Modal open={this.state.open} closed={this.handleModalOpen}>
