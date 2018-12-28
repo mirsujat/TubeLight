@@ -22,7 +22,7 @@ class App extends Component {
   // method-5: handle modal open and close -DONE
   // method-6: handle cart open and close -DONE
   // method-7: validate user input
-  // method-8: remove order from cart
+  // method-8: remove order from cart -DONE
 
   //! select product by id
   handleSelectId = id => {
@@ -54,6 +54,7 @@ class App extends Component {
     this.setState({ cart: cart, order: {}, selectId: null, open: false });
     this.totalPrice();
   };
+  //! remove order from cart and recalculate totalPrice
   removeOrder = orderNumber => {
     const { cart } = this.state;
     const updateOrder = cart.filter(order => order.orderNumber !== orderNumber);
