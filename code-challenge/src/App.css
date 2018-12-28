@@ -252,5 +252,6 @@ table > caption {
 }
 
 .remove-btn {
+  color: red;
   cursor: pointer;
 }
