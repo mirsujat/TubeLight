@@ -12,7 +12,8 @@ class App extends Component {
     open: false,
     cartopen: false,
     currencyFormat: "$",
-    totalPrice: 0
+    totalPrice: 0,
+    orderFormError: {}
   };
   //! TODO
   // method-1: select a product to buy -DONE
@@ -50,9 +51,12 @@ class App extends Component {
   handleOrderSubmit = e => {
     e.preventDefault();
     const { cart, order } = this.state;
-    cart.unshift(order);
-    this.setState({ cart: cart, order: {}, selectId: null, open: false });
-    this.totalPrice();
+    const isValid = this.validate();
+    if (isValid) {
+      cart.unshift(order);
+      this.setState({ cart: cart, order: {}, selectId: null, open: false });
+      this.totalPrice();
+    }
   };
   //! remove order from cart and recalculate totalPrice
   removeOrder = orderNumber => {
@@ -64,6 +68,7 @@ class App extends Component {
     );
     this.setState({ cart: updateOrder, totalPrice: updateTotalPrice });
   };
+  //! Calculate totalPrice of orderd product
   totalPrice = () => {
     const { cart } = this.state;
     const totalPrice = cart.reduce(
@@ -86,6 +91,19 @@ class App extends Component {
       return { cartopen: !prevState.cartopen };
     });
   };
+  //! Validate order form
+  validate = () => {
+    const { order } = this.state;
+    const orderFormError = {};
+    let isValid = true;
+    if (!order.size) {
+      isValid = false;
+      orderFormError.size = "You must select size!";
+    }
+
+    this.setState({ orderFormError });
+    return isValid;
+  };
 
   render() {
     const {
@@ -94,7 +112,8 @@ class App extends Component {
       cart,
       cartopen,
       totalPrice,
-      currencyFormat
+      currencyFormat,
+      orderFormError
     } = this.state;
     let content = <div>There is no data to show.</div>;
     let shoppingCart = null;
@@ -137,7 +156,9 @@ class App extends Component {
                     <td>{index + 1}</td>
                     <td>{item.orderNumber}</td>
                     <td>{item.title}</td>
-                    <td>{item.description}</td>
+                    <td>
+                      {item.description}, Size: {item.size}
+                    </td>
                     <td>
                       {item.currencyFormat}{" "}
                       {parseFloat(item.price, 10).toFixed(2)}
@@ -212,6 +233,7 @@ class App extends Component {
                   <option>L</option>
                   <option>XL</option>
                 </select>
+                <p className="error">{orderFormError.size}</p>
               </div>
               <div className="form-field">
                 <label>Please Select Quantity</label>
