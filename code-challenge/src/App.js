@@ -11,7 +11,8 @@ class App extends Component {
     open: false,
     cartopen: false,
     totalPrice: 0,
-    currencyFormat: "$"
+    currencyFormat: "$",
+    orderFormError: {}
   };
   // Challenges
   // 1- Display all products -DONE
@@ -20,8 +21,8 @@ class App extends Component {
   // 4- submit order and added to cart -DONE
   // 5- handle cart open and close -DONE
   // 6- calculate totalPrice -DONE
-  // 7- remove order from cart
-  // 8- validate order form
+  // 7- remove order from cart -DONE
+  // 8- validate order form -DONE
 
   //! select a product to order
   selectById = id => {
@@ -51,9 +52,12 @@ class App extends Component {
   handleOrderSubmit = e => {
     e.preventDefault();
     const { cart, order } = this.state;
-    cart.unshift(order);
-    this.setState({ cart: cart, order: {}, open: false });
-    this.totalPrice();
+    const isValid = this.validate();
+    if (isValid) {
+      cart.unshift(order);
+      this.setState({ cart: cart, order: {}, open: false });
+      this.totalPrice();
+    }
   };
 
   //! Remove order form cart and recalculate totalPrice
@@ -91,6 +95,20 @@ class App extends Component {
       return { cartopen: !prevState.cartopen };
     });
   };
+
+  //! Validate order form
+  validate = () => {
+    const { order } = this.state;
+    const orderFormError = {};
+    let isValid = true;
+    if (!order.size) {
+      isValid = false;
+      orderFormError.size = "You must select size!";
+    }
+    this.setState({ orderFormError });
+    return isValid;
+  };
+
   render() {
     const {
       data,
@@ -98,7 +116,8 @@ class App extends Component {
       cart,
       cartopen,
       totalPrice,
-      currencyFormat
+      currencyFormat,
+      orderFormError
     } = this.state;
     let content = <div>There is no product to display.</div>;
     let shoppingCart = null;
@@ -217,6 +236,7 @@ class App extends Component {
                   <option>L</option>
                   <option>XL</option>
                 </select>
+                <p className="error">{orderFormError.size}</p>
               </div>
               <div className="form-field">
                 <label>Please Select Quantity</label>
