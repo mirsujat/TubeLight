@@ -1,4 +1,4 @@
-// Challenge -1: 30 Minutes
+* Challenge -1: 30 Minutes *
 - URL  https://ip.nf/me.json;
 - Make an input component so that user can search their IP information.
 - when the component first loaded it display the user's own Ip Information.
@@ -6,18 +6,18 @@
 - and when a user type a new ip address into the input field the component should reload and  fetch the submitted ip information and display it to the screen.
 *** make sure you should avoid create infinit loop. ***
 
-// Challenge -2: 40 Minutes
+ * Challenge -2: 40 Minutes *
 - Make a modal component that will display  user registration form.
 - The user registration form must have username, email, password,                  confirmPassword fields.
 - You must sanatize the user input before send it to the server.
 
-// Challenge -3: 30 Minutes
+* Challenge -3: 30 Minutes *
 - URL https://jsonplaceholder.typicode.com/users;
 - or URL https://randomuser.me/api/?&results=12&nat=us,dk,fr,gb
 - Load and display a list of users form a remote server.
 - When a user click one of the users show the user's detail.
 
-// Challenge -4: 
+* Challenge -4: *
 - Make a shopping cart app
 - when user click on a buy button product added to the shopping cart 
 - shopping cart display the product quantity and total price 
