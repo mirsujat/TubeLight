@@ -19,7 +19,7 @@ class App extends Component {
   // 3- Process the order as user specified - DONE
   // 4- submit order and added to cart -DONE
   // 5- handle cart open and close -DONE
-  // 6- calculate totalPrice
+  // 6- calculate totalPrice -DONE
   // 7- remove order from cart
   // 8- validate order form
 
@@ -46,12 +46,35 @@ class App extends Component {
     updateOrder.amount = updateOrder.price * updateOrder.orderQuantity;
     this.setState({ order: updateOrder });
   };
+
   //! submit order and added to the cart
   handleOrderSubmit = e => {
     e.preventDefault();
     const { cart, order } = this.state;
     cart.unshift(order);
     this.setState({ cart: cart, order: {}, open: false });
+    this.totalPrice();
+  };
+
+  //! Remove order form cart and recalculate totalPrice
+  handleRemoveOrder = orderNumber => {
+    const { cart } = this.state;
+    const updatedCart = cart.filter(order => order.orderNumber !== orderNumber);
+    const updatedTotalPrice = updatedCart.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.amount,
+      0
+    );
+    this.setState({ cart: updatedCart, totalPrice: updatedTotalPrice });
+  };
+
+  //! Caluculate totalPrice
+  totalPrice = () => {
+    const { cart } = this.state;
+    const totalPrice = cart.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.amount,
+      0
+    );
+    this.setState({ totalPrice });
   };
 
   //! handle modal open
@@ -106,8 +129,9 @@ class App extends Component {
                 <td>Product Name</td>
                 <td>Description</td>
                 <td>Unit Price($)</td>
-                <td>Quantity</td>
+                <td>Order Quantity</td>
                 <td>Amount($)</td>
+                <td>Remove</td>
               </tr>
             </thead>
             <tbody>
@@ -126,6 +150,12 @@ class App extends Component {
                     <td>
                       {item.currencyFormat}{" "}
                       {parseFloat(item.amount, 10).toFixed(2)}
+                    </td>
+                    <td
+                      className="remove-btn"
+                      onClick={() => this.handleRemoveOrder(item.orderNumber)}
+                    >
+                      Remove
                     </td>
                   </tr>
                 );
