@@ -232,6 +232,7 @@ class App extends Component {
                   value={order.size}
                   onChange={this.handleOrder}
                 >
+                  <option />
                   <option>X</option>
                   <option>L</option>
                   <option>XL</option>
