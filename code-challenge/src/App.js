@@ -213,18 +213,12 @@ class App extends Component {
         <Modal open={this.state.open} closed={this.handleModalClose}>
           <div className="card">
             <form className="reg-form" onSubmit={this.handleOrderSubmit}>
-              <div className="form-field">
-                <p>Name: {order.title}</p>
-              </div>
-              <div className="form-field">
-                <p>Description: {order.description}</p>
-              </div>
-              <div className="form-field">
-                <p>
-                  Price: {order.currencyFormat}{" "}
-                  {parseFloat(order.price, 10).toFixed(2)}
-                </p>
-              </div>
+              <p>Name: {order.title}</p>
+              <p>Description: {order.description}</p>
+              <p>
+                Price: {order.currencyFormat}{" "}
+                {parseFloat(order.price, 10).toFixed(2)}
+              </p>
               <div className="form-field">
                 <label>Please Select Size</label>
                 <select
