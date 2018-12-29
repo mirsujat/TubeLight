@@ -156,7 +156,7 @@ class App extends Component {
             <tbody>
               {cart.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={item.orderNumber}>
                     <td>{index + 1}</td>
                     <td>{item.orderNumber}</td>
                     <td>{item.title}</td>
@@ -207,7 +207,7 @@ class App extends Component {
           </div>
         </div>
         <div className="products">{content}</div>
-        <div className="shopping-cart" cartopen={this.state.cartopen}>
+        <div className="shopping-cart" open={this.state.cartopen}>
           {shoppingCart}
         </div>
         <Modal open={this.state.open} closed={this.handleModalClose}>
