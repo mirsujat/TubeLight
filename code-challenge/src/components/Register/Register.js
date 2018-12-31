@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-class Ecom extends Component {
+class Registration extends Component {
   state = {};
   render() {
     return (
       <div>
-        <h1>Ecommerce</h1>
+        <h1>Registration</h1>
       </div>
     );
   }
 }
 
-export default Ecom;
+export default Registration;
