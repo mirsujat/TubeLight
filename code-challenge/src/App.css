@@ -21,13 +21,13 @@ ul {
 }
 
 li {
-  display: inline-block;
   list-style: none;
-  padding: 6px 15px;
 }
 a {
+  display: inline-block;
   text-decoration: none;
   color: grey;
+  padding: 6px 15px;
 }
 .header a {
   color: inherit;
