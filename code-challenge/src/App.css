@@ -1,0 +1,31 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.header,
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+  background-color: teal;
+  color: #f1f1ff;
+  line-height: 60px;
+  font-size: 17px;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  padding: 6px 15px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

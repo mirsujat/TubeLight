@@ -8,6 +8,7 @@ import Ecom from "./components/Ecom/Ecom";
 import Register from "./components/Register/Register";
 
 import "./index.css";
+import "./App.css";
 
 import * as serviceWorker from "./serviceWorker";
 
