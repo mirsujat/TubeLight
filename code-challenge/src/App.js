@@ -9,7 +9,7 @@ class App extends Component {
     const { searchTerm } = this.state;
     if (!this.state.user) {
       const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
-      this.setState({ user: data });
+      this.setState({ user: data, searchTerm: data.ip.ip });
       console.log("IP Info: ", this.state.user);
     }
   };
@@ -24,6 +24,7 @@ class App extends Component {
               className="search"
               name="search"
               value={this.state.searchTerm}
+              onChange={e => this.setState({ searchTerm: e.target.value })}
             />
             <button type="submit" className="search-btn">
               Submit
