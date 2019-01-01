@@ -5,11 +5,10 @@ class App extends Component {
     searchTerm: "me",
     user: ""
   };
-  componentDidMount = async () => {
-    const { searchTerm, user } = this.state;
+  componentDidMount = () => {
+    const { user } = this.state;
     if (!user) {
-      const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
-      this.setState({ user: data, searchTerm: data.ip.ip });
+      this.searchIP();
     }
   };
   componentDidUpdate = async (prevProps, prevState) => {
@@ -21,10 +20,17 @@ class App extends Component {
     ) {
       const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
       this.setState({ user: data, searchTerm: data.ip.ip });
-      console.log("Update IP Info: ", this.state.user);
     }
   };
-
+  handleSubmit = e => {
+    e.preventDefault();
+    this.searchIP();
+  };
+  searchIP = async () => {
+    const { searchTerm, user } = this.state;
+    const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
+    this.setState({ user: data, searchTerm: data.ip.ip });
+  };
   render() {
     const { user } = this.state;
     console.log("user: ", this.state.user);
@@ -53,7 +59,7 @@ class App extends Component {
       <div className="app">
         <h1>SEARCH YOUR IP ADDRESS.</h1>
         <div className="search-bar">
-          <form className="search-form">
+          <form onSubmit={this.handleSubmit} className="search-form">
             <input
               className="search"
               name="search"
