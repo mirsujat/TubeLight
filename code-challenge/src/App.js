@@ -17,7 +17,19 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>React Code Challenge</h1>
+        <h1>SEARCH YOUR IP ADDRESS.</h1>
+        <div className="search-bar">
+          <form className="search-form">
+            <input
+              className="search"
+              name="search"
+              value={this.state.searchTerm}
+            />
+            <button type="submit" className="search-btn">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     );
   }

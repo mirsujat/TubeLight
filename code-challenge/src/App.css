@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -31,4 +34,39 @@ a {
 }
 .header a {
   color: inherit;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  width: 500px;
+}
+form {
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+button {
+  display: inline-block;
+  padding: 4px 15px;
+  cursor: pointer;
+}
+.search-form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.search-form input {
+  width: 80%;
+  padding: 4px 15px;
+}
+.search-btn button {
+  width: 18%;
+  padding: 4px 15px;
 }
