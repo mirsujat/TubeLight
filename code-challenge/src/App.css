@@ -9,8 +9,20 @@
   margin: 0;
   padding: 0;
 }
-.header,
-ul {
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+  background-color: teal;
+  color: #f1f1ff;
+  line-height: 60px;
+  font-size: 17px;
+}
+.header ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -31,6 +43,12 @@ a {
   text-decoration: none;
   color: grey;
   padding: 6px 15px;
+}
+span {
+  display: inline-block;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.64);
+  padding: 3px 6px;
 }
 .header a {
   color: inherit;

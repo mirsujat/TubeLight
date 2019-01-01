@@ -6,11 +6,10 @@ class App extends Component {
     user: ""
   };
   componentDidMount = async () => {
-    const { searchTerm } = this.state;
-    if (!this.state.user) {
+    const { searchTerm, user } = this.state;
+    if (!user) {
       const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
       this.setState({ user: data, searchTerm: data.ip.ip });
-      console.log("IP Info: ", this.state.user);
     }
   };
   componentDidUpdate = async (prevProps, prevState) => {
@@ -27,7 +26,29 @@ class App extends Component {
   };
 
   render() {
+    const { user } = this.state;
     console.log("user: ", this.state.user);
+    let content = <div>Loading...</div>;
+    if (user) {
+      content = (
+        <div className="ip-address">
+          <ul>
+            <li>
+              <span>IP Address: </span> {user.ip.ip}
+            </li>
+            <li>
+              <span>Hostname: </span> {user.ip.hostname}
+            </li>
+            <li>
+              <span>City: </span> {user.ip.city}
+            </li>
+            <li>
+              <span>Country: </span> {user.ip.country}
+            </li>
+          </ul>
+        </div>
+      );
+    }
     return (
       <div className="app">
         <h1>SEARCH YOUR IP ADDRESS.</h1>
@@ -44,6 +65,7 @@ class App extends Component {
             </button>
           </form>
         </div>
+        {content}
       </div>
     );
   }
