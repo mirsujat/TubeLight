@@ -27,7 +27,7 @@ class App extends Component {
     this.searchIP();
   };
   searchIP = async () => {
-    const { searchTerm, user } = this.state;
+    const { searchTerm } = this.state;
     const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
     this.setState({ user: data, searchTerm: data.ip.ip });
   };
