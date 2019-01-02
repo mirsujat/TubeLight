@@ -98,3 +98,47 @@ li > span {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.64);
 }
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  width: 500px;
+  box-shadow: 0px 9px 6px 6px rgba(0, 0, 0, 0.4);
+}
+.card-header {
+  text-align: center;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.64);
+}
+.form-field {
+  display: block;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.form-field input {
+  display: block;
+  width: 100%;
+}
+label {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.54);
+}

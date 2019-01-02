@@ -15,7 +15,7 @@ class App extends Component {
   componentDidUpdate = async (prevProps, prevState) => {
     const { searchTerm } = this.state;
     if (
-      searchTerm !== "me" &&
+      prevState.searchTerm !== "me" &&
       prevState.searchTerm !== searchTerm &&
       searchTerm.length === 14
     ) {
