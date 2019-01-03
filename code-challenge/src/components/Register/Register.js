@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Modal from "../Portal/Portal";
+
+// Initialize form fields
 const initFields = {
   username: "",
   email: "",
@@ -8,7 +11,8 @@ const initFields = {
 class Registration extends Component {
   state = {
     field: { ...initFields },
-    formErrors: { ...initFields }
+    formErrors: { ...initFields },
+    open: false
   };
   handleChange = e => {
     const { field } = this.state;
@@ -65,56 +69,58 @@ class Registration extends Component {
 
   render() {
     return (
-      <div className="register">
-        <div className="card">
-          <h1 className="card-header">REGISTER NOW!</h1>
-          <form onSubmit={this.handleSubmit} className="reg-form">
-            <div className="form-field">
-              <label htmlFor="username">username</label>
-              <input
-                type="text"
-                name="username"
-                value={this.state.field.username}
-                onChange={this.handleChange}
-              />
-              <p className="error">{this.state.formErrors.username}</p>
-            </div>
-            <div className="form-field">
-              <label htmlFor="email">e-mail</label>
-              <input
-                type="text"
-                name="email"
-                value={this.state.field.email}
-                onChange={this.handleChange}
-              />
-              <p className="error">{this.state.formErrors.email}</p>
-            </div>
-            <div className="form-field">
-              <label htmlFor="password">password</label>
-              <input
-                type="text"
-                name="password"
-                value={this.state.field.password}
-                onChange={this.handleChange}
-              />
-              <p className="error">{this.state.formErrors.password}</p>
-            </div>
-            <div className="form-field">
-              <label htmlFor="confirmPassword">confirm password</label>
-              <input
-                type="text"
-                name="confirmPassword"
-                value={this.state.field.confirmPassword}
-                onChange={this.handleChange}
-              />
-              <p className="error">{this.state.formErrors.confirmPassword}</p>
-            </div>
-            <div className="form-field">
-              <button type="submit">REGISTER</button>
-            </div>
-          </form>
+      <Modal>
+        <div className="register">
+          <div className="card">
+            <h1 className="card-header">REGISTER NOW!</h1>
+            <form onSubmit={this.handleSubmit} className="reg-form">
+              <div className="form-field">
+                <label htmlFor="username">username</label>
+                <input
+                  type="text"
+                  name="username"
+                  value={this.state.field.username}
+                  onChange={this.handleChange}
+                />
+                <p className="error">{this.state.formErrors.username}</p>
+              </div>
+              <div className="form-field">
+                <label htmlFor="email">e-mail</label>
+                <input
+                  type="text"
+                  name="email"
+                  value={this.state.field.email}
+                  onChange={this.handleChange}
+                />
+                <p className="error">{this.state.formErrors.email}</p>
+              </div>
+              <div className="form-field">
+                <label htmlFor="password">password</label>
+                <input
+                  type="text"
+                  name="password"
+                  value={this.state.field.password}
+                  onChange={this.handleChange}
+                />
+                <p className="error">{this.state.formErrors.password}</p>
+              </div>
+              <div className="form-field">
+                <label htmlFor="confirmPassword">confirm password</label>
+                <input
+                  type="text"
+                  name="confirmPassword"
+                  value={this.state.field.confirmPassword}
+                  onChange={this.handleChange}
+                />
+                <p className="error">{this.state.formErrors.confirmPassword}</p>
+              </div>
+              <div className="form-field">
+                <button type="submit">REGISTER</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+      </Modal>
     );
   }
 }
