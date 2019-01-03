@@ -7,18 +7,8 @@ const initFields = {
 };
 class Registration extends Component {
   state = {
-    field: {
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: ""
-    },
-    formErrors: {
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: ""
-    }
+    field: { ...initFields },
+    formErrors: { ...initFields }
   };
   handleChange = e => {
     const { field } = this.state;
@@ -32,7 +22,10 @@ class Registration extends Component {
     let isValid = this.validate();
     if (isValid) {
       console.log("Registration Data: ", field);
-      this.setState({ field: { ...initFields }, formErrors: {} });
+      this.setState({
+        field: { ...initFields },
+        formErrors: { ...initFields }
+      });
     }
   };
   validate = () => {
