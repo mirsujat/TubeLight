@@ -39,17 +39,32 @@ class Registration extends Component {
     const { field } = this.state;
     const formErrors = {};
     let isValid = true;
-    const usernamePattern = /^\w+[\.-]?\w{2,20}$/;
+    const usernamePattern = /^\w+[\.-]?\w{1,20}$/;
+    const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const passPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     const msg = {
       username: "Username must be aplhanumeric and contain (2-20) characters.",
       email: "Ivalid e-mail address. i.e; test@gmail.com",
-      password: "Pasword must be 6-20 characters long.",
+      password:
+        "password must be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter.",
       confirmPassword: "Password and confirmPassword not matched."
     };
 
     if (!field.username.match(usernamePattern)) {
       isValid = false;
       formErrors.username = msg.username;
+    }
+    if (!field.email.match(emailPattern)) {
+      isValid = false;
+      formErrors.email = msg.email;
+    }
+    if (!field.password.match(passPattern)) {
+      isValid = false;
+      formErrors.password = msg.password;
+    }
+    if (field.confirmPassword !== field.password) {
+      isValid = false;
+      formErrors.confirmPassword = msg.confirmPassword;
     }
     this.setState({ formErrors });
     return isValid;
