@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Registration from "../Register/Register";
 
 class Navigation extends Component {
   state = {
@@ -21,15 +22,12 @@ class Navigation extends Component {
             <NavLink to="/ecom">Ecom</NavLink>
           </li>
           <li>
-            <NavLink
-              to="/register"
-              onClick={this.handleModalOpen}
-              closed={this.handleModalOpen}
-            >
+            <NavLink to="/register" onClick={this.handleModalOpen}>
               Register
             </NavLink>
           </li>
         </ul>
+        <Registration open={this.state.open} closed={this.handleModalOpen} />
       </div>
     );
   }
