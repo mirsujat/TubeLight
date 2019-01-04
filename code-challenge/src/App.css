@@ -108,7 +108,7 @@ li > span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  /* margin: 30px; */
 }
 .register form {
   display: flex;
@@ -125,6 +125,7 @@ li > span {
   padding: 15px 35px;
   min-width: 250px;
   box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
 }
 .card-header {
   text-align: center;
@@ -153,4 +154,29 @@ label {
 
 .error {
   color: red;
+}
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1500px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  cursor: pointer;
+}
+.modal {
+  display: block;
+  position: fixed;
+  top: 14%;
+  z-index: 1000;
 }
