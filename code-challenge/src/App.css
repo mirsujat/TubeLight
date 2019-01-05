@@ -155,6 +155,8 @@ label {
 .error {
   color: red;
 }
+
+/* Modal or Portal */
 .modal-wrapper {
   display: flex;
   flex-direction: column;
