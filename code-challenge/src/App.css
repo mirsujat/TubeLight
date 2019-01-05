@@ -127,6 +127,7 @@ li > span {
   min-width: 250px;
   box-shadow: 7px 8px 20px 3px rgba(0, 0, 0, 0.2);
   background-color: white;
+  color: rgba(0, 0, 0, 0.74);
 }
 .card-header {
   text-align: center;
@@ -196,4 +197,37 @@ label {
 .product {
   width: 300px;
   height: 300px;
+}
+
+.cart {
+  display: block;
+  position: absolute;
+  top: 7%;
+  right: 0;
+  z-index: 300;
+}
+table {
+  border-collapse: collapse;
+}
+
+table,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+td {
+  line-height: 20px;
+  padding: 5px 15px;
+}
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+thead > tr {
+  background-color: #d6cfcf;
+  font-weight: 500;
+}
+caption {
+  background-color: #ffc107;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
 }
