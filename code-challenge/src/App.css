@@ -122,9 +122,10 @@ li > span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 6px;
   padding: 15px 35px;
   min-width: 250px;
-  box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 8px 20px 3px rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 .card-header {
@@ -181,4 +182,18 @@ label {
   position: fixed;
   top: 14%;
   z-index: 1000;
+}
+
+.e-com {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.product {
+  width: 300px;
+  height: 300px;
 }
