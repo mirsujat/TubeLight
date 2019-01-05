@@ -39,9 +39,8 @@ class Cart extends Component {
                 <td />
                 <td />
                 <td />
-                <td />
+                <td>TOTAL = </td>
                 <td>$ 240</td>
-                <td>Remove</td>
               </tr>
             </tfoot>
           </table>

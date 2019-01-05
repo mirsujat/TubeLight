@@ -209,7 +209,6 @@ label {
 table {
   border-collapse: collapse;
 }
-
 table,
 td {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -226,8 +225,13 @@ thead > tr {
   font-weight: 500;
 }
 caption {
-  background-color: #ffc107;
+  background-color: #ff9800;
   color: white;
   font-size: 24px;
+  font-weight: 500;
+}
+tfoot {
+  color: #ff9800;
+  font-size: 16px;
   font-weight: 500;
 }
