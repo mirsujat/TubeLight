@@ -1,79 +1,23 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import { Switch, Route } from "react-router-dom";
 
+import Layout from "./components/Layout/Layout";
+import IpAddress from "./components/IpAddress/IpAddress";
+import Ecom from "./components/Ecom/Ecom";
+import Register from "./components/Register/Register";
 class App extends Component {
-  state = {
-    searchTerm: "me",
-    user: ""
-  };
-  componentDidMount() {
-    const { user } = this.state;
-    if (!user) {
-      this.searchIP();
-    }
-  }
-  componentDidUpdate = async (prevProps, prevState) => {
-    const { searchTerm } = this.state;
-    if (
-      prevState.searchTerm !== "me" &&
-      prevState.searchTerm !== searchTerm &&
-      searchTerm.length === 14
-    ) {
-      this.searchIP();
-    }
-  };
-  handleSubmit = e => {
-    e.preventDefault();
-    this.searchIP();
-  };
-
-  searchIP = async () => {
-    const { searchTerm } = this.state;
-    const { data } = await Axios.get(`https://ip.nf/${searchTerm}.json`);
-    this.setState({ user: data, searchTerm: data.ip.ip });
-  };
+  state = {};
   render() {
-    const { user } = this.state;
-    let content = <div>Loading...</div>;
-    if (user) {
-      content = (
-        <div className="content">
-          <ul>
-            <li>
-              <span>IP Address: </span>
-              {user.ip.ip}
-            </li>
-            <li>
-              <span>Hostname: </span>
-              {user.ip.hostname}
-            </li>
-            <li>
-              <span>City: </span>
-              {user.ip.city}
-            </li>
-            <li>
-              <span>Country: </span>
-              {user.ip.country}
-            </li>
-          </ul>
-        </div>
-      );
-    }
+    let routes = (
+      <Switch>
+        <Route path="/" exact component={IpAddress} />
+        <Route path="/ecom" exact component={Ecom} />
+        <Route path="/register" exact component={Register} />
+      </Switch>
+    );
     return (
-      <div className="app">
-        <h1>SEARCH IP ADDRESS</h1>
-        <div className="seacrh-bar">
-          <form onSubmit={this.handleSubmit} className="search-form">
-            <input
-              type="text"
-              name="searchTerm"
-              value={this.state.searchTerm}
-              onChange={e => this.setState({ searchTerm: e.target.value })}
-            />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        {content}
+      <div>
+        <Layout>{routes}</Layout>
       </div>
     );
   }
