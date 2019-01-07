@@ -26,9 +26,9 @@ class Layout extends Component {
           togglemodal={this.handleModalOpen}
           togglecart={this.handleCartOpen}
         />
-        <Registration open={this.state.open} closed={this.handleModalOpen} />
-        <Cart cartopen={this.state.cartopen} />
         <main className="content">{this.props.children}</main>
+        <Cart cartopen={this.state.cartopen} />
+        <Registration open={this.state.open} closed={this.handleModalOpen} />
       </Wrapper>
     );
   }
