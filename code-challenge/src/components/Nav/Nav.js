@@ -1,7 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import Registration from "../Register/Register";
-import Cart from "../Ecom/Cart/Cart";
 
 const Navigation = props => {
   return (
@@ -18,7 +16,7 @@ const Navigation = props => {
             Register
           </NavLink>
         </li>
-        <li onClick={props.cartopen}>
+        <li onClick={props.togglecart}>
           <i className="fas fa-cart-plus" />
           <span>{0}</span>
         </li>

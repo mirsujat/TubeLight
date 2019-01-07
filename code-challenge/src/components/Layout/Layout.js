@@ -24,10 +24,10 @@ class Layout extends Component {
       <Wrapper>
         <Navigation
           togglemodal={this.handleModalOpen}
-          cartopen={this.handleCartOpen}
+          togglecart={this.handleCartOpen}
         />
         <Registration open={this.state.open} closed={this.handleModalOpen} />
-        <Cart open={this.state.cartopen} />
+        <Cart cartopen={this.state.cartopen} />
         <main className="content">{this.props.children}</main>
       </Wrapper>
     );

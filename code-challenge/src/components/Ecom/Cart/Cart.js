@@ -47,7 +47,11 @@ class Cart extends Component {
         </div>
       );
     }
-    return <div className="cart">{content}</div>;
+    return (
+      <div className="cart" open={this.props.cartopen}>
+        {content}
+      </div>
+    );
   }
 }
 
