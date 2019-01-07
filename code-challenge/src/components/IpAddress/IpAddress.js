@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import Layout from "../Layout/Layout";
 
 class IpAddress extends Component {
   state = {
@@ -60,21 +61,23 @@ class IpAddress extends Component {
       );
     }
     return (
-      <div className="app">
-        <h1>SEARCH IP ADDRESS</h1>
-        <div className="seacrh-bar">
-          <form onSubmit={this.handleSubmit} className="search-form">
-            <input
-              type="text"
-              name="searchTerm"
-              value={this.state.searchTerm}
-              onChange={e => this.setState({ searchTerm: e.target.value })}
-            />
-            <button type="submit">Submit</button>
-          </form>
+      <Layout>
+        <div className="app">
+          <h1>SEARCH IP ADDRESS</h1>
+          <div className="seacrh-bar">
+            <form onSubmit={this.handleSubmit} className="search-form">
+              <input
+                type="text"
+                name="searchTerm"
+                value={this.state.searchTerm}
+                onChange={e => this.setState({ searchTerm: e.target.value })}
+              />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          {content}
         </div>
-        {content}
-      </div>
+      </Layout>
     );
   }
 }

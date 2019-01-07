@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Products from "../../products";
+import Layout from "../Layout/Layout";
 
 class Ecom extends Component {
   state = {
@@ -23,7 +24,12 @@ class Ecom extends Component {
         );
       });
     }
-    return <div className="e-com">{content}</div>;
+
+    return (
+      <Layout>
+        <div className="e-com">{content}</div>
+      </Layout>
+    );
   }
 }
 

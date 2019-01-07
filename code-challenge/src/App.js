@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import IpAddress from "./components/IpAddress/IpAddress";
 import Ecom from "./components/Ecom/Ecom";
-import Register from "./components/Register/Register";
+
 class App extends Component {
   state = {};
   render() {
@@ -14,11 +14,7 @@ class App extends Component {
         <Route path="/ecom" exact component={Ecom} />
       </Switch>
     );
-    return (
-      <div>
-        <Layout>{routes}</Layout>
-      </div>
-    );
+    return <div>{routes}</div>;
   }
 }
 
