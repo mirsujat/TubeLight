@@ -12,7 +12,7 @@ const Navigation = props => {
           <NavLink to="/ecom">Ecom</NavLink>
         </li>
         <li>
-          <NavLink to="/register" onClick={props.togglemodal}>
+          <NavLink to="" onClick={props.togglemodal}>
             Register
           </NavLink>
         </li>

@@ -12,7 +12,6 @@ class App extends Component {
       <Switch>
         <Route path="/" exact component={IpAddress} />
         <Route path="/ecom" exact component={Ecom} />
-        <Route path="/register" exact component={Register} />
       </Switch>
     );
     return (
