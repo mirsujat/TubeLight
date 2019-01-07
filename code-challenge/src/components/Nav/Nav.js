@@ -6,10 +6,7 @@ const Navigation = props => {
     <div className="header">
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/ecom">Ecom</NavLink>
+          <NavLink to="/">Ecom</NavLink>
         </li>
         <li>
           <NavLink to="" onClick={props.togglemodal}>
@@ -18,7 +15,7 @@ const Navigation = props => {
         </li>
         <li onClick={props.togglecart}>
           <i className="fas fa-cart-plus" />
-          <span>{0}</span>
+          <span>{props.orders}</span>
         </li>
       </ul>
     </div>

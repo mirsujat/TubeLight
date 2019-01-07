@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 import Products from "../../products";
 import Layout from "../Layout/Layout";
+import Cart from "./Cart/Cart";
 
 class Ecom extends Component {
   state = {
-    data: { ...Products }
+    data: { ...Products },
+    cartopen: false,
+    orders: 10
+  };
+  handleCartOpen = () => {
+    this.setState(prevState => {
+      return { cartopen: !prevState.cartopen };
+    });
   };
   render() {
     const { data } = this.state;
@@ -26,7 +34,8 @@ class Ecom extends Component {
     }
 
     return (
-      <Layout>
+      <Layout orders={this.state.orders} togglecart={this.handleCartOpen}>
+        <Cart cartopen={this.state.cartopen} />
         <div className="e-com">{content}</div>
       </Layout>
     );
