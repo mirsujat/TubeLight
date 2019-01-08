@@ -24,7 +24,7 @@ const OrderForm = props => {
               </select>
             </div>
             <div className="form-field">
-              <label>Please Select Size</label>
+              <label>Please Select Quantity</label>
               <select name={props.orderQuantity}>
                 <option>{1}</option>
                 <option>{2}</option>
