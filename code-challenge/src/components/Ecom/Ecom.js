@@ -2,12 +2,26 @@ import React, { Component } from "react";
 import Products from "../../products";
 import Layout from "../Layout/Layout";
 import Cart from "./Cart/Cart";
+import OrderForm from "./OrderForm/OrderForm";
 
 class Ecom extends Component {
   state = {
     data: { ...Products },
     cartopen: false,
-    orders: 10
+    orders: 10,
+    open: false,
+    formopen: false
+  };
+  buyNow = id => {
+    const { data } = this.state;
+    const selectedId = data.products.filter(product => product.id === id);
+    this.setState({ selectedId });
+    this.handleModalOpen();
+  };
+  handleModalOpen = () => {
+    this.setState(prevState => {
+      return { open: !prevState.open, formopen: !prevState.formopen };
+    });
   };
   handleCartOpen = () => {
     this.setState(prevState => {
@@ -27,7 +41,7 @@ class Ecom extends Component {
             <p>
               Price: {product.currencyFormat} {product.price}
             </p>
-            <button>BUY NOW</button>
+            <button onClick={id => this.buyNow(product.id)}>BUY NOW</button>
           </div>
         );
       });
@@ -37,6 +51,11 @@ class Ecom extends Component {
       <Layout orders={this.state.orders} togglecart={this.handleCartOpen}>
         <Cart cartopen={this.state.cartopen} />
         <div className="e-com">{content}</div>
+        <OrderForm
+          open={this.state.open}
+          formopen={this.state.formopen}
+          closed={this.handleModalOpen}
+        />
       </Layout>
     );
   }
