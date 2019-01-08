@@ -10,17 +10,33 @@ class Ecom extends Component {
     cartopen: false,
     orders: 10,
     open: false,
-    formopen: false
+    formopen: false,
+    selectedId: {}
   };
   buyNow = id => {
     const { data } = this.state;
-    const selectedId = data.products.filter(product => product.id === id);
+    const selectedId = data.products
+      .filter(product => product.id === id)
+      .reduce((obj, item) => {
+        obj = item;
+        obj.orderNumber = Date.now();
+        obj.amount = item.price;
+        return obj;
+      }, {});
     this.setState({ selectedId });
     this.handleModalOpen();
   };
   handleModalOpen = () => {
-    this.setState(prevState => {
-      return { open: !prevState.open, formopen: !prevState.formopen };
+    this.setState({
+      open: true,
+      formopen: true
+    });
+  };
+  handleModalClose = () => {
+    this.setState({
+      open: false,
+      formopen: false,
+      selectedId: {}
     });
   };
   handleCartOpen = () => {
@@ -29,7 +45,8 @@ class Ecom extends Component {
     });
   };
   render() {
-    const { data } = this.state;
+    const { data, selectedId } = this.state;
+    console.log(this.state.selectedId);
     let content = <div>Loading...</div>;
     if (data) {
       content = data.products.map(product => {
@@ -54,7 +71,12 @@ class Ecom extends Component {
         <OrderForm
           open={this.state.open}
           formopen={this.state.formopen}
-          closed={this.handleModalOpen}
+          closed={this.handleModalClose}
+          title={selectedId.title}
+          description={selectedId.description}
+          currencyFormat={selectedId.currencyFormat}
+          price={selectedId.price}
+          amount={selectedId.amount}
         />
       </Layout>
     );
