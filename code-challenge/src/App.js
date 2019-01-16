@@ -1,18 +1,14 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
 
-import Ecom from "./components/Ecom/Ecom";
-
-class App extends Component {
+class APP extends Component {
   state = {};
   render() {
-    let routes = (
-      <Switch>
-        <Route path="/" exact component={Ecom} />
-      </Switch>
+    return (
+      <div>
+        <h1>React Challenge</h1>
+      </div>
     );
-    return <div>{routes}</div>;
   }
 }
 
-export default App;
+export default APP;
