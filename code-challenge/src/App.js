@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import Layout from "./components/Layout/Layout";
 
-class APP extends Component {
+class App extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <Layout>
         <h1>React Challenge</h1>
-      </div>
+      </Layout>
     );
   }
 }
 
-export default APP;
+export default App;

@@ -17,8 +17,15 @@
 - Load and display a list of users form a remote server.
 - When a user click one of the users show the user's detail.
 
-* Challenge -4: *
+* Challenge -4: 60 minutes *
 - Make a shopping cart app
 - when user click on a buy button product added to the shopping cart 
 - shopping cart display the product quantity and total price 
 - user can remove item from the shoppping cart.
+
+* Challenge -5: 40 minutes *
+- Make a Nav bar with a registration button. 
+- Make a modal component that display the registration form. 
+- If a user click the button registration form will be displayed.
+- and validate the user input before submit/send it to remote server.
+
