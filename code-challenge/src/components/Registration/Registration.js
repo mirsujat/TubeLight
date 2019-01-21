@@ -35,6 +35,8 @@ class Registration extends Component {
     const fieldError = {};
     let isValid = true;
     const usernameRegex = /^\w+[\_.-]?\w{1,19}$/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,19}$/;
     const msg = {
       username: "Username must be aplhanumeric and contain (2-20) characters.",
       email: "Ivalid e-mail address. i.e; test@gmail.com",
@@ -46,6 +48,19 @@ class Registration extends Component {
       isValid = false;
       fieldError.username = msg.username;
     }
+    if (!fields.email.match(emailRegex)) {
+      isValid = false;
+      fieldError.email = msg.email;
+    }
+    if (!fields.password.match(passRegex)) {
+      isValid = false;
+      fieldError.password = msg.password;
+    }
+    if (fields.confirmPassword !== fields.password) {
+      isValid = false;
+      fieldError.confirmPassword = msg.confirmPassword;
+    }
+
     this.setState({ fieldError });
     return isValid;
   };
