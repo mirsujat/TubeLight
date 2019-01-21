@@ -147,9 +147,15 @@ label {
 .form-field {
   display: block;
   width: 100%;
-  padding: 8px 0;
 }
 
 button {
   cursor: pointer;
+}
+.error {
+  display: block;
+  min-height: 1px;
+  color: red;
+  font-size: 13px;
+  margin-top: 3px;
 }

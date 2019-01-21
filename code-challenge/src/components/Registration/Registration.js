@@ -21,13 +21,34 @@ class Registration extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { fields } = this.state;
-    console.log("Register: ", fields);
-    this.setState({
-      fields: { ...initFields },
-      fieldError: { ...initFields }
-    });
+    const isValid = this.validate();
+    if (isValid) {
+      console.log("Register: ", fields);
+      this.setState({
+        fields: { ...initFields },
+        fieldError: { ...initFields }
+      });
+    }
   };
-
+  validate = () => {
+    const { fields } = this.state;
+    const fieldError = {};
+    let isValid = true;
+    const usernameRegex = /^\w+[\_.-]?\w{1,19}$/;
+    const msg = {
+      username: "Username must be aplhanumeric and contain (2-20) characters.",
+      email: "Ivalid e-mail address. i.e; test@gmail.com",
+      password:
+        "password must be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter.",
+      confirmPassword: "Password and confirmPassword not matched."
+    };
+    if (!fields.username.match(usernameRegex)) {
+      isValid = false;
+      fieldError.username = msg.username;
+    }
+    this.setState({ fieldError });
+    return isValid;
+  };
   render() {
     return (
       <Modal open={this.props.open} closed={this.props.closed}>
@@ -43,6 +64,7 @@ class Registration extends Component {
                   value={this.state.fields.username}
                   onChange={this.handleChange}
                 />
+                <p className="error">{this.state.fieldError.username}</p>
               </div>
               <div className="form-field">
                 <label htmlFor="e-mail">E-mail</label>
@@ -52,6 +74,7 @@ class Registration extends Component {
                   value={this.state.fields.email}
                   onChange={this.handleChange}
                 />
+                <p className="error">{this.state.fieldError.email}</p>
               </div>
               <div className="form-field">
                 <label htmlFor="password">Password</label>
@@ -61,6 +84,7 @@ class Registration extends Component {
                   value={this.state.fields.password}
                   onChange={this.handleChange}
                 />
+                <p className="error">{this.state.fieldError.password}</p>
               </div>
               <div className="form-field">
                 <label htmlFor="confirmPassword">Confirm Password</label>
@@ -70,6 +94,7 @@ class Registration extends Component {
                   value={this.state.fields.confirmPassword}
                   onChange={this.handleChange}
                 />
+                <p className="error">{this.state.fieldError.confirmPassword}</p>
               </div>
               <div className="form-field">
                 <button type="submit">Register</button>
