@@ -5,13 +5,14 @@ const initFields = {
   username: "",
   email: "",
   password: "",
-  confrmPassword: ""
+  confirmPassword: ""
 };
 
 class Register extends Component {
   state = {
     fields: { ...initFields },
-    formError: { ...initFields }
+    formError: { ...initFields },
+    submitMsg: ""
   };
   handleChange = e => {
     const { fields } = this.state;
@@ -20,12 +21,14 @@ class Register extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
+    const { fields } = this.state;
     let isValid = this.validate();
     if (isValid) {
-      console.log("Form Value:", this.state.fields);
+      console.log("Form Value:", fields);
       this.setState({
         fields: { ...initFields },
-        formError: { ...initFields }
+        formError: { ...initFields },
+        submitMsg: "Yaaa Hooo Submitted Successfully!!!"
       });
     }
   };
@@ -55,7 +58,7 @@ class Register extends Component {
       isValid = false;
       formError.password = msg.password;
     }
-    if (fields.confrmPassword !== fields.password) {
+    if (fields.confirmPassword !== fields.password) {
       isValid = false;
       formError.confirmPassword = msg.confirmPassword;
     }
@@ -68,6 +71,7 @@ class Register extends Component {
       <Modal open={this.props.open} closed={this.props.closed}>
         <div className="card">
           <h1>REGISTER NOW!</h1>
+          <p className="submit">{this.state.submitMsg}</p>
           <form className="reg-form" onSubmit={this.handleSubmit}>
             <div className="form-field">
               <label htmlFor="username">Username</label>
@@ -94,7 +98,7 @@ class Register extends Component {
               <input
                 type="text"
                 name="password"
-                value={this.state.password}
+                value={this.state.fields.password}
                 onChange={this.handleChange}
               />
               <p className="red">{this.state.formError.password}</p>
@@ -104,10 +108,10 @@ class Register extends Component {
               <input
                 type="text"
                 name="confirmPassword"
-                value={this.state.confirmPassword}
+                value={this.state.fields.confirmPassword}
                 onChange={this.handleChange}
               />
-              <p className="red">{this.state.formError.confrmPassword}</p>
+              <p className="red">{this.state.formError.confirmPassword}</p>
             </div>
             <div className="form-field">
               <button type="submit" className="flat-btn">
