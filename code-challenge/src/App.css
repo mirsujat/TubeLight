@@ -59,6 +59,18 @@ label {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.68);
 }
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.app {
+  display: block;
+  position: relative;
+  min-height: 1px;
+  min-width: 1px;
+  padding: 0;
+  margin: 0;
+}
 .nav-right {
   display: flex;
   flex-direction: row;
@@ -111,7 +123,7 @@ label {
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 13%;
+  top: 11%;
   z-index: 10000;
   background-color: white;
   color: rgba(0, 0, 0, 0.84);
@@ -166,4 +178,7 @@ label {
 p {
   padding: 3px 0;
   margin: 0;
+}
+.submit {
+  color: green;
 }
