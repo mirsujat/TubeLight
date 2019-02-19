@@ -84,7 +84,10 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-top: 40px;
+  margin-right: 0;
+  margin-bottom: 40px;
+  margin-left: 0;
   min-height: calc(100vh - 120px);
 }
 
@@ -120,13 +123,16 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  width: 500px;
+  height: auto;
+  padding: 25px 40px;
   margin: 0;
   position: absolute;
   top: 11%;
   z-index: 10000;
   background-color: white;
   color: rgba(0, 0, 0, 0.84);
+  box-shadow: 10px 14px 20px 9px rgba(0, 0, 0, 0.2);
 }
 .backdrop {
   display: block;
@@ -141,18 +147,15 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
-.card {
+.form-group {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 25px 40px;
-  margin: 0;
-  color: rgba(0, 0, 0, 0.84);
-  background-color: white;
-  width: 500px;
-  height: auto;
-  box-shadow: 10px 14px 20px 9px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.reg-form {
+  width: 100%;
 }
 .form-field {
   display: block;
@@ -160,10 +163,7 @@ a {
   padding: 8px 0;
   margin: 0;
 }
-.card h1 {
-  text-decoration: underline;
-  color: rgba(0, 0, 0, 0.64);
-}
+
 .flat-btn {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -181,4 +181,33 @@ p {
 }
 .submit {
   color: green;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 8px;
+  color: rgba(0, 0, 0, 0.84);
+  background-color: white;
+  width: 320px;
+  height: 250px;
+  box-shadow: 3px 1px 15px 6px rgba(0, 0, 0, 0.2);
+}
+.card h1 {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.64);
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.buy {
+  border: 1px solid #f1f1f1;
+  background-color: #ff9800;
+  color: #f1f1f1;
+  padding: 6px 25px;
 }
