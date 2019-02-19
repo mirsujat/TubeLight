@@ -69,7 +69,7 @@ class Register extends Component {
   render() {
     return (
       <Modal open={this.props.open} closed={this.props.closed}>
-        <div className="card">
+        <div className="form-group">
           <h1>REGISTER NOW!</h1>
           <p className="submit">{this.state.submitMsg}</p>
           <form className="reg-form" onSubmit={this.handleSubmit}>
