@@ -2,11 +2,15 @@ import React, { Component } from "react";
 class Cart extends Component {
   state = {};
   render() {
-    return (
-      <div>
-        <h1>Cart: Display Shopping Cart</h1>
-      </div>
-    );
+    let cart = <noscript />;
+    if (this.props.open) {
+      cart = (
+        <div open={this.props.open} onClick={this.props.cartclicked}>
+          <div className="cart">{this.props.children}</div>
+        </div>
+      );
+    }
+    return <div>{cart}</div>;
   }
 }
 
