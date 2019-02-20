@@ -16,11 +16,7 @@ class App extends Component {
         <Route path="/products" exact component={ProductList} />
       </Switch>
     );
-    return (
-      <div className="app">
-        <Layout>{routes}</Layout>
-      </div>
-    );
+    return <div className="app">{routes}</div>;
   }
 }
 
