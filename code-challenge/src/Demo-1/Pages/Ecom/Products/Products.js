@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import products from "../../../../products";
 import ListItem from "../ListItem/ListItem";
 import Cart from "../Cart/Cart";
+import Layout from "../../../Layout/Layout";
 
 class ProductList extends Component {
   state = {
@@ -12,9 +13,14 @@ class ProductList extends Component {
 
   handleBuyNow = id => {
     const { data, cart } = this.state;
-    const cartItem = data.products.filter(product => {
-      return product.sku === id;
-    });
+    const cartItem = data.products
+      .filter(product => product.id === id)
+      .reduce((obj, item) => {
+        obj = item;
+        obj.orderNumber = Date.now();
+        obj.amount = item.price;
+        return obj;
+      }, {});
     cart.push(cartItem);
     this.setState({ cart });
   };
@@ -24,7 +30,7 @@ class ProductList extends Component {
     });
   };
   render() {
-    const { data, cart, cartopen } = this.state;
+    const { data, cart } = this.state;
     console.log("cart: ", cart);
     let lists = <div>Loading...</div>;
     let shoppingCart = null;
@@ -38,12 +44,12 @@ class ProductList extends Component {
             size={product.availableSizes}
             currencyFormate={product.currencyFormat}
             price={product.price}
-            clicked={() => this.handleBuyNow(product.sku)}
+            clicked={() => this.handleBuyNow(product.id)}
           />
         );
       });
     }
-    if (cart) {
+    if (cart && this.state.cartopen) {
       shoppingCart = (
         <Cart open={this.state.cartopen} cartclicked={this.handleCartOpen}>
           <table>
@@ -59,31 +65,27 @@ class ProductList extends Component {
               </tr>
             </thead>
             <tbody>
-              {cart.map((item, index) => {
-                return (
-                  <tr key={index + 1}>
-                    <td>{index + 1}</td>
-                    <td>{item.sku}</td>
-                    <td>{item.title}</td>
-                    <td>{item.description}</td>
-                    <td>{item.size}</td>
-                    <td>
-                      {item.currencyFormat} {item.price}
-                    </td>
-                    <td>{item.amount}</td>
-                  </tr>
-                );
-              })}
+              <tr>
+                <td>indexnumber</td>
+                <td>id</td>
+                <td>title</td>
+                <td>description</td>
+                <td>size</td>
+                <td>currencyFormat, item.price</td>
+                <td>amount</td>
+              </tr>
             </tbody>
           </table>
         </Cart>
       );
     }
     return (
-      <div className="products">
-        {lists}
-        {shoppingCart}
-      </div>
+      <Layout togglecart={this.handleCartOpen}>
+        <div className="products">
+          {lists}
+          {shoppingCart}
+        </div>
+      </Layout>
     );
   }
 }
