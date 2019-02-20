@@ -211,3 +211,19 @@ p {
   color: #f1f1f1;
   padding: 6px 25px;
 }
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 61px;
+  right: 12px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.84);
+  background-color: white;
+  width: 650px;
+  height: auto;
+  box-shadow: 3px 1px 15px 6px rgba(0, 0, 0, 0.2);
+}
