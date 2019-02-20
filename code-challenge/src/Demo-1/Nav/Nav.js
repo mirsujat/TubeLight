@@ -13,9 +13,7 @@ const Nav = props => (
       <li>
         <NavLink to="/products">Products</NavLink>{" "}
       </li>
-      <li>
-        <NavLink to="/cart">Cart</NavLink>{" "}
-      </li>
+      <li onClick={props.cartclicked}>Cart</li>
       <li onClick={props.clicked}>Register</li>
     </ul>
   </div>
