@@ -1,6 +1,6 @@
 import React from "react";
 const ListItem = props => (
-  <div className="card" key={props.key}>
+  <div className="card">
     <h5>{props.title}</h5>
     <p>{props.description}</p>
     <p>{props.style}</p>
@@ -8,7 +8,7 @@ const ListItem = props => (
     <p>
       {props.currencyFormate} {props.price}
     </p>
-    <button type="submit" className="buy">
+    <button type="submit" className="buy" onClick={props.clicked}>
       BUY NOW
     </button>
   </div>
