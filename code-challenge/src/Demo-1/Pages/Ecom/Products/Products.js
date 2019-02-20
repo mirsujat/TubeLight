@@ -53,6 +53,7 @@ class ProductList extends Component {
       shoppingCart = (
         <Cart open={this.state.cartopen} cartclicked={this.handleCartOpen}>
           <table>
+            <caption>YOUR SHOPPING CART</caption>
             <thead>
               <tr>
                 <td>#</td>
@@ -65,15 +66,23 @@ class ProductList extends Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>indexnumber</td>
-                <td>id</td>
-                <td>title</td>
-                <td>description</td>
-                <td>size</td>
-                <td>currencyFormat, item.price</td>
-                <td>amount</td>
-              </tr>
+              {cart.map((item, index) => {
+                return (
+                  <tr key={index + 1}>
+                    <td>{index + 1}</td>
+                    <td>{item.orderNumber}</td>
+                    <td>{item.title}</td>
+                    <td>{item.description}</td>
+                    <td>{item.availableSizes}</td>
+                    <td>
+                      {item.currencyFormat} {item.price}
+                    </td>
+                    <td>
+                      {item.currencyFormat} {item.amount}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </Cart>
