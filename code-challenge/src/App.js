@@ -5,7 +5,6 @@ import Layout from "./Demo-1/Layout/Layout";
 import Home from "./Demo-1/Pages/Home";
 import Contact from "./Demo-1/Pages/Contact";
 import ProductList from "./Demo-1/Pages/Ecom/Products/Products";
-import Cart from "./Demo-1/Pages/Ecom/Cart/Cart";
 
 class App extends Component {
   state = {};

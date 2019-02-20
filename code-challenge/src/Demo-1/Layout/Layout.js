@@ -24,14 +24,12 @@ class Layout extends Component {
   render() {
     return (
       <div className="layout">
-        <Nav
-          clicked={this.handleModalOpen}
-          cartclicked={this.handleCartOpen}
-          open={this.state.cartopen}
-        />
-        <main className="main">{this.props.children}</main>
+        <Nav clicked={this.handleModalOpen} cartclicked={this.handleCartOpen} />
+        <main className="main">
+          {this.props.children}
+          <Cart open={this.state.cartopen} />
+        </main>
         <Footer />
-        <Cart open={this.state.cartopen} />
         <Register open={this.state.open} closed={this.handleModalOpen} />
       </div>
     );
