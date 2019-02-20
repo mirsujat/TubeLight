@@ -6,8 +6,7 @@ import Cart from "../Pages/Ecom/Cart/Cart";
 
 class Layout extends Component {
   state = {
-    open: false,
-    cartopen: false
+    open: false
   };
   handleModalOpen = () => {
     this.setState(prevState => {
@@ -15,20 +14,14 @@ class Layout extends Component {
     });
   };
 
-  handleCartOpen = () => {
-    this.setState(prevState => {
-      return { cartopen: !prevState.cartopen };
-    });
-  };
-
   render() {
     return (
       <div className="layout">
-        <Nav clicked={this.handleModalOpen} cartclicked={this.handleCartOpen} />
-        <main className="main">
-          {this.props.children}
-          <Cart open={this.state.cartopen} />
-        </main>
+        <Nav
+          clicked={this.handleModalOpen}
+          togglecart={this.props.togglecart}
+        />
+        <main className="main">{this.props.children}</main>
         <Footer />
         <Register open={this.state.open} closed={this.handleModalOpen} />
       </div>
