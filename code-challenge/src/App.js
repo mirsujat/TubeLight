@@ -15,7 +15,6 @@ class App extends Component {
         <Route path="/" exact component={Home} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/products" exact component={ProductList} />
-        <Route path="/cart" exact component={Cart} />
       </Switch>
     );
     return (
