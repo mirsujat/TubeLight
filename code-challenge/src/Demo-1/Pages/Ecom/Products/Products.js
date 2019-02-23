@@ -3,17 +3,21 @@ import products from "../../../../products";
 import ListItem from "../ListItem/ListItem";
 import Cart from "../Cart/Cart";
 import Layout from "../../../Layout/Layout";
+import OrderForm from "../OrderForm/OrderForm";
 
 class ProductList extends Component {
   state = {
     data: { ...products },
     cart: [],
-    cartopen: false
+    selectedId: {},
+    cartopen: false,
+    open: false,
+    formopen: false
   };
 
-  handleBuyNow = id => {
-    const { data, cart } = this.state;
-    const cartItem = data.products
+  handleSelectId = id => {
+    const { data } = this.state;
+    const selectedId = data.products
       .filter(product => product.id === id)
       .reduce((obj, item) => {
         obj = item;
@@ -21,8 +25,14 @@ class ProductList extends Component {
         obj.amount = item.price;
         return obj;
       }, {});
-    cart.push(cartItem);
-    this.setState({ cart });
+    this.setState({ selectedId });
+    this.handleOrderFormOpen();
+  };
+  handleOrderFormOpen = () => {
+    this.setState({ open: true, formopen: true });
+  };
+  handleOrderFormClosed = () => {
+    this.setState({ open: false, formopen: false });
   };
   handleCartOpen = () => {
     this.setState(prevState => {
@@ -31,9 +41,16 @@ class ProductList extends Component {
   };
   render() {
     const { data, cart } = this.state;
-    console.log("cart: ", cart);
+    console.log("Open: ", this.state.open);
     let lists = <div>Loading...</div>;
     let shoppingCart = null;
+    let orderform = null;
+
+    if (this.state.open && this.state.formopen) {
+      orderform = (
+        <OrderForm open={this.state.open} closed={this.handleOrderFormClosed} />
+      );
+    }
     if (data) {
       lists = data.products.map(product => {
         return (
@@ -44,7 +61,7 @@ class ProductList extends Component {
             size={product.availableSizes}
             currencyFormate={product.currencyFormat}
             price={product.price}
-            clicked={() => this.handleBuyNow(product.id)}
+            clicked={() => this.handleSelectId(product.id)}
           />
         );
       });
@@ -93,6 +110,7 @@ class ProductList extends Component {
         <div className="products">
           {lists}
           {shoppingCart}
+          {orderform}
         </div>
       </Layout>
     );
