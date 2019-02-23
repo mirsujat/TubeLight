@@ -46,7 +46,7 @@ class ProductList extends Component {
     let shoppingCart = null;
     let orderform = null;
 
-    if (this.state.open && this.state.formopen) {
+    if (this.state.open) {
       orderform = (
         <OrderForm open={this.state.open} closed={this.handleOrderFormClosed} />
       );

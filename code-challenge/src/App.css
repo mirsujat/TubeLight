@@ -260,3 +260,9 @@ caption {
   color: rgba(0, 0, 0, 0.64);
   padding-bottom: 15px;
 }
+.order-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
