@@ -22,17 +22,23 @@ class ProductList extends Component {
       .reduce((obj, item) => {
         obj = item;
         obj.orderNumber = Date.now();
-        obj.amount = item.price;
+        obj.amount = item.price * item.orderQuantity;
         return obj;
       }, {});
     this.setState({ selectedId });
     this.handleOrderFormOpen();
   };
+  handleChange = e => {
+    const { selectedId } = this.state;
+    selectedId.amount = selectedId.price * selectedId.orderQuantity;
+    selectedId[e.target.name] = e.target.value;
+    this.setState({ selectedId });
+  };
   handleOrderFormOpen = () => {
-    this.setState({ open: true, formopen: true });
+    this.setState({ open: true });
   };
   handleOrderFormClosed = () => {
-    this.setState({ open: false, formopen: false });
+    this.setState({ open: false });
   };
   handleCartOpen = () => {
     this.setState(prevState => {
@@ -55,6 +61,9 @@ class ProductList extends Component {
           description={selectedId.description}
           currencyFormat={selectedId.currencyFormat}
           price={selectedId.price}
+          orderQuantity={selectedId.orderQuantity}
+          amount={selectedId.amount}
+          handleChange={this.handleChange}
         />
       );
     }

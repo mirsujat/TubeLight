@@ -3,7 +3,6 @@ import Modal from "../../../Modal/Modal";
 
 const OrderForm = props => {
   let open = props.open;
-  let formopen = props.formopen;
   let content = null;
   if (open) {
     content = (
@@ -24,7 +23,7 @@ const OrderForm = props => {
           </div>
           <div className="form-field">
             <label>Please Select Quantity</label>
-            <select name={props.orderQuantity}>
+            <select name="orderQuantity" onChange={props.handleChange}>
               <option>{1}</option>
               <option>{2}</option>
               <option>{3}</option>
@@ -37,7 +36,9 @@ const OrderForm = props => {
               <option>{10}</option>
             </select>
           </div>
-          <p>Amount: {props.amount}</p>
+          <p onChange={props.handleChange} name="amount">
+            Amount: {props.currencyFormat} {props.amount}
+          </p>
           <div className="form-field">
             <button type="submt" className="order-btn">
               ORDER NOW
