@@ -10,6 +10,7 @@ class ProductList extends Component {
     data: { ...products },
     cart: [],
     selectedId: {},
+    order: {},
     cartopen: false,
     open: false,
     formopen: false
@@ -25,13 +26,13 @@ class ProductList extends Component {
         obj.amount = item.price * item.orderQuantity;
         return obj;
       }, {});
-    this.setState({ selectedId });
     this.handleOrderFormOpen();
+    this.setState({ selectedId });
   };
   handleChange = e => {
     const { selectedId } = this.state;
-    selectedId.amount = selectedId.price * selectedId.orderQuantity;
     selectedId[e.target.name] = e.target.value;
+    selectedId.amount = selectedId.price * selectedId.orderQuantity;
     this.setState({ selectedId });
   };
   handleOrderFormOpen = () => {
