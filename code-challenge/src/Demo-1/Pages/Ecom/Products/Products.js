@@ -10,10 +10,8 @@ class ProductList extends Component {
     data: { ...products },
     cart: [],
     selectedId: {},
-    order: {},
     cartopen: false,
-    open: false,
-    formopen: false
+    open: false
   };
 
   handleSelectId = id => {
@@ -67,9 +65,9 @@ class ProductList extends Component {
           title={selectedId.title}
           description={selectedId.description}
           currencyFormat={selectedId.currencyFormat}
-          price={selectedId.price}
+          price={selectedId.price.toFixed(2)}
           orderQuantity={selectedId.orderQuantity}
-          amount={selectedId.amount}
+          amount={selectedId.amount.toFixed(2)}
           handleChange={this.handleChange}
           submit={this.handleSubmit}
         />
@@ -117,11 +115,11 @@ class ProductList extends Component {
                     <td>{item.description}</td>
                     <td>{item.availableSizes}</td>
                     <td>
-                      {item.currencyFormat} {item.price}
+                      {item.currencyFormat} {item.price.toFixed(2)}
                     </td>
                     <td>{item.orderQuantity}</td>
                     <td>
-                      {item.currencyFormat} {item.amount}
+                      {item.currencyFormat} {item.amount.toFixed(2)}
                     </td>
                   </tr>
                 );
