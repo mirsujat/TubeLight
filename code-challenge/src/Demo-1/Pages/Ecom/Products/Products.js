@@ -40,15 +40,22 @@ class ProductList extends Component {
     });
   };
   render() {
-    const { data, cart } = this.state;
-    console.log("Open: ", this.state.open);
+    const { data, cart, selectedId } = this.state;
+    console.log("SelectedId: ", this.state.selectedId);
     let lists = <div>Loading...</div>;
     let shoppingCart = null;
     let orderform = null;
 
     if (this.state.open) {
       orderform = (
-        <OrderForm open={this.state.open} closed={this.handleOrderFormClosed} />
+        <OrderForm
+          open={this.state.open}
+          closed={this.handleOrderFormClosed}
+          title={selectedId.title}
+          description={selectedId.description}
+          currencyFormat={selectedId.currencyFormat}
+          price={selectedId.price}
+        />
       );
     }
     if (data) {
