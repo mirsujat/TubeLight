@@ -227,10 +227,7 @@ p {
   height: auto;
   box-shadow: 3px 1px 15px 6px rgba(0, 0, 0, 0.2);
 }
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+
 table,
 thead,
 td {
@@ -252,6 +249,13 @@ tbody > tr > td {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.8);
 }
+tfoot > tr > td {
+  padding: 5px 15px;
+  text-align: left;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.64);
+}
+
 caption {
   display: table-caption;
   text-align: center;
@@ -259,6 +263,13 @@ caption {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.64);
   padding-bottom: 15px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.empty {
+  border: 0px solid white;
 }
 .order-form {
   display: flex;

@@ -11,7 +11,9 @@ class ProductList extends Component {
     cart: [],
     selectedId: {},
     cartopen: false,
-    open: false
+    open: false,
+    currencyFormat: "$",
+    totalPrice: 0
   };
 
   handleSelectId = id => {
@@ -50,6 +52,8 @@ class ProductList extends Component {
       return { cartopen: !prevState.cartopen };
     });
   };
+  // TODO
+  handleTotalPrice = () => {};
   render() {
     const { data, cart, selectedId } = this.state;
     console.log("SelectedId: ", this.state.selectedId);
@@ -91,7 +95,7 @@ class ProductList extends Component {
     if (cart && this.state.cartopen) {
       shoppingCart = (
         <Cart open={this.state.cartopen} cartclicked={this.handleCartOpen}>
-          <table>
+          <table className="shopping-cart">
             <caption>YOUR SHOPPING CART</caption>
             <thead>
               <tr>
@@ -125,6 +129,20 @@ class ProductList extends Component {
                 );
               })}
             </tbody>
+            <tfoot>
+              <tr>
+                <td className="empty" />
+                <td className="empty" />
+                <td className="empty" />
+                <td className="empty" />
+                <td className="empty" />
+                <td className="empty" />
+                <td>TOTAL AMOUNT =</td>
+                <td>
+                  {this.state.currencyFormat} {this.state.totalPrice.toFixed(2)}
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </Cart>
       );
