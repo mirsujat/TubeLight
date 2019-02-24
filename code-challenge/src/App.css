@@ -123,7 +123,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  min-width: 500px;
   height: auto;
   padding: 25px 40px;
   margin: 0;
@@ -265,4 +265,6 @@ caption {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 650px;
+  height: 350px;
 }

@@ -7,7 +7,7 @@ const OrderForm = props => {
   if (open) {
     content = (
       <Modal open={props.open} closed={props.closed}>
-        <form className="order-form">
+        <form className="order-form" onSubmit={props.submit}>
           <p>Name: {props.title}</p>
           <p>Description: {props.description}</p>
           <p>
@@ -40,7 +40,7 @@ const OrderForm = props => {
             Amount: {props.currencyFormat} {props.amount}
           </p>
           <div className="form-field">
-            <button type="submt" className="order-btn">
+            <button type="submit" className="order-btn">
               ORDER NOW
             </button>
           </div>

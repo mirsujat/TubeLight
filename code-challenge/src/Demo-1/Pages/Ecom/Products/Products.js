@@ -35,6 +35,12 @@ class ProductList extends Component {
     selectedId.amount = selectedId.price * selectedId.orderQuantity;
     this.setState({ selectedId });
   };
+  handleSubmit = e => {
+    e.preventDefault();
+    const { cart, selectedId } = this.state;
+    cart.push(selectedId);
+    this.setState({ cart, selectedId: null, open: false });
+  };
   handleOrderFormOpen = () => {
     this.setState({ open: true });
   };
@@ -65,6 +71,7 @@ class ProductList extends Component {
           orderQuantity={selectedId.orderQuantity}
           amount={selectedId.amount}
           handleChange={this.handleChange}
+          submit={this.handleSubmit}
         />
       );
     }
@@ -96,6 +103,7 @@ class ProductList extends Component {
                 <td>Product Description</td>
                 <td>Size</td>
                 <td>Unit Price($)</td>
+                <td>Order QTN</td>
                 <td>Amount($)</td>
               </tr>
             </thead>
@@ -111,6 +119,7 @@ class ProductList extends Component {
                     <td>
                       {item.currencyFormat} {item.price}
                     </td>
+                    <td>{item.orderQuantity}</td>
                     <td>
                       {item.currencyFormat} {item.amount}
                     </td>
