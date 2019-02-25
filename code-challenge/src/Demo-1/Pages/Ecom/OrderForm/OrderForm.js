@@ -15,10 +15,12 @@ const OrderForm = props => {
           </p>
           <div className="form-field">
             <label>Please Select Size</label>
-            <select name={props.availableSizes}>
-              <option>X</option>
-              <option>L</option>
-              <option>XL</option>
+            <select name="availableSizes" onChange={props.handleChange}>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="X">XS</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
             </select>
           </div>
           <div className="form-field">

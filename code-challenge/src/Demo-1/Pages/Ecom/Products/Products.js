@@ -78,6 +78,7 @@ class ProductList extends Component {
           description={selectedId.description}
           currencyFormat={selectedId.currencyFormat}
           price={selectedId.price.toFixed(2)}
+          availableSizes={selectedId.availableSizes}
           orderQuantity={selectedId.orderQuantity}
           amount={selectedId.amount.toFixed(2)}
           handleChange={this.handleChange}
