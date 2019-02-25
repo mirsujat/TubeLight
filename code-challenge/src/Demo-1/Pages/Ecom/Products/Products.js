@@ -40,6 +40,15 @@ class ProductList extends Component {
     const { cart, selectedId } = this.state;
     cart.push(selectedId);
     this.setState({ cart, selectedId: null, open: false });
+    this.handleTotalPrice();
+  };
+  // TODO: Calculate total price
+  handleTotalPrice = () => {
+    const { cart } = this.state;
+    const totalPrice = cart.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.amount;
+    }, 0);
+    this.setState({ totalPrice });
   };
   handleOrderFormOpen = () => {
     this.setState({ open: true });
@@ -52,8 +61,7 @@ class ProductList extends Component {
       return { cartopen: !prevState.cartopen };
     });
   };
-  // TODO
-  handleTotalPrice = () => {};
+
   render() {
     const { data, cart, selectedId } = this.state;
     console.log("SelectedId: ", this.state.selectedId);
