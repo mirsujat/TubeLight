@@ -261,8 +261,9 @@ caption {
   text-align: center;
   font-size: 32px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.64);
+  /* color: rgba(0, 0, 0, 0.64); */
   padding-bottom: 15px;
+  color: #ff9800;
 }
 table {
   border-collapse: collapse;
