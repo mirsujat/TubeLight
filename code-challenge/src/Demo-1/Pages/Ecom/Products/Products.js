@@ -38,9 +38,16 @@ class ProductList extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { cart, selectedId } = this.state;
-    cart.push(selectedId);
-    this.setState({ cart, selectedId: null, open: false });
-    this.handleTotalPrice();
+    let updatedCart = [...cart, selectedId];
+    let totalPrice = updatedCart.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.amount;
+    }, 0);
+    this.setState({
+      cart: updatedCart,
+      selectedId: null,
+      open: false,
+      totalPrice
+    });
   };
   // TODO: Calculate total price
   handleTotalPrice = () => {
