@@ -1,5 +1,5 @@
 ============================================================================
 Challenge 1: 
-Make a todo app so that user can create, read, update and delete their todo.
+Make a todo list app so that user can create, read, update and delete their todo.
 Time = 40 minuties
 ============================================================================ 
