@@ -88,9 +88,15 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares);
     const moves = history.map((step, move) => {
       const desc = move ? "Go to move #" + move : "Go to game start";
+      console.log("step:", step.squares);
+      const locationX = step.squares.lastIndexOf("X");
+      const locationO = step.squares.lastIndexOf("O");
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <span>
+            Position of X: {locationX}, Position of O: {locationO}{" "}
+          </span>
         </li>
       );
     });
@@ -101,6 +107,7 @@ class Game extends React.Component {
     } else {
       status = "Next Player: " + (this.state.xIsNext ? "x" : "o");
     }
+    console.log(this.state.history);
     return (
       <div className="game">
         <div className="game-board">
