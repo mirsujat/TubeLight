@@ -47,7 +47,7 @@ ul {
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .position {
   display: inline-block;
@@ -57,6 +57,4 @@ ul {
 }
 .active {
   font-weight: 600;
-}
-.move {
 }

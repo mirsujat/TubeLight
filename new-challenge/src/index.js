@@ -103,15 +103,17 @@ class Game extends React.Component {
       if (locationO === -1) {
         return (locationO = "");
       }
-      const { isActive } = this.state;
-      let classname = "move";
+
+      let classname = "";
       if (this.state.selected === move) {
         classname = "active";
       }
 
       return (
         <li key={move} className={classname}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button className={classname} onClick={() => this.jumpTo(move)}>
+            {desc}
+          </button>
           <span className="position">Position of X: {locationX}</span>
           <span className="position">Position of O: {locationO}</span>
         </li>
