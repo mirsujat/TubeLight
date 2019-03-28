@@ -49,3 +49,12 @@ ul {
 .game-info {
   margin-left: 20px;
 }
+.position {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.74);
+}
+.bold {
+  font-weight: 600;
+}
