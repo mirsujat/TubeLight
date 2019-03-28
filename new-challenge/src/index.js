@@ -55,7 +55,6 @@ class Game extends React.Component {
       ],
       xIsNext: true,
       stepNumber: 0,
-      isBold: false,
       isActive: false
     };
   }
@@ -81,7 +80,6 @@ class Game extends React.Component {
     this.setState({
       stepNumber: step,
       xIsNext: step % 2 === 0,
-      isBold: true,
       isActive: true
     });
   }
@@ -90,9 +88,11 @@ class Game extends React.Component {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
+    const { isActive } = this.state;
+    let classname = isActive ? "active" : "";
+
     const moves = history.map((step, move) => {
       const desc = move ? "Go to move #" + move : "Go to game start";
-      console.log("step:", step.squares);
       let locationX = step.squares.lastIndexOf("X");
       let locationO = step.squares.lastIndexOf("O");
       if (locationX === -1) {
@@ -101,15 +101,9 @@ class Game extends React.Component {
       if (locationO === -1) {
         return (locationO = "");
       }
-      let bold = "";
-      if (this.state.isBold && this.state.isActive) {
-        bold = "bold";
-      }
       return (
-        <li key={move} active={this.state.isActive}>
-          <button className={bold} onClick={() => this.jumpTo(move)}>
-            {desc}
-          </button>
+        <li key={move} className={classname}>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
           <span className="position">Position of X: {locationX}</span>
           <span className="position">Position of O: {locationO}</span>
         </li>
