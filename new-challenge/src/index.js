@@ -55,7 +55,8 @@ class Game extends React.Component {
       ],
       xIsNext: true,
       stepNumber: 0,
-      isActive: false
+      isActive: false,
+      selected: []
     };
   }
   handleClick(i) {
@@ -80,7 +81,8 @@ class Game extends React.Component {
     this.setState({
       stepNumber: step,
       xIsNext: step % 2 === 0,
-      isActive: true
+      isActive: true,
+      selected: step
     });
   }
 
@@ -101,6 +103,12 @@ class Game extends React.Component {
       if (locationO === -1) {
         return (locationO = "");
       }
+      const { isActive } = this.state;
+      let classname = "move";
+      if (this.state.selected === move) {
+        classname = "active";
+      }
+
       return (
         <li key={move} className={classname}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
