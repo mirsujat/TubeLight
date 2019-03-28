@@ -46,14 +46,24 @@ const Square = props => {
 
 class Board extends React.Component {
   state = {
-    row: [0, 1, 2],
+    rows: [0, 1, 2],
     squares: [0, 1, 2, 3, 4, 5, 6, 7, 8]
   };
 
   render() {
+    const { rows, squares } = this.state;
     let renderSquares = null;
     let boardRow = null;
     let boardSquare = null;
+    if (rows && squares) {
+      renderSquares = rows.map((i, row) => {
+        return (boardRow = (
+          <div className="board-row" key={row}>
+            {row}
+          </div>
+        ));
+      });
+    }
 
     return <div>{renderSquares}</div>;
   }
