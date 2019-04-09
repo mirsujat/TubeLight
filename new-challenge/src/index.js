@@ -46,31 +46,33 @@ const Square = props => {
 
 class Board extends React.Component {
   state = {
-    rows: [0, 1, 2],
-    squares: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    // rows: [0, 1, 2],
+    squares: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    rows: [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
   };
 
   render() {
-    const { rows, squares } = this.state;
-    const Element = [0, 1, 2];
-    const SquareElement = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    let renderSquares = null;
+    const { rows } = this.state;
     let BoardRow = null;
-    let boardSquare = null;
     if (rows) {
-      BoardRow = rows.map((value, i) => {
+      BoardRow = rows.map((r, i) => {
         return (
-          <div className="board-row" key={i}>
-            <Square
-              value={this.props.squares[i]}
-              onClick={() => this.props.onClick(i)}
-            />
+          <div className="board-row" key={"row_" + i}>
+            {r.map((d, j) => {
+              return (
+                <Square
+                  key={i + "_" + j}
+                  value={this.props.squares[i]}
+                  onClick={() => this.props.onClick(i, j)}
+                />
+              );
+            })}
           </div>
         );
       });
     }
 
-    return <div>{boardRow}</div>;
+    return <div>{BoardRow}</div>;
   }
 }
 class Game extends React.Component {
