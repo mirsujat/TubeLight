@@ -84,7 +84,6 @@ class Game extends React.Component {
       ],
       xIsNext: true,
       stepNumber: 0,
-      isActive: false,
       selected: []
     };
   }
@@ -110,17 +109,14 @@ class Game extends React.Component {
     this.setState({
       stepNumber: step,
       xIsNext: step % 2 === 0,
-      isActive: true,
       selected: step
     });
   }
-
+  toggle = () => {};
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
-    const { isActive } = this.state;
-    let classname = isActive ? "active" : "";
 
     const moves = history.map((step, move) => {
       const desc = move ? "Go to move #" + move : "Go to game start";
@@ -140,11 +136,13 @@ class Game extends React.Component {
 
       return (
         <li key={move} className={classname}>
-          <button className={classname} onClick={() => this.jumpTo(move)}>
-            {desc}
-          </button>
-          <span className="position">Position of X: {locationX}</span>
-          <span className="position">Position of O: {locationO}</span>
+          <div>
+            <button className={classname} onClick={() => this.jumpTo(move)}>
+              {desc}
+            </button>
+            <span className="position">Position of X: {locationX}</span>
+            <span className="position">Position of O: {locationO}</span>
+          </div>
         </li>
       );
     });
@@ -155,14 +153,17 @@ class Game extends React.Component {
     } else {
       status = "Next Player: " + (this.state.xIsNext ? "x" : "o");
     }
-    console.log(this.state.history);
+
     return (
       <div className="game">
         <div className="game-board">
           <Board squares={current.squares} onClick={i => this.handleClick(i)} />
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div className="status">{status}</div>
+          <button className="sort" onClick={this.toggle}>
+            Sort by Acending
+          </button>
           <ol>{moves}</ol>
         </div>
       </div>

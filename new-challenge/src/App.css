@@ -45,7 +45,16 @@ ul {
   display: flex;
   flex-direction: row;
 }
-
+.status {
+  display: inline;
+  padding-right: 30px;
+}
+.sort {
+  display: inline;
+}
+button {
+  display: inline-block;
+}
 .game-info {
   margin-left: 40px;
 }
