@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 
 const Square = props => {
   return (
-    <button className="square" onClick={props.onClick}>
+    <button className={props.classname} onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -60,6 +60,7 @@ class Board extends React.Component {
               return (
                 <Square
                   key={i + "_" + j}
+                  classname={this.props.classname}
                   value={this.props.squares[d]}
                   onClick={() => this.props.onClick(d)}
                 />
@@ -112,9 +113,11 @@ class Game extends React.Component {
       selected: step
     });
   }
+  // TODO
   toggle = () => {};
+
   render() {
-    const history = this.state.history;
+    const { history } = this.state;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
@@ -148,16 +151,31 @@ class Game extends React.Component {
     });
 
     let status;
+    let hightLight = "square";
     if (winner) {
       status = "Winner: " + winner;
     } else {
       status = "Next Player: " + (this.state.xIsNext ? "x" : "o");
     }
 
+    console.log("Winner: ", current.squares);
+    // TODO
+    // let test = current.squares.find(el => {
+    //   return winner == el;
+    // });
+    // console.log("Test: ", test);
+    if (winner) {
+      hightLight = "square high-light";
+    }
+
     return (
       <div className="game">
         <div className="game-board">
-          <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+          <Board
+            squares={current.squares}
+            classname={hightLight}
+            onClick={i => this.handleClick(i)}
+          />
         </div>
         <div className="game-info">
           <div className="status">{status}</div>
@@ -196,6 +214,7 @@ function calculateWinner(squares) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
+
+    return null;
   }
-  return null;
 }

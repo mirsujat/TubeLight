@@ -67,3 +67,6 @@ button {
 .active {
   font-weight: 600;
 }
+.high-light {
+  background-color: bisque;
+}
