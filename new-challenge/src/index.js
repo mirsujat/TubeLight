@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 
 const Square = props => {
   return (
-    <button className={props.classname} onClick={props.onClick}>
+    <button className="square" onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -28,7 +28,6 @@ class Board extends React.Component {
               return (
                 <Square
                   key={d}
-                  classname={this.props.classname}
                   value={this.props.squares[d]}
                   onClick={() => this.props.onClick(d)}
                 />
@@ -117,7 +116,6 @@ class Game extends React.Component {
     });
 
     let status;
-    let hightLight = "square";
     if (winner) {
       status = "Winner: " + winner;
     } else {
@@ -127,11 +125,7 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board
-            squares={current.squares}
-            classname={hightLight}
-            onClick={i => this.handleClick(i)}
-          />
+          <Board squares={current.squares} onClick={i => this.handleClick(i)} />
         </div>
         <div className="game-info">
           <div className="status">{status}</div>
