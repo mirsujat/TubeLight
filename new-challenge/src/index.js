@@ -122,6 +122,8 @@ class Game extends React.Component {
       status = "Next Player: " + (this.state.xIsNext ? "x" : "o");
     }
 
+    console.log("Winner: ", winner);
+    console.log("Current: ", current.squares);
     return (
       <div className="game">
         <div className="game-board">
