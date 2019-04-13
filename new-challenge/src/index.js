@@ -106,7 +106,6 @@ class Game extends React.Component {
       if (this.state.selected === move) {
         classname = "active";
       }
-
       return (
         <li key={move} className={classname}>
           <div>
@@ -118,6 +117,10 @@ class Game extends React.Component {
       );
     });
 
+    // Display the move Ascending or Descending Order
+    if (!isAscending) {
+      moves.reverse();
+    }
     let status;
     if (winner) {
       status = "Winner: " + winner;
