@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
+import Game from "./components/Game/Game";
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>React Tic-Toc-Toe Game Challenge</h1>
+        <h1>GAME</h1>
       </div>
     );
   }
