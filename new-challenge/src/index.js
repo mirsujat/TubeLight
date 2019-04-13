@@ -3,17 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "./App.css";
 import * as serviceWorker from "./serviceWorker";
-import Game from "./components/Game/Game";
+import App from "./App";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>GAME</h1>
-      </div>
-    );
-  }
-}
 // ========================================
 
 ReactDOM.render(<App />, document.getElementById("root"));
