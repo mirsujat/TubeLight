@@ -24,13 +24,13 @@ ul {
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 65px;
+  height: 65px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 65px;
 }
 .square.highlight {
   background: #ffeb3b;
