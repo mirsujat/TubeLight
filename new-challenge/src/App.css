@@ -33,7 +33,7 @@ ul {
   width: 34px;
 }
 .square.highlight {
-  background: rgb(243, 239, 6);
+  background: #ffeb3b;
 }
 
 .square:focus {
