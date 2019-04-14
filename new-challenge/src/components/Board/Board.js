@@ -3,10 +3,24 @@ import Square from "../Square/Square";
 
 class Board extends Component {
   state = {
-    squares: Array(9).fill(null)
+    squares: Array(9).fill(null),
+    xIsNext: true
   };
+
+  handleClick = i => {
+    const { squares } = this.state;
+    squares[i] = this.state.xIsNext ? "X" : "O";
+    this.setState({ squares, xIsNext: !this.state.xIsNext });
+  };
+
   renderSquares(i) {
-    return <Square key={i} value={this.state.squares[i]} />;
+    return (
+      <Square
+        key={i}
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
   }
 
   render() {
@@ -23,7 +37,15 @@ class Board extends Component {
         </div>
       );
     }
-    return <div className="board">{squares}</div>;
+
+    const status = "Next Player: " + (this.state.xIsNext ? "X" : "O");
+
+    return (
+      <div className="board">
+        <div className="status">{status}</div>
+        {squares}
+      </div>
+    );
   }
 }
 
