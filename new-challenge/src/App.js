@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
 import "./App.css";
+import Game from "./components/Game/Game";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>Tic toc toe game</h1>
+        <Game />
       </div>
     );
   }
