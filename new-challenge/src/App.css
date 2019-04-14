@@ -64,6 +64,10 @@ li {
 .game-info {
   margin-left: 40px;
 }
+.move-list-item-selected {
+  float: left;
+  font-weight: bold;
+}
 .position {
   display: inline-block;
   padding: 0 15px;
