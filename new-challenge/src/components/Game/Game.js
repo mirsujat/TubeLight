@@ -5,7 +5,8 @@ class Game extends Component {
   state = {
     history: [{ squares: Array(9).fill(null) }],
     xIsNext: true,
-    stepNumber: 0
+    stepNumber: 0,
+    isAscending: true
   };
 
   handleClick = i => {
@@ -35,12 +36,18 @@ class Game extends Component {
     });
   };
 
+  handleToggle = () => {
+    this.setState({
+      isAscending: !this.state.isAscending
+    });
+  };
+
   render() {
-    const { history, stepNumber } = this.state;
+    const { history, stepNumber, isAscending } = this.state;
     const current = history[stepNumber];
     const winner = calculateWinner(current.squares);
 
-    const moves = history.map((step, move) => {
+    let moves = history.map((step, move) => {
       const lastMoveIndex = step.lastMoveIndex;
       const col = 1 + (lastMoveIndex % 3);
       const row = 1 + Math.floor(lastMoveIndex / 3);
@@ -59,6 +66,10 @@ class Game extends Component {
       );
     });
 
+    if (!isAscending) {
+      moves.reverse();
+    }
+
     let status;
     if (winner) {
       status = "Winner : " + winner;
@@ -72,6 +83,9 @@ class Game extends Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
+          <button onClick={this.handleToggle}>
+            {isAscending ? "Descending" : "Ascending"}
+          </button>
           <div>{moves}</div>
         </div>
       </div>
