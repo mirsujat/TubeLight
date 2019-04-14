@@ -3,12 +3,25 @@ import Square from "../Square/Square";
 
 class Board extends Component {
   state = {
-    squares: Array(9).fill(null)
+    squares: Array(9).fill(null),
+    xIsNext: true
   };
 
   renderSquares = i => {
-    return <Square key={i} value={this.state.squares[i]} />;
+    return (
+      <Square
+        key={i}
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
   };
+  handleClick = i => {
+    const { squares } = this.state;
+    squares[i] = this.state.xIsNext ? "X" : "O";
+    this.setState({ squares, xIsNext: !this.state.xIsNext });
+  };
+
   render() {
     const boardSize = 3;
     const squares = [];
