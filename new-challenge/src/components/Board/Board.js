@@ -3,11 +3,13 @@ import Square from "../Square/Square";
 
 class Board extends Component {
   renderSquares = i => {
+    const winLine = this.props.winLine;
     return (
       <Square
         key={i}
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
+        highlight={winLine && winLine.includes(i)}
       />
     );
   };
