@@ -58,6 +58,9 @@ ul {
 button {
   display: inline-block;
 }
+li {
+  list-style: none;
+}
 .game-info {
   margin-left: 40px;
 }
