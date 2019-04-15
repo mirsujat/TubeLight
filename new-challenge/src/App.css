@@ -14,10 +14,6 @@ ul {
   display: table;
 }
 
-.status {
-  margin-bottom: 10px;
-}
-
 .square {
   background: #fff;
   border: 1px solid #999;
@@ -52,6 +48,8 @@ ul {
   display: inline-block;
   padding-right: 30px;
   font-size: 32px;
+  width: 300px;
+  margin-bottom: 10px;
 }
 .status-win {
   display: inline-block;
