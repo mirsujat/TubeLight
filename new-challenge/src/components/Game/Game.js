@@ -7,7 +7,8 @@ class Game extends Component {
     history: [{ squares: Array(9).fill(null) }],
     xIsNext: true,
     stepNumber: 0,
-    isAscending: true
+    isAscending: true,
+    isReset: false
   };
 
   handleClick = i => {
@@ -26,7 +27,8 @@ class Game extends Component {
         }
       ]),
       xIsNext: !this.state.xIsNext,
-      stepNumber: history.length
+      stepNumber: history.length,
+      isReset: false
     });
   };
 
@@ -42,40 +44,52 @@ class Game extends Component {
       isAscending: !this.state.isAscending
     });
   };
+  handleReset = () => {
+    this.setState({
+      stepNumber: 0,
+      isReset: true
+    });
+  };
 
   render() {
-    const { history, stepNumber, isAscending } = this.state;
+    const { history, stepNumber, isAscending, isReset } = this.state;
     const current = history[stepNumber];
     const winInfo = calculateWinner(current.squares);
     const winner = winInfo.winner;
+
+    let gameState;
 
     let moves = history.map((step, move) => {
       const lastMoveIndex = step.lastMoveIndex;
       const col = 1 + (lastMoveIndex % 3);
       const row = 1 + Math.floor(lastMoveIndex / 3);
-      const desc = move
-        ? `Go to move#${move} (${col}, ${row})`
-        : "Go to game start";
-      return (
-        <li key={move}>
-          <button
-            className={
-              move === stepNumber
-                ? "move-list move-list-item-selected"
-                : "move-list"
-            }
-            onClick={() => this.jumpTo(move)}
-          >
-            {desc}
-          </button>
-        </li>
-      );
+      const desc = move ? `Go to move# ${move} (${col}, ${row})` : null;
+      if (move) {
+        return (gameState = (
+          <li key={move}>
+            <button
+              className={
+                move === stepNumber
+                  ? "btn move-list move-list-item-selected"
+                  : "btn move-list"
+              }
+              onClick={() => this.jumpTo(move)}
+            >
+              {desc}
+            </button>
+          </li>
+        ));
+      } else {
+        gameState = null;
+      }
     });
 
     if (!isAscending) {
       moves.reverse();
     }
-
+    if (isReset) {
+      moves = null;
+    }
     let status;
     if (winner) {
       status = <div className="status-win">Winner: {winner}</div>;
@@ -97,8 +111,11 @@ class Game extends Component {
         </div>
         <div className="game-info">
           <div className="status">{status}</div>
-          <button onClick={this.handleToggle}>
+          <button onClick={this.handleToggle} className="btn">
             {isAscending ? "Sort Descending" : " Sort Ascending"}
+          </button>
+          <button onClick={this.handleReset} className="btn start-btn">
+            Start New Game!
           </button>
           <div className="move">{moves}</div>
         </div>
