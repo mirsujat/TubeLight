@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Board from "../Board/Board";
+import BoardWithArray from "../Board/BoardWithArray";
+import BoardWithMap from "../Board/BoardWithMap";
 
 class Game extends Component {
   state = {
@@ -88,7 +89,7 @@ class Game extends Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board
+          <BoardWithMap
             squares={current.squares}
             onClick={i => this.handleClick(i)}
             winLine={winInfo.line}
