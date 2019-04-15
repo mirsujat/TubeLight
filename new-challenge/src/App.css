@@ -49,8 +49,21 @@ ul {
   flex-direction: row;
 }
 .status {
-  display: inline;
+  display: inline-block;
   padding-right: 30px;
+  font-size: 32px;
+}
+.status-win {
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 32px;
+  color: green;
+}
+.status-draw {
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 32px;
+  color: #ff9800;
 }
 .sort {
   display: inline;
@@ -64,9 +77,20 @@ li {
 .game-info {
   margin-left: 40px;
 }
+.move-list {
+  display: block;
+  margin-bottom: 4px;
+  padding: 4px;
+}
 .move-list-item-selected {
-  float: left;
+  display: block;
   font-weight: bold;
+}
+.move {
+  display: block;
+  width: 250px;
+  height: auto;
+  margin: 10px;
 }
 .position {
   display: inline-block;

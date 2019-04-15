@@ -58,7 +58,11 @@ class Game extends Component {
       return (
         <li key={move}>
           <button
-            className={move === stepNumber ? "move-list-item-selected" : ""}
+            className={
+              move === stepNumber
+                ? "move-list move-list-item-selected"
+                : "move-list"
+            }
             onClick={() => this.jumpTo(move)}
           >
             {desc}
@@ -73,10 +77,10 @@ class Game extends Component {
 
     let status;
     if (winner) {
-      status = "Winner : " + winner;
+      status = <div className="status-win">Winner: {winner}</div>;
     } else {
       if (winInfo.isDraw) {
-        status = "Match Draw";
+        status = <div className="status-draw">Match Draw</div>;
       } else {
         status = "Next Player: " + (this.state.xIsNext ? " X" : "O");
       }
@@ -91,11 +95,11 @@ class Game extends Component {
           />
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div className="status">{status}</div>
           <button onClick={this.handleToggle}>
-            {isAscending ? "Descending" : "Ascending"}
+            {isAscending ? "Sort Descending" : " Sort Ascending"}
           </button>
-          <div>{moves}</div>
+          <div className="move">{moves}</div>
         </div>
       </div>
     );
