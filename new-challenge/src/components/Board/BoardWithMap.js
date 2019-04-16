@@ -12,11 +12,12 @@ class BoardWithMap extends Component {
       [9, 10, 11],
       [12],
       [13, 14]
-    ]
+    ],
+    formFields: [[0, 1], [2], [3, 4, 5], [6, 7, 8], [9, 10, 11], [12], [13, 14]]
   };
 
   render() {
-    const { boardSquare, testSquares } = this.state;
+    const { boardSquare, testSquares, formFields } = this.state;
     const winLine = this.props.winLine;
     let squares;
     if (boardSquare) {
@@ -56,10 +57,25 @@ class BoardWithMap extends Component {
       });
     }
 
+    // From Group
+    let formGroup;
+    if (formFields) {
+      formGroup = formFields.map((r, i) => {
+        return (
+          <div className="form-group" key={"row_" + i}>
+            {r.map((d, j) => {
+              return <input type="text" key={d} className="form-field" />;
+            })}
+          </div>
+        );
+      });
+    }
+
     return (
       <div className="board">
         {squares}
         <div className="test-board"> {testSquareBoard}</div>
+        <form action="">{formGroup}</form>
       </div>
     );
   }
