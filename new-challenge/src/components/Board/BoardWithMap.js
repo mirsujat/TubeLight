@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Square from "../Square/Square";
+import Form from "../Form/Form";
 
 class BoardWithMap extends Component {
   state = {
@@ -12,8 +13,7 @@ class BoardWithMap extends Component {
       [9, 10, 11],
       [12],
       [13, 14]
-    ],
-    formFields: [[0, 1], [2], [3, 4, 5], [6, 7, 8], [9, 10, 11], [12], [13, 14]]
+    ]
   };
 
   render() {
@@ -57,25 +57,11 @@ class BoardWithMap extends Component {
       });
     }
 
-    // From Group
-    let formGroup;
-    if (formFields) {
-      formGroup = formFields.map((r, i) => {
-        return (
-          <div className="form-group" key={"row_" + i}>
-            {r.map((d, j) => {
-              return <input type="text" key={d} className="form-field" />;
-            })}
-          </div>
-        );
-      });
-    }
-
     return (
       <div className="board">
         {squares}
         <div className="test-board"> {testSquareBoard}</div>
-        <form action="">{formGroup}</form>
+        <Form />
       </div>
     );
   }
