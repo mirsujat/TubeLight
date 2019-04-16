@@ -79,9 +79,8 @@ class Game extends Component {
             </button>
           </li>
         ));
-      } else {
-        gameState = null;
       }
+      return (gameState = null);
     });
 
     if (!isAscending) {
