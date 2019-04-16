@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Square from "../Square/Square";
-import Form from "../Form/Form";
 
 class BoardWithMap extends Component {
   state = {
@@ -61,7 +60,6 @@ class BoardWithMap extends Component {
       <div className="board">
         {squares}
         <div className="test-board"> {testSquareBoard}</div>
-        <Form />
       </div>
     );
   }
