@@ -133,3 +133,22 @@ li {
 .high-light {
   background-color: bisque;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 15px;
+}
+.form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.form-field {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 6px;
+}
