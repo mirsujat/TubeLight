@@ -8,7 +8,7 @@ const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
-const productDOM = document.querySelector(".products-center");
+const productsDOM = document.querySelector(".products-center");
 
 // Cart
 let cart = [];
@@ -34,7 +34,33 @@ class Products {
 }
 
 // Display Product
-class UI {}
+class UI {
+  displayProducts(products) {
+    let result = "";
+    products.forEach(product => {
+      result += `
+       <!-- single product -->
+        <article class="product">
+          <div class="img-container">
+            <img
+              src=${product.image}
+              alt="product"
+              class="product-img"
+            />
+            <button class="bag-btn" data-id=${product.id} >
+              <i class="fas fa-shopping-cart"></i>
+              add to cart
+            </button>
+          </div>
+          <h3>${product.title}</h3>
+          <h4>$ ${product.price}</h4>
+        </article>
+        <!-- end of single product -->
+      `;
+    });
+    productsDOM.innerHTML = result;
+  }
+}
 
 // local Storage
 class Storage {}
@@ -43,5 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const products = new Products();
 
-  products.getProducts().then(data => console.log(data));
+  products.getProducts().then(products => ui.displayProducts(products));
 });
