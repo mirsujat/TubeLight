@@ -263,7 +263,8 @@ body {
 /*------- Logo Design ----*/
 .logo {
   display: inline-block;
-  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .logo-head {
   color: #444;
