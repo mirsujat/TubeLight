@@ -259,5 +259,17 @@ body {
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
-
 /* --------------- End of Cart ---------------- */
+/*------- Logo Design ----*/
+.logo {
+  display: inline-block;
+  font-size: 32px;
+}
+.logo-head {
+  color: #444;
+  letter-spacing: 16px;
+}
+.logo-tail {
+  color: var(--primaryColor);
+  letter-spacing: 16px;
+}
