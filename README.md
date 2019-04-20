@@ -1,10 +1,4 @@
-# TubeLight
-Technology Used in this project are React, Redux, Express, MongoDB and GraphQL, Firebase 
+## Net Cat 
 
-# [See Burger Builder Demo here](https://build-burger-c3801.firebaseapp.com/)
-
-![Burger Builder](https://github.com/mirsujat/TubeLight/blob/master/Burger.png)
-
-
-## These are  exercices project to Learn React, Redux, Express, MongoDB and GraphQL, Firebase 
+is a Vanila Javascript Project build with Javascript, html and css
 Thanks Mir Sujat
