@@ -286,6 +286,7 @@ body {
 }
 
 .hire {
-  font-weight: 400;
+  font-weight: 900;
   color: var(--primaryColor);
+  text-transform: uppercase;
 }
