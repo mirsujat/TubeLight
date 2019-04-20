@@ -274,3 +274,18 @@ body {
   color: var(--primaryColor);
   letter-spacing: 16px;
 }
+.footer {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  letter-spacing: 5px;
+  color: rgba(0, 0, 0, 0, 0.54);
+}
+.fas.fa-heart {
+  color: var(--primaryColor);
+}
+
+.hire {
+  font-weight: 400;
+  color: var(--primaryColor);
+}
