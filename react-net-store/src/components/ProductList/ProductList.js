@@ -8,14 +8,14 @@ class ProductList extends Component {
   };
   render() {
     return (
-      <Frament>
+      <Fragment>
         <div className="py-5">
           <div className="container">
             <Title name="our" title="products" />
             <div className="row" />
           </div>
         </div>
-      </Frament>
+      </Fragment>
       //<Product />
     );
   }
