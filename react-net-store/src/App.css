@@ -17,6 +17,7 @@ body {
 }
 .text-blue {
   color: var(--mainBlue);
+  padding-left: 15px;
 }
 .text-bright {
   color: var(--lightBlue);
