@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import logo from "../../logo.svg";
+
+import { ButtonContainer } from "../StyledComponent/Button/Button";
 
 class Navbar extends Component {
   state = {};
@@ -22,10 +25,12 @@ https://www.iconfinder.com/Makoto_msk
           </li>
         </ul>
         <Link to="/cart" className="ml-auto">
-          <button className="">
-            <i className="fas fa-cart-plus" />
+          <ButtonContainer className="">
+            <span className="mr-2">
+              <i className="fas fa-cart-plus" />
+            </span>
             my cart
-          </button>
+          </ButtonContainer>
         </Link>
       </nav>
     );
