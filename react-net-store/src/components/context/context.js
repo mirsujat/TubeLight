@@ -30,9 +30,9 @@ class ProductProvider extends Component {
     console.log("====================================");
   };
 
-  addTocart = () => {
+  addToCart = id => {
     console.log("====================================");
-    console.log("Hello from addToCart");
+    console.log(`Hello from addToCart cart.id is ${id}`);
     console.log("====================================");
   };
 
@@ -42,7 +42,7 @@ class ProductProvider extends Component {
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
-          addTocart: this.addTocart
+          addToCart: this.addToCart
         }}
       >
         {this.props.children}
