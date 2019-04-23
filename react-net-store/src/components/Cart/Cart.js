@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Title from "../Title/Title";
 import CartColumns from "./CartColumns";
+import EmptyCart from "./EmptyCart";
 
 class Cart extends Component {
   state = {};
@@ -9,6 +10,7 @@ class Cart extends Component {
       <section>
         <Title name="your" title="cart" />
         <CartColumns />
+        <EmptyCart />
       </section>
     );
   }
