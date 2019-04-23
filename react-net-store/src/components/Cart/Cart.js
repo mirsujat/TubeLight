@@ -3,6 +3,8 @@ import Title from "../Title/Title";
 import CartColumns from "./CartColumns";
 import EmptyCart from "./EmptyCart";
 import { ProductConsumer } from "../context/context";
+import CartList from "./CartList";
+import CartTotals from "./CartTotals";
 
 class Cart extends Component {
   state = {};
@@ -17,6 +19,8 @@ class Cart extends Component {
                 <Fragment>
                   <Title name="your" title="cart" />
                   <CartColumns />
+                  <CartList value={value} />
+                  <CartTotals value={value} />
                 </Fragment>
               );
             } else {
