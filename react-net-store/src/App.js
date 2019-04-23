@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
-
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -9,6 +7,7 @@ import ProductList from "./components/ProductList/ProductList";
 import Details from "./components/Details/Details";
 import Cart from "./components/Cart/Cart";
 import Default from "./components/Default/Default";
+import Modal from "./components/Modal/Modal";
 
 class App extends Component {
   render() {
@@ -21,6 +20,7 @@ class App extends Component {
           <Route path="/cart" component={Cart} />
           <Route component={Default} />
         </Switch>
+        <Modal />
       </Fragment>
     );
   }
