@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import Title from "../Title/Title";
+import CartColumns from "./CartColumns";
 
 class Cart extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <h3>Hello from Cart</h3>
-      </div>
+      <section>
+        <Title name="your" title="cart" />
+        <CartColumns />
+      </section>
     );
   }
 }
