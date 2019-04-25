@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react";
+import Recipe from "../Recipe/Recipe";
+import RecipeSearch from "../RecipeSearch/RecipeSearch";
 
 class RecipeList extends Component {
   state = {};
@@ -6,6 +8,8 @@ class RecipeList extends Component {
     return (
       <Fragment>
         <h1>Hello From Recipe List</h1>
+        <RecipeSearch />
+        <Recipe />
       </Fragment>
     );
   }
