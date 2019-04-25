@@ -1,17 +1,40 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import { recipes } from "./tempList";
 import RecipeList from "./components/RecipeList/RecipeList";
 import RecipeDetails from "./components/RecipeDetails/RecipeDetails";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-function App() {
-  return (
-    <Fragment>
-      <RecipeList />
-      <RecipeDetails />
-    </Fragment>
-  );
+class App extends Component {
+  state = {
+    recipes: [],
+    url:
+      "https://www.food2fork.com/api/search?key=05c8438483f0c257ebd873b75a6a0f04"
+  };
+
+  async getRecipes() {
+    try {
+      const data = await fetch(this.state.url);
+      const jsonData = await data.json();
+      this.setState({ recipes: jsonData.recipes });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  componentDidMount() {
+    this.getRecipes();
+  }
+  render() {
+    console.log("====================================");
+    console.log(this.state.recipes);
+    console.log("====================================");
+    return (
+      <Fragment>
+        <RecipeList />
+        <RecipeDetails />
+      </Fragment>
+    );
+  }
 }
 
 export default App;
