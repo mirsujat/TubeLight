@@ -8,6 +8,7 @@ import Details from "./components/Details/Details";
 import Cart from "./components/Cart/Cart";
 import Default from "./components/Default/Default";
 import Modal from "./components/Modal/Modal";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/cart" component={Cart} />
           <Route component={Default} />
         </Switch>
+        <Footer />
         <Modal />
       </Fragment>
     );
