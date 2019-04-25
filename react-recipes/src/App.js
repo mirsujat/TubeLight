@@ -25,12 +25,9 @@ class App extends Component {
   //   this.getRecipes();
   // }
   render() {
-    console.log("====================================");
-    console.log(this.state.recipes);
-    console.log("====================================");
     return (
       <Fragment>
-        <RecipeList />
+        <RecipeList recipes={this.state.recipes} />
         <RecipeDetails />
       </Fragment>
     );
