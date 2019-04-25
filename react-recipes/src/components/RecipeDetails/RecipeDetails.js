@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { recipe } from "../../tempDetails";
 
 class RecipeDetails extends Component {
   state = {};
