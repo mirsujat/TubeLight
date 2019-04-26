@@ -108,7 +108,12 @@ class App extends Component {
   };
 
   render() {
-    return <Fragment>{this.displayPage(this.state.pageIndex)}</Fragment>;
+    return (
+      <Fragment>
+        {this.displayPage(this.state.pageIndex)}
+        <Footer />
+      </Fragment>
+    );
   }
 }
 
