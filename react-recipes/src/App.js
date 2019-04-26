@@ -66,9 +66,9 @@ class App extends Component {
   };
 
   handleChange = e => {
-    console.log("====================================");
-    console.log("hello from handle Change");
-    console.log("====================================");
+    this.setState({
+      search: e.traget.value
+    });
   };
   handleSubmit = e => {
     e.preventDefault();
