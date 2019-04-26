@@ -10,6 +10,8 @@ class Recipe extends Component {
       publisher,
       recipe_id
     } = this.props.recipe;
+
+    const { handleDetails } = this.props;
     return (
       <Fragment>
         <div className="col-10 mx-auto col-md-6 col-lg-4 my-3">
@@ -29,7 +31,11 @@ class Recipe extends Component {
               </h6>
             </div>
             <div className="card-footer">
-              <button className="btn btn-primary text-capitalize" type="button">
+              <button
+                className="btn btn-primary text-capitalize"
+                type="button"
+                onClick={() => handleDetails(0, recipe_id)}
+              >
                 details
               </button>
               <a
