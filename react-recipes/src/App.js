@@ -4,6 +4,7 @@ import RecipeList from "./components/RecipeList/RecipeList";
 import RecipeDetails from "./components/RecipeDetails/RecipeDetails";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   state = {
