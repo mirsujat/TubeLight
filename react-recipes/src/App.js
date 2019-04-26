@@ -10,23 +10,37 @@ class App extends Component {
     recipes: recipes,
     url:
       "https://www.food2fork.com/api/search?key=05c8438483f0c257ebd873b75a6a0f04",
+    base_url:
+      "https://www.food2fork.com/api/search?key=05c8438483f0c257ebd873b75a6a0f04",
     details_id: 35382,
     pageIndex: 1,
-    search: ""
+    search: "",
+    query: "&q=",
+    error: ""
   };
 
   async getRecipes() {
     try {
       const data = await fetch(this.state.url);
       const jsonData = await data.json();
-      this.setState({ recipes: jsonData.recipes });
+      if (jsonData.recipes.length === 0) {
+        this.setState(() => {
+          return {
+            error: "sorry! but your search did not return any reseults."
+          };
+        });
+      } else {
+        this.setState(() => {
+          return { recipes: jsonData.recipes };
+        });
+      }
     } catch (error) {
       console.log(error);
     }
   }
-  // componentDidMount() {
-  //   this.getRecipes();
-  // }
+  componentDidMount() {
+    this.getRecipes();
+  }
   displayPage = index => {
     switch (index) {
       case 1:
@@ -37,6 +51,7 @@ class App extends Component {
             value={this.state.search}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
+            error={this.state.error}
           />
         );
         break;
@@ -66,15 +81,29 @@ class App extends Component {
   };
 
   handleChange = e => {
-    this.setState({
-      search: e.traget.value
-    });
+    this.setState(
+      {
+        search: e.target.value
+      },
+      () => {
+        console.log(this.state.search);
+      }
+    );
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log("====================================");
-    console.log("hello from handle submit");
-    console.log("====================================");
+    const { base_url, query, search } = this.state;
+    this.setState(
+      () => {
+        return {
+          url: `${base_url}${query}${search}`,
+          search: ""
+        };
+      },
+      () => {
+        this.getRecipes();
+      }
+    );
   };
 
   render() {
