@@ -21,7 +21,7 @@ class App extends Component {
     e.preventDefault();
     const newItem = {
       id: this.state.id,
-      item: this.state.item
+      title: this.state.item
     };
     console.log(newItem);
     const updatedItems = [...this.state.items, newItem];
@@ -44,7 +44,7 @@ class App extends Component {
               handleChange={this.handleChange}
               handleSubmit={this.handleSubmit}
             />
-            <TodoList />
+            <TodoList items={this.state.items} />
           </div>
         </div>
       </div>
