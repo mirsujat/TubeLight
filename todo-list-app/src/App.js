@@ -44,6 +44,16 @@ class App extends Component {
     });
   };
 
+  handleEdit = id => {
+    const filteredItems = this.state.items.filter(item => item.id !== id);
+    const selectedItem = this.state.items.find(item => item.id === id);
+    console.log(selectedItem);
+    this.setState({
+      items: filteredItems,
+      item: selectedItem.title
+    });
+  };
+
   render() {
     return (
       <div className="container">
@@ -59,6 +69,7 @@ class App extends Component {
               items={this.state.items}
               clearList={this.clearList}
               handleDelete={this.handleDelete}
+              handleEdit={this.handleEdit}
             />
           </div>
         </div>
