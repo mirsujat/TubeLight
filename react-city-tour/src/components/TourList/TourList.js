@@ -9,7 +9,6 @@ class TourList extends Component {
   };
   render() {
     const { tours } = this.state;
-
     return (
       <section className="tourList">
         {tours.map(tour => {
