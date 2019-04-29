@@ -5,7 +5,7 @@ class TourList extends Component {
   state = {};
   render() {
     return (
-      <section>
+      <section className="tourList">
         <Tour />
       </section>
     );
