@@ -8,10 +8,13 @@ class TourList extends Component {
     tours: tourData
   };
   render() {
-    console.log(this.state.tours);
+    const { tours } = this.state;
+
     return (
       <section className="tourList">
-        <Tour />
+        {tours.map(tour => {
+          return <Tour key={tour.id} tour={tour} />;
+        })}
       </section>
     );
   }
