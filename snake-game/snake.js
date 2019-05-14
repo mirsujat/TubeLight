@@ -185,6 +185,7 @@
     score: 0,
 
     /* The apple simply records a location on the map. */
+    /*  Math.floor(Math.random() * 400) returns an random integer between 0-399*/
     apple: {
       index: Math.floor(Math.random() * 400)
     },
