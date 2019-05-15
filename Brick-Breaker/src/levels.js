@@ -8,7 +8,7 @@ export function buildLevel(game, level) {
       if (birck === 1) {
         let position = {
           x: 80 * brickIndex,
-          y: 20 + 24 * rowIndex
+          y: 75 + 24 * rowIndex
         };
         bricks.push(new Brick(game, position));
       }
