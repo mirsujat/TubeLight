@@ -26,6 +26,10 @@ export default class Game {
   // update the ball and paddle
   update(deltaTime) {
     this.gameObjects.forEach(object => object.update(deltaTime));
+
+    this.gameObjects = this.gameObjects.filter(
+      object => !object.markedForDeletion
+    );
   }
 
   // draw the ball and paddle
