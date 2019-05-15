@@ -22,6 +22,11 @@ export default class Paddle {
     this.speed = this.maxSpeed;
   }
 
+  // stop the paddle
+  stop() {
+    this.speed = 0;
+  }
+
   // draw the canvas
   draw(ctx) {
     ctx.fillStyle = "#ccc";
