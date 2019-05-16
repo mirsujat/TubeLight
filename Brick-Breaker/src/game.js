@@ -21,6 +21,7 @@ export default class Game {
     this.ball = new Ball(this);
     this.paddle = new Paddle(this);
     this.gameObjects = [];
+    this.lives = 3;
     new InputHandler(this.paddle, this);
   }
 
@@ -34,9 +35,12 @@ export default class Game {
 
   // update the ball and paddle
   update(deltaTime) {
+    if (this.lives === 0) this.gamestate = GAMESTATE.GAMEOVER;
+
     if (
       this.gamestate === GAMESTATE.PAUSED ||
-      this.gamestate === GAMESTATE.MENU
+      this.gamestate === GAMESTATE.MENU ||
+      this.gamestate === GAMESTATE.GAMEOVER
     )
       return;
 
@@ -74,6 +78,16 @@ export default class Game {
         this.gameWidth / 2,
         this.gameHeight / 2
       );
+    }
+    if (this.gamestate === GAMESTATE.GAMEOVER) {
+      ctx.rect(0, 0, this.gameWidth, this.gameHeight);
+      ctx.fillStyle = "rgba(0,0,0,0.9)";
+      ctx.fill();
+
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText("GAME OVER", this.gameWidth / 2, this.gameHeight / 2);
     }
   }
 
