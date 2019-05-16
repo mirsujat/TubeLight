@@ -13,6 +13,9 @@ export default class InputHandler {
         case 83:
           game.togglePause();
           break;
+        case 32:
+          game.start();
+          break;
       }
     });
     document.addEventListener("keyup", event => {

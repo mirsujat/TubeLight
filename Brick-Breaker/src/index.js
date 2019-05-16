@@ -11,7 +11,6 @@ const GAME_HEIGHT = 600;
 
 // create new game obj
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
-game.start();
 
 // clear the screen
 ctx.clearRect(0, 0, 800, 600);
