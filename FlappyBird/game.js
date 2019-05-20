@@ -238,21 +238,93 @@ const gameOver = {
     }
   }
 };
+//PIPES
+const pipes = {
+  position: [],
+  top: {
+    sX: 553,
+    sY: 0
+  },
+  bottom: {
+    sX: 502,
+    sY: 0
+  },
+  w: 53,
+  h: 400,
+  gap: 85,
+  maxYPos: -150,
+  dx: 2,
+
+  draw: function() {
+    for (let i = 0; i < this.position.length; i++) {
+      let p = this.position[i];
+
+      let topYPos = p.y;
+      let bottomYPos = p.y + this.h + this.gap;
+
+      // TOP PIPE
+      ctx.drawImage(
+        sprite,
+        this.top.sX,
+        this.top.sY,
+        this.w,
+        this.h,
+        p.x,
+        topYPos,
+        this.w,
+        this.h
+      );
+      // BOTTOM PIPE
+      ctx.drawImage(
+        sprite,
+        this.bottom.sX,
+        this.bottom.sY,
+        this.w,
+        this.h,
+        p.x,
+        bottomYPos,
+        this.w,
+        this.h
+      );
+    }
+  },
+  update: function() {
+    if (state.current !== state.game) return;
+    if (frames % 100 == 0) {
+      this.position.push({
+        x: cvs.width,
+        y: this.maxYPos * (Math.random() + 1)
+      });
+    }
+    for (let i = 0; i < this.position.length; i++) {
+      let p = this.position[i];
+
+      p.x -= this.dx;
+
+      // IF THE PIPE GO BEYOIND THE CANVAS, WE DELETE THEM FROM ARRAY
+      if (p.x + this.width <= 0) {
+        this.position.shift();
+      }
+    }
+  }
+};
 
 // DRAW THE GAME OBJ
 function draw() {
   ctx.fillStyle = "#70c5ce";
   ctx.fillRect(0, 0, cvs.width, cvs.height);
   bg.draw();
+  pipes.draw();
   fg.draw();
   bird.draw();
   getReady.draw();
   gameOver.draw();
 }
-// UPDATE THE GAME OBJ
+// UPDATE THE GAME OBJECT
 function update() {
   bird.update();
   fg.update();
+  pipes.update();
 }
 // GAME LOOP
 function loop() {
@@ -260,8 +332,8 @@ function loop() {
   draw();
   frames++;
 
-  requestAnimationFrame(loop);
+  window.requestAnimationFrame(loop);
 }
 
 // CALLL THE GAME LOOOP
-loop();
+window.requestAnimationFrame(loop);
