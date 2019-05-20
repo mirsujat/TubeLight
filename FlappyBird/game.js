@@ -18,6 +18,13 @@ const state = {
   over: 2
 };
 
+// START BUTTON
+const startBtn = {
+  x: 120,
+  y: 263,
+  w: 83,
+  h: 29
+};
 // event for state controller
 cvs.addEventListener("click", function(event) {
   switch (state.current) {
@@ -28,7 +35,23 @@ cvs.addEventListener("click", function(event) {
       bird.flap();
       break;
     case state.over:
-      state.current = state.getReady;
+      let rect = cvs.getBoundingClientRect();
+      let clickX = event.clickX - rect.left;
+      let clickY = event.clickY - rect.top;
+      // CHECK IF WE CLICK ON THE START BUTTON
+      if (
+        clickX >= startBtn.x &&
+        clickX <= startBtn.x + startBtn.w &&
+        clickY >= startBtn.y &&
+        clickY <= startBtn.y + startBtn.h
+      ) {
+        bird.speedReset();
+        pipes.reset();
+        score.reset();
+        state.current = state.getReady;
+      }
+      break;
+
     default:
       break;
   }
@@ -130,7 +153,7 @@ const bird = {
   frame: 0,
   speed: 0,
   gravity: 0.25,
-  jump: 2.6,
+  jump: 4.6,
   rotation: 0,
 
   draw: function() {
@@ -186,6 +209,9 @@ const bird = {
         this.rotation = -25 * DEGREE;
       }
     }
+  },
+  speedReset: function() {
+    this.speed = 0;
   }
 };
 
@@ -328,8 +354,43 @@ const pipes = {
       // IF THE PIPE GO BEYOIND THE CANVAS, WE DELETE THEM FROM ARRAY
       if (p.x + this.width <= 0) {
         this.position.shift();
+        score.value += 1;
+        score.best = Math.max(score.value, score.best);
+        localStorage.setItem("best_score", score.best);
       }
     }
+  },
+  reset: function() {
+    this.position = [];
+  }
+};
+
+// SCORE
+const score = {
+  best: parseInt(localStorage.getItem("best_score")) || 0,
+  value: 0,
+
+  draw: function() {
+    ctx.fillStyle = "#FFF";
+    ctx.strokeStyle = "#000";
+    if (state.current == state.game) {
+      ctx.lineWidth = 2;
+      ctx.font = "35px Teko";
+      ctx.fillText(this.value, cvs.width / 2, 50);
+      ctx.strokeText(this.value, cvs.width / 2, 50);
+    } else if (state.current == state.over) {
+      // SCORE VALUE
+      ctx.font = "25px Teko";
+      ctx.fillText(this.value, 225, 186);
+      ctx.strokeText(this.value, 225, 186);
+
+      // BEST SCORE
+      ctx.fillText(this.best, 225, 228);
+      ctx.strokeText(this.best, 225, 228);
+    }
+  },
+  reset: function() {
+    this.value = 0;
   }
 };
 
@@ -343,6 +404,7 @@ function draw() {
   bird.draw();
   getReady.draw();
   gameOver.draw();
+  score.draw();
 }
 // UPDATE THE GAME OBJECT
 function update() {
@@ -356,8 +418,8 @@ function loop() {
   draw();
   frames++;
 
-  window.requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 
 // CALLL THE GAME LOOOP
-window.requestAnimationFrame(loop);
+loop();
