@@ -25,7 +25,7 @@ const startBtn = {
   w: 83,
   h: 29
 };
-// event for state controller
+// GAME CONTROLLER
 cvs.addEventListener("click", function(event) {
   switch (state.current) {
     case state.getReady:
@@ -36,8 +36,8 @@ cvs.addEventListener("click", function(event) {
       break;
     case state.over:
       let rect = cvs.getBoundingClientRect();
-      let clickX = event.clickX - rect.left;
-      let clickY = event.clickY - rect.top;
+      let clickX = event.clientX - rect.left;
+      let clickY = event.clientY - rect.top;
       // CHECK IF WE CLICK ON THE START BUTTON
       if (
         clickX >= startBtn.x &&
