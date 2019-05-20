@@ -153,7 +153,7 @@ const bird = {
   frame: 0,
   speed: 0,
   gravity: 0.25,
-  jump: 4.6,
+  jump: 3.6,
   rotation: 0,
 
   draw: function() {
@@ -281,7 +281,7 @@ const pipes = {
   h: 400,
   gap: 85,
   maxYPos: -150,
-  dx: 2,
+  dx: 1,
 
   draw: function() {
     for (let i = 0; i < this.position.length; i++) {
@@ -318,7 +318,7 @@ const pipes = {
   },
   update: function() {
     if (state.current !== state.game) return;
-    if (frames % 100 == 0) {
+    if (frames % 500 == 0) {
       this.position.push({
         x: cvs.width,
         y: this.maxYPos * (Math.random() + 1)
@@ -356,7 +356,7 @@ const pipes = {
         this.position.shift();
         score.value += 1;
         score.best = Math.max(score.value, score.best);
-        localStorage.setItem("best_score", score.best);
+        localStorage.setItem("best", score.best);
       }
     }
   },
@@ -367,7 +367,7 @@ const pipes = {
 
 // SCORE
 const score = {
-  best: parseInt(localStorage.getItem("best_score")) || 0,
+  best: parseInt(localStorage.getItem("best")) || 0,
   value: 0,
 
   draw: function() {
@@ -383,7 +383,6 @@ const score = {
       ctx.font = "25px Teko";
       ctx.fillText(this.value, 225, 186);
       ctx.strokeText(this.value, 225, 186);
-
       // BEST SCORE
       ctx.fillText(this.best, 225, 228);
       ctx.strokeText(this.best, 225, 228);
