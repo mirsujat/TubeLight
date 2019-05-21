@@ -10,6 +10,22 @@ let DEGREE = Math.PI / 180;
 const sprite = new Image();
 sprite.src = "./img/sprite.png";
 
+// LOAD SOUND
+const SCORE_S = new Audio();
+SCORE_S.src = "audio/sfx_point.wav";
+
+const FLAP = new Audio();
+FLAP.src = "audio/sfx_flap.wav";
+
+const HIT = new Audio();
+HIT.src = "audio/sfx_hit.wav";
+
+const SWOOSHING = new Audio();
+SWOOSHING.src = "audio/sfx_swooshing.wav";
+
+const DIE = new Audio();
+DIE.src = "audio/sfx_die.wav";
+
 // GAME STATE
 const state = {
   current: 0,
@@ -30,9 +46,11 @@ cvs.addEventListener("click", function(event) {
   switch (state.current) {
     case state.getReady:
       state.current = state.game;
+      SWOOSHING.play();
       break;
     case state.game:
       bird.flap();
+      FLAP.play();
       break;
     case state.over:
       let rect = cvs.getBoundingClientRect();
@@ -199,6 +217,7 @@ const bird = {
         this.y = cvs.height - fg.h - this.h / 2;
         if (state.current == state.game) {
           state.current = state.over;
+          DIE.play();
         }
       }
       // IF THE SPEED IS GREATER THAN THE JUMP MEANS THE BIRD IS FALLING DOWN
@@ -337,6 +356,7 @@ const pipes = {
         bird.y - bird.radius < p.y + this.h
       ) {
         state.current = state.over;
+        HIT.play();
       }
       // COLLISION DETECTION with BOTTOM PIPE
       if (
@@ -346,6 +366,7 @@ const pipes = {
         bird.y - bird.radius < bottomPipeYPos + this.h
       ) {
         state.current = state.over;
+        HIT.play();
       }
 
       //MOVE THE PIPE TO THE LEFT
@@ -355,8 +376,9 @@ const pipes = {
       if (p.x + this.w <= 0) {
         this.position.shift();
         score.value += 1;
+        SCORE_S.play();
         score.best = Math.max(score.value, score.best);
-        localStorage.setItem("best", score.best);
+        localStorage.setItem("best_score", score.best);
       }
     }
   },
@@ -367,7 +389,7 @@ const pipes = {
 
 // SCORE
 const score = {
-  best: parseInt(localStorage.getItem("best")) || 0,
+  best: parseInt(localStorage.getItem("best_score")) || 0,
   value: 0,
 
   draw: function() {
