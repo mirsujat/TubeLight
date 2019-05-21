@@ -352,7 +352,7 @@ const pipes = {
       p.x -= this.dx;
 
       // IF THE PIPE GO BEYOIND THE CANVAS, WE DELETE THEM FROM ARRAY
-      if (p.x + this.width <= 0) {
+      if (p.x + this.w <= 0) {
         this.position.shift();
         score.value += 1;
         score.best = Math.max(score.value, score.best);
