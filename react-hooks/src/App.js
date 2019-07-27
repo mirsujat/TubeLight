@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axois from "axios";
+import axios from "axios";
 import "./App.css";
-import { async } from "q";
 
 function App() {
   const [data, setData] = useState({ hits: [] });
@@ -12,7 +11,7 @@ function App() {
     let ignore = false;
 
     const fetchData = async () => {
-      const result = await axois(
+      const result = await axios(
         "https://hn.algolia.com/api/v1/search?query=" + query
       );
       if (!ignore) setData(result.data);
@@ -22,16 +21,16 @@ function App() {
       ignore = true;
     };
   }, [query]);
+
+  function handleChange(e) {
+    setQuery(e.target.value);
+  }
   return (
     <div>
       <header>
         <h1>React Hooks</h1>
       </header>
-      <input
-        type="text"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-      />
+      <input type="text" name={query} value={query} onChange={handleChange} />
       <ul>
         {data.hits.map(item => (
           <li key={item.objectID}>
