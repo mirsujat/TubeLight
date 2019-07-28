@@ -2,20 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Articles = () => {
-  const [posts, setPosts] = useState({ data: [] });
+  const [posts, setPosts] = useState(null);
 
   useEffect(() => {
-    let ignore = false;
     const fetchPosts = async () => {
-      const posts = await axios("https://jsonplaceholder.typicode.com/posts");
-      if (!ignore) setPosts(posts);
+      const articles = await axios.get(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      setPosts(articles);
     };
     fetchPosts();
-    return () => {
-      ignore = true;
-    };
-  });
+  }, []);
 
+  console.log("Data: " + posts);
   return (
     <div>
       <h1>Hello From Articles Page</h1>
