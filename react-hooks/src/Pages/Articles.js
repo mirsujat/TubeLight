@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Articles = () => {
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState({ data: [] });
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -14,10 +14,23 @@ const Articles = () => {
     fetchPosts();
   }, []);
 
-  console.log("Data: " + posts);
+  console.log("Data: " + posts.data.length);
+  let content = <div>Loading...</div>;
+  if (posts.data.length > 0) {
+    content = posts.data.map(item => {
+      return (
+        <ul>
+          <li key={item.id}>{item.title}</li>
+          <li>{item.body}</li>
+        </ul>
+      );
+    });
+  }
+
   return (
     <div>
       <h1>Hello From Articles Page</h1>
+      {content}
     </div>
   );
 };
