@@ -3,20 +3,18 @@ import Axios from "axios";
 
 const Article = ({ match }) => {
   const [article, setArticle] = useState({ data: [] });
-  const [param, setParam] = useState(match.params.id);
+  const [id, setId] = useState(match.params.id);
 
   useEffect(() => {
     const fetchArticle = async () => {
       const result = await Axios.get(
-        "https://jsonplaceholder.typicode.com/posts/" + param
+        "https://jsonplaceholder.typicode.com/posts/" + id
       );
       setArticle(result);
     };
     fetchArticle();
-  }, [param]);
+  }, [id]);
 
-  console.log("param: , " + match.params.id);
-  console.log("Article , " + article.data.id);
   let content = <div>Loading...</div>;
   if (article.data !== []) {
     content = (
