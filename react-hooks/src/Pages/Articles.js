@@ -15,13 +15,12 @@ const Articles = () => {
     fetchPosts();
   }, []);
 
-  console.log("Data: " + posts.data.length);
   let content = <div>Loading...</div>;
   if (posts.data.length > 0) {
     content = posts.data.map(item => {
       return (
-        <ul>
-          <li key={item.id}>
+        <ul key={item.id}>
+          <li>
             <Link to={`/api/${item.id}`}>{item.title}</Link>
           </li>
         </ul>
