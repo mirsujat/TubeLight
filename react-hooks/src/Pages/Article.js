@@ -2,7 +2,7 @@ import React from "react";
 
 const Article = () => (
   <div>
-    <h1>Hello From Articles Page</h1>
+    <h1>Hello From Article Page</h1>
   </div>
 );
 

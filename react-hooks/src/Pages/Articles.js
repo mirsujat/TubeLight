@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Articles = () => {
@@ -20,8 +21,9 @@ const Articles = () => {
     content = posts.data.map(item => {
       return (
         <ul>
-          <li key={item.id}>{item.title}</li>
-          <li>{item.body}</li>
+          <li key={item.id}>
+            <Link to={`/api/${item.id}`}>{item.title}</Link>
+          </li>
         </ul>
       );
     });
