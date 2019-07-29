@@ -2,15 +2,13 @@ import React from "react";
 import useSignUpForm from "../Components/CustomHooks/CustomHook";
 
 const Form = () => {
+  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
   // callback function
   const signup = () => {
     alert(`User Created!
          Name: ${inputs.firstName} ${inputs.lastName}
          Email: ${inputs.email}`);
   };
-
-  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
-
   return (
     <div>
       <h2>Registration Form</h2>
