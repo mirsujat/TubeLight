@@ -14,6 +14,7 @@ const FormValidation = () => {
 
   return (
     <div className="section">
+      <h3>Form Validation</h3>
       <div className="container">
         <div className="column">
           <div className="box">
