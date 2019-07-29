@@ -7,10 +7,13 @@ const Navbar = () => (
       <Link to="/">Home</Link>
     </li>
     <li>
-      <Link to="/form">Form</Link>
+      <Link to="/simple-form">Simple Form with Hooks</Link>
     </li>
     <li>
-      <Link to="/form-validation">Form Validation</Link>
+      <Link to="/form">Form with No Validation</Link>
+    </li>
+    <li>
+      <Link to="/form-validation">Form with Validation</Link>
     </li>
     <li>
       <Link to="/api/articles">Articles</Link>
