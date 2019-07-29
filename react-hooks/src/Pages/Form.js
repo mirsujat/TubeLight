@@ -1,51 +1,67 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useSignUpForm from "../Components/CustomHooks/CustomHook";
 
 const Form = () => {
-  const [regForm, setRegForm] = useState({
-    name: "",
-    age: "",
-    sex: ""
-  });
-  function handleChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+  // callback function
+  const signup = () => {
+    alert(`User Created!
+         Name: ${inputs.firstName} ${inputs.lastName}
+         Email: ${inputs.email}`);
+  };
 
-    setRegForm({
-      [name]: value
-    });
-  }
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log(regForm.name);
-    console.log(regForm.age);
-    console.log(regForm.sex);
-  }
+  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
+
   return (
     <div>
       <h2>Registration Form</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name={regForm.name}
-          value={regForm.name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name={regForm.age}
-          value={regForm.age}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name={regForm.sex}
-          value={regForm.sex}
-          onChange={handleChange}
-        />
-        <button type="submit" value="submit">
-          submit
-        </button>
+        <div>
+          <label>First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            value={inputs.firstName}
+            onChange={handleInputChange}
+            required
+          />
+          <label>Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            value={inputs.lastName}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Email Address</label>
+          <input
+            type="email"
+            name="email"
+            onChange={handleInputChange}
+            value={inputs.email}
+            required
+          />
+        </div>
+        <div>
+          <label>Password</label>
+          <input
+            type="password"
+            name="password1"
+            onChange={handleInputChange}
+            value={inputs.password1}
+          />
+        </div>
+        <div>
+          <label>Re-enter Password</label>
+          <input
+            type="password"
+            name="password2"
+            onChange={handleInputChange}
+            value={inputs.password2}
+          />
+        </div>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );

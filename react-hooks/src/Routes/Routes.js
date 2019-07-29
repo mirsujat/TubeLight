@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import Form from "../Pages/Form";
 import Articles from "../Pages/Articles";
 import Article from "../Pages/Article";
+import FormValidation from "../Pages/FormValidation";
 
 const Routes = () => (
   <Router>
@@ -12,6 +13,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/form" component={Form} />
+      <Route path="/form-validation" component={FormValidation} />
       <Route path="/api/articles" component={Articles} />
       <Route path="/api/:id" component={Article} />
     </Switch>
