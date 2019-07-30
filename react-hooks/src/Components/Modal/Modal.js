@@ -27,6 +27,10 @@ const Modal = ({ isShowing, hide }) =>
                 </button>
               </div>
               <p>Hello, I'm a modal.</p>
+              <p>Hello, I'm a modal.</p>
+              <p>Hello, I'm a modal.</p>
+              <p>Hello, I'm a modal.</p>
+              <p>Hello, I'm a modal.</p>
             </div>
           </div>
         </React.Fragment>,
