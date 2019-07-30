@@ -10,8 +10,10 @@ const useSimpleForm = callback => {
 
   const handleChange = event => {
     event.persist();
-    const name = event.target.name;
-    const value = event.target.value;
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+
     setValues(values => ({
       ...values,
       [name]: value
