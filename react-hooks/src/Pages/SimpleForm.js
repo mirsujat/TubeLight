@@ -1,17 +1,22 @@
 import React from "react";
 import useSimpleForm from "../Components/CustomHooks/useSimpleForm";
+import validate from "../Validation/Validation";
 
 const SimpleForm = () => {
   const login = () => {
     console.log("Form Values: ", { values });
   };
-  const { handleSubmit, handleChange, values } = useSimpleForm(login);
+  const { handleSubmit, handleChange, values, errors } = useSimpleForm(
+    login,
+    validate
+  );
 
   return (
     <div>
       <h1>Simple Form</h1>
       <form onSubmit={handleSubmit}>
         <input
+          placeholder="Last Name"
           type="text"
           name="firstname"
           value={values.firstname || ""}
@@ -19,6 +24,7 @@ const SimpleForm = () => {
         />
         <br />
         <input
+          placeholder="Last Name"
           type="text"
           name="lastname"
           value={values.lastname || ""}
@@ -26,11 +32,22 @@ const SimpleForm = () => {
         />
         <br />
         <input
+          placeholder="email"
           type="text"
           name="email"
           value={values.email || ""}
           onChange={handleChange}
         />
+        {errors.email && <p className="is-danger">{errors.email}</p>}
+        <br />
+        <input
+          placeholder="Password"
+          type="text"
+          name="password"
+          value={values.password || ""}
+          onChange={handleChange}
+        />
+        {errors.password && <p className="is-danger">{errors.password}</p>}
         <br />
         <select
           name="select"
