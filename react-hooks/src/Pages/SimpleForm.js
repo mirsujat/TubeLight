@@ -3,7 +3,7 @@ import useSimpleForm from "../Components/CustomHooks/useSimpleForm";
 
 const SimpleForm = () => {
   const login = () => {
-    console.log("Form Values: " + values);
+    console.log("Form Values: ", { values });
   };
   const { handleSubmit, handleChange, values } = useSimpleForm(login);
 
