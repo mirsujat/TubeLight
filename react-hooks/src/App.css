@@ -10,3 +10,6 @@ body {
 .is-danger {
   color: red;
 }
+button {
+  cursor: pointer;
+}
