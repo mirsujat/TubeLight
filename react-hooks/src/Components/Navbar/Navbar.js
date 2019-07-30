@@ -24,7 +24,9 @@ const Navbar = () => {
         <li>
           <Link to="/api/articles">Articles</Link>
         </li>
-        <button onClick={toggle}>Show Modal</button>
+        <button className="button-default" onClick={toggle}>
+          Show Modal
+        </button>
       </ul>
       <Modal isShowing={isShowing} hide={toggle} />
     </div>
