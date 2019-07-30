@@ -10,9 +10,11 @@ const useSimpleForm = callback => {
 
   const handleChange = event => {
     event.persist();
+    const name = event.target.name;
+    const value = event.target.value;
     setValues(values => ({
       ...values,
-      [event.target.name]: event.target.value
+      [name]: value
     }));
   };
 
