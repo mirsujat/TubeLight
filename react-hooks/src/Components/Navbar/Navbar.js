@@ -24,6 +24,12 @@ const Navbar = () => {
         <li>
           <Link to="/api/articles">Articles</Link>
         </li>
+        <button
+          className="button-default"
+          onClick={() => console.log("Print to The Console.")}
+        >
+          Print Console
+        </button>
         <button className="button-default" onClick={toggle}>
           Show Modal
         </button>

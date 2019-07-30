@@ -1,5 +1,6 @@
 /* Modal */
 .modal-overlay {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +13,7 @@
 }
 
 .modal-wrapper {
-  display: inline-table;
+  display: block;
   position: fixed;
   padding: 0.5rem;
   top: 0;
@@ -26,16 +27,16 @@
 }
 
 .modal {
-  z-index: 100;
+  z-index: 1060;
   background: white;
   position: relative;
   margin: 1.75rem auto;
   border-radius: 3px;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .modal-content {
-  pointer-events: auto;
+  /* pointer-events: auto; */
 }
 
 .modal-header {

@@ -6,7 +6,7 @@ const Modal = ({ isShowing, hide }) =>
   isShowing
     ? ReactDOM.createPortal(
         <React.Fragment>
-          <div className="modal-overlay" />
+          <div className="modal-overlay" onClick={hide} />
           <div
             className="modal-wrapper"
             aria-modal
