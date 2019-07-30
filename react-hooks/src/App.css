@@ -7,3 +7,6 @@ header {
 body {
   margin: 15px;
 }
+.is-danger {
+  color: red;
+}
