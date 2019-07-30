@@ -5,9 +5,7 @@ const useSimpleForm = callback => {
 
   const handleSubmit = event => {
     if (event) event.preventDefault();
-    console.log({
-      values
-    });
+    callback();
   };
 
   const handleChange = event => {
