@@ -13,7 +13,7 @@ const Articles = () => {
       setPosts(articles);
     };
     fetchPosts();
-  }, []);
+  }, [setPosts]);
 
   let content = <div>Loading...</div>;
   if (posts.data.length > 0) {
