@@ -13,7 +13,7 @@ const Article = ({ match }) => {
       setArticle(result);
     };
     fetchArticle();
-  }, [id]);
+  }, [id, setId]);
 
   let content = <div>Loading...</div>;
   if (article.data !== []) {
