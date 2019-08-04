@@ -44,11 +44,9 @@ const Home = () => {
     setQuery(e.target.value);
   }
 
-  console.log("Data: ", data);
-
   let content = null;
 
-  if (data.hits.length === 0) {
+  if (data.hits.length === []) {
     content = <div>Loading...</div>;
   }
   if (isSearching && data.hits.length > 0) {
@@ -67,7 +65,7 @@ const Home = () => {
       </div>
     );
   }
-
+  console.log("Data: ", data);
   return (
     <div>
       <header>
