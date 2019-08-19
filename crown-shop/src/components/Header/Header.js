@@ -13,7 +13,7 @@ const Header = () => (
       <Link className="option" to="/shop">
         SHOP
       </Link>
-      <Link className="option" to="/contact">
+      <Link className="option" to="/signin">
         CONTACT
       </Link>
     </div>
