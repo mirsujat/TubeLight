@@ -14,7 +14,7 @@ class App extends Component {
     currentUser: null
   };
 
-  unsubscribeFrommAuth = null;
+  unsubscribeFromAuth = null;
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {

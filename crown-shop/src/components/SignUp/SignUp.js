@@ -16,28 +16,27 @@ class SignUp extends Component {
   handleSubmit = async event => {
     event.preventDefault();
 
-    alert("Hi!");
-    //   const { displayName, email, password, confirmPassword } = this.state;
-    //   if (password !== confirmPassword) {
-    //     alert("Password and Confirm Password don't match");
-    //     return;
-    //   }
-    //   try {
-    //     const { user } = await auth.createUserWithEmailAndPassword(
-    //       email,
-    //       password
-    //     );
-    //     await createUserProfileDocument(user, { displayName });
+    const { displayName, email, password, confirmPassword } = this.state;
+    if (password !== confirmPassword) {
+      alert("Password and Confirm Password don't match");
+      return;
+    }
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      await createUserProfileDocument(user, { displayName });
 
-    //     this.setState({
-    //       displayName: "",
-    //       email: "",
-    //       password: "",
-    //       confirmPassword: ""
-    //     });
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
+      this.setState({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   handleChange = event => {
@@ -85,7 +84,9 @@ class SignUp extends Component {
             label="Confirm Password"
             required
           />
-          <CustomButton type="submit">SIGN UP</CustomButton>
+          <CustomButton type="submit" onClick={this.handleSubmit}>
+            SIGN UP
+          </CustomButton>
         </form>
       </div>
     );
