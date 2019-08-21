@@ -14,10 +14,10 @@ class App extends Component {
     currentUser: null
   };
 
-  unsubscribeFormAuth = null;
+  unsubscribeFrommAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFormAuth = auth.onAuthStateChanged(async userAuth => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapShot => {
@@ -27,6 +27,8 @@ class App extends Component {
               ...snapShot.data()
             }
           });
+
+          console.log(this.state);
         });
       }
 
@@ -36,7 +38,7 @@ class App extends Component {
 
   // This prevent memory leaks
   componentWillUnmount() {
-    this.unsubscribeFormAuth();
+    this.unsubscribeFromAuth();
   }
 
   render() {
