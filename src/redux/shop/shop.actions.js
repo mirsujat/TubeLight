@@ -1,7 +1,7 @@
 import ShopActionTypes from "./shop.types";
 import {
   firestore,
-  convertCollectionSnapshotToMap
+  convertCollectionsSnapshotToMap
 } from "../../firebase/firebase.utils";
 
 export const fetchCollectionsStart = () => ({
@@ -18,6 +18,7 @@ export const fetchCollectionsFailure = errorMessage => ({
   payload: errorMessage
 });
 
+// Now this functionality handled by saga
 export const fetchCollectionsStartAsync = () => {
   return dispatch => {
     const collectionRef = firestore.collection("collections");
@@ -26,7 +27,7 @@ export const fetchCollectionsStartAsync = () => {
     collectionRef
       .get()
       .then(snapshot => {
-        const collectionsMap = convertCollectionSnapshotToMap(snapshot);
+        const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
         dispatch(fetchCollectionsSuccess(collectionsMap));
       })
       .catch(error => dispatch(fetchCollectionsFailure(error.message)));
