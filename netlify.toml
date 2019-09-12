@@ -4,5 +4,5 @@
   # This is the directory is publishing to netlify's CDN
   publish = "build"
   # functions build directory
-  functions = "build-lambda"
+  functions-build = "build-lambda"
 
