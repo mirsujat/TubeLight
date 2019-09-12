@@ -1,13 +1,27 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
+import axios from "axios";
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const PublishableKey = "pk_test_dnep0Wu9dcCcJI3RfDgTW4pN";
+  let URL = "http://localhost:9000/.netlify/functions/api/payment";
+
+  if (process.env.NODE_ENV !== "development") {
+    URL = "https://crown-shop.netlify.com/.netlify/functions/api/payment";
+  }
 
   const onToken = token => {
-    console.log(token);
-    alert("Payment Successful");
+    axios({
+      url: URL,
+      method: "post",
+      data: {
+        amount: priceForStripe,
+        token
+      }
+    })
+      .then(response => alert("Payment Successful!"))
+      .catch(error => console.log("Payment Error: ", JSON.parse(error)));
   };
 
   return (
