@@ -29,10 +29,10 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development npm-run-all --parallel start:app start:server",
     "start:app": "react-scripts start",
-    "start:server": "netlify-lambda serve lambda",
+    "start:server": "netlify-lambda serve src/lambda",
     "build": "npm-run-all --parallel build:**",
     "build:app": "react-scripts build",
-    "build:lambda": "netlify-lambda build lambda",
+    "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
