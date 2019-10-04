@@ -1,7 +1,6 @@
 import { applyMiddleware, createStore } from "redux";
 import { rootReducer } from "../redux/root-reducer";
 import { middlewares } from "../redux/store";
-import { create } from "domain";
 
 export const findByDataAttr = (component, attr) => {
   const wrapper = component.find(`[data-testid='${attr}']`);
