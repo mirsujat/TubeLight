@@ -1,25 +1,25 @@
 import React from "react";
 import { shallow } from "enzyme";
-import CartIconComponent from "./cart-icon.component";
+import CollectionItem from "./collection-item.component";
 import { findByDataAttr } from "../../utils/utils";
 
 const setUp = (props = {}) => {
-  const component = shallow(<CartIconComponent {...props}></CartIconComponent>);
+  const component = shallow(<CollectionItem {...props}></CollectionItem>);
   return component;
 };
 
-describe("Cart Icon Component", () => {
+describe("Collection Item Component", () => {
   let wrapper;
   beforeEach(() => {
     const props = {
-      toggleCartHidden: jest.fn(),
-      itemCount: 2
+      item: { id: 1, title: "test" },
+      addItem: jest.fn()
     };
     wrapper = setUp(props);
   });
 
   it("should render without error", () => {
-    const component = findByDataAttr(wrapper, "cart-icon-component");
+    const component = findByDataAttr(wrapper, "collection-item");
     expect(component.length).toBe(1);
   });
 });
