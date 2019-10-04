@@ -1,25 +1,27 @@
 import React from "react";
 import { shallow } from "enzyme";
-import HeaderComponent from "./header.component";
+import CheckoutItem from "./checkout-item.component";
 import { findByDataAttr } from "../../utils/utils";
 
 const setUp = (props = {}) => {
-  const component = shallow(<HeaderComponent {...props}></HeaderComponent>);
+  const component = shallow(<CheckoutItem {...props}></CheckoutItem>);
   return component;
 };
 
-describe("Header Component", () => {
+describe("CheckoutItem Component", () => {
   let wrapper;
   beforeEach(() => {
     const props = {
-      currentUser: { id: 2, email: "test@gmail.com" },
-      hidden: false
+      cartItem: {},
+      clearItem: jest.fn(),
+      addItem: jest.fn(),
+      removeItem: jest.fn()
     };
     wrapper = setUp(props);
   });
 
   it("should render without error", () => {
-    const component = findByDataAttr(wrapper, "header-component");
+    const component = findByDataAttr(wrapper, "checkout-item");
     expect(component.length).toBe(1);
   });
 });
