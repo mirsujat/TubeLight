@@ -6,7 +6,7 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 import CartIconComponent from "../../components/cart-icon/cart-icon.component";
 
-const CartIcon = () => <CartIconComponent {...props}></CartIconComponent>;
+const CartIcon = props => <CartIconComponent {...props}></CartIconComponent>;
 
 const mapDispatchToProps = dispatch => ({
   toggleCartHidden: () => dispatch(toggleCartHidden())

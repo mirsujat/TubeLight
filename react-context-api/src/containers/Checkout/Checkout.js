@@ -8,7 +8,10 @@ import {
 } from "../../redux/cart/cart.actions";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
-const Checkout = () => <CheckoutItem {...props}></CheckoutItem>;
+const Checkout = props => {
+  console.log("Props:", props);
+  return <CheckoutItem {...props}></CheckoutItem>;
+};
 
 const mapDispatchToProps = dispatch => ({
   clearItem: item => dispatch(clearItemFromCart(item)),

@@ -5,9 +5,11 @@ import "./collections-overview.styles.scss";
 
 const CollectionsOverviewComponent = ({ collections }) => (
   <div className="collections-overview" data-testid="collections-overview">
-    {collections.map(({ id, ...otherCollectionProps }) => (
-      <CollectionPreview key={id} {...otherCollectionProps} />
-    ))}
+    {collections
+      ? collections.map(({ id, ...otherCollectionProps }) => (
+          <CollectionPreview key={id} {...otherCollectionProps} />
+        ))
+      : null}
   </div>
 );
 

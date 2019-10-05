@@ -7,8 +7,8 @@ import { selectCartItems } from "../../redux/cart/cart.selectors";
 
 import CartDropdownComponent from "../../components/cart-dropdown/cart-dropdown.component";
 
-const CartDropdown = () => (
-  <CartDropdownComponent {...this.props}></CartDropdownComponent>
+const CartDropdown = props => (
+  <CartDropdownComponent {...props}></CartDropdownComponent>
 );
 
 const mapStateToProps = createStructuredSelector({
