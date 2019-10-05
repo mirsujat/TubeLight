@@ -6,7 +6,7 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import HeaderComponent from "../../components/header/header.component";
 
-const Header = () => <HeaderComponent {...props}></HeaderComponent>;
+const Header = props => <HeaderComponent {...props}></HeaderComponent>;
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,

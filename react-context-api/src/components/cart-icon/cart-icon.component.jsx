@@ -7,7 +7,7 @@ import "./cart-icon.styles.scss";
 const CartIconComponent = ({ toggleCartHidden, itemCount }) => (
   <div
     className="cart-icon"
-    onClick={toggleCartHidden}
+    onClick={() => toggleCartHidden()}
     data-testid="cart-icon-component"
   >
     <ShoppingIcon className="shopping-icon" />

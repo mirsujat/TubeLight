@@ -17,9 +17,7 @@ const HeaderComponent = ({ currentUser, hidden }) => (
       <Link className="option" to="/shop">
         SHOP
       </Link>
-      <Link className="option" to="/shop">
-        CONTACT
-      </Link>
+
       {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
@@ -31,7 +29,7 @@ const HeaderComponent = ({ currentUser, hidden }) => (
       )}
       <CartIcon />
     </div>
-    {hidden ? null : <CartDropdown />}
+    {hidden ? <CartDropdown /> : null}
   </div>
 );
 
