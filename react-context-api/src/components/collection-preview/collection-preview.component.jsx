@@ -5,7 +5,7 @@ import CollectionItemContainer from "../../containers/CollectionItemContainer/Co
 import "./collection-preview.styles.scss";
 
 const CollectionPreview = ({ title, items }) => (
-  <div className="collection-preview">
+  <div className="collection-preview" data-testid="collection-preview">
     <h1 className="title">{title.toUpperCase()}</h1>
     <div className="preview">
       {items

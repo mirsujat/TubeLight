@@ -9,7 +9,7 @@ import CartDropdownContainer from "../../containers/CartDropdownContainer/CartDr
 import "./header.styles.scss";
 
 const Header = ({ currentUser, hidden }) => (
-  <div className="header">
+  <div className="header" data-testid="header">
     <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>

@@ -6,7 +6,7 @@ import CartItem from "../cart-item/cart-item.component";
 import "./cart-dropdown.styles.scss";
 
 const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
-  <div className="cart-dropdown">
+  <div className="cart-dropdown" data-testid="cart-dropdown-component">
     <div className="cart-items">
       {cartItems && cartItems.length ? (
         cartItems.map(cartItem => (
