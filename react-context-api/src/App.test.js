@@ -16,12 +16,19 @@ describe("Render App Component Without Error", () => {
   let wrapper;
   beforeEach(() => {
     const initialState = {
-      currentUser: {}
+      user: {},
+      cart: [],
+      directory: [],
+      shop: []
     };
     wrapper = setUp(initialState);
   });
   it("Should render without errors", () => {
     const component = findByDataAttr(wrapper, "app");
     expect(component.length).toBe(1);
+  });
+  it("Should render App", () => {
+    const component = wrapper;
+    expect(component).toMatchSnapshot();
   });
 });

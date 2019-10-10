@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render App Component Without Error Should render App 1`] = `ShallowWrapper {}`;
