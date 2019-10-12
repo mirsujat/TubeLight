@@ -5,7 +5,8 @@ const Form = () => {
   return (
     <div className="form">
       <h1>Hello form Form Component</h1>
-      <Input></Input>
+      <Input className="input" type="email" name="name" />
+      <Input className="input" type="password" name="name" />
     </div>
   );
 };
