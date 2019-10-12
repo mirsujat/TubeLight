@@ -1,9 +1,19 @@
 import React from "react";
 
-const Input = () => {
+const Input = ({ label, type, name, value, onChange, className }) => {
   return (
-    <div className="input">
-      <h1>Hello form Input Component</h1>
+    <div className="field">
+      <label htmlFor="label">{label}</label>
+      <div className="control">
+        <input
+          type={type}
+          name={name}
+          value={value || ""}
+          onChange={onChange}
+          className={className}
+          autoComplete="off"
+        />
+      </div>
     </div>
   );
 };
