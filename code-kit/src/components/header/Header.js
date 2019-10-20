@@ -1,20 +1,40 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => (
-  <div className="header">
-    <ul className="nav-bar">
-      <li className="nav-link">
-        <Link to="/">Home</Link>
-      </li>
-      <li className="nav-link">
-        <Link to="/blog">Blog</Link>
-      </li>
-      <li className="nav-link">
-        <Link to="/registration">Registration</Link>
-      </li>
-    </ul>
-  </div>
-);
+import Modal from "../modal/modal";
+import RegistrationPage from "../../pages/Registration/RegistrationPage";
+
+class Header extends Component {
+  state = { open: false };
+
+  toggleModalOpen = () => {
+    this.setState(prevState => {
+      return { open: !prevState.open };
+    });
+  };
+
+  render() {
+    return (
+      <div className="header">
+        <ul className="nav-bar">
+          <li className="nav-link">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-link">
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li className="nav-link">
+            <Link to="/registration" onClick={this.toggleModalOpen}>
+              Registration
+            </Link>
+          </li>
+        </ul>
+        <Modal open={this.state.open} closed={this.toggleModalOpen}>
+          <RegistrationPage></RegistrationPage>
+        </Modal>
+      </div>
+    );
+  }
+}
 
 export default Header;

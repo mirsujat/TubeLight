@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import Home from "./pages/Home/Home";
-import Registration from "./pages/Registration/Registration";
-import Blog from "./pages/Blog/Blog";
+import HomePage from "./pages/Home/HomePage";
+import BlogPage from "./pages/Blog/BlogPage";
 import Header from "./components/header/Header";
 
 class App extends Component {
@@ -16,9 +15,8 @@ class App extends Component {
         <div className="content">
           <h1>REACT HOOKS</h1>
           <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/blog" component={Blog}></Route>
-            <Route exact path="/registration" component={Registration}></Route>
+            <Route exact path="/" component={HomePage}></Route>
+            <Route exact path="/blog" component={BlogPage}></Route>
           </Switch>
         </div>
       </div>

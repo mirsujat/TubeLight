@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Blog extends Component {
+class BlogPage extends Component {
   state = {};
   render() {
     return (
@@ -11,4 +11,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default BlogPage;

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Form from "../../components/form/Form";
 
-class Registration extends Component {
-  state = {};
+class RegistrationPage extends Component {
   render() {
     return (
       <div className="registration">
@@ -12,4 +11,4 @@ class Registration extends Component {
   }
 }
 
-export default Registration;
+export default RegistrationPage;

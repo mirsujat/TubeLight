@@ -68,3 +68,40 @@
   height: 35px;
   font-size: 16px;
 }
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 500px;
+  height: auto;
+  padding: 25px 40px;
+  margin: 0;
+  position: absolute;
+  top: 11%;
+  z-index: 10000;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.84);
+  box-shadow: 10px 14px 20px 9px rgba(0, 0, 0, 0.2);
+}
+.backdrop {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: -895px;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
