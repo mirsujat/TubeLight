@@ -1,14 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Form from "../../components/form/Form";
 
-class RegistrationPage extends Component {
-  render() {
-    return (
-      <div className="registration">
-        <Form></Form>
-      </div>
-    );
-  }
-}
+const RegistrationPage = () => <Form></Form>;
 
 export default RegistrationPage;
