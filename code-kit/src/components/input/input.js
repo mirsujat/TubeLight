@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ label, type, name, value, onChange, className }) => {
+const Input = ({ label, type, name, value, onChange, className, children }) => {
   return (
     <div className="field">
       <label htmlFor="label" className="label">
@@ -15,6 +15,7 @@ const Input = ({ label, type, name, value, onChange, className }) => {
           className={className}
           autoComplete="off"
         />
+        {children}
       </div>
     </div>
   );

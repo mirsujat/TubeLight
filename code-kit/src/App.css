@@ -51,15 +51,16 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  padding-bottom: 15px;
 }
 .control {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
   min-width: 550px;
   min-height: 1px;
-  padding: 0px 0px 15px 0px;
   font-size: 16px;
 }
 .input {
@@ -67,6 +68,11 @@
   width: 100%;
   height: 35px;
   font-size: 16px;
+}
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.62);
 }
 .modal-wrapper {
   display: flex;
@@ -81,7 +87,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 500px;
+  max-width: 600px;
   height: auto;
   padding: 25px 40px;
   margin: 0;
@@ -104,4 +110,15 @@
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
+}
+.is-danger {
+  color: red;
+}
+.submit {
+  cursor: pointer;
+}
+
+.control > p {
+  display: inline-block;
+  margin-top: 3px;
 }
