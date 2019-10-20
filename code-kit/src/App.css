@@ -1,14 +1,70 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
+  font-size: calc(6px + 2vmin);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.nav-link {
+  display: inline-block;
+  padding: 4px 15px;
+}
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 550px;
+  min-height: 250px;
+  background-color: #ffffff;
+  padding: 35px;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px 4px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 550px;
+  min-height: 1px;
+  padding: 0px 0px 15px 0px;
+  font-size: 16px;
+}
+.input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
 }

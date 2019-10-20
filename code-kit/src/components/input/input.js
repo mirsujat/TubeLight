@@ -3,7 +3,9 @@ import React from "react";
 const Input = ({ label, type, name, value, onChange, className }) => {
   return (
     <div className="field">
-      <label htmlFor="label">{label}</label>
+      <label htmlFor="label" className="label">
+        {label}:
+      </label>
       <div className="control">
         <input
           type={type}
