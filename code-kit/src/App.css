@@ -28,97 +28,84 @@
   justify-content: center;
   padding: 15px;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 550px;
-  min-height: 250px;
-  background-color: #ffffff;
-  padding: 35px;
-  box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px 4px;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.field {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 15px;
-}
-.control {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-
-  min-width: 550px;
-  min-height: 1px;
-  font-size: 16px;
-}
-.input {
-  display: block;
-  width: 100%;
-  height: 35px;
-  font-size: 16px;
-}
-.label {
-  font-size: 16px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.62);
-}
 .modal-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
 .modal {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  max-width: 600px;
-  height: auto;
-  padding: 25px 40px;
-  margin: 0;
+  justify-content: center;
   position: absolute;
+  padding: 35px;
+  margin: 0;
+  max-width: 500px;
+  height: auto;
   top: 11%;
-  z-index: 10000;
   background-color: white;
-  color: rgba(0, 0, 0, 0.84);
-  box-shadow: 10px 14px 20px 9px rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.74);
+  box-shadow: 9px 14px 4px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
+
 .backdrop {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 100%;
-  height: auto;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
   top: 0;
   right: 0;
-  bottom: -895px;
+  bottom: -600px;
   left: 0;
-  z-index: 100;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
+
+.form-field,
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 15px;
+  margin: 0;
+  width: 430px;
+}
+.label {
+  display: inline-block;
+  padding-bottom: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.48);
+}
+.form-control {
+  display: block;
+  width: 100%;
+}
+.form-control > p {
+  padding: 0px;
+  margin-top: -2px;
+  margin-bottom: 0px;
+}
 .is-danger {
   color: red;
-}
-.submit {
-  cursor: pointer;
-}
-
-.control > p {
-  display: inline-block;
-  margin-top: 3px;
 }

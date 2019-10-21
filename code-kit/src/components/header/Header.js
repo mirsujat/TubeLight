@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 import Modal from "../modal/Modal";
 import RegistrationPage from "../../pages/Registration/RegistrationPage";
 
