@@ -1,7 +1,10 @@
-export default function validate(values) {
+export const validate = values => {
   let errors = {};
+  // eslint-disable-next-line
   const usernameRegex = /^\w+[\_.-]?\w{1,19}$/;
+  // eslint-disable-next-line
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  // eslint-disable-next-line
   const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,19}$/;
   const msg = {
     username:
@@ -31,4 +34,19 @@ export default function validate(values) {
     errors.confirmPassword = msg.confirmPassword;
   }
   return errors;
-}
+};
+
+export const validateIp = values => {
+  const errors = {};
+  // eslint-disable-next-line
+  const regexIp = /^(?=.*[^\.]$)((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.?){4}$/gim;
+  const msg = {
+    ip: "Invalid IP Address"
+  };
+  if (!values.ipaddress) {
+    errors.ipaddress = "Valid IP Address Required.";
+  } else if (!values.ipaddress.match(regexIp)) {
+    errors.ipaddress = msg.ip;
+  }
+  return errors;
+};

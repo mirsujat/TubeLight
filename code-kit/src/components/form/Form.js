@@ -1,7 +1,7 @@
 import React from "react";
 import Input from "../input/Input";
 import useForm from "../../customhooks/userForm";
-import validate from "../../validators/validators";
+import { validate } from "../../validators/validators";
 
 const Form = () => {
   const { handleChange, handleSubmit, values, errors } = useForm(

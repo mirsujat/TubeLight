@@ -44,7 +44,7 @@
   position: absolute;
   padding: 35px;
   margin: 0;
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
   top: 11%;
   background-color: white;
@@ -108,4 +108,16 @@
 }
 .is-danger {
   color: red;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+}
+.search-btn {
+  line-height: 20px;
+  padding: 3px 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 6px;
 }
