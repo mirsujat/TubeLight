@@ -25,6 +25,7 @@ const Form = () => {
           value={values.username || ""}
           onChange={handleChange}
           className={`input ${errors.username && "is-danger"}`}
+          placeholder="username"
         >
           {errors.username && (
             <p className="help is-danger">{errors.username}</p>
@@ -37,6 +38,7 @@ const Form = () => {
           value={values.email || ""}
           onChange={handleChange}
           className={`input ${errors.email && "is-danger"}`}
+          placeholder="E-mail"
         >
           {errors.email && <p className="help is-danger">{errors.email}</p>}
         </Input>
@@ -47,6 +49,7 @@ const Form = () => {
           value={values.password || ""}
           onChange={handleChange}
           className={`input ${errors.password && "is-danger"}`}
+          placeholder="password"
         >
           {errors.password && (
             <p className="help is-danger">{errors.password}</p>
@@ -59,6 +62,7 @@ const Form = () => {
           value={values.confirmPassword || ""}
           onChange={handleChange}
           className={`input ${errors.confirmPassword && "is-danger"}`}
+          placeholder="confirm password"
         >
           {errors.confirmPassword && (
             <p className="help is-danger">{errors.confirmPassword}</p>

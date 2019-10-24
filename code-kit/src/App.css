@@ -98,8 +98,10 @@
   color: rgba(0, 0, 0, 0.48);
 }
 .form-control {
-  display: block;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-bottom: 25px;
 }
 .form-control > p {
   padding: 0px;
@@ -110,14 +112,37 @@
   color: red;
 }
 
-.search-form {
+.search-page {
+  display: flex;
+  flex-direction: column;
+}
+.search {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 .search-btn {
   line-height: 20px;
-  padding: 3px 15px;
-  margin-bottom: 12px;
+  padding: 2px 10px;
+  font-size: 16px;
   cursor: pointer;
   letter-spacing: 6px;
+}
+.title {
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.64);
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.search-content > p {
+  margin-bottom: 0;
 }
