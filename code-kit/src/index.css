@@ -38,7 +38,7 @@ form {
 input {
   display: block;
   width: 100%;
-  min-height: 20px;
+  line-height: 20px;
   padding: 3px 10px;
   font-size: 16px;
   border-width: 2px;

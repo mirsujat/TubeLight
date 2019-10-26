@@ -111,3 +111,40 @@
 .is-danger {
   color: red;
 }
+
+/*  search page */
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.search-btn {
+  display: inline-block;
+  line-height: 20px;
+  padding: 3px 10px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: rgba(0, 0, 0, 0.74);
+  cursor: pointer;
+  letter-spacing: 8px;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.54);
+  padding-right: 15px;
+}
+.page-header {
+  text-align: center;
+  letter-spacing: 10px;
+  color: rgba(0, 0, 0, 0.48);
+  text-transform: uppercase;
+}
