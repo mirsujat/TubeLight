@@ -43,10 +43,10 @@ export const validateIp = values => {
   const msg = {
     ip: "Invalid IP Address"
   };
-  if (!values.ipaddress) {
-    errors.ipaddress = "Valid IP Address Required.";
-  } else if (!values.ipaddress.match(regexIp)) {
-    errors.ipaddress = msg.ip;
+  if (!values.searchTerm) {
+    errors.searchTerm = "Valid IP Address Required.";
+  } else if (!values.searchTerm.match(regexIp)) {
+    errors.searchTerm = msg.ip;
   }
   return errors;
 };

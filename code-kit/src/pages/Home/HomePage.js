@@ -6,7 +6,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="home">
-        <h4 className="page-header">Search IP.</h4>
+        <h4 className="page-header">Search IP</h4>
         <Search></Search>
       </div>
     );

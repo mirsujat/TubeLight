@@ -24,7 +24,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 15px;
 }
@@ -113,38 +113,90 @@
 }
 
 /*  search page */
+
+.page-header {
+  text-align: center;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.48);
+}
 .search {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .search-form {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
+
 .search-btn {
-  display: inline-block;
-  line-height: 20px;
-  padding: 3px 10px;
-  font-size: 16px;
   margin-bottom: 25px;
-  color: rgba(0, 0, 0, 0.74);
-  cursor: pointer;
+  padding: 3px 10px;
+  line-height: 20px;
   letter-spacing: 8px;
+  cursor: pointer;
 }
+
 .title {
-  font-size: 18px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.48);
   padding-right: 15px;
 }
-.page-header {
-  text-align: center;
-  letter-spacing: 10px;
-  color: rgba(0, 0, 0, 0.48);
-  text-transform: uppercase;
+.result {
+  margin-top: 25px;
+}
+li {
+  display: block;
+  padding-bottom: 10px;
+}
+ul {
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+}
+
+/* Blog Page */
+.blog,
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+.collections {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.collection {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+img,
+.img {
+  display: block;
+  width: 230px;
+  height: 300px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+.product-title {
+  padding-left: 5px;
+  padding-bottom: 0;
+  margin: 0;
 }
