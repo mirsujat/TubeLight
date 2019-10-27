@@ -22,10 +22,8 @@ class Header extends Component {
           <li className="nav-link">
             <Link to="/blog">Blog</Link>
           </li>
-          <li className="nav-link">
-            <Link to="/registration" onClick={this.toggleModalOpen}>
-              Registration
-            </Link>
+          <li className="nav-link" onClick={this.toggleModalOpen}>
+            Registration
           </li>
         </ul>
         <Modal open={this.state.open} closed={this.toggleModalOpen}>
