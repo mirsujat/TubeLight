@@ -1,16 +1,9 @@
-import React, { Component } from "react";
-import Search from "../../components/search/Search";
+import React from "react";
 
-class HomePage extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="home">
-        <h4 className="page-header">Search IP</h4>
-        <Search></Search>
-      </div>
-    );
-  }
-}
+const HomePage = () => (
+  <div className="home">
+    <h1>Hello from Home Page</h1>
+  </div>
+);
 
 export default HomePage;
