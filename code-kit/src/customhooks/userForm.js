@@ -29,7 +29,11 @@ const useForm = (callback, validate) => {
     handleChange,
     handleSubmit,
     values,
-    errors
+    errors,
+    isSubmitting,
+    setIsSubmitting,
+    setValues,
+    setErrors
   };
 };
 
