@@ -1,5 +1,11 @@
 import React from "react";
+import Form from "../../components/form/Form";
 
-const RegistrationPage = () => <div>Hello from Reg Page</div>;
+const RegistrationPage = () => (
+  <div className="reg-page">
+    <h1>Register now!</h1>
+    <Form></Form>
+  </div>
+);
 
 export default RegistrationPage;
