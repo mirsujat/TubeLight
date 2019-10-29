@@ -20,7 +20,7 @@ const Form = () => {
       setValues({});
       setErrors({});
       setIsSubmitting(false);
-      console.log("Hi");
+      console.log("Thanks for sumitting form!!");
     }
   }
 
@@ -33,6 +33,7 @@ const Form = () => {
           value={values.username}
           onChange={handleChange}
           placeholder="username"
+          className={`${errors.username && "error"}`}
         >
           {errors.username && (
             <p className={`${errors.username && "is-danger"}`}>
@@ -46,17 +47,19 @@ const Form = () => {
           value={values.email}
           onChange={handleChange}
           placeholder="E-mail"
+          className={`${errors.email && "error"}`}
         >
           {errors.email && (
             <p className={`${errors.email && "is-danger"}`}>{errors.email}</p>
           )}
         </Input>
         <Input
-          type="text"
+          type="password"
           name="password"
           value={values.password}
           onChange={handleChange}
           placeholder="password"
+          className={`${errors.password && "error"}`}
         >
           {errors.password && (
             <p className={`${errors.password && "is-danger"}`}>
@@ -65,11 +68,12 @@ const Form = () => {
           )}
         </Input>
         <Input
-          type="text"
+          type="password"
           name="confirmPassword"
           value={values.confirmPassword}
           onChange={handleChange}
           placeholder="confirm password"
+          className={`${errors.confirmPassword && "error"}`}
         >
           {errors.confirmPassword && (
             <p className={`${errors.confirmPassword && "is-danger"}`}>
