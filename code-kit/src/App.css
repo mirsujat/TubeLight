@@ -14,13 +14,6 @@
   margin: 0 0 30px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.content {
-  display: block;
-  min-width: 1px;
-  min-height: 1px;
-  padding: 0;
-  margin: 60px 0 0 0;
-}
 
 /* navigation bar */
 .nav-bar,
@@ -43,6 +36,15 @@ a {
 a:hover {
   color: rgba(0, 0, 0, 0.92);
 }
+
+.content {
+  display: block;
+  min-width: 1px;
+  min-height: 1px;
+  padding: 0;
+  margin: 60px 0 0 0;
+}
+
 /* card */
 .card {
   display: flex;

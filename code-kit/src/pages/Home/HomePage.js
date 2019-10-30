@@ -8,6 +8,7 @@ const HomePage = () => {
 
   useEffect(() => {
     search();
+    // eslint-disable-next-line
   }, []);
 
   const handleSubmit = event => {
