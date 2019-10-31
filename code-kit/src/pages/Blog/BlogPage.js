@@ -29,6 +29,9 @@ const BlogPage = () => {
                     <span className="name">{item.name}</span>
                     <span className="price">${item.price}</span>
                   </div>
+                  <div className="buy-now">
+                    <button className="buy">add to cart</button>
+                  </div>
                 </div>
               );
             })}

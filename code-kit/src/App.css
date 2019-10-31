@@ -261,6 +261,7 @@ input {
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 15px 6px;
   padding: 10px;
+  position: relative;
 }
 img,
 .img {
@@ -281,4 +282,36 @@ img,
 }
 .price {
   display: inline-block;
+}
+
+.buy-now {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  cursor: pointer;
+}
+.buy {
+  display: inline-block;
+  position: absolute;
+  top: 70%;
+  right: 13%;
+  padding: 15px 25px;
+  background-color: transparent;
+  border: 2px solid rgba(129, 126, 126, 0.5);
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: whitesmoke;
+}
+.buy:hover {
+  border: 2px solid whitesmoke;
+}
+.buy-now:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid whitesmoke;
 }
