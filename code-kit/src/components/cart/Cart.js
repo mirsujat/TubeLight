@@ -17,15 +17,9 @@ const Cart = () => {
             </div>
             <div className="cart-item-price">$24</div>
           </div>
-
-          <div className="cart-item">
-            <div className="cart-item-img">item img</div>
-            <div className="cart-item-title">cart item title for women</div>
-            <div className="cart-item-price">$24</div>
-          </div>
         </div>
         <div className="cart-footer">
-          <button className="checkout-btn">checkout</button>
+          <span className="checkout">checkout</span>
         </div>
       </div>
     </div>
