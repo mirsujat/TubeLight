@@ -4,6 +4,7 @@ import Modal from "../modal/Modal";
 import Card from "../card/Card";
 import RegistrationPage from "../../pages/Registration/RegistrationPage";
 import Context from "../../context/Context";
+import Cart from "../cart/Cart";
 
 const Header = () => {
   const { open, auth, toggleModalOpen, toggleAuth } = useContext(Context);
@@ -32,7 +33,7 @@ const Header = () => {
           <span className="cart-icon">Cart</span>
         </div>
       </div>
-
+      <Cart></Cart>
       <Modal open={open} closed={toggleModalOpen}>
         <Card>
           <RegistrationPage></RegistrationPage>
