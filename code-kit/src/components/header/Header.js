@@ -10,23 +10,29 @@ const Header = () => {
 
   return (
     <div className="header">
-      <ul className="nav">
-        <li className="nav-link">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/blog">Blog</Link>
-        </li>
-        {auth ? (
-          <li className="nav-link" onClick={toggleAuth}>
-            Logout
+      <div className="nav-bar">
+        <ul className="nav">
+          <li className="nav-link">
+            <Link to="/">Home</Link>
           </li>
-        ) : (
-          <li className="nav-link" onClick={toggleModalOpen}>
-            Register
+          <li className="nav-link">
+            <Link to="/blog">Blog</Link>
           </li>
-        )}
-      </ul>
+          {auth ? (
+            <li className="nav-link" onClick={toggleAuth}>
+              Logout
+            </li>
+          ) : (
+            <li className="nav-link" onClick={toggleModalOpen}>
+              Register
+            </li>
+          )}
+        </ul>
+        <div className="nav-right">
+          <span className="cart-icon">Cart</span>
+        </div>
+      </div>
+
       <Modal open={open} closed={toggleModalOpen}>
         <Card>
           <RegistrationPage></RegistrationPage>
