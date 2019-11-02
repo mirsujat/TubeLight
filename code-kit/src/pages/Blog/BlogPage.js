@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import SHOP_DATA from "./ShopData";
+import Context from "../../context/Context";
 
 const BlogPage = () => {
   const [collections, setCollections] = useState({});
+  const { addItemToCart } = useContext(Context);
 
   useEffect(() => {
     const collections = Object.keys(SHOP_DATA).map(key => SHOP_DATA[key]);
     setCollections(collections);
   }, []);
 
-  console.log("Collections: ", collections);
+  // console.log("Collections: ", collections);
 
   let content = null;
   if (collections.length > 0) {
@@ -30,7 +32,12 @@ const BlogPage = () => {
                     <span className="price">${item.price}</span>
                   </div>
                   <div className="buy-now">
-                    <button className="buy">add to cart</button>
+                    <button
+                      className="buy"
+                      onClick={item => addItemToCart(item)}
+                    >
+                      add to cart
+                    </button>
                   </div>
                 </div>
               );

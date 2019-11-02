@@ -4,7 +4,11 @@ const Context = createContext({
   auth: false,
   open: false,
   toggleAuth: () => {},
-  toggleModalOpen: () => {}
+  toggleModalOpen: () => {},
+  cartOpen: false,
+  toggleCartOpen: () => {},
+  cart: [],
+  addItemToCart: item => {}
 });
 
 export default Context;
