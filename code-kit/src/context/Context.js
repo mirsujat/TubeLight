@@ -8,7 +8,7 @@ const Context = createContext({
   cartOpen: false,
   toggleCartOpen: () => {},
   cart: [],
-  addItemToCart: item => {}
+  addItemToCart: () => {}
 });
 
 export default Context;

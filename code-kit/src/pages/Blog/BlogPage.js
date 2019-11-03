@@ -32,10 +32,7 @@ const BlogPage = () => {
                     <span className="price">${item.price}</span>
                   </div>
                   <div className="buy-now">
-                    <button
-                      className="buy"
-                      onClick={item => addItemToCart(item)}
-                    >
+                    <button className="buy" onClick={() => addItemToCart(item)}>
                       add to cart
                     </button>
                   </div>

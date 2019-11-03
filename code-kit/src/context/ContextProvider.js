@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Context from "./Context";
+import { addItem } from "./utils";
 
 const ContextProvider = ({ children }) => {
   const [auth, setAuth] = useState(false);
@@ -10,10 +11,8 @@ const ContextProvider = ({ children }) => {
   const toggleAuth = () => setAuth(!auth);
   const toggleModalOpen = () => setOpen(!open);
   const toggleCartOpen = () => setCartOpen(!cartOpen);
-  const addItemToCart = item => {
-    setCart(item);
-    console.log("Cart: ", cart);
-  };
+  const addItemToCart = item => setCart(addItem(cart, item));
+  console.log("cart: ", cart);
 
   return (
     <Context.Provider
