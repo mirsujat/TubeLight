@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Context from "./Context";
-import { addItem } from "./utils";
+import { addItem, incrementQuantity, decrementQuantity } from "./utils";
 
 const ContextProvider = ({ children }) => {
   const [auth, setAuth] = useState(false);
@@ -12,8 +12,10 @@ const ContextProvider = ({ children }) => {
   const toggleModalOpen = () => setOpen(!open);
   const toggleCartOpen = () => setCartOpen(!cartOpen);
   const addItemToCart = item => setCart(addItem(cart, item));
-  console.log("cart: ", cart);
+  const handleIncrement = item => setCart(incrementQuantity(cart, item));
+  const handleDecrement = item => setCart(decrementQuantity(cart, item));
 
+  console.log("Cart: ", cart);
   return (
     <Context.Provider
       value={{
@@ -24,7 +26,9 @@ const ContextProvider = ({ children }) => {
         cartOpen,
         toggleCartOpen,
         cart,
-        addItemToCart
+        addItemToCart,
+        handleIncrement,
+        handleDecrement
       }}
     >
       {children}

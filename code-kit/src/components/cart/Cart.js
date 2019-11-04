@@ -25,11 +25,11 @@ const Cart = () => {
     <div className="cart">
       <div className="cart-content">
         <div className="cart-body">{content}</div>
-        <div className="cart-footer">
-          <Link to="/checkout" onClick={toggleCartOpen}>
+        <Link to="/checkout" onClick={toggleCartOpen}>
+          <div className="cart-footer">
             <span className="checkout">checkout</span>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
