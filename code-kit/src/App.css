@@ -234,9 +234,10 @@ a:hover {
 .checkout-items {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 750px;
+  justify-content: space-around;
+  width: 850px;
 }
+
 .checkout-item {
   display: flex;
   flex-direction: row;
@@ -254,7 +255,7 @@ a:hover {
   list-style: none;
   padding: 3px 15px;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   font-size: 14px;
 }
 .item {
@@ -262,7 +263,7 @@ a:hover {
 }
 .item-img {
   display: block;
-  width: 22%;
+  width: 16%;
   height: 100%;
 }
 .item-img > img {
@@ -270,19 +271,25 @@ a:hover {
   height: 100%;
 }
 .item-name {
-  width: 40%;
+  width: 26%;
 }
 .item-quantity {
-  width: 30%;
+  width: 25%;
   height: 37px;
 
   color: rgba(0, 0, 0, 0.46);
 }
 .item-price {
-  width: 20%;
+  width: 9%;
 }
 .item-total {
   width: 20%;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.62);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.item-remove {
+  width: 14%;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.66);
 }
@@ -294,8 +301,12 @@ a:hover {
 .center {
   text-align: center;
 }
+.ml {
+  margin-left: 115px;
+}
 .ml-80 {
-  margin-left: 114px;
+  margin-right: 20px;
+  margin-left: 115px;
 }
 .ml-60 {
   margin-left: 60px;
@@ -325,7 +336,7 @@ a:hover {
   font-size: 35px;
   padding: 0px 15px;
   margin-top: -42px;
-  margin-left: 90px;
+  margin-left: 87px;
   cursor: pointer;
 }
 .right-arrow {
@@ -333,7 +344,8 @@ a:hover {
   position: absolute;
   font-size: 35px;
   padding: 0px 15px;
-  margin-top: -13px;
+  margin-top: -14px;
+  margin-left: 30px;
   cursor: pointer;
 }
 .quantity {

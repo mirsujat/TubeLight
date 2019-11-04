@@ -35,7 +35,8 @@ const Checkout = () => {
               </span>
             </li>
             <li className="list item-price center">${price}</li>
-            <li className="list item-total center">$Total</li>
+            <li className="list item-total center">$1470</li>
+            <li className="list item-remove center">X</li>
           </ul>
         </div>
       );
@@ -49,9 +50,10 @@ const Checkout = () => {
         <ul className="checkout-header">
           <li className="checkout-title">Photo</li>
           <li className="checkout-title">Name</li>
-          <li className="checkout-title ml-80">Quantity</li>
+          <li className="checkout-title ml">Quantity</li>
           <li className="checkout-title">Price</li>
           <li className="checkout-title">Total</li>
+          <li className="checkout-title">Remove</li>
         </ul>
       </div>
       {content}

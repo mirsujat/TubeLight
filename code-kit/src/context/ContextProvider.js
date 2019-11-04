@@ -14,6 +14,7 @@ const ContextProvider = ({ children }) => {
   const addItemToCart = item => setCart(addItem(cart, item));
   const handleIncrement = item => setCart(incrementQuantity(cart, item));
   const handleDecrement = item => setCart(decrementQuantity(cart, item));
+  const removeItemFromCart = item => console.log("Item Removed!");
 
   console.log("Cart: ", cart);
   return (
