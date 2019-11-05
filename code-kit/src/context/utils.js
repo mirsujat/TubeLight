@@ -35,3 +35,16 @@ export const decrementQuantity = (cart, item) => {
       : cartItem
   );
 };
+export const removeItem = (cart, item) => {
+  return cart.filter(cartItem => cartItem.id !== item.id);
+};
+export const getCartTotal = cart => {
+  return cart.reduce((cartTotal, cartItem) => {
+    return cartTotal + cartItem.quantity * cartItem.price;
+  }, 0);
+};
+export const getCartItemsCount = cart => {
+  return cart.reduce((quantity, cartItem) => {
+    return quantity + cartItem.quantity;
+  }, 0);
+};

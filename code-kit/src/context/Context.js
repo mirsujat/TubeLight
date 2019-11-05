@@ -8,10 +8,14 @@ const Context = createContext({
   cartOpen: false,
   toggleCartOpen: () => {},
   cart: [],
+  cartItemsCount: 0,
   addItemToCart: () => {},
   handleIncrement: () => {},
   handleDecrement: () => {},
-  removeItem: () => {}
+  removeItem: () => {},
+  handleCartItemCount: () => {},
+  cartTotal: 0,
+  removeItemFromCart: () => {}
 });
 
 export default Context;

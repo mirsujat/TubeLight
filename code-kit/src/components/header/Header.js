@@ -13,7 +13,8 @@ const Header = () => {
     toggleModalOpen,
     toggleAuth,
     cartOpen,
-    toggleCartOpen
+    toggleCartOpen,
+    cartItemsCount
   } = useContext(Context);
 
   return (
@@ -38,6 +39,7 @@ const Header = () => {
         </ul>
         <div className="nav-right" onClick={toggleCartOpen}>
           <span className="cart-icon">Cart</span>
+          <span className="cart-item-count">[{cartItemsCount}]</span>
         </div>
       </div>
       {cartOpen ? <Cart></Cart> : null}
