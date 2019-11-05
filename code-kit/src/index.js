@@ -6,14 +6,11 @@ import "./index.css";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import ContextProvider from "./context/ContextProvider";
 
 ReactDOM.render(
-  <ContextProvider>
-    <Router>
-      <App />
-    </Router>
-  </ContextProvider>,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById("root")
 );
 

@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import Input from "../input/Input";
 import useForm from "../../customhooks/userForm";
 import { validate } from "../../validators/validators";
-import Context from "../../context/Context";
 
 const Form = () => {
   const {
@@ -15,7 +14,6 @@ const Form = () => {
     setValues,
     setErrors
   } = useForm(submitFormHandler, validate);
-  const { toggleModalOpen, toggleAuth } = useContext(Context);
 
   function submitFormHandler() {
     if (isSubmitting) {
@@ -23,8 +21,6 @@ const Form = () => {
       setValues({});
       setErrors({});
       setIsSubmitting(false);
-      toggleModalOpen();
-      toggleAuth();
       console.log("Thanks for sumitting form!!");
     }
   }

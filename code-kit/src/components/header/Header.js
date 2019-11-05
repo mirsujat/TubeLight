@@ -1,22 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "../modal/Modal";
 import Card from "../card/Card";
 import RegistrationPage from "../../pages/Registration/RegistrationPage";
-import Context from "../../context/Context";
-import Cart from "../cart/Cart";
 
 const Header = () => {
-  const {
-    open,
-    auth,
-    toggleModalOpen,
-    toggleAuth,
-    cartOpen,
-    toggleCartOpen,
-    cartItemsCount
-  } = useContext(Context);
-
   return (
     <div className="header">
       <div className="nav-bar">
@@ -27,23 +15,13 @@ const Header = () => {
           <li className="nav-link">
             <Link to="/blog">Blog</Link>
           </li>
-          {auth ? (
-            <li className="nav-link" onClick={toggleAuth}>
-              Logout
-            </li>
-          ) : (
-            <li className="nav-link" onClick={toggleModalOpen}>
-              Register
-            </li>
-          )}
+          <li className="nav-link" onClick={() => alert("toggleModalOpen !!")}>
+            Logout
+          </li>
         </ul>
-        <div className="nav-right" onClick={toggleCartOpen}>
-          <span className="cart-icon">Cart</span>
-          <span className="cart-item-count">[{cartItemsCount}]</span>
-        </div>
       </div>
-      {cartOpen ? <Cart></Cart> : null}
-      <Modal open={open} closed={toggleModalOpen}>
+
+      <Modal>
         <Card>
           <RegistrationPage></RegistrationPage>
         </Card>
