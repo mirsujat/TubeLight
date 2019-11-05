@@ -368,6 +368,29 @@ a:hover {
   letter-spacing: 4px;
   font-weight: bold;
 }
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 15px;
+  margin-top: 20px;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.52);
+}
+.order-now {
+  display: inline-block;
+  padding: 4px 15px;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.52);
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.order-now:hover {
+  color: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 /* Reg-form*/
 .reg-page {
   display: flex;

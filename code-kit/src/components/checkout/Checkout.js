@@ -7,7 +7,8 @@ const Checkout = () => {
     handleIncrement,
     handleDecrement,
     cartTotal,
-    removeItemFromCart
+    removeItemFromCart,
+    checkedout
   } = useContext(Context);
   let content = (
     <div className="empty-checkout">
@@ -54,6 +55,9 @@ const Checkout = () => {
           );
         })}
         <div className="total">TOTAL = ${cartTotal}</div>
+        <div className="order" onClick={() => checkedout(cart)}>
+          <span className="order-now">sumbit order</span>
+        </div>
       </Fragment>
     );
   }

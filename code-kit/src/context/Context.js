@@ -15,7 +15,8 @@ const Context = createContext({
   removeItem: () => {},
   handleCartItemCount: () => {},
   cartTotal: 0,
-  removeItemFromCart: () => {}
+  removeItemFromCart: () => {},
+  checkedout: () => {}
 });
 
 export default Context;

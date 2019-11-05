@@ -24,13 +24,17 @@ const ContextProvider = ({ children }) => {
   const handleIncrement = item => setCart(incrementQuantity(cart, item));
   const handleDecrement = item => setCart(decrementQuantity(cart, item));
   const removeItemFromCart = item => setCart(removeItem(cart, item));
+  const checkedout = cart => {
+    console.log("Checkout Successfull:", cart);
+    alert("Thanks! Your Items will be deliverd within 3 days.");
+    setCart([]);
+  };
 
   useEffect(() => {
     setCartItemsCount(getCartItemsCount(cart));
     setCartTotal(getCartTotal(cart));
   }, [cart]);
 
-  console.log("Cart: ", cart);
   return (
     <Context.Provider
       value={{
@@ -46,7 +50,8 @@ const ContextProvider = ({ children }) => {
         handleDecrement,
         cartTotal,
         removeItemFromCart,
-        cartItemsCount
+        cartItemsCount,
+        checkedout
       }}
     >
       {children}
