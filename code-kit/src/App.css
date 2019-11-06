@@ -275,10 +275,6 @@ input {
 }
 
 .collection {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   display: block;
   width: 250px;
   height: 360px;
@@ -337,6 +333,7 @@ img,
 .add-to-cart-btn:hover {
   border: 2px solid white;
 }
+/* Cart */
 .cart-container {
   display: flex;
   position: absolute;
@@ -357,7 +354,6 @@ img,
   height: 75%;
   margin: 58px 0 0 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-
   overflow: auto;
 }
 .cart-body {
@@ -428,4 +424,97 @@ img,
 }
 .cart-btn:hover {
   color: rgba(0, 0, 0, 0.68);
+}
+
+/* checkout page */
+.checkout-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.58);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 850px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.checkout-header {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  margin: 0 0 2px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.38);
+  text-transform: uppercase;
+}
+.header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.list-item {
+  width: 100%;
+  height: 100%;
+  padding: 6px 15px;
+}
+.photo {
+  display: block;
+  width: 15%;
+}
+.photo > img {
+  height: 74px;
+  padding: 6px 6px 6px 0;
+}
+.name {
+  display: block;
+  width: 40%;
+}
+.quantity {
+  display: block;
+  width: 20%;
+}
+.price {
+  display: block;
+  width: 10%;
+}
+.remove {
+  display: block;
+  width: 15%;
+}
+.checkout-content {
+  display: block;
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 85px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.p-15 {
+  padding: 0 15px;
 }

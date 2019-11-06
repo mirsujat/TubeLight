@@ -3,7 +3,7 @@ import Context from "./Context";
 
 const ContextProvider = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(true);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const toggleModalOpen = () => setOpen(!open);
   const toggleCartOpen = () => setCartOpen(!cartOpen);
