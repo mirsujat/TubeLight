@@ -5,7 +5,6 @@ import "./App.css";
 import Header from "./components/header/Header";
 import HomePage from "./pages/Home/HomePage";
 import BlogPage from "./pages/Blog/BlogPage";
-import CheckoutPage from "./pages/Checkout/CheckoutPage";
 
 class App extends Component {
   state = {};
@@ -18,7 +17,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage}></Route>
             <Route path="/blog" component={BlogPage}></Route>
-            <Route path="/checkout" component={CheckoutPage}></Route>
           </Switch>
         </div>
       </div>
