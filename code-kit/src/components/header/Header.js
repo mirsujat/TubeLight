@@ -8,16 +8,17 @@ import RegistrationPage from "../../pages/Registration/RegistrationPage";
 import Cart from "../cart/Cart";
 
 const Header = () => {
-  const { open, toggleModalOpen, cartOpen, toggleCartOpen } = useContext(
-    Context
-  );
+  const {
+    open,
+    toggleModalOpen,
+    cartOpen,
+    toggleCartOpen,
+    itemsCount
+  } = useContext(Context);
   return (
     <div className="header">
       <div className="nav-bar">
         <ul className="nav">
-          <li className="nav-link">
-            <Link to="/checkout">checkout</Link>
-          </li>
           <li className="nav-link">
             <Link to="/">Home</Link>
           </li>
@@ -30,7 +31,7 @@ const Header = () => {
 
           <li className="nav-link" onClick={toggleCartOpen}>
             Cart
-            <span className="cart-count">[0]</span>
+            <span className="cart-count">[{itemsCount}]</span>
           </li>
         </ul>
         {cartOpen ? <Cart></Cart> : null}

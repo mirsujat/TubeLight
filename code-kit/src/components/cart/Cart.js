@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import Context from "../../context/Context";
 
 const Cart = () => {
+  const { toggleCartOpen, cart } = useContext(Context);
+
+  let content = <div className="empty-cart">Your Cart Is Empty</div>;
+  if (cart.length > 0) {
+    content = cart.map(cartItem => {
+      const { id, imageUrl, name, price } = cartItem;
+      return (
+        <ul className="cart-content" key={id}>
+          <li className="cart-img">
+            <img src={imageUrl} alt="product" />
+          </li>
+          <li className="cart-title">{name}</li>
+          <li className="cart-price">${price}</li>
+        </ul>
+      );
+    });
+  }
   return (
     <div className="cart-container">
       <div className="cart">
-        <div className="cart-body">
-          <ul className="cart-content">
-            <li className="cart-img">
-              <img
-                src="https://i.ibb.co/ZYW3VTp/brown-brim.png"
-                alt="product"
-              />
-            </li>
-            <li className="cart-title">Product Name for Shows</li>
-            <li className="cart-price">$25</li>
-          </ul>
-        </div>
+        <div className="cart-body">{content}</div>
       </div>
+
       <div className="cart-footer">
-        <button className="cart-btn">checkout</button>
+        <Link to="/checkout" onClick={toggleCartOpen}>
+          <button className="cart-btn">checkout</button>
+        </Link>
       </div>
     </div>
   );

@@ -297,10 +297,10 @@ img,
   justify-content: space-between;
   padding: 8px 0px;
 }
-.name {
+.footer > .p-name {
   display: inline-block;
 }
-.price {
+.footer > .p-price {
   display: inline-block;
 }
 .buy-now {
@@ -359,10 +359,8 @@ img,
 .cart-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-
+  width: 95%;
   margin: 0 15px;
 }
 .cart-content {
@@ -391,7 +389,7 @@ img,
 .cart-title {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 65%;
   height: 100%;
@@ -426,6 +424,14 @@ img,
   color: rgba(0, 0, 0, 0.68);
 }
 
+.empty-cart {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 120px;
+  right: 44px;
+  font-size: 24px;
+}
 /* checkout page */
 .checkout-page {
   display: flex;
@@ -475,15 +481,18 @@ img,
 }
 .photo {
   display: block;
-  width: 15%;
+  width: 12%;
+  text-align: left;
 }
 .photo > img {
-  height: 74px;
+  width: 90px;
+  height: 90px;
   padding: 6px 6px 6px 0;
 }
 .name {
   display: block;
-  width: 40%;
+  width: 48%;
+  text-align: left;
 }
 .quantity {
   display: block;
@@ -517,4 +526,59 @@ img,
 
 .p-15 {
   padding: 0 15px;
+}
+.left-arrow {
+  display: inline-block;
+  font-size: 24px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.right-arrow {
+  display: inline-block;
+  font-size: 24px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.checkout-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  height: 65px;
+}
+.checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 30px;
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.48);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.checkout-btn:hover {
+  color: rgba(0, 0, 0, 0.68);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.total {
+  display: block;
+  margin-right: 30px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.34);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.delete {
+  display: inline-block;
+  cursor: pointer;
+  padding: 35px;
+}
+
+.sorry {
+  display: block;
+  margin: 25px 0;
 }
