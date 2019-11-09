@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import SHOP_DATA from "./ShopData";
+import Context from "../../context/Context";
 
 const BlogPage = () => {
+  const { addItemToCart } = useContext(Context);
   const [collections, setCollections] = useState({});
 
   useEffect(() => {
@@ -28,7 +30,12 @@ const BlogPage = () => {
                     <span className="p-price">${item.price}</span>
                   </div>
                   <div className="buy-now">
-                    <button className="add-to-cart-btn">add to cart</button>
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={() => addItemToCart(item)}
+                    >
+                      add to cart
+                    </button>
                   </div>
                 </div>
               );

@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import Modal from "../modal/Modal";
 import Card from "../card/Card";
 import RegistrationPage from "../../pages/Registration/RegistrationPage";
+import Context from "../../context/Context";
+import Cart from "../cart/Cart";
 
 const Header = () => {
+  const { cartOpen, toggleCartOpen, itemsCount } = useContext(Context);
   return (
     <div className="header">
       <div className="nav-bar">
         <ul className="nav">
+          <li className="nav-link">
+            <Link to="/checkout">checkout</Link>
+          </li>
           <li className="nav-link">
             <Link to="/">Home</Link>
           </li>
@@ -17,11 +23,12 @@ const Header = () => {
             <Link to="/blog">Blog</Link>
           </li>
           <li className="nav-link">Logout</li>
-          <li className="nav-link">
+          <li className="nav-link" onClick={toggleCartOpen}>
             Cart
-            <span className="cart-count">[0]</span>
+            <span className="cart-count">[{itemsCount}]</span>
           </li>
         </ul>
+        {cartOpen ? <Cart></Cart> : null}
       </div>
 
       <Modal>
