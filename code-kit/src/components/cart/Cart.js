@@ -9,7 +9,7 @@ const Cart = () => {
     content = cart.map(cartItem => {
       const { id, imageUrl, name, price } = cartItem;
       return (
-        <div className="cart-content" key={id}>
+        <div className="cart-content" key={id} data-testid="cart-content">
           <div className="cart-img">
             <img src={imageUrl} alt="product" />
           </div>
@@ -20,7 +20,7 @@ const Cart = () => {
     });
   }
   return (
-    <div className="cart-container">
+    <div className="cart-container" data-testid="cart-container">
       <div className="cart-wrapper">
         <div className="cart">
           <div className="cart-body">
