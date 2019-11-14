@@ -4,7 +4,11 @@ import Context from "../../context/Context";
 
 const Cart = () => {
   const { cart, toggleCartOpen } = useContext(Context);
-  let content = <div className="empty-cart">Your Cart Is Empty</div>;
+  let content = (
+    <div className="empty-cart" data-testid="empty-cart">
+      Your Cart Is Empty
+    </div>
+  );
   if (cart.length > 0) {
     content = cart.map(cartItem => {
       const { id, imageUrl, name, price } = cartItem;
@@ -30,8 +34,16 @@ const Cart = () => {
           </div>
         </div>
         <div className="cart-footer">
-          <Link to="/checkout" className="cart-btn">
-            <button className="cart-btn" onClick={toggleCartOpen}>
+          <Link
+            to="/checkout"
+            className="cart-btn"
+            data-testid="link-to-checkout-page"
+          >
+            <button
+              className="cart-btn"
+              onClick={toggleCartOpen}
+              data-testid="cart-btn"
+            >
               checkout
             </button>
           </Link>

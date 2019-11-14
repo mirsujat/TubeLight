@@ -1,17 +1,61 @@
 import React from "react";
-import { render, fireEvent, cleanup } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 
-import ContextProvider from "../../context/ContextProvider";
+import { renderWithRouter } from "../../testutils/";
+import ContextProviderDev from "../../context/ContextProvider.dev";
 import Cart from "./Cart";
 
 afterEach(cleanup);
 
-test("cart component", () => {
-  const { getByTestId } = render(
-    <ContextProvider>
-      <Cart></Cart>
-    </ContextProvider>
-  );
+describe("render cart component without error", () => {
+  test("cart-container", () => {
+    const { getByTestId } = renderWithRouter(<Cart></Cart>);
+    expect(getByTestId("cart-container")).toBeTruthy();
+  });
 
-  expect(getByTestId("cart-container")).toBeTruthy();
+  test("cart-btn", () => {
+    const { getByTestId } = renderWithRouter(<Cart></Cart>);
+    expect(getByTestId("cart-btn")).toBeTruthy();
+  });
+
+  test("checkout text", () => {
+    const { getByText } = renderWithRouter(<Cart></Cart>);
+    expect(getByText("checkout")).toBeTruthy();
+  });
+
+  test("empty cart", () => {
+    const { getByTestId } = renderWithRouter(<Cart></Cart>);
+
+    expect(getByTestId("empty-cart")).toBeTruthy();
+  });
+
+  test(" render with cart DATA ", () => {
+    const { getAllByTestId } = renderWithRouter(
+      <ContextProviderDev>
+        <Cart></Cart>
+      </ContextProviderDev>
+    );
+
+    expect(getAllByTestId("cart-content")).toBeTruthy();
+  });
+
+  test("Link to checkout page ", () => {
+    const { getByTestId } = renderWithRouter(
+      <ContextProviderDev>
+        <Cart></Cart>
+      </ContextProviderDev>
+    );
+
+    expect(getByTestId("link-to-checkout-page")).toBeTruthy();
+  });
+  test(" render with text", () => {
+    const { debug, getByText } = renderWithRouter(
+      <ContextProviderDev>
+        <Cart></Cart>
+      </ContextProviderDev>
+    );
+
+    expect(getByText(/test1/i).textContent).toBe("test1");
+    debug();
+  });
 });

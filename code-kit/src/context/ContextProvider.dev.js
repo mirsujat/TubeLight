@@ -9,8 +9,11 @@ import {
   getTotalPrice
 } from "./utils";
 
-const ContextProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+const ContextProviderDev = ({ children }) => {
+  const [cart, setCart] = useState([
+    { id: 1, name: "test1" },
+    { id: 2, name: "test2" }
+  ]);
   const [cartOpen, setCartOpen] = useState(false);
   const [itemsCount, setItemsCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -43,4 +46,4 @@ const ContextProvider = ({ children }) => {
   );
 };
 
-export default ContextProvider;
+export default ContextProviderDev;
