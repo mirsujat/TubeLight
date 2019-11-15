@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { cleanup } from "@testing-library/react";
 
 import { renderWithRouter } from "../../testutils/";
 import ContextProviderDev from "../../context/ContextProvider.dev";
@@ -49,13 +49,12 @@ describe("render cart component without error", () => {
     expect(getByTestId("link-to-checkout-page")).toBeTruthy();
   });
   test(" render with text", () => {
-    const { debug, getByText } = renderWithRouter(
+    const { getByText } = renderWithRouter(
       <ContextProviderDev>
         <Cart></Cart>
       </ContextProviderDev>
     );
 
     expect(getByText(/test1/i).textContent).toBe("test1");
-    debug();
   });
 });

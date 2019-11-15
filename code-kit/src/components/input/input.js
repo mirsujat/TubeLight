@@ -7,6 +7,7 @@ const Input = ({
   placeholder,
   onChange,
   className,
+  datatestid,
   children
 }) => (
   <div className="form-control">
@@ -17,6 +18,7 @@ const Input = ({
       placeholder={placeholder}
       onChange={onChange}
       className={className}
+      data-testid={datatestid}
     ></input>
     {children}
   </div>

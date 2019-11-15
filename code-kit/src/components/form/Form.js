@@ -27,7 +27,11 @@ const Form = () => {
 
   return (
     <div className="reg-form">
-      <form className="form-group" onSubmit={handleSubmit}>
+      <form
+        className="form-group"
+        onSubmit={handleSubmit}
+        data-testid="form-group"
+      >
         <Input
           type="text"
           name="username"
@@ -35,6 +39,7 @@ const Form = () => {
           onChange={handleChange}
           placeholder="username"
           className={`${errors.username && "error"}`}
+          datatestid="username"
         >
           {errors.username && (
             <p className={`${errors.username && "is-danger"}`}>
@@ -49,6 +54,7 @@ const Form = () => {
           onChange={handleChange}
           placeholder="E-mail"
           className={`${errors.email && "error"}`}
+          datatestid="email"
         >
           {errors.email && (
             <p className={`${errors.email && "is-danger"}`}>{errors.email}</p>
@@ -61,6 +67,7 @@ const Form = () => {
           onChange={handleChange}
           placeholder="password"
           className={`${errors.password && "error"}`}
+          datatestid="password"
         >
           {errors.password && (
             <p className={`${errors.password && "is-danger"}`}>
@@ -75,6 +82,7 @@ const Form = () => {
           onChange={handleChange}
           placeholder="confirm password"
           className={`${errors.confirmPassword && "error"}`}
+          datatestid="confirmPassword"
         >
           {errors.confirmPassword && (
             <p className={`${errors.confirmPassword && "is-danger"}`}>
