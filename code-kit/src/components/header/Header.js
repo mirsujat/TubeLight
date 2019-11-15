@@ -10,9 +10,9 @@ import Cart from "../cart/Cart";
 const Header = () => {
   const { cartOpen, toggleCartOpen, itemsCount } = useContext(Context);
   return (
-    <div className="header">
+    <div className="header" data-testid="header">
       <div className="nav-bar">
-        <ul className="nav">
+        <ul className="nav" data-testid="nav">
           <li className="nav-link">
             <Link to="/checkout">checkout</Link>
           </li>

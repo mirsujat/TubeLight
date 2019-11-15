@@ -10,11 +10,11 @@ const Input = ({
   datatestid,
   children
 }) => (
-  <div className="form-control">
+  <div className="form-control" data-testid="form-control">
     <input
       type={type}
       name={name}
-      value={value || ""}
+      value={value}
       placeholder={placeholder}
       onChange={onChange}
       className={className}
