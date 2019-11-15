@@ -69,18 +69,23 @@ const HomePage = () => {
     );
   }
   return (
-    <div className="home">
+    <div className="home" data-testid="homepage">
       <h2 className="home-title">search ip</h2>
 
       <div className="search">
-        <form className="search-form" onSubmit={handleSubmit}>
+        <form
+          className="search-form"
+          onSubmit={handleSubmit}
+          data-testid="search-form"
+        >
           <Input
             type="text"
             name="ip"
             value={values.ip}
             onChange={handleChange}
+            datatestid="ip"
           ></Input>
-          <button type="submit" className="search-btn">
+          <button type="submit" className="search-btn" data-testid="search-btn">
             search
           </button>
         </form>
