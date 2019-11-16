@@ -32,11 +32,10 @@ const HomePage = () => {
     });
   };
 
-  let content = null;
+  let content = <div>...Loading</div>;
   if (userIp.ip) {
-    console.log("userIp :", userIp);
     content = (
-      <ul className="result">
+      <ul className="result" data-testid="result">
         <li className="item">
           <span className="item-title">IP:</span>
           {userIp.ip}
@@ -79,6 +78,7 @@ const HomePage = () => {
           data-testid="search-form"
         >
           <Input
+            id="ip"
             type="text"
             name="ip"
             value={values.ip}
