@@ -26,8 +26,14 @@ class Modal extends Component {
     let content = <noscript></noscript>;
     if (this.props.open) {
       content = (
-        <div className="modal-wrapper" open={this.props.open}>
-          <div className="modal">{this.props.children}</div>
+        <div
+          className="modal-wrapper"
+          open={this.props.open}
+          data-testid="modal-wrapper"
+        >
+          <div className="modal" data-testid="modal">
+            {this.props.children}
+          </div>
           <Backdrop onClick={this.props.closed}></Backdrop>
         </div>
       );
