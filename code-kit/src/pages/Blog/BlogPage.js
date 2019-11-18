@@ -16,23 +16,30 @@ const BlogPage = () => {
     content = collections.map(collection => {
       const { title, id, items } = collection;
       return (
-        <div className="section" key={id}>
-          <h1 className="section-title">{title}</h1>
-          <div className="collections">
+        <div className="section" key={id} data-testid="product-section">
+          <h1 className="section-title" data-testid="section-title">
+            {title}
+          </h1>
+          <div className="collections" data-testid="collections">
             {items.map(item => {
               return (
-                <div className="collection" key={item.id}>
+                <div
+                  className="collection"
+                  key={item.id}
+                  data-testid="collection"
+                >
                   <div className="img">
                     <img src={item.imageUrl} alt="product" />
                   </div>
-                  <div className="footer">
+                  <div className="footer" data-testid="footer">
                     <span className="p-name">{item.name}</span>
                     <span className="p-price">${item.price}</span>
                   </div>
-                  <div className="buy-now">
+                  <div className="buy-now" data-testid="buy-now">
                     <button
                       className="add-to-cart-btn"
                       onClick={() => addItemToCart(item)}
+                      data-testid="add-to-cart-btn"
                     >
                       add to cart
                     </button>
@@ -45,7 +52,11 @@ const BlogPage = () => {
       );
     });
   }
-  return <div className="blog">{content}</div>;
+  return (
+    <div className="blog" data-testid="blog">
+      {content}
+    </div>
+  );
 };
 
 export default BlogPage;

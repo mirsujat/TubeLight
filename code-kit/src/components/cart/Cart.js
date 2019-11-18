@@ -17,7 +17,9 @@ const Cart = () => {
           <div className="cart-img">
             <img src={imageUrl} alt="product" />
           </div>
-          <div className="cart-title">{name}</div>
+          <div className="cart-title" data-testid="cart-title">
+            {name}
+          </div>
           <div className="cart-price">${price}</div>
         </div>
       );
