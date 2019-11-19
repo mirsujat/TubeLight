@@ -90,7 +90,9 @@ const HomePage = () => {
           </button>
         </form>
 
-        <div className="search-result">{content}</div>
+        <div className="search-result" data-testid="search-result">
+          {content}
+        </div>
       </div>
     </div>
   );
