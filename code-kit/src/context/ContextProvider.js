@@ -14,11 +14,13 @@ const ContextProvider = ({ children }) => {
   const [cartOpen, setCartOpen] = useState(false);
   const [itemsCount, setItemsCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const toggleCartOpen = () => setCartOpen(!cartOpen);
   const addItemToCart = item => setCart(addItem(cart, item));
   const removeItemFromCart = item => setCart(removeItem(cart, item));
   const filterItemFromCart = item => setCart(filterItem(cart, item));
+  const toggleModalOpen = () => setOpen(!open);
 
   useEffect(() => {
     setItemsCount(getItemsCount(cart));
@@ -35,7 +37,9 @@ const ContextProvider = ({ children }) => {
         removeItemFromCart,
         filterItemFromCart,
         itemsCount,
-        totalPrice
+        totalPrice,
+        open,
+        toggleModalOpen
       }}
     >
       {children}

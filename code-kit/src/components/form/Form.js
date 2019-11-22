@@ -33,6 +33,7 @@ const Form = () => {
         data-testid="form-group"
       >
         <Input
+          id="username"
           type="text"
           name="username"
           value={values.username}

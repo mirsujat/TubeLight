@@ -8,6 +8,8 @@ const Context = createContext({
   removeItemFromCart: () => {},
   filterItemFromCart: () => {},
   itemsCount: 0,
-  totalPrice: 0
+  totalPrice: 0,
+  open: false,
+  toggleModalOpen: () => {}
 });
 export default Context;

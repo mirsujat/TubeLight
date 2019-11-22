@@ -8,7 +8,13 @@ import Context from "../../context/Context";
 import Cart from "../cart/Cart";
 
 const Header = () => {
-  const { cartOpen, toggleCartOpen, itemsCount } = useContext(Context);
+  const {
+    cartOpen,
+    toggleCartOpen,
+    itemsCount,
+    open,
+    toggleModalOpen
+  } = useContext(Context);
   return (
     <div className="header" data-testid="header">
       <div className="nav-bar">
@@ -19,7 +25,9 @@ const Header = () => {
           <li className="nav-link">
             <Link to="/blog">Blog</Link>
           </li>
-          <li className="nav-link">Logout</li>
+          <li className="nav-link" onClick={toggleModalOpen}>
+            Logout
+          </li>
           <li className="nav-link" onClick={toggleCartOpen}>
             Cart
             <span className="cart-count">[{itemsCount}]</span>
@@ -28,7 +36,7 @@ const Header = () => {
         {cartOpen ? <Cart></Cart> : null}
       </div>
 
-      <Modal>
+      <Modal open={open} closed={toggleModalOpen}>
         <Card>
           <RegistrationPage></RegistrationPage>
         </Card>
