@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Input from "../input/Input";
 import useForm from "../../customhooks/userForm";
 import { validate } from "../../validators/validators";
+import Context from "../../context/Context";
 
 const Form = () => {
   const {
@@ -14,6 +15,7 @@ const Form = () => {
     setValues,
     setErrors
   } = useForm(submitFormHandler, validate);
+  const { toggleModalOpen } = useContext(Context);
 
   function submitFormHandler() {
     if (isSubmitting) {
@@ -33,7 +35,6 @@ const Form = () => {
         data-testid="form-group"
       >
         <Input
-          id="username"
           type="text"
           name="username"
           value={values.username}
@@ -91,7 +92,12 @@ const Form = () => {
             </p>
           )}
         </Input>
-        <button type="submit" className="submit-btn">
+        <button
+          type="submit"
+          className="submit-btn"
+          data-testid="submit-btn"
+          onClick={toggleModalOpen}
+        >
           submit
         </button>
       </form>

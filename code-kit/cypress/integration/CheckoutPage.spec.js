@@ -1,6 +1,6 @@
 describe("CheckouPage Should Display Correctlly:", () => {
   it("Display Proper Text Content:", () => {
-    cy.visit("http://localhost:3000/checkout");
+    cy.visit("http://localhost:3001/checkout");
     cy.get(".photo").contains("photo");
     cy.get(".name").contains("name");
     cy.get(".quantity").contains("quantity");
