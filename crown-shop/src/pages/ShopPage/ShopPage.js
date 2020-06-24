@@ -1,6 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
+import "./ShopPage.styles.scss";
+
 import CollectionsOverview from "../../components/CollectionsOverview/CollectionsOverview";
 import CollectionPage from "../CollectionPage/CollectionPage";
 
