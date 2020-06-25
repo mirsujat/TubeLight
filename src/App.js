@@ -6,6 +6,7 @@ import { createStructuredSelector } from "reselect";
 import "./App.css";
 
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 import HomePage from "./pages/HomePage/HomePage";
 import ShopPage from "./pages/ShopPage/ShopPage";
@@ -35,18 +36,16 @@ const App = ({ checkUserSession, currentUser }) => {
           }
         />
       </Switch>
+      <Footer></Footer>
     </div>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
-const mapDispatchToProps = dispatch => ({
-  checkUserSession: () => dispatch(checkUserSession())
+const mapDispatchToProps = (dispatch) => ({
+  checkUserSession: () => dispatch(checkUserSession()),
 });
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -17,3 +17,25 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .collection-page {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+
+      &.collection-item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

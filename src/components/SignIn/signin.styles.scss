@@ -11,3 +11,20 @@
     justify-content: space-between;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .sign-in {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin: 10px 0;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
