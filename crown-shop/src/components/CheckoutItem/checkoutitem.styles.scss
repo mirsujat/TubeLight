@@ -39,3 +39,49 @@
     cursor: pointer;
   }
 }
+@media only screen and (max-width: 600px) {
+  .checkout-item {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    border-bottom: 1px solid darkgrey;
+    padding: 10px 0;
+    font-size: 14px;
+    align-items: center;
+
+    .image-container {
+      width: 30%;
+      padding-right: 15px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .name {
+      width: 40%;
+    }
+    .quantity,
+    .price {
+      width: 23%;
+      padding-right: 15px;
+    }
+
+    .quantity {
+      display: flex;
+
+      .arrow {
+        cursor: pointer;
+      }
+
+      .value {
+        margin: 0 10px;
+      }
+    }
+
+    .remove-button {
+      padding-left: 12px;
+      cursor: pointer;
+    }
+  }
+}
