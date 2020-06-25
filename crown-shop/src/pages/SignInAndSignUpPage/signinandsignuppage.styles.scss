@@ -4,3 +4,12 @@
   justify-content: space-between;
   margin: 30px auto;
 }
+@media only screen and (max-width: 600px) {
+  .sign-in-and-sign-up {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 15px;
+  }
+}
