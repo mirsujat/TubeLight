@@ -9,6 +9,7 @@ import GridItem from "../../../components/Grid/GridItem.jsx";
 import footerStyle from "./footerStyle.jsx";
 
 const footer = props => {
+  let date = new Date().getFullYear();
   const { classes } = props;
   return (
     <Fragment>
@@ -41,7 +42,7 @@ const footer = props => {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <h6 className={classes.credit}>
-              Design and Develop by: mir.sujat@gmail.com, &copy;2018
+              Design and Develop by: mir.sujat@gmail.com, &copy;{date}
             </h6>
           </GridItem>
         </GridContainer>
