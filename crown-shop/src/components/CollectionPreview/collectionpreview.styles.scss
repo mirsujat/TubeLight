@@ -14,3 +14,23 @@
     justify-content: space-around;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .collection-preview {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    .preview {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}
