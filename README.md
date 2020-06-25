@@ -1,7 +1,7 @@
 # MuiCustomTheme is a React Kit Build With Material-UI @1.4.3 and React @16.4.3
 
 
-### [SEE React Kit DEMO]: (https://react-kit.firebaseapp.com/)
+# SEE React Kit DEMO: (https://react-kit.firebaseapp.com/)
 
 Make user you have nodejs install
 
