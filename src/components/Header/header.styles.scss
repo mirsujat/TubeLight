@@ -1,14 +1,19 @@
 .header {
-  height: 70px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  border-bottom: 1px solid #d2cece;
+  background-color: #333;
+  a {
+    color: #ffffff;
+  }
 
   .logo-container {
     height: 100%;
-    width: 70px;
-    padding: 25px;
+    width: 60px;
+    padding: 0 25px;
   }
 
   .options {
