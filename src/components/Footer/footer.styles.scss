@@ -1,30 +1,40 @@
 .footer {
   width: 100%;
-  height: 64px;
+  height: 58px;
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  align-items: center;
   background-color: #333333;
   color: #ffffff;
-  padding-top: 15px;
   padding-right: 15px;
-  padding-bottom: 0;
   padding-left: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h6 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.footer-left,
+.footer-right,
+.source-code,
+.hire-me {
+  padding: 0px 15px;
 }
 .footer-left > h6 {
   font-size: 10px;
   color: #ffffff;
   font-weight: 300;
 }
-.footer > .hire-me > h4 > a {
-  font-size: 12px;
+.hire-me > h6 {
+  font-size: 10px;
   letter-spacing: 10px;
+  font-weight: 500;
 }
 .source-code {
   font-size: 10px;
   color: #ffffff;
   font-weight: 300;
+  padding: 15px;
 }
 
 @media only screen and (max-width: 600px) {

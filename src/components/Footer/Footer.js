@@ -10,22 +10,23 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-left">
         <h6>
-          Develop and design by mir sujat &copy; {date}, contact:
-          mir.sujat@gmail.com{" "}
+          With love mir sujat &copy; {date}, contact: mir.sujat@gmail.com{" "}
         </h6>
       </div>
       <div className="hire-me">
-        <h4 className="hire-me">
+        <h6 className="hire-me">
           <a href={angelList} target="_blank" rel="noopener noreferrer">
             Hire Me!
           </a>
-        </h4>
+        </h6>
       </div>
       <div className="footer-right">
-        <span className="source-code">Find Source code: </span>
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <img src={gitLogo} alt="gitHub link" heigth="24" width="24"></img>
-        </a>
+        <h6>
+          <span className="source-code">Find Source code: </span>
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <img src={gitLogo} alt="gitHub link" heigth="24" width="24"></img>
+          </a>
+        </h6>
       </div>
     </div>
   );
