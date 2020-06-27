@@ -10,6 +10,8 @@
   .sign-up {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 260px;
     .title {
       margin: 10px 0;
