@@ -1,5 +1,5 @@
 import React from "react";
-import gitLogo from "./Octocat.jpg";
+import gitLogo from "./GitHub-Mark-Light-64px.png";
 import "./footer.styles.scss";
 
 const Footer = () => {
@@ -15,16 +15,16 @@ const Footer = () => {
         </h6>
       </div>
       <div className="hire-me">
-        <h6>
+        <h4 className="hire-me">
           <a href={angelList} target="_blank" rel="noopener noreferrer">
             Hire Me!
           </a>
-        </h6>
+        </h4>
       </div>
       <div className="footer-right">
         <span className="source-code">Find Source code: </span>
         <a href={github} target="_blank" rel="noopener noreferrer">
-          <img src={gitLogo} alt="gitHub link" heigth="50px" width="50px"></img>
+          <img src={gitLogo} alt="gitHub link" heigth="24" width="24"></img>
         </a>
       </div>
     </div>
