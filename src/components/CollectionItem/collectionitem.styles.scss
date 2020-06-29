@@ -1,10 +1,11 @@
 .collection-item {
-  width: 22vw;
+  width: 23vw;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
 
   .image {
     width: 100%;
@@ -54,6 +55,7 @@
     height: 350px;
     align-items: center;
     position: relative;
+    margin-bottom: 10px;
 
     .image {
       width: 100%;
