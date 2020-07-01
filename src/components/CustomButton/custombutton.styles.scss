@@ -6,7 +6,7 @@
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: black;
+  background-color: #ca2b70;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -31,11 +31,11 @@
     }
   }
   &.inverted {
-    background-color: white;
+    background-color: #ca2b70;
     color: black;
     border: 1px solid black;
     &:hover {
-      background-color: black;
+      background-color: #f13b8a;
       color: white;
       border: none;
     }
