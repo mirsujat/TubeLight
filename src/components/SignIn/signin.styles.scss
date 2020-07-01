@@ -10,6 +10,9 @@
     display: flex;
     justify-content: space-between;
   }
+  .uper-case {
+    text-transform: uppercase;
+  }
 }
 
 @media only screen and (max-width: 600px) {
