@@ -5,11 +5,14 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid black;
+  box-shadow: -17px 20px 12px 17px rgba(0, 0, 0, 0.2);
   background-color: white;
-  top: 90px;
-  right: 40px;
+  top: 60px;
+  right: 1px;
   z-index: 5;
+  .custom-button {
+    background-color: #ca2b70;
+  }
 
   .empty-message {
     font-size: 18px;
