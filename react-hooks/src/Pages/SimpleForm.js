@@ -1,6 +1,7 @@
 import React from "react";
 import useSimpleForm from "../Components/CustomHooks/useSimpleForm";
 import validate from "../Validation/Validation";
+import styles from "./SimpleForm.module.css";
 
 const SimpleForm = () => {
   const login = () => {
@@ -60,12 +61,16 @@ const SimpleForm = () => {
           <option value={values.mango}>Mango</option>
         </select>
         <br />
-        <input
-          name="isGoing"
-          type="checkbox"
-          checked={values.isGoing || false}
-          onChange={handleChange}
-        />
+        <label className={styles.container}>
+          <input
+            name="isGoing"
+            type="checkbox"
+            checked={values.isGoing || false}
+            onChange={handleChange}
+          />
+          <span className={styles.checkmark}></span>
+        </label>
+
         <br />
         <button type="submit">Submit</button>
       </form>
