@@ -16,7 +16,7 @@ const SimpleForm = () => {
       <h1>Simple Form</h1>
       <form onSubmit={handleSubmit}>
         <input
-          placeholder="Last Name"
+          placeholder="First Name"
           type="text"
           name="firstname"
           value={values.firstname || ""}
