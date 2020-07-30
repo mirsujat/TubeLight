@@ -8,6 +8,8 @@ import Article from "../Pages/Article";
 import FormValidation from "../Pages/FormValidation";
 import SimpleForm from "../Pages/SimpleForm";
 
+import TabManager from "../Pages/TabManager";
+
 const Routes = () => (
   <Router>
     <Navbar />
@@ -18,6 +20,7 @@ const Routes = () => (
       <Route path="/form-validation" component={FormValidation} />
       <Route path="/api/articles" component={Articles} />
       <Route path="/api/:id" component={Article} />
+      <Route path="/tabs" component={TabManager} />
     </Switch>
   </Router>
 );
