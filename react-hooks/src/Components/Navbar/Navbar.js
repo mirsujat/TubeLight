@@ -24,6 +24,9 @@ const Navbar = () => {
         <li>
           <Link to="/api/articles">Articles</Link>
         </li>
+        <li>
+          <Link to="/tabs">Tab Manager</Link>
+        </li>
         <button
           className="button-default"
           onClick={() => console.log("Print to The Console.")}
