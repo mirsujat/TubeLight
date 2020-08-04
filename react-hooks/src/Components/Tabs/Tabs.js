@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import styles from "./Tabs.module.css";
 
 const Tabs = (props) => {
