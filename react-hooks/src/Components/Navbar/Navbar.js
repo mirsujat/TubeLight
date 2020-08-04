@@ -27,6 +27,9 @@ const Navbar = () => {
         <li>
           <Link to="/tabs">Tab Manager</Link>
         </li>
+        <li>
+          <Link to="/multiselect">Multiselect</Link>
+        </li>
         <button
           className="button-default"
           onClick={() => console.log("Print to The Console.")}
