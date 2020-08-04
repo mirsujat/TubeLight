@@ -9,7 +9,7 @@ const MultiSelect = () => {
   };
   return (
     <div className="multi_selection">
-      <div className="select_box" onClick={() => handleShowOption()}>
+      <div className="select_box" onClick={handleShowOption}>
         <select>
           <option>Select Options</option>
         </select>
