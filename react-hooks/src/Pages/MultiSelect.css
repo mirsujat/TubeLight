@@ -1,0 +1,38 @@
+.multiple_selection {
+  width: 300px;
+  background-color: #bcc2c1;
+}
+
+.select_box {
+  position: relative;
+}
+
+.select_box select {
+  width: 100%;
+  font-weight: bold;
+  padding: 4px 15px;
+}
+
+.over_select {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.checkboxes {
+  display: none;
+  border: 1px #eee solid;
+  box-shadow: 3px 5px 20px 0px;
+  padding: 25px 0px;
+}
+
+.checkboxes label {
+  display: block;
+  padding: 6px 15px;
+}
+
+.checkboxes label:hover {
+  background-color: #cccfcf;
+}
