@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import useDebounce from "../Components/CustomHooks/useDebounce";
 import axios from "axios";
 
@@ -15,10 +15,10 @@ const Home = () => {
   // ... so that we aren't hitting our API rapidly.
   const debouncedSearchTerm = useDebounce(query, 1000);
 
-  const fetchData = query => {
+  const fetchData = (query) => {
     return axios("https://hn.algolia.com/api/v1/search?query=" + query)
-      .then(result => result)
-      .catch(err => {
+      .then((result) => result)
+      .catch((err) => {
         console.log(err);
         return [];
       });
@@ -30,7 +30,7 @@ const Home = () => {
       // Set isSearching state
       setIsSearching(true);
       // Fire off our API call
-      fetchData(debouncedSearchTerm).then(result => {
+      fetchData(debouncedSearchTerm).then((result) => {
         // Set back to false since request finished
         setIsSearching(false);
         setData(result.data);
@@ -56,7 +56,7 @@ const Home = () => {
     content = (
       <div>
         <ul>
-          {data.hits.map(item => (
+          {data.hits.map((item) => (
             <li key={item.objectID}>
               <a href={item.url}>{item.title}</a>
             </li>
