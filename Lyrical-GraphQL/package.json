@@ -15,7 +15,7 @@
   "dependencies": {
     "nodemon": "*",
     "apollo-client": "^0.8.1",
-    "axios": "^0.15.3",
+    "axios": "^0.21.1",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
