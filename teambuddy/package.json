@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.1",
     "json-server": "^0.12.1",
